@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SB Exercises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
+<meta property="book:title" content="PreTeXt Sample Book">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = true;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXSB" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="groups-sage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="groups.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="groups-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Open Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-TWJ.html" class="internal"><span class="title">Author Biography</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-RAB.html" class="internal"><span class="title">About Robert A. Beezer</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors to the 4<span class="process-math">\(^\mathrm{th}\)</span> Edition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-basics.html" class="internal"><span class="codenumber">I</span> <span class="title">Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-sage.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Immediate Help</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Annotating Your Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Lists of Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Saving and Sharing Your Work</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-sets.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-sage-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-8.html" class="internal"><span class="codenumber">1.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction and Math in a Title <span class="process-math">\(A\notsubset B\)</span></span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Greatest Common Divisor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Primes and Factoring</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-integers.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-7.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-sage-exercises.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-9.html" class="internal"><span class="codenumber">2.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-algebra.html" class="internal"><span class="codenumber">II</span> <span class="title">Algebra (and Runestone)</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-5" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-6" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-groups-define.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Definition of a Group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Examples of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-5" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-sage.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Integers mod n</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Groups of symmetries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Subgroups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="exercises-groups.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-9.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-sage-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-11.html" class="internal"><span class="codenumber">3.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclicity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-4.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-5.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Subgroups of a Cyclic Group</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cyclic Groups of Complex Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-7.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Large Powers of Integers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-cyclic.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-9.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-sage-exercises.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-11.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rune.html" class="internal"><span class="codenumber">5</span> <span class="title">Runestone Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="inactive-code.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Programs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="activecode.html" class="internal"><span class="codenumber">5.2</span> <span class="title">ActiveCode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="code-lens.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Code Lens</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="coding-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Coding Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="data-files.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Data Files</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="videos-in-runestone.html" class="internal"><span class="codenumber">5.6</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rune-nested-divisions.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Deeper</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Subsection One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Subsection Two</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="true-false-exercises.html" class="internal"><span class="codenumber">5.8</span> <span class="title">True/False Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groupwork.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Multiple Choice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="parsons-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="horizontal-parsons-exercises.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Horizontal Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matching-exercises.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Matching Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="clickable-area-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Clickable Area Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="select-exercises.html" class="internal"><span class="codenumber">5.14</span> <span class="title">Select Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="short-answer-exercises.html" class="internal"><span class="codenumber">5.15</span> <span class="title">Short Answer Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polling.html" class="internal"><span class="codenumber">5.16</span> <span class="title">Polling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">5.17</span> <span class="title">DoenetML</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E</span> <span class="title">A Structured Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-6-3.html" class="internal"><span class="codenumber">E.1</span> <span class="title">A Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3" class="internal"><span class="codenumber">E.1.1</span> <span class="title">A Subsection in a Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="exercises-groups"><h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="exercises-groups-2"><h3 class="heading"><span class="codenumber">1<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-2-1-1">Find all <span class="process-math">\(x \in {\mathbb Z}\)</span> satisfying each of the following equations.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-groups-2-1-2">
+<li id="exercises-groups-2-1-2-1">
+<div class="para" id="exercises-groups-2-1-2-1-1">
+<span class="process-math">\(\displaystyle 3x \equiv 2 \pmod{7}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.a"><a href="#exercises-groups-2-1-2-1" title="Copy heading and permalink for Item 3.5.1.a">🔗</a></div>
+</li>
+<li id="exercises-groups-2-1-2-2">
+<div class="para" id="exercises-groups-2-1-2-2-1">
+<span class="process-math">\(\displaystyle 5x + 1 \equiv 13 \pmod{23}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.b"><a href="#exercises-groups-2-1-2-2" title="Copy heading and permalink for Item 3.5.1.b">🔗</a></div>
+</li>
+<li id="exercises-groups-2-1-2-3">
+<div class="para" id="exercises-groups-2-1-2-3-1">
+<span class="process-math">\(\displaystyle 5x + 1 \equiv 13 \pmod{26}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.c"><a href="#exercises-groups-2-1-2-3" title="Copy heading and permalink for Item 3.5.1.c">🔗</a></div>
+</li>
+<li id="exercises-groups-2-1-2-4">
+<div class="para" id="exercises-groups-2-1-2-4-1">
+<span class="process-math">\(\displaystyle 9x \equiv 3 \pmod{5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.d"><a href="#exercises-groups-2-1-2-4" title="Copy heading and permalink for Item 3.5.1.d">🔗</a></div>
+</li>
+<li id="exercises-groups-2-1-2-5">
+<div class="para" id="exercises-groups-2-1-2-5-1">
+<span class="process-math">\(\displaystyle 5x \equiv 1 \pmod{6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.e"><a href="#exercises-groups-2-1-2-5" title="Copy heading and permalink for Item 3.5.1.e">🔗</a></div>
+</li>
+<li id="exercises-groups-2-1-2-6">
+<div class="para" id="exercises-groups-2-1-2-6-1">
+<span class="process-math">\(\displaystyle 3x \equiv 1 \pmod{6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.1.f"><a href="#exercises-groups-2-1-2-6" title="Copy heading and permalink for Item 3.5.1.f">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="exercises-groups-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-2-2-1">(a) <span class="process-math">\(3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}\text{;}\)</span>  (c) <span class="process-math">\(18 + 26 \mathbb Z\text{;}\)</span>  (e) <span class="process-math">\(5 + 6 \mathbb Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.1.1"><a href="#exercises-groups-2-2" title="Copy heading and permalink for Hint 3.5.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.1"><a href="#exercises-groups-2" title="Copy heading and permalink for Exercise 3.5.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-3"><h3 class="heading"><span class="codenumber">2<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-3-1-1">Which of the following multiplication tables defined on the set <span class="process-math">\(G = \{ a, b, c, d \}\)</span> form a group? Support your answer in each case.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-groups-3-1-2">
+<li id="exercises-groups-3-1-2-1">
+<div class="para logical" id="exercises-groups-3-1-2-1-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; c &amp; d &amp; a \\
+b &amp; b &amp; b &amp; c &amp; d \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; a &amp; b &amp; c
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.2.a"><a href="#exercises-groups-3-1-2-1" title="Copy heading and permalink for Item 3.5.2.a">🔗</a></div>
+</li>
+<li id="exercises-groups-3-1-2-2">
+<div class="para logical" id="exercises-groups-3-1-2-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; a &amp; d &amp; c \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; c &amp; b &amp; a
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.2.b"><a href="#exercises-groups-3-1-2-2" title="Copy heading and permalink for Item 3.5.2.b">🔗</a></div>
+</li>
+<li id="exercises-groups-3-1-2-3">
+<div class="para logical" id="exercises-groups-3-1-2-3-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; c &amp; d &amp; a \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; a &amp; b &amp; c
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.2.c"><a href="#exercises-groups-3-1-2-3" title="Copy heading and permalink for Item 3.5.2.c">🔗</a></div>
+</li>
+<li id="exercises-groups-3-1-2-4">
+<div class="para logical" id="exercises-groups-3-1-2-4-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; a &amp; c &amp; d \\
+c &amp; c &amp; b &amp; a &amp; d \\
+d &amp; d &amp; d &amp; b &amp; c
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.5.2.d"><a href="#exercises-groups-3-1-2-4" title="Copy heading and permalink for Item 3.5.2.d">🔗</a></div>
+</li>
+</ol>
+<div class="solutions"><details id="exercises-groups-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-3-2-1">(a) Not a group; (c) a group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.2.1"><a href="#exercises-groups-3-2" title="Copy heading and permalink for Hint 3.5.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.2"><a href="#exercises-groups-3" title="Copy heading and permalink for Exercise 3.5.2">🔗</a></div></article><article class="exercise exercise-like" id="exercise-groups-rectangle-symmetries"><h3 class="heading"><span class="codenumber">3<span class="period">.</span></span></h3>
+<div class="para" id="exercise-groups-rectangle-symmetries-1-1">Write out Cayley tables for groups formed by the symmetries of a rectangle and for <span class="process-math">\(({\mathbb Z}_4, +)\text{.}\)</span> How many elements are in each group? Are the groups the same? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-groups-rectangle-symmetries-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.3"><a href="#exercise-groups-rectangle-symmetries" title="Copy heading and permalink for Exercise 3.5.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-5"><h3 class="heading"><span class="codenumber">4<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-5-1-1">Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.4"><a href="#exercises-groups-5" title="Copy heading and permalink for Exercise 3.5.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-6"><h3 class="heading"><span class="codenumber">5<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-6-1-1">Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square?  The symmetry group of the square is denoted by <span class="process-math">\(D_4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.5"><a href="#exercises-groups-6" title="Copy heading and permalink for Exercise 3.5.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-7"><h3 class="heading"><span class="codenumber">6<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-7-1-1">Give a multiplication table for the group <span class="process-math">\(U(12)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="exercises-groups-7-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc}
+\cdot &amp; 1  &amp; 5  &amp; 7  &amp; 11 \\
+\hline
+1 &amp; 1 &amp; 5 &amp; 7 &amp; 11 \\ 5 &amp; 5 &amp; 1 &amp; 11 &amp; 7 \\
+7 &amp; 7 &amp; 11 &amp; 1 &amp; 5 \\ 11 &amp; 11 &amp; 7 &amp; 5 &amp; 1
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-7-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.6.1"><a href="#exercises-groups-7-2" title="Copy heading and permalink for Hint 3.5.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.6"><a href="#exercises-groups-7" title="Copy heading and permalink for Exercise 3.5.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-8"><h3 class="heading"><span class="codenumber">7<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-8-1-1">Let <span class="process-math">\(S = {\mathbb R} \setminus \{ -1 \}\)</span> and define a binary operation on <span class="process-math">\(S\)</span> by <span class="process-math">\(a \ast b = a + b + ab\text{.}\)</span> Prove that <span class="process-math">\((S, \ast)\)</span> is an abelian group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-8-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.7"><a href="#exercises-groups-8" title="Copy heading and permalink for Exercise 3.5.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-9"><h3 class="heading"><span class="codenumber">8<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-9-1-1">Give an example of two elements <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> in <span class="process-math">\(GL_2({\mathbb R})\)</span> with <span class="process-math">\(AB \neq BA\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-9-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-9-2-1">Pick two matrices. Almost any pair will work.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-9-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.8.1"><a href="#exercises-groups-9-2" title="Copy heading and permalink for Hint 3.5.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.8"><a href="#exercises-groups-9" title="Copy heading and permalink for Exercise 3.5.8">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-10"><h3 class="heading"><span class="codenumber">9<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-10-1-1">Prove that the product of two matrices in <span class="process-math">\(SL_2({\mathbb R})\)</span> has determinant one.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-10-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.9"><a href="#exercises-groups-10" title="Copy heading and permalink for Exercise 3.5.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-11"><h3 class="heading"><span class="codenumber">10<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-11-1-1">
+<div class="para">Prove that the set of matrices of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; x &amp; y \\
+0 &amp; 1 &amp; z \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">is a group under matrix multiplication.  This group, known as the <dfn class="terminology">Heisenberg group</dfn>, is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; x &amp; y \\
+0 &amp; 1 &amp; z \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; x' &amp; y' \\
+0 &amp; 1 &amp; z' \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 &amp; x+x' &amp; y+y'+xz' \\
+0 &amp; 1 &amp; z+z' \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-11-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.10"><a href="#exercises-groups-11" title="Copy heading and permalink for Exercise 3.5.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-12"><h3 class="heading"><span class="codenumber">11<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-12-1-1">Prove that <span class="process-math">\(\det(AB) = \det(A) \det(B)\)</span> in <span class="process-math">\(GL_2({\mathbb R})\text{.}\)</span> Use this result to show that the binary operation in the group <span class="process-math">\(GL_2({\mathbb R})\)</span> is closed; that is, if <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are in <span class="process-math">\(GL_2({\mathbb R})\text{,}\)</span> then <span class="process-math">\(AB \in GL_2({\mathbb R})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-12-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.11"><a href="#exercises-groups-12" title="Copy heading and permalink for Exercise 3.5.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-13"><h3 class="heading"><span class="codenumber">12<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-13-1-1">
+<div class="para">Let <span class="process-math">\({\mathbb Z}_2^n = \{ (a_1, a_2, \ldots, a_n) : a_i \in {\mathbb Z}_2 \}\text{.}\)</span> Define a binary operation on <span class="process-math">\({\mathbb Z}_2^n\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n).
+\end{equation*}
+</div>
+<div class="para">Prove that <span class="process-math">\({\mathbb Z}_2^n\)</span> is a group under this operation. This group is important in algebraic coding theory.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-13-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.12"><a href="#exercises-groups-13" title="Copy heading and permalink for Exercise 3.5.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-14"><h3 class="heading"><span class="codenumber">13<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-14-1-1">Show that <span class="process-math">\({\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}\)</span> is a group under the operation of multiplication.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-14-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.13"><a href="#exercises-groups-14" title="Copy heading and permalink for Exercise 3.5.13">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-15"><h3 class="heading"><span class="codenumber">14<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-15-1-1">Given the groups  <span class="process-math">\({\mathbb R}^{\ast}\)</span> and <span class="process-math">\({\mathbb Z}\text{,}\)</span> let <span class="process-math">\(G = {\mathbb R}^{\ast}  \times {\mathbb Z}\text{.}\)</span> Define a binary operation <span class="process-math">\(\circ\)</span> on <span class="process-math">\(G\)</span> by <span class="process-math">\((a,m) \circ (b,n) = (ab, m + n)\text{.}\)</span> Show that <span class="process-math">\(G\)</span> is a group under this operation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-15-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.14"><a href="#exercises-groups-15" title="Copy heading and permalink for Exercise 3.5.14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-16"><h3 class="heading"><span class="codenumber">15<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-16-1-1">Prove or disprove that every group containing six elements is abelian.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-16-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-16-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-16-2-1">There is a nonabelian group containing six elements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-16-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.15.1"><a href="#exercises-groups-16-2" title="Copy heading and permalink for Hint 3.5.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.15"><a href="#exercises-groups-16" title="Copy heading and permalink for Exercise 3.5.15">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-17"><h3 class="heading"><span class="codenumber">16<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-17-1-1">Give a specific example of some group <span class="process-math">\(G\)</span> and elements <span class="process-math">\(g, h \in G\)</span> where <span class="process-math">\((gh)^n \neq g^nh^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-17-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-17-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-17-2-1">Look at the symmetry group of an equilateral triangle or a square.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-17-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.16.1"><a href="#exercises-groups-17-2" title="Copy heading and permalink for Hint 3.5.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.16"><a href="#exercises-groups-17" title="Copy heading and permalink for Exercise 3.5.16">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-18"><h3 class="heading"><span class="codenumber">17<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-18-1-1">Give an example of three different groups with eight elements. Why are the groups different?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-18-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-18-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-18-2-1">The are five different groups of order 8.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-18-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.17.1"><a href="#exercises-groups-18-2" title="Copy heading and permalink for Hint 3.5.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.17"><a href="#exercises-groups-18" title="Copy heading and permalink for Exercise 3.5.17">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-19"><h3 class="heading"><span class="codenumber">18<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-19-1-1">Show that there are <span class="process-math">\(n!\)</span> permutations of a set containing <span class="process-math">\(n\)</span> items.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-19-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-19-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="exercises-groups-19-2-1">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sigma =
+\begin{pmatrix}
+1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">be in <span class="process-math">\(S_n\text{.}\)</span> All of the <span class="process-math">\(a_i\)</span>s must be distinct. There are <span class="process-math">\(n\)</span> ways to choose <span class="process-math">\(a_1\text{,}\)</span> <span class="process-math">\(n-1\)</span> ways to choose <span class="process-math">\(a_2\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> 2 ways to choose <span class="process-math">\(a_{n - 1}\text{,}\)</span> and only one way to choose <span class="process-math">\(a_n\text{.}\)</span> Therefore, we can form <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(n(n - 1) \cdots 2 \cdot 1 = n!\)</span> ways.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-19-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.18.1"><a href="#exercises-groups-19-2" title="Copy heading and permalink for Hint 3.5.18.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.18"><a href="#exercises-groups-19" title="Copy heading and permalink for Exercise 3.5.18">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-20"><h3 class="heading"><span class="codenumber">19<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-20-1-1">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 + a  \equiv a + 0  \equiv a \pmod{ n }
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(a \in {\mathbb Z}_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-20-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.19"><a href="#exercises-groups-20" title="Copy heading and permalink for Exercise 3.5.19">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-21"><h3 class="heading"><span class="codenumber">20<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-21-1-1">
+<div class="para">Prove that there is  a multiplicative identity for the integers modulo <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a \cdot  1   \equiv  a \pmod{n}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-21-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.20"><a href="#exercises-groups-21" title="Copy heading and permalink for Exercise 3.5.20">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-22"><h3 class="heading"><span class="codenumber">21<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-22-1-1">
+<div class="para">For each <span class="process-math">\(a \in {\mathbb Z}_n\)</span> find an element <span class="process-math">\(b \in {\mathbb Z}_n\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a + b \equiv b + a  \equiv 0 \pmod{ n}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-22-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.21"><a href="#exercises-groups-22" title="Copy heading and permalink for Exercise 3.5.21">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-23"><h3 class="heading"><span class="codenumber">22<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-23-1-1">Show that addition and multiplication mod $n$ are well defined operations.  That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-23-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.22"><a href="#exercises-groups-23" title="Copy heading and permalink for Exercise 3.5.22">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-24"><h3 class="heading"><span class="codenumber">23<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-24-1-1">Show that addition and multiplication mod <span class="process-math">\(n\)</span> are associative operations.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-24-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.23"><a href="#exercises-groups-24" title="Copy heading and permalink for Exercise 3.5.23">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-25"><h3 class="heading"><span class="codenumber">24<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-25-1-1">
+<div class="para">Show that multiplication distributes over addition modulo <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a(b  + c)  \equiv ab + ac  \pmod{n}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-25-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.24"><a href="#exercises-groups-25" title="Copy heading and permalink for Exercise 3.5.24">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-26"><h3 class="heading"><span class="codenumber">25<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-26-1-1">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be elements in a group <span class="process-math">\(G\text{.}\)</span>  Prove that <span class="process-math">\(ab^na^{-1} = (aba^{-1})^n\)</span> for <span class="process-math">\(n \in \mathbb Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-26-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-26-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="exercises-groups-26-2-1">
+<div class="displaymath process-math" id="exercises-groups-26-2-1-1">
+\begin{align*}
+(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})\\
+&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}\\
+&amp; = ab^na^{-1}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-26-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.25.1"><a href="#exercises-groups-26-2" title="Copy heading and permalink for Hint 3.5.25.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.25"><a href="#exercises-groups-26" title="Copy heading and permalink for Exercise 3.5.25">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-27"><h3 class="heading"><span class="codenumber">26<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-27-1-1">Let <span class="process-math">\(U(n)\)</span> be the group of units in <span class="process-math">\({\mathbb Z}_n\text{.}\)</span> If <span class="process-math">\(n \gt 2\text{,}\)</span> prove that there is an element <span class="process-math">\(k \in U(n)\)</span> such that <span class="process-math">\(k^2 = 1\)</span> and <span class="process-math">\(k \neq 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-27-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.26"><a href="#exercises-groups-27" title="Copy heading and permalink for Exercise 3.5.26">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-28"><h3 class="heading"><span class="codenumber">27<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-28-1-1">Prove that the inverse of <span class="process-math">\(g _1 g_2 \cdots g_n\)</span> is <span class="process-math">\(g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-28-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.27"><a href="#exercises-groups-28" title="Copy heading and permalink for Exercise 3.5.27">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-29"><h3 class="heading"><span class="codenumber">28<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-29-1-1">Prove the remainder of <a href="section-groups-define.html#proposition-group-equations" class="xref" data-knowl="./knowl/xref/proposition-group-equations.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.2.14">Proposition 3.2.14</a>: if <span class="process-math">\(G\)</span> is a group and <span class="process-math">\(a, b \in G\text{,}\)</span> then the equation <span class="process-math">\(xa = b\)</span> has a unique solution in <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-29-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.28"><a href="#exercises-groups-29" title="Copy heading and permalink for Exercise 3.5.28">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-30"><h3 class="heading"><span class="codenumber">29<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-30-1-1">Prove <a href="section-groups-define.html#theorem-exponent-laws" class="xref" data-knowl="./knowl/xref/theorem-exponent-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.16">Theorem 3.2.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-30-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.29"><a href="#exercises-groups-30" title="Copy heading and permalink for Exercise 3.5.29">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-31"><h3 class="heading"><span class="codenumber">30<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-31-1-1">Prove the right and left cancellation laws for a group <span class="process-math">\(G\text{;}\)</span> that is, show that in the group <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(ba = ca\)</span> implies <span class="process-math">\(b = c\)</span> and <span class="process-math">\(ab = ac\)</span> implies <span class="process-math">\(b = c\)</span> for elements <span class="process-math">\(a, b, c \in G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-31-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.30"><a href="#exercises-groups-31" title="Copy heading and permalink for Exercise 3.5.30">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-32"><h3 class="heading"><span class="codenumber">31<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-32-1-1">Show that if <span class="process-math">\(a^2 = e\)</span> for all elements <span class="process-math">\(a\)</span> in a group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(G\)</span> must be abelian.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-32-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-32-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-32-2-1">Since <span class="process-math">\(abab = (ab)^2 = e = a^2 b^2 = aabb\text{,}\)</span> we know that <span class="process-math">\(ba = ab\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-32-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.31.1"><a href="#exercises-groups-32-2" title="Copy heading and permalink for Hint 3.5.31.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.31"><a href="#exercises-groups-32" title="Copy heading and permalink for Exercise 3.5.31">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-33"><h3 class="heading"><span class="codenumber">32<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-33-1-1">Show that if <span class="process-math">\(G\)</span> is a finite group of even order, then there is an <span class="process-math">\(a \in G\)</span> such that <span class="process-math">\(a\)</span> is not the identity and <span class="process-math">\(a^2 = e\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-33-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.32"><a href="#exercises-groups-33" title="Copy heading and permalink for Exercise 3.5.32">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-34"><h3 class="heading"><span class="codenumber">33<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-34-1-1">Let <span class="process-math">\(G\)</span> be a group and suppose that <span class="process-math">\((ab)^2 = a^2b^2\)</span> for all <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in <span class="process-math">\(G\text{.}\)</span>  Prove that <span class="process-math">\(G\)</span> is an abelian group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-34-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.33"><a href="#exercises-groups-34" title="Copy heading and permalink for Exercise 3.5.33">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-35"><h3 class="heading"><span class="codenumber">34<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-35-1-1">Find all the subgroups of <span class="process-math">\({\mathbb Z}_3 \times {\mathbb Z}_3\text{.}\)</span> Use this information to show that <span class="process-math">\({\mathbb Z}_3 \times {\mathbb Z}_3\)</span> is not the same group as <span class="process-math">\({\mathbb Z}_9\text{.}\)</span>  (See <a href="section-subgroups.html#example-groups-z2xz2" class="xref" data-knowl="./knowl/xref/example-groups-z2xz2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3.5: Structurally Different Groups">Example 3.3.5</a>  for a short description of the product of groups.)<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-35-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.34"><a href="#exercises-groups-35" title="Copy heading and permalink for Exercise 3.5.34">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-36"><h3 class="heading"><span class="codenumber">35<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-36-1-1">Find all the subgroups of the symmetry group of an equilateral triangle.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-36-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-36-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-36-2-1">
+<span class="process-math">\(H_1 = \{ id \}\text{,}\)</span> <span class="process-math">\(H_2 = \{ id, \rho_1, \rho_2 \}\text{,}\)</span> <span class="process-math">\(H_3 = \{ id, \mu_1 \}\text{,}\)</span> <span class="process-math">\(H_4 = \{ id, \mu_2 \}\text{,}\)</span> <span class="process-math">\(H_5 = \{ id, \mu_3 \}\text{,}\)</span> <span class="process-math">\(S_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-36-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.35.1"><a href="#exercises-groups-36-2" title="Copy heading and permalink for Hint 3.5.35.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.35"><a href="#exercises-groups-36" title="Copy heading and permalink for Exercise 3.5.35">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-37"><h3 class="heading"><span class="codenumber">36<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-37-1-1">Compute the subgroups of the symmetry group of a square.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-37-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.36"><a href="#exercises-groups-37" title="Copy heading and permalink for Exercise 3.5.36">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-38"><h3 class="heading"><span class="codenumber">37<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-38-1-1">Let <span class="process-math">\(H = \{2^k : k \in {\mathbb Z} \}\text{.}\)</span> Show that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\({\mathbb Q}^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-38-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.37"><a href="#exercises-groups-38" title="Copy heading and permalink for Exercise 3.5.37">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-39"><h3 class="heading"><span class="codenumber">38<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-39-1-1">Let <span class="process-math">\(n = 0, 1, 2, \ldots\)</span> and <span class="process-math">\(n {\mathbb Z} = \{ nk : k \in  {\mathbb Z} \}\text{.}\)</span> Prove that <span class="process-math">\(n {\mathbb Z}\)</span> is a subgroup of <span class="process-math">\({\mathbb Z}\text{.}\)</span>  Show that these subgroups are the only subgroups of <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-39-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.38"><a href="#exercises-groups-39" title="Copy heading and permalink for Exercise 3.5.38">🔗</a></div></article><article class="exercise exercise-like" id="exercise-groups-circle-group"><h3 class="heading"><span class="codenumber">39<span class="period">.</span></span></h3>
+<div class="para" id="exercise-groups-circle-group-1-1">Let <span class="process-math">\({\mathbb T} = \{ z \in  {\mathbb C}^* : |z| =1 \}\text{.}\)</span> Prove that <span class="process-math">\({\mathbb T}\)</span> is a subgroup of <span class="process-math">\({\mathbb C}^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-groups-circle-group-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.39"><a href="#exercise-groups-circle-group" title="Copy heading and permalink for Exercise 3.5.39">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-41"><h3 class="heading"><span class="codenumber">40<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-41-1-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\theta \in {\mathbb R}\text{.}\)</span> Prove that <span class="process-math">\(G\)</span> is a subgroup of <span class="process-math">\(SL_2({\mathbb R})\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-41-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.40"><a href="#exercises-groups-41" title="Copy heading and permalink for Exercise 3.5.40">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-42"><h3 class="heading"><span class="codenumber">41<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-42-1-1">
+<div class="para">Prove that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
+\end{equation*}
+</div>
+<div class="para">is a subgroup of <span class="process-math">\({\mathbb R}^{\ast}\)</span> under the group operation of multiplication.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-42-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-42-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-42-2-1">The identity of <span class="process-math">\(G\)</span> is <span class="process-math">\(1 = 1 + 0 \sqrt{2}\text{.}\)</span> Since <span class="process-math">\((a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}\text{,}\)</span> <span class="process-math">\(G\)</span> is closed under multiplication.  Finally,  <span class="process-math">\((a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-42-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.41.1"><a href="#exercises-groups-42-2" title="Copy heading and permalink for Hint 3.5.41.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.41"><a href="#exercises-groups-42" title="Copy heading and permalink for Exercise 3.5.41">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-43"><h3 class="heading"><span class="codenumber">42<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-43-1-1">
+<div class="para">Let <span class="process-math">\(G\)</span> be the group of <span class="process-math">\(2 \times 2\)</span> matrices under addition and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H =
+\left\{
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix} :
+a + d = 0
+\right\}.
+\end{equation*}
+</div>
+<div class="para">Prove that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-43-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.42"><a href="#exercises-groups-43" title="Copy heading and permalink for Exercise 3.5.42">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-44"><h3 class="heading"><span class="codenumber">43<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-44-1-1">Prove or disprove: <span class="process-math">\(SL_2( {\mathbb Z} )\text{,}\)</span> the set of <span class="process-math">\(2 \times 2\)</span> matrices with integer entries and determinant one, is a subgroup of <span class="process-math">\(SL_2( {\mathbb R} )\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-44-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.43"><a href="#exercises-groups-44" title="Copy heading and permalink for Exercise 3.5.43">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-45"><h3 class="heading"><span class="codenumber">44<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-45-1-1">List the subgroups of the quaternion group, <span class="process-math">\(Q_8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-45-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.44"><a href="#exercises-groups-45" title="Copy heading and permalink for Exercise 3.5.44">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-46"><h3 class="heading"><span class="codenumber">45<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-46-1-1">Prove that the intersection of two subgroups of a group <span class="process-math">\(G\)</span> is also a subgroup of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-46-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.45"><a href="#exercises-groups-46" title="Copy heading and permalink for Exercise 3.5.45">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-47"><h3 class="heading"><span class="codenumber">46<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-47-1-1">Prove or disprove:  If <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are subgroups of a group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(H \cup K\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-47-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-47-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-47-2-1">Look at <span class="process-math">\(S_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-47-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.46.1"><a href="#exercises-groups-47-2" title="Copy heading and permalink for Hint 3.5.46.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.46"><a href="#exercises-groups-47" title="Copy heading and permalink for Exercise 3.5.46">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-48"><h3 class="heading"><span class="codenumber">47<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-48-1-1">Prove or disprove: If <span class="process-math">\(H\)</span> and <span class="process-math">\(K\)</span> are subgroups of a group <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(H K = \{hk : h \in H \text{ and } k \in K \}\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> What if <span class="process-math">\(G\)</span> is abelian?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-48-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.47"><a href="#exercises-groups-48" title="Copy heading and permalink for Exercise 3.5.47">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-49"><h3 class="heading"><span class="codenumber">48<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-49-1-1">
+<div class="para">Let <span class="process-math">\(G\)</span> be a group and <span class="process-math">\(g \in G\text{.}\)</span> Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
+\end{equation*}
+</div>
+<div class="para">is a subgroup of <span class="process-math">\(G\text{.}\)</span> This subgroup is called the <dfn class="terminology">center</dfn> of <span class="process-math">\(G\text{.}\)</span> </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-49-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.48"><a href="#exercises-groups-49" title="Copy heading and permalink for Exercise 3.5.48">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-50"><h3 class="heading"><span class="codenumber">49<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-50-1-1">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be elements of a group <span class="process-math">\(G\text{.}\)</span> If <span class="process-math">\(a^4b = ba\)</span> and <span class="process-math">\(a^3 = e\text{,}\)</span> prove that <span class="process-math">\(ab = ba\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-50-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-50-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-groups-50-2-1">Since <span class="process-math">\(a^4b = ba\text{,}\)</span> it must be the case that <span class="process-math">\(b = a^6 b = a^2 b a\text{,}\)</span> and we can conclude that <span class="process-math">\(ab = a^3 b a = ba\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-50-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.5.49.1"><a href="#exercises-groups-50-2" title="Copy heading and permalink for Hint 3.5.49.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.49"><a href="#exercises-groups-50" title="Copy heading and permalink for Exercise 3.5.49">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-51"><h3 class="heading"><span class="codenumber">50<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-51-1-1">Give an example of an infinite group in which every nontrivial subgroup is infinite.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-51-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.50"><a href="#exercises-groups-51" title="Copy heading and permalink for Exercise 3.5.50">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-52"><h3 class="heading"><span class="codenumber">51<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-52-1-1">If <span class="process-math">\(xy = x^{-1} y^{-1}\)</span> for all <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> in <span class="process-math">\(G\text{,}\)</span> prove that <span class="process-math">\(G\)</span> must be abelian.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-52-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.51"><a href="#exercises-groups-52" title="Copy heading and permalink for Exercise 3.5.51">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-53"><h3 class="heading"><span class="codenumber">52<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-53-1-1">Prove or disprove: Every proper subgroup of an nonabelian group is nonabelian.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-53-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.52"><a href="#exercises-groups-53" title="Copy heading and permalink for Exercise 3.5.52">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-54"><h3 class="heading"><span class="codenumber">53<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-groups-54-1-1">
+<div class="para">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}.
+\end{equation*}
+</div>
+<div class="para">Prove <span class="process-math">\(C(H)\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span>  This subgroup is called the <dfn class="terminology">centralizer</dfn> of <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-54-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.53"><a href="#exercises-groups-54" title="Copy heading and permalink for Exercise 3.5.53">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-55"><h3 class="heading"><span class="codenumber">54<span class="period">.</span></span></h3>
+<div class="para" id="exercises-groups-55-1-1">Let <span class="process-math">\(H\)</span> be a subgroup of <span class="process-math">\(G\text{.}\)</span>  If <span class="process-math">\(g \in G\text{,}\)</span> show that <span class="process-math">\(gHg^{-1} =  \{g^{-1}hg : h\in H\}\)</span> is also a subgroup of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-55-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.5.54"><a href="#exercises-groups-55" title="Copy heading and permalink for Exercise 3.5.54">🔗</a></div></article><div class="exercisegroup" id="exercises-groups-56">
+<h3 class="heading"><span class="title">Exercise Group.</span></h3>
+<div class="introduction" id="exercises-groups-56-1"><div class="para" id="exercises-groups-56-1-1">In each group, how many solutions are there to <span class="process-math">\(x^2=e\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercises-groups-56-2"><h4 class="heading"><span class="codenumber">55<span class="period">.</span></span></h4>
+<div class="para" id="exercises-groups-56-2-1-1">
+<span class="process-math">\(C_n\text{,}\)</span> <span class="process-math">\(n\)</span> odd.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-56-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-56-2-2-1">
+<span class="process-math">\(1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.55.1"><a href="#exercises-groups-56-2-2" title="Copy heading and permalink for Answer 3.5.55.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.55"><a href="#exercises-groups-56-2" title="Copy heading and permalink for Exercise 3.5.55">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-56-3"><h4 class="heading"><span class="codenumber">56<span class="period">.</span></span></h4>
+<div class="para" id="exercises-groups-56-3-1-1">
+<span class="process-math">\(C_n\text{,}\)</span> <span class="process-math">\(n\)</span> even.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-56-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-56-3-2-1">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.56.1"><a href="#exercises-groups-56-3-2" title="Copy heading and permalink for Answer 3.5.56.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.56"><a href="#exercises-groups-56-3" title="Copy heading and permalink for Exercise 3.5.56">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-56-4"><h4 class="heading"><span class="codenumber">57<span class="period">.</span></span></h4>
+<div class="para" id="exercises-groups-56-4-1-1">
+<span class="process-math">\(D_n\text{,}\)</span> <span class="process-math">\(n\)</span> odd.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-56-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-56-4-2-1">
+<span class="process-math">\(n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.57.1"><a href="#exercises-groups-56-4-2" title="Copy heading and permalink for Answer 3.5.57.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.57"><a href="#exercises-groups-56-4" title="Copy heading and permalink for Exercise 3.5.57">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-56-5"><h4 class="heading"><span class="codenumber">58<span class="period">.</span></span></h4>
+<div class="para" id="exercises-groups-56-5-1-1">
+<span class="process-math">\(D_n\text{,}\)</span> <span class="process-math">\(n\)</span> even.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-56-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-56-5-2-1">
+<span class="process-math">\(n+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.58.1"><a href="#exercises-groups-56-5-2" title="Copy heading and permalink for Answer 3.5.58.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.5.58"><a href="#exercises-groups-56-5" title="Copy heading and permalink for Exercise 3.5.58">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 3.5.55–58"><a href="#exercises-groups-56" title="Copy heading and permalink for Exercise Group 3.5.55–58">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="exercises-groups-57"><h3 class="heading"><span class="codenumber">59<span class="period">.</span></span></h3>
+<div class="introduction" id="exercises-groups-57-1"><div class="para" id="exercises-groups-57-1-1">This is an odd-numbered exercise with tasks.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-groups-57-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exercises-groups-57-2-1-1">What is <span class="process-math">\(1+1\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-57-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-57-2-2-1">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.59.a.1"><a href="#exercises-groups-57-2-2" title="Copy heading and permalink for Answer 3.5.59.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.59.a"><a href="#exercises-groups-57-2" title="Copy heading and permalink for Task 3.5.59.a">🔗</a></div></article><article class="task exercise-like" id="exercises-groups-57-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="introduction" id="exercises-groups-57-3-1"><div class="para" id="exercises-groups-57-3-1-1">This task has subtasks.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-groups-57-3-2"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="exercises-groups-57-3-2-1-1">What is <span class="process-math">\(3+3\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-57-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-57-3-2-2-1">
+<span class="process-math">\(6\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.59.b.i.1"><a href="#exercises-groups-57-3-2-2" title="Copy heading and permalink for Answer 3.5.59.b.i.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.59.b.i"><a href="#exercises-groups-57-3-2" title="Copy heading and permalink for Task 3.5.59.b.i">🔗</a></div></article><article class="task exercise-like" id="exercises-groups-57-3-3"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="exercises-groups-57-3-3-1-1">What is <span class="process-math">\(5+5\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-57-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-57-3-3-2-1">
+<span class="process-math">\(10\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.59.b.ii.1"><a href="#exercises-groups-57-3-3-2" title="Copy heading and permalink for Answer 3.5.59.b.ii.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.59.b.ii"><a href="#exercises-groups-57-3-3" title="Copy heading and permalink for Task 3.5.59.b.ii">🔗</a></div></article><div class="autopermalink" data-description="Task 3.5.59.b"><a href="#exercises-groups-57-3" title="Copy heading and permalink for Task 3.5.59.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 3.5.59"><a href="#exercises-groups-57" title="Copy heading and permalink for Exercise 3.5.59">🔗</a></div></article><article class="exercise exercise-like" id="exercises-groups-58"><h3 class="heading"><span class="codenumber">60<span class="period">.</span></span></h3>
+<div class="introduction" id="exercises-groups-58-1"><div class="para" id="exercises-groups-58-1-1">This is an even-numbered exercise with tasks.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-groups-58-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exercises-groups-58-2-1-1">What is <span class="process-math">\(2+2\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-58-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-58-2-2-1">
+<span class="process-math">\(4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.60.a.1"><a href="#exercises-groups-58-2-2" title="Copy heading and permalink for Answer 3.5.60.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.60.a"><a href="#exercises-groups-58-2" title="Copy heading and permalink for Task 3.5.60.a">🔗</a></div></article><article class="task exercise-like" id="exercises-groups-58-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="introduction" id="exercises-groups-58-3-1"><div class="para" id="exercises-groups-58-3-1-1">This task has subtasks.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-groups-58-3-2"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para" id="exercises-groups-58-3-2-1-1">What is <span class="process-math">\(4+4\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-58-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-58-3-2-2-1">
+<span class="process-math">\(8\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.60.b.i.1"><a href="#exercises-groups-58-3-2-2" title="Copy heading and permalink for Answer 3.5.60.b.i.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.60.b.i"><a href="#exercises-groups-58-3-2" title="Copy heading and permalink for Task 3.5.60.b.i">🔗</a></div></article><article class="task exercise-like" id="exercises-groups-58-3-3"><h5 class="heading"><span class="codenumber">(ii)</span></h5>
+<div class="para" id="exercises-groups-58-3-3-1-1">What is <span class="process-math">\(6+6\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-groups-58-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="exercises-groups-58-3-3-2-1">
+<span class="process-math">\(12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.5.60.b.ii.1"><a href="#exercises-groups-58-3-3-2" title="Copy heading and permalink for Answer 3.5.60.b.ii.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.5.60.b.ii"><a href="#exercises-groups-58-3-3" title="Copy heading and permalink for Task 3.5.60.b.ii">🔗</a></div></article><div class="autopermalink" data-description="Task 3.5.60.b"><a href="#exercises-groups-58-3" title="Copy heading and permalink for Task 3.5.60.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 3.5.60"><a href="#exercises-groups-58" title="Copy heading and permalink for Exercise 3.5.60">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.5: Exercises"><a href="#exercises-groups" title="Copy heading and permalink for Exercises 3.5: Exercises">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="groups-sage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="groups-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=9664088;
+var sc_invisible=1;
+var sc_security="6e60c510";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-48811660-1');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>

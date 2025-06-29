@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SB Sets and Equivalence Relations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
+<meta property="book:title" content="PreTeXt Sample Book">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = true;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXSB" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-note-on-proofs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sets.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sets-sage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Open Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-TWJ.html" class="internal"><span class="title">Author Biography</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-RAB.html" class="internal"><span class="title">About Robert A. Beezer</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors to the 4<span class="process-math">\(^\mathrm{th}\)</span> Edition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-sage.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Immediate Help</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Annotating Your Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Lists of Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Saving and Sharing Your Work</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-sets.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-sage-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-8.html" class="internal"><span class="codenumber">1.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction and Math in a Title <span class="process-math">\(A\notsubset B\)</span></span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Greatest Common Divisor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Primes and Factoring</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-integers.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-7.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-sage-exercises.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-9.html" class="internal"><span class="codenumber">2.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-5" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-6" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-groups-define.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Definition of a Group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Examples of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-5" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-sage.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Integers mod n</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Groups of symmetries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Subgroups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groups.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-9.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-sage-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-11.html" class="internal"><span class="codenumber">3.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclicity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-4.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-5.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Subgroups of a Cyclic Group</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cyclic Groups of Complex Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-7.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Large Powers of Integers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-cyclic.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-9.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-sage-exercises.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-11.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rune.html" class="internal"><span class="codenumber">5</span> <span class="title">Runestone Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="inactive-code.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Programs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="activecode.html" class="internal"><span class="codenumber">5.2</span> <span class="title">ActiveCode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="code-lens.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Code Lens</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="coding-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Coding Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="data-files.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Data Files</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="videos-in-runestone.html" class="internal"><span class="codenumber">5.6</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rune-nested-divisions.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Deeper</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Subsection One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Subsection Two</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="true-false-exercises.html" class="internal"><span class="codenumber">5.8</span> <span class="title">True/False Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groupwork.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Multiple Choice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="parsons-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="horizontal-parsons-exercises.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Horizontal Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matching-exercises.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Matching Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="clickable-area-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Clickable Area Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="select-exercises.html" class="internal"><span class="codenumber">5.14</span> <span class="title">Select Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="short-answer-exercises.html" class="internal"><span class="codenumber">5.15</span> <span class="title">Short Answer Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polling.html" class="internal"><span class="codenumber">5.16</span> <span class="title">Polling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">5.17</span> <span class="title">DoenetML</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E</span> <span class="title">A Structured Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-6-3.html" class="internal"><span class="codenumber">E.1</span> <span class="title">A Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3" class="internal"><span class="codenumber">E.1.1</span> <span class="title">A Subsection in a Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-sets-and-equivalence-relations"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Sets and Equivalence Relations</span>
+</h2>
+<section class="subsection" id="section-sets-and-equivalence-relations-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Set Theory</span>
+</h3>
+<div class="para" id="section-sets-and-equivalence-relations-2-2">A <dfn class="terminology">set</dfn> is a well-defined collection of objects; that is, it is defined in such a manner that we can determine for any given object <span class="process-math">\(x\)</span> whether or not <span class="process-math">\(x\)</span> belongs to the set.  The objects that belong to a set are called its <dfn class="terminology">elements</dfn> or <dfn class="terminology">members</dfn>. We will denote sets by capital letters, such as <span class="process-math">\(A\)</span> or <span class="process-math">\(X\text{;}\)</span> if <span class="process-math">\(a\)</span> is an element of the set <span class="process-math">\(A\text{,}\)</span> we write <span class="process-math">\(a \in A\text{.}\)</span> <div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-3">
+<div class="para">A set is usually specified either by listing all of its elements inside a pair of braces or by stating the property that determines whether or not an object <span class="process-math">\(x\)</span> belongs to the set. We might write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X = \{ x_1, x_2, \ldots, x_n \}
+\end{equation*}
+</div>
+<div class="para">for a set containing elements <span class="process-math">\(x_1, x_2, \ldots, x_n\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X = \{ x :x \text{ satisfies }{\mathcal P}\}
+\end{equation*}
+</div>
+<div class="para">if each <span class="process-math">\(x\)</span> in <span class="process-math">\(X\)</span> satisfies a certain property <span class="process-math">\({\mathcal P}\text{.}\)</span>  For example, if <span class="process-math">\(E\)</span> is the set of even positive integers, we can describe <span class="process-math">\(E\)</span> by writing either</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even integer and } x \gt 0 \}\text{.}
+\end{equation*}
+</div>
+<div class="para">We write <span class="process-math">\(2 \in E\)</span> when we want to say that 2 is in the set <span class="process-math">\(E\text{,}\)</span> and <span class="process-math">\(-3 \notin E\)</span> to say that <span class="process-math">\(-3\)</span> is not in the set <span class="process-math">\(E\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-4">
+<div class="para">Some of the more important sets that we will consider are the following:</div>
+<div class="displaymath process-math" id="section-sets-and-equivalence-relations-2-4-1">
+\begin{align*}
+{\mathbb N} &amp;= \{n: n \text{ is a natural number}\}  = \{1, 2, 3, \ldots \}\\
+{\mathbb Z} &amp;= \{n : n \text{ is an integer} \} = \{\ldots, -1, 0, 1,  2, \ldots \}\\
+{\mathbb Q} &amp;= \{r : r \text{ is a rational number}\} = \{p/q : p, q \in {\mathbb Z} \text{ where } q \neq 0\}\\
+{\mathbb R} &amp;= \{ x : x \text{ is a real number} \}\\
+{\mathbb C} &amp;= \{z : z \text{ is a complex number}\}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-5">
+<div class="para">We can find various relations between sets as well as perform operations on sets.  A set <span class="process-math">\(A\)</span> is a <dfn class="terminology">subset</dfn> of <span class="process-math">\(B\text{,}\)</span> written <span class="process-math">\(A \subset B\)</span> or <span class="process-math">\(B \supset A\text{,}\)</span> if every element of <span class="process-math">\(A\)</span> is also an element of <span class="process-math">\(B\text{.}\)</span>   For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{4,5,8\} \subset \{2, 3, 4, 5, 6, 7, 8, 9 \}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbb N} \subset {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}\text{.}
+\end{equation*}
+</div>
+<div class="para">Trivially, every set is a subset of itself.  A set <span class="process-math">\(B\)</span> is a <dfn class="terminology">proper subset</dfn> of a set <span class="process-math">\(A\)</span> if <span class="process-math">\(B \subset A\)</span> but <span class="process-math">\(B \neq A\text{.}\)</span> If <span class="process-math">\(A\)</span> is not a subset of <span class="process-math">\(B\text{,}\)</span> we write <span class="process-math">\(A \notsubset B\text{;}\)</span> for example, <span class="process-math">\(\{4, 7, 9\} \notsubset \{2, 4, 5,  8, 9 \}\text{.}\)</span>  Two sets are <dfn class="terminology">equal</dfn>, written <span class="process-math">\(A = B\text{,}\)</span> if we can show that <span class="process-math">\(A \subset B\)</span> and <span class="process-math">\(B \subset A\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-6">It is convenient to have a set with no elements in it.  This set is called the <dfn class="terminology">empty set</dfn> and is denoted by <span class="process-math">\(\emptyset\text{.}\)</span>  Note that the empty set is a subset of every set. <div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-7">
+<div class="para">To construct new sets out of old sets, we can perform certain operations: the <dfn class="terminology">union</dfn> <span class="process-math">\(A \cup B\)</span> of two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cup B = \{x : x \in A \text{ or } x \in B \}
+\end{equation*}
+</div>
+<div class="para">and the <dfn class="terminology">intersection</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span>  is defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cap B = \{x :  x \in A \text{ and } x \in B \}\text{.}
+\end{equation*}
+</div>
+<div class="para"> If <span class="process-math">\(A = \{1, 3, 5\}\)</span> and <span class="process-math">\(B = \{ 1, 2, 3, 9 \}\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \cup B = \{1, 2, 3, 5, 9 \} \quad \text{and} \quad A \cap B = \{ 1, 3 \}\text{.}
+\end{equation*}
+</div>
+<div class="para">We can consider the union and the intersection of more than two sets.  In this case we write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcup_{i = 1}^{n} A_{i} = A_{1} \cup \ldots \cup A_n
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bigcap_{i = 1}^{n} A_{i} = A_{1} \cap \ldots \cap A_n
+\end{equation*}
+</div>
+<div class="para">for the union and intersection, respectively, of the sets <span class="process-math">\(A_1, \ldots, A_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-8">When two sets have no elements in common, they are said to be <dfn class="terminology">disjoint</dfn>; for example, if <span class="process-math">\(E\)</span> is the set of even integers and <span class="process-math">\(O\)</span> is the set of odd integers, then <span class="process-math">\(E\)</span> and <span class="process-math">\(O\)</span> are disjoint.  Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are disjoint exactly when <span class="process-math">\(A \cap B = \emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-9">
+<div class="para">Sometimes we will work within one fixed set <span class="process-math">\(U\text{,}\)</span> called the <dfn class="terminology">universal set</dfn>.  For any set <span class="process-math">\(A \subset U\text{,}\)</span> we define the <dfn class="terminology">complement</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted by <span class="process-math">\(A'\text{,}\)</span> to be the set </div>
+<div class="displaymath process-math">
+\begin{equation*}
+A' = \{ x : x \in U \text{ and } x \notin A \}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-10">
+<div class="para">We define the <dfn class="terminology">difference</dfn> of two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to be </div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \setminus B = A \cap B'  = \{ x : x \in A \text{ and } x \notin B \}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-operations" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Set Operations.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-operations-2">
+<div class="para">Let <span class="process-math">\({\mathbb R}\)</span> be the universal set and suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \{ x \in {\mathbb R} : 0 \lt x \leq 3 \} \quad \text{and} \quad B = \{ x \in {\mathbb R} : 2 \leq x \lt 4 \}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" id="example-sets-operations-2-3">
+\begin{align*}
+A \cap B &amp; =  \{ x \in {\mathbb R} : 2 \leq x \leq 3 \}\\
+A \cup B &amp; =  \{ x \in {\mathbb R} : 0 \lt x \lt 4 \}\\
+A \setminus B &amp; =  \{ x \in {\mathbb R} : 0 \lt x \lt 2  \}\\
+A' &amp; =  \{ x \in {\mathbb R} : x \leq 0 \text{ or } x \gt 3 \}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-operations-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.1: Set Operations"><a href="#example-sets-operations" title="Copy heading and permalink for Example 1.2.1: Set Operations">🔗</a></div></article></details><article class="proposition theorem-like" id="section-sets-and-equivalence-relations-2-12"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-12-1-1">
+<div class="para">Let <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> be sets. Then</div>
+<ol class="decimal" id="section-sets-and-equivalence-relations-2-12-1-1-4">
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-1">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-1-1">
+<span class="process-math">\(A \cup A = A\text{,}\)</span> <span class="process-math">\(A \cap A = A\text{,}\)</span> and <span class="process-math">\(A \setminus A = \emptyset\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-2">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-2-1">
+<span class="process-math">\(A \cup \emptyset = A\)</span> and <span class="process-math">\(A \cap \emptyset = \emptyset\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-3">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-3-1">
+<span class="process-math">\(A \cup (B \cup C) = (A \cup B) \cup C\)</span> and  <span class="process-math">\(A \cap (B \cap C) = (A \cap B) \cap C\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-4">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-4-1">
+<span class="process-math">\(A \cup B = B \cup A\)</span> and <span class="process-math">\(A \cap B = B \cap A\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-4" title="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-5">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-5-1">
+<span class="process-math">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-5" title="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-12-1-1-4-6">
+<div class="para" id="section-sets-and-equivalence-relations-2-12-1-1-4-6-1">
+<span class="process-math">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#section-sets-and-equivalence-relations-2-12-1-1-4-6" title="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 1.2.2"><a href="#section-sets-and-equivalence-relations-2-12" title="Copy heading and permalink for Proposition 1.2.2">🔗</a></div></article><details id="section-sets-and-equivalence-relations-2-12-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="section-sets-and-equivalence-relations-2-12-2-1">We will prove (1) and (3) and leave the remaining results to be proven in the exercises.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-12-2-2">
+<div class="para">(1) Observe that</div>
+<div class="displaymath process-math" id="section-sets-and-equivalence-relations-2-12-2-2-1">
+\begin{align*}
+A \cup A &amp; =  \{ x :  x \in A \text{ or } x \in A \}\\
+&amp; =  \{ x : x \in A \}\\
+&amp; =  A\\
+\end{align*}
+<div class="para intertext">and</div>
+\begin{align*}
+A \cap A &amp; =  \{ x : x \in A \text{ and } x \in A \}\\
+&amp; =  \{ x : x \in A  \}\\
+&amp; =  A\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-12-2-3">Also, <span class="process-math">\(A \setminus A = A \cap A' = \emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-12-2-4">
+<div class="para">(3) For sets <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="section-sets-and-equivalence-relations-2-12-2-4-4">
+\begin{align*}
+A \cup (B \cup C) &amp; = A \cup \{ x : x \in B \text{ or } x \in C \}\\
+&amp; = \{ x : x \in A \text{ or } x \in B, \text{ or } x \in C \}\\
+&amp; = \{ x : x \in A \text{ or } x \in B \} \cup C\\
+&amp; = (A \cup B) \cup C. 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-12-2-5">A similar argument proves that  <span class="process-math">\(A \cap (B \cap C) = (A \cap B) \cap C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-12-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.2.1"><a href="#section-sets-and-equivalence-relations-2-12-2" title="Copy heading and permalink for Proof 1.2.2.1">🔗</a></div></article></details><article class="theorem theorem-like" id="section-sets-and-equivalence-relations-2-13"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="space"> </span><span class="creator">(Augustus De Morgan, 1806–1871)</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan’s Laws.</span>
+</h4>
+<div class="para logical" id="section-sets-and-equivalence-relations-2-13-4-1">
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be sets. Then</div>
+<ol class="decimal" id="section-sets-and-equivalence-relations-2-13-4-1-3">
+<li id="section-sets-and-equivalence-relations-2-13-4-1-3-1">
+<div class="para" id="section-sets-and-equivalence-relations-2-13-4-1-3-1-1">
+<span class="process-math">\((A \cup B)' = A' \cap B'\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-4-1-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#section-sets-and-equivalence-relations-2-13-4-1-3-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-2-13-4-1-3-2">
+<div class="para" id="section-sets-and-equivalence-relations-2-13-4-1-3-2-1">
+<span class="process-math">\((A \cap B)' = A' \cup B'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-4-1-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#section-sets-and-equivalence-relations-2-13-4-1-3-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.3: De Morgan’s Laws"><a href="#section-sets-and-equivalence-relations-2-13" title="Copy heading and permalink for Theorem 1.2.3: De Morgan’s Laws">🔗</a></div></article><details id="section-sets-and-equivalence-relations-2-13-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="section-sets-and-equivalence-relations-2-13-5-1">(1) We must show that <span class="process-math">\((A \cup B)' \subset A' \cap B'\)</span> and <span class="process-math">\((A \cup B)' \supset A' \cap B'\text{.}\)</span> Let <span class="process-math">\(x \in (A \cup B)'\text{.}\)</span>  Then <span class="process-math">\(x \notin A \cup B\text{.}\)</span> So <span class="process-math">\(x\)</span> is neither in <span class="process-math">\(A\)</span> nor in <span class="process-math">\(B\text{,}\)</span> by the definition of the union of sets.  By the definition of the complement, <span class="process-math">\(x \in A'\)</span> and <span class="process-math">\(x \in B'\text{.}\)</span>  Therefore, <span class="process-math">\(x \in A' \cap B'\)</span> and we have <span class="process-math">\((A \cup B)' \subset A' \cap B'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-13-5-2">To show the reverse inclusion, suppose that <span class="process-math">\(x \in A' \cap B'\text{.}\)</span>  Then <span class="process-math">\(x \in A'\)</span> and <span class="process-math">\(x \in B'\text{,}\)</span> and so <span class="process-math">\(x \notin A\)</span> and <span class="process-math">\(x \notin B\text{.}\)</span> Thus <span class="process-math">\(x \notin A \cup B\)</span> and so <span class="process-math">\(x \in (A \cup B)'\text{.}\)</span>  Hence, <span class="process-math">\((A \cup B)' \supset A' \cap B'\)</span> and so <span class="process-math">\((A \cup B)' = A' \cap B'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-2-13-5-3">The proof of (2) is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-2-13-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.3.1"><a href="#section-sets-and-equivalence-relations-2-13-5" title="Copy heading and permalink for Proof 1.2.3.1">🔗</a></div></article></details><details id="example-sets-other-relations" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Other Relations on Sets.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-other-relations-2">
+<div class="para">Other relations between sets often hold true. For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+( A \setminus B) \cap (B \setminus A) = \emptyset\text{.}
+\end{equation*}
+</div>
+<div class="para">To see that this is true, observe that</div>
+<div class="displaymath process-math" id="example-sets-other-relations-2-2">
+\begin{align*}
+( A \setminus B) \cap (B \setminus A) &amp; = ( A \cap B') \cap (B \cap A')\\
+&amp; = A \cap A' \cap B \cap B'\\
+&amp; = \emptyset\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-other-relations-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.4: Other Relations on Sets"><a href="#example-sets-other-relations" title="Copy heading and permalink for Example 1.2.4: Other Relations on Sets">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.1: Set Theory"><a href="#section-sets-and-equivalence-relations-2" title="Copy heading and permalink for Subsection 1.2.1: Set Theory">🔗</a></div></section><section class="subsection" id="section-sets-and-equivalence-relations-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Cartesian Products and Mappings</span>
+</h3>
+<div class="para logical" id="section-sets-and-equivalence-relations-3-2">
+<div class="para">Given sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> we can define a new set <span class="process-math">\(A \times B\text{,}\)</span> called the <dfn class="terminology">Cartesian product</dfn>  of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> as a set of ordered pairs.  That is, </div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \times B = \{ (a,b) : a \in A \text{ and } b \in B \}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-cartesian-products" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Cartesian Products.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-cartesian-products-2">
+<div class="para">If <span class="process-math">\(A = \{ x, y \}\text{,}\)</span> <span class="process-math">\(B = \{ 1, 2, 3 \}\text{,}\)</span> and <span class="process-math">\(C = \emptyset\text{,}\)</span> then <span class="process-math">\(A \times B\)</span> is the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A \times C = \emptyset\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-cartesian-products-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.5: Cartesian Products"><a href="#example-sets-cartesian-products" title="Copy heading and permalink for Example 1.2.5: Cartesian Products">🔗</a></div></article></details><div class="para logical" id="section-sets-and-equivalence-relations-3-4">
+<div class="para">We define the <dfn class="terminology">Cartesian product of <span class="process-math">\(n\)</span> sets</dfn> to be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(A = A_1 = A_2 = \cdots = A_n\text{,}\)</span> we often write <span class="process-math">\(A^n\)</span> for <span class="process-math">\(A \times \cdots \times A\)</span> (where <span class="process-math">\(A\)</span> would be written <span class="process-math">\(n\)</span> times).  For example, the set <span class="process-math">\({\mathbb R}^3\)</span> consists of all of 3-tuples of real numbers.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-3-5">
+<div class="para">Subsets of <span class="process-math">\(A \times B\)</span> are called <dfn class="terminology">relations</dfn>.  We will define a  <dfn class="terminology">mapping</dfn> or <dfn class="terminology">function</dfn> <span class="process-math">\(f \subset A \times B\)</span> from a set <span class="process-math">\(A\)</span> to a set <span class="process-math">\(B\)</span> to be the special type of relation where <span class="process-math">\((a, b) \in f\)</span> if for every element <span class="process-math">\(a \in A\)</span> there exists a unique element <span class="process-math">\(b \in B\text{.}\)</span> Another way of saying this is that for every element in <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(f\)</span> assigns a unique element in <span class="process-math">\(B\text{.}\)</span>  We usually write <span class="process-math">\(f:A \rightarrow B\)</span> or <span class="process-math">\(A \stackrel{f}{\rightarrow} B\text{.}\)</span>  Instead of writing down ordered pairs  <span class="process-math">\((a,b) \in A \times B\text{,}\)</span> we write <span class="process-math">\(f(a) = b\)</span> or <span class="process-math">\(f : a \mapsto b\text{.}\)</span>  The set  <span class="process-math">\(A\)</span> is called the <dfn class="terminology">domain</dfn> of <span class="process-math">\(f\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(A) = \{ f(a) : a \in A \} \subset B
+\end{equation*}
+</div>
+<div class="para">is called the <dfn class="terminology">range</dfn> or <dfn class="terminology">image</dfn> of <span class="process-math">\(f\text{.}\)</span>  We can think of the elements in the function’s domain as input values and the elements in the function’s range as output values.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figure-sets-mappings"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sets-mappings.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.6<span class="period">.</span></span><span class="space"> </span>Mappings and relations<div class="autopermalink" data-description="Figure 1.2.6"><a href="#figure-sets-mappings" title="Copy heading and permalink for Figure 1.2.6">🔗</a></div></figcaption></figure><details id="example-sets-mappings" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Mappings.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-mappings-2">Suppose <span class="process-math">\(A = \{1, 2, 3 \}\)</span> and <span class="process-math">\(B = \{a, b, c \}\text{.}\)</span>  In <a href="section-sets-and-equivalence-relations.html#figure-sets-mappings" class="xref" data-knowl="./knowl/xref/figure-sets-mappings.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.2.6">Figure 1.2.6</a> we define relations <span class="process-math">\(f\)</span> and  <span class="process-math">\(g\)</span> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span>  The relation <span class="process-math">\(f\)</span> is a mapping, but <span class="process-math">\(g\)</span> is not because <span class="process-math">\(1 \in A\)</span> is not assigned to a unique element in <span class="process-math">\(B\text{;}\)</span> that is, <span class="process-math">\(g(1) = a\)</span> and <span class="process-math">\(g(1) = b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-sets-mappings-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.7: Mappings"><a href="#example-sets-mappings" title="Copy heading and permalink for Example 1.2.7: Mappings">🔗</a></div></article></details><div class="para" id="section-sets-and-equivalence-relations-3-8">Given a function <span class="process-math">\(f : A \rightarrow B\text{,}\)</span> it is often possible to write a list describing what the function does to each specific element in the domain.  However, not all functions can be described in this manner.  For example, the function <span class="process-math">\(f: {\mathbb R} \rightarrow {\mathbb R}\)</span> that sends each real number to its cube is a mapping that must be described by writing <span class="process-math">\(f(x) = x^3\)</span> or <span class="process-math">\(f:x \mapsto x^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-3-9">Consider the relation <span class="process-math">\(f : {\mathbb Q} \rightarrow {\mathbb Z}\)</span> given by <span class="process-math">\(f(p/q) = p\text{.}\)</span>  We know that <span class="process-math">\(1/2 = 2/4\text{,}\)</span> but is <span class="process-math">\(f(1/2) = 1\)</span> or 2?  This relation cannot be a mapping because it is not well-defined.  A relation is <dfn class="terminology">well-defined</dfn> if each element in the domain is assigned to a <em class="emphasis">unique</em> element in the range.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-3-10">If <span class="process-math">\(f:A \rightarrow B\)</span> is a map and the image of <span class="process-math">\(f\)</span> is <span class="process-math">\(B\text{,}\)</span> i.e., <span class="process-math">\(f(A) = B\text{,}\)</span> then <span class="process-math">\(f\)</span> is said to be <dfn class="terminology">onto</dfn> or <dfn class="terminology">surjective</dfn>. In other words, if there exists an <span class="process-math">\(a \in A\)</span> for each <span class="process-math">\(b \in B\)</span> such that <span class="process-math">\(f(a) = b\text{,}\)</span> then <span class="process-math">\(f\)</span> is onto. A map is <dfn class="terminology">one-to-one</dfn> or <dfn class="terminology">injective</dfn> if <span class="process-math">\(a_1 \neq a_2\)</span> implies <span class="process-math">\(f(a_1) \neq f(a_2)\text{.}\)</span>  Equivalently, a function is one-to-one if <span class="process-math">\(f(a_1) = f(a_2)\)</span> implies <span class="process-math">\(a_1 = a_2\text{.}\)</span>  A map that is both one-to-one and onto is called <dfn class="terminology">bijective</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-one-to-one-onto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">One-to-One and Onto Mappings.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-one-to-one-onto-2">Let <span class="process-math">\(f:{\mathbb Z} \rightarrow {\mathbb Q}\)</span> be defined by <span class="process-math">\(f(n) = n/1\text{.}\)</span>  Then <span class="process-math">\(f\)</span> is one-to-one but not onto.  Define <span class="process-math">\(g : {\mathbb Q} \rightarrow {\mathbb Z}\)</span> by <span class="process-math">\(g(p/q) = p\)</span> where <span class="process-math">\(p/q\)</span> is a rational number expressed in its lowest terms with a positive denominator.  The function <span class="process-math">\(g\)</span> is onto but not one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-one-to-one-onto-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.8: One-to-One and Onto Mappings"><a href="#example-sets-one-to-one-onto" title="Copy heading and permalink for Example 1.2.8: One-to-One and Onto Mappings">🔗</a></div></article></details><div class="para" id="section-sets-and-equivalence-relations-3-12">Given two functions, we can construct a new function by using the range of the first function as the domain of the second function.  Let <span class="process-math">\(f : A \rightarrow B\)</span> and <span class="process-math">\(g : B \rightarrow C\)</span> be mappings.  Define a new map, the <dfn class="terminology">composition</dfn> of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> from <span class="process-math">\(A\)</span> to <span class="process-math">\(C\text{,}\)</span> by <span class="process-math">\((g \circ f)(x) = g(f(x))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figure-sets-composition"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sets-composition.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.9<span class="period">.</span></span><span class="space"> </span>Composition of maps<div class="autopermalink" data-description="Figure 1.2.9"><a href="#figure-sets-composition" title="Copy heading and permalink for Figure 1.2.9">🔗</a></div></figcaption></figure><details id="example-sets-composition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Composition of Mappings.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-composition-2">Consider the functions <span class="process-math">\(f: A \rightarrow B\)</span> and <span class="process-math">\(g: B \rightarrow C\)</span> that are defined in <a href="section-sets-and-equivalence-relations.html#figure-sets-composition" class="xref" data-knowl="./knowl/xref/figure-sets-composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.2.9">Figure 1.2.9</a> (top).  The composition of these functions, <span class="process-math">\(g \circ f: A \rightarrow C\text{,}\)</span> is defined in <a href="section-sets-and-equivalence-relations.html#figure-sets-composition" class="xref" data-knowl="./knowl/xref/figure-sets-composition.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.2.9">Figure 1.2.9</a> (bottom).<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-composition-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.10: Composition of Mappings"><a href="#example-sets-composition" title="Copy heading and permalink for Example 1.2.10: Composition of Mappings">🔗</a></div></article></details><details id="example-sets-composition-noncommute" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Composition is not Commutative.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-composition-noncommute-2">
+<div class="para">Let <span class="process-math">\(f(x) = x^2\)</span> and <span class="process-math">\(g(x) = 2x + 5\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(f \circ g)(x) = f(g(x)) = (2x + 5)^2 = 4x^2 + 20x + 25
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g \circ f)(x) = g(f(x)) = 2x^2 + 5\text{.}
+\end{equation*}
+</div>
+<div class="para">In general, order makes a difference; that is, in most cases <span class="process-math">\(f \circ g \neq g \circ f\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-composition-noncommute-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.11: Composition is not Commutative"><a href="#example-sets-composition-noncommute" title="Copy heading and permalink for Example 1.2.11: Composition is not Commutative">🔗</a></div></article></details><details id="example-sets-composition-commute" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Some Mappings Commute.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-composition-commute-2">
+<div class="para">Sometimes it is the case that <span class="process-math">\(f \circ g= g \circ f\text{.}\)</span>  Let <span class="process-math">\(f(x) = x^3\)</span> and <span class="process-math">\(g(x) = \sqrt[3]{x}\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(f \circ g )(x) = f(g(x)) = f( \sqrt[3]{x}\, ) = (\sqrt[3]{x}\, )^3 = x
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g \circ f )(x) = g(f(x)) = g( x^3) = \sqrt[3]{ x^3} = x\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-composition-commute-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.12: Some Mappings Commute"><a href="#example-sets-composition-commute" title="Copy heading and permalink for Example 1.2.12: Some Mappings Commute">🔗</a></div></article></details><details id="example-sets-linear-map" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">A Linear Map.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-linear-map-2">
+<div class="para">Given a <span class="process-math">\(2 \times 2\)</span> matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">we can define a map <span class="process-math">\(T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_A (x,y) = (ax + by, cx +dy)
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\((x,y)\)</span> in <span class="process-math">\({\mathbb R}^2\text{.}\)</span>  This is actually matrix multiplication; that is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+=
+\begin{pmatrix}
+ax + by \\
+cx +dy
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Maps from <span class="process-math">\({\mathbb R}^n\)</span> to <span class="process-math">\({\mathbb R}^m\)</span> given by matrices are called <dfn class="terminology">linear maps</dfn> or <dfn class="terminology">linear transformations</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-linear-map-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.13: A Linear Map"><a href="#example-sets-linear-map" title="Copy heading and permalink for Example 1.2.13: A Linear Map">🔗</a></div></article></details><details id="example-sets-permutation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">A Permutation.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-permutation-2">
+<div class="para">Suppose that <span class="process-math">\(S = \{ 1,2,3  \}\text{.}\)</span> Define a map <span class="process-math">\(\pi :S\rightarrow S\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pi( 1 )  = 2, \qquad \pi( 2 )  = 1, \qquad \pi( 3 )  = 3\text{.}
+\end{equation*}
+</div>
+<div class="para">This is a bijective map.  An alternative way to  write <span class="process-math">\(\pi\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+\pi(1) &amp; \pi(2) &amp; \pi(3)
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 1 &amp; 3
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">For any set <span class="process-math">\(S\text{,}\)</span> a one-to-one and onto mapping <span class="process-math">\(\pi : S \rightarrow S\)</span> is called a <dfn class="terminology">permutation</dfn> of <span class="process-math">\(S\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-permutation-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.14: A Permutation"><a href="#example-sets-permutation" title="Copy heading and permalink for Example 1.2.14: A Permutation">🔗</a></div></article></details><article class="theorem theorem-like" id="section-sets-and-equivalence-relations-3-19"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="section-sets-and-equivalence-relations-3-19-1-1">
+<div class="para">Let <span class="process-math">\(f : A \rightarrow B\text{,}\)</span> <span class="process-math">\(g : B \rightarrow C\text{,}\)</span> and <span class="process-math">\(h : C \rightarrow D\text{.}\)</span> Then</div>
+<ol class="decimal" id="section-sets-and-equivalence-relations-3-19-1-1-4">
+<li id="section-sets-and-equivalence-relations-3-19-1-1-4-1">
+<div class="para" id="section-sets-and-equivalence-relations-3-19-1-1-4-1-1">The composition of mappings is associative; that is, <span class="process-math">\((h \circ g) \circ f = h \circ (g \circ f)\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-3-19-1-1-4-2">
+<div class="para" id="section-sets-and-equivalence-relations-3-19-1-1-4-2-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both one-to-one, then the mapping <span class="process-math">\(g \circ f\)</span> is one-to-one;<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-3-19-1-1-4-3">
+<div class="para" id="section-sets-and-equivalence-relations-3-19-1-1-4-3-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both onto, then the mapping <span class="process-math">\(g \circ f\)</span> is onto;<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-3-19-1-1-4-4">
+<div class="para" id="section-sets-and-equivalence-relations-3-19-1-1-4-4-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are bijective, then so is <span class="process-math">\(g \circ f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#section-sets-and-equivalence-relations-3-19-1-1-4-4" title="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.15"><a href="#section-sets-and-equivalence-relations-3-19" title="Copy heading and permalink for Theorem 1.2.15">🔗</a></div></article><details id="section-sets-and-equivalence-relations-3-19-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="section-sets-and-equivalence-relations-3-19-2-1">We will prove (1) and (3). Part (2) is left as an exercise.  Part (4) follows directly from (2) and (3).<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-3-19-2-2">
+<div class="para">(1) We must show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h \circ (g \circ f) = (h \circ g) \circ f\text{.}
+\end{equation*}
+</div>
+<div class="para">For <span class="process-math">\(a \in A\)</span> we have</div>
+<div class="displaymath process-math" id="section-sets-and-equivalence-relations-3-19-2-2-3">
+\begin{align*}
+(h \circ (g \circ f))(a) &amp; = h((g \circ f)(a))\\
+&amp; = h(g(f(a))) \\
+&amp; = (h \circ g)(f(a))\\
+&amp; = ((h \circ g) \circ f)(a)\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-sets-and-equivalence-relations-3-19-2-3">
+<div class="para">(3) Assume that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both onto functions. Given <span class="process-math">\(c \in C\text{,}\)</span> we must show that there exists an <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\((g \circ f)(a) = g(f(a)) = c\text{.}\)</span> However, since <span class="process-math">\(g\)</span> is onto, there is an element <span class="process-math">\(b \in B\)</span> such that <span class="process-math">\(g(b) = c\text{.}\)</span> Similarly, there is an <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\(f(a) = b\text{.}\)</span> Accordingly,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g \circ f)(a) = g(f(a)) = g(b) = c\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-19-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.15.1"><a href="#section-sets-and-equivalence-relations-3-19-2" title="Copy heading and permalink for Proof 1.2.15.1">🔗</a></div></article></details><div class="para" id="section-sets-and-equivalence-relations-3-20">If <span class="process-math">\(S\)</span> is any set, we will use <span class="process-math">\(id_S\)</span> or <span class="process-math">\(id\)</span> to denote the <dfn class="terminology">identity mapping</dfn> from <span class="process-math">\(S\)</span> to itself.  Define this map by <span class="process-math">\(id(s) = s\)</span> for all <span class="process-math">\(s \in S\text{.}\)</span>  A map <span class="process-math">\(g: B \rightarrow A\)</span> is an <dfn class="terminology">inverse mapping</dfn> of <span class="process-math">\(f: A \rightarrow B\)</span> if <span class="process-math">\(g \circ f = id_A\)</span> and <span class="process-math">\(f \circ g = id_B\text{;}\)</span> in other words, the inverse function of a function simply “undoes” the function.   A map is said to be <dfn class="terminology">invertible</dfn> if it has an inverse.  We usually write <span class="process-math">\(f^{-1}\)</span> for the inverse of <span class="process-math">\(f\text{.}\)</span> <div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-20" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-inverse-function" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">An Inverse Function.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-inverse-function-2">The function <span class="process-math">\(f(x) = x^3\)</span> has inverse <span class="process-math">\(f^{-1}(x) = \sqrt[3]{x}\)</span> by <a href="section-sets-and-equivalence-relations.html#example-sets-composition-commute" class="xref" data-knowl="./knowl/xref/example-sets-composition-commute.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.12: Some Mappings Commute">Example 1.2.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-inverse-function-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.16: An Inverse Function"><a href="#example-sets-inverse-function" title="Copy heading and permalink for Example 1.2.16: An Inverse Function">🔗</a></div></article></details><details id="example-sets-exponential" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential and Logarithmic Functions are Inverses.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-exponential-2">
+<div class="para">The natural logarithm and the exponential functions, <span class="process-math">\(f(x) = \ln x\)</span> and <span class="process-math">\(f^{-1}(x) = e^x\text{,}\)</span> are inverses of each other provided that we are careful about choosing domains.  Observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(f^{-1}(x)) = f(e^x) = \ln e^x = x
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(f(x)) = f^{-1}(\ln x) = e^{\ln x} = x
+\end{equation*}
+</div>
+<div class="para">whenever composition makes sense.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-exponential-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.17: Exponential and Logarithmic Functions are Inverses"><a href="#example-sets-exponential" title="Copy heading and permalink for Example 1.2.17: Exponential and Logarithmic Functions are Inverses">🔗</a></div></article></details><details id="example-sets-inverse-matrix" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">A Matrix Inverse Yields an Inverse of a Linear Map.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-inverse-matrix-2">
+<div class="para">Suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+3 &amp; 1 \\
+5 &amp; 2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(A\)</span> defines a map from <span class="process-math">\({\mathbb R}^2\)</span> to <span class="process-math">\({\mathbb R}^2\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_A (x,y) = (3x +  y, 5x + 2y)\text{.}
+\end{equation*}
+</div>
+<div class="para">We can find an inverse map of <span class="process-math">\(T_A\)</span> by simply inverting the matrix <span class="process-math">\(A\text{;}\)</span> that is, <span class="process-math">\(T_A^{-1} = T_{A^{-1}}\text{.}\)</span> In this example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1} =
+\begin{pmatrix}
+2  &amp; -1 \\
+-5 &amp;  3
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">and hence, the inverse map is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_A^{-1} (x,y) = (2x -  y, -5x + 3y)\text{.}
+\end{equation*}
+</div>
+<div class="para">It is easy to check that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T^{-1}_A \circ T_A (x,y) = T_A \circ T_A^{-1} (x,y) = (x,y)\text{.}
+\end{equation*}
+</div>
+<div class="para">Not every map has an inverse.  If we consider the map</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_B (x,y) = (3x , 0 )
+\end{equation*}
+</div>
+<div class="para">given by the matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B =
+\begin{pmatrix}
+3 &amp; 0 \\
+0 &amp; 0
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">then an inverse map would have to be of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_B^{-1} (x,y) = (ax + by, cx +dy)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x,y) = T \circ T_B^{-1} (x,y) = (3ax + 3by, 0)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>  Clearly this is  impossible because <span class="process-math">\(y\)</span> might not be 0.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-inverse-matrix-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.18: A Matrix Inverse Yields an Inverse of a Linear Map"><a href="#example-sets-inverse-matrix" title="Copy heading and permalink for Example 1.2.18: A Matrix Inverse Yields an Inverse of a Linear Map">🔗</a></div></article></details><details id="example-sets-inverse-permutation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.19</span><span class="period">.</span><span class="space"> </span><span class="title">An Inverse Permutation.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-inverse-permutation-2">
+<div class="para">Given the permutation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pi =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 3 &amp; 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(S = \{ 1,2,3 \}\text{,}\)</span> it is easy to see that the permutation defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pi^{-1} =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+3 &amp; 1 &amp; 2
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">is the inverse of <span class="process-math">\(\pi\text{.}\)</span>  In fact, any bijective mapping possesses an inverse, as we will see in the next theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-inverse-permutation-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.19: An Inverse Permutation"><a href="#example-sets-inverse-permutation" title="Copy heading and permalink for Example 1.2.19: An Inverse Permutation">🔗</a></div></article></details><article class="theorem theorem-like" id="section-sets-and-equivalence-relations-3-25"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.20</span><span class="period">.</span>
+</h4>
+<div class="para" id="section-sets-and-equivalence-relations-3-25-1-1">A mapping is invertible if and only if it is both one-to-one and onto.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-25-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.20"><a href="#section-sets-and-equivalence-relations-3-25" title="Copy heading and permalink for Theorem 1.2.20">🔗</a></div></article><details id="section-sets-and-equivalence-relations-3-25-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="section-sets-and-equivalence-relations-3-25-2-1">Suppose first that <span class="process-math">\(f:A \rightarrow B\)</span> is invertible with inverse <span class="process-math">\(g: B \rightarrow A\text{.}\)</span> Then <span class="process-math">\(g \circ f = id_A\)</span> is the identity map; that is, <span class="process-math">\(g(f(a)) = a\text{.}\)</span> If <span class="process-math">\(a_1, a_2 \in A\)</span> with <span class="process-math">\(f(a_1) = f(a_2)\text{,}\)</span> then <span class="process-math">\(a_1 = g(f(a_1)) = g(f(a_2)) = a_2\text{.}\)</span>  Consequently, <span class="process-math">\(f\)</span> is one-to-one.  Now suppose that <span class="process-math">\(b \in B\text{.}\)</span> To show that <span class="process-math">\(f\)</span> is onto, it is necessary to find an <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\(f(a) = b\text{,}\)</span> but <span class="process-math">\(f(g(b)) = b\)</span> with <span class="process-math">\(g(b) \in A\text{.}\)</span> Let <span class="process-math">\(a = g(b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-25-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-3-25-2-2">Conversely, let <span class="process-math">\(f\)</span> be bijective and let <span class="process-math">\(b \in B\text{.}\)</span>  Since <span class="process-math">\(f\)</span> is onto, there exists an <span class="process-math">\(a \in A\)</span> such that <span class="process-math">\(f(a) = b\text{.}\)</span>  Because <span class="process-math">\(f\)</span> is one-to-one, <span class="process-math">\(a\)</span> must be unique. Define <span class="process-math">\(g\)</span> by letting <span class="process-math">\(g(b) = a\text{.}\)</span>  We have now constructed the inverse of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-3-25-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.20.1"><a href="#section-sets-and-equivalence-relations-3-25-2" title="Copy heading and permalink for Proof 1.2.20.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.2: Cartesian Products and Mappings"><a href="#section-sets-and-equivalence-relations-3" title="Copy heading and permalink for Subsection 1.2.2: Cartesian Products and Mappings">🔗</a></div></section><section class="subsection" id="section-sets-and-equivalence-relations-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="space"> </span><span class="title">Equivalence Relations and Partitions</span>
+</h3>
+<div class="para logical" id="section-sets-and-equivalence-relations-4-2">
+<div class="para">A fundamental notion in mathematics is that of equality.  We can generalize equality with equivalence relations and equivalence classes.  An <dfn class="terminology">equivalence relation</dfn> on a set <span class="process-math">\(X\)</span> is a relation <span class="process-math">\(R \subset X \times X\)</span> such that</div>
+<ul class="disc" id="section-sets-and-equivalence-relations-4-2-5">
+<li id="section-sets-and-equivalence-relations-4-2-5-1">
+<div class="para" id="section-sets-and-equivalence-relations-4-2-5-1-1">
+<span class="process-math">\((x, x) \in R\)</span> for all <span class="process-math">\(x \in X\)</span> (<dfn class="terminology">reflexive property</dfn>);<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-2-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-sets-and-equivalence-relations-4-2-5-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-4-2-5-2">
+<div class="para" id="section-sets-and-equivalence-relations-4-2-5-2-1">
+<span class="process-math">\((x, y) \in R\)</span> implies <span class="process-math">\((y, x) \in R\)</span> (<dfn class="terminology">symmetric property</dfn>);<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-2-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-sets-and-equivalence-relations-4-2-5-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-sets-and-equivalence-relations-4-2-5-3">
+<div class="para" id="section-sets-and-equivalence-relations-4-2-5-3-1">
+<span class="process-math">\((x, y)\)</span> and <span class="process-math">\((y, z) \in R\)</span> imply <span class="process-math">\((x, z) \in R\)</span> (<dfn class="terminology">transitive property</dfn>).<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-2-5-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-sets-and-equivalence-relations-4-2-5-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-4-3">Given an equivalence relation <span class="process-math">\(R\)</span>  on a set <span class="process-math">\(X\text{,}\)</span> we usually write  <span class="process-math">\(x \sim y\)</span> instead of <span class="process-math">\((x, y) \in R\text{.}\)</span> If the equivalence relation already has an associated notation such as <span class="process-math">\(=\text{,}\)</span> <span class="process-math">\(\equiv\text{,}\)</span> or <span class="process-math">\(\cong\text{,}\)</span> we will use that notation.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-equivalent-fractions" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Fractions.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-equivalent-fractions-2">
+<div class="para">Let <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> <span class="process-math">\(r\text{,}\)</span> and <span class="process-math">\(s\)</span> be integers, where <span class="process-math">\(q\)</span> and <span class="process-math">\(s\)</span> are nonzero.  Define <span class="process-math">\(p/q \sim r/s\)</span> if <span class="process-math">\(ps = qr\text{.}\)</span>  Clearly <span class="process-math">\(\sim\)</span> is reflexive and symmetric.  To show that it is also transitive, suppose that <span class="process-math">\(p/q \sim r/s\)</span> and <span class="process-math">\(r/s \sim t/u\text{,}\)</span> with <span class="process-math">\(q\text{,}\)</span> <span class="process-math">\(s\text{,}\)</span> and <span class="process-math">\(u\)</span> all nonzero.  Then <span class="process-math">\(ps = qr\)</span> and <span class="process-math">\(ru = st\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+psu = qru = qst\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(s \neq 0\text{,}\)</span> <span class="process-math">\(pu = qt\text{.}\)</span> Consequently, <span class="process-math">\(p/q \sim t/u\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-equivalent-fractions-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.21: Equivalent Fractions"><a href="#example-sets-equivalent-fractions" title="Copy heading and permalink for Example 1.2.21: Equivalent Fractions">🔗</a></div></article></details><details id="example-sets-equivalent-derivative" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.22</span><span class="period">.</span><span class="space"> </span><span class="title">An Equivalence Relation From Derivatives.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-equivalent-derivative-2">
+<div class="para">Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable functions on <span class="process-math">\({\mathbb R}\text{.}\)</span>  We can define an equivalence relation on such functions by letting <span class="process-math">\(f(x) \sim g(x)\)</span> if <span class="process-math">\(f'(x) = g'(x)\text{.}\)</span> It is clear that <span class="process-math">\(\sim\)</span> is both reflexive and symmetric.  To demonstrate transitivity, suppose that <span class="process-math">\(f(x) \sim g(x)\)</span> and  <span class="process-math">\(g(x) \sim h(x)\text{.}\)</span>  From calculus we know that <span class="process-math">\(f(x) - g(x) = c_1\)</span> and <span class="process-math">\(g(x)- h(x) = c_2\text{,}\)</span> where <span class="process-math">\(c_1\)</span> and <span class="process-math">\(c_2\)</span> are both constants. Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) - h(x) = ( f(x) - g(x)) + ( g(x)- h(x))  = c_1 - c_2
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(f'(x) - h'(x) = 0\text{.}\)</span> Therefore, <span class="process-math">\(f(x) \sim h(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-equivalent-derivative-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.22: An Equivalence Relation From Derivatives"><a href="#example-sets-equivalent-derivative" title="Copy heading and permalink for Example 1.2.22: An Equivalence Relation From Derivatives">🔗</a></div></article></details><details id="example-sets-equivalent-circles" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.23</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Circles.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-equivalent-circles-2">For <span class="process-math">\((x_1, y_1 )\)</span> and <span class="process-math">\((x_2, y_2)\)</span> in <span class="process-math">\({\mathbb R}^2\text{,}\)</span> define <span class="process-math">\((x_1, y_1 ) \sim (x_2, y_2)\)</span> if <span class="process-math">\(x_1^2 + y_1^2 = x_2^2 + y_2^2\text{.}\)</span>  Then <span class="process-math">\(\sim\)</span> is an equivalence relation on <span class="process-math">\({\mathbb R}^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-sets-equivalent-circles-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.23: Equivalent Circles"><a href="#example-sets-equivalent-circles" title="Copy heading and permalink for Example 1.2.23: Equivalent Circles">🔗</a></div></article></details><details id="example-sets-equivalent-matrices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.24</span><span class="period">.</span><span class="space"> </span><span class="title">Equivalent Matrices.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-equivalent-matrices-2">
+<div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(2 \times 2\)</span> matrices with entries in the real numbers. We can define an equivalence relation on the set of <span class="process-math">\(2 \times 2\)</span> matrices, by saying <span class="process-math">\(A \sim B\)</span> if there exists an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(PAP^{-1} = B\text{.}\)</span>  For example, if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+1 &amp; 2 \\
+-1 &amp; 1
+\end{pmatrix}
+\quad \text{and} \quad
+B =
+\begin{pmatrix}
+-18 &amp; 33 \\
+-11 &amp; 20
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(A \sim B\)</span> since <span class="process-math">\(PAP^{-1} = B\)</span> for</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P =
+\begin{pmatrix}
+2 &amp; 5 \\
+1 &amp; 3
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(I\)</span> be the <span class="process-math">\(2 \times 2\)</span> identity matrix; that is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I =
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(IAI^{-1} = IAI = A\text{;}\)</span> therefore, the relation is reflexive.  To show symmetry, suppose that <span class="process-math">\(A \sim B\text{.}\)</span>  Then there exists an invertible matrix <span class="process-math">\(P\)</span> such that <span class="process-math">\(PAP^{-1} = B\text{.}\)</span>  So</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = P^{-1} B P = P^{-1} B (P^{-1})^{-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Finally, suppose that <span class="process-math">\(A \sim B\)</span> and <span class="process-math">\(B \sim C\text{.}\)</span>  Then there exist invertible matrices <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> such that <span class="process-math">\(PAP^{-1} = B\)</span> and  <span class="process-math">\(QBQ^{-1} = C\text{.}\)</span>  Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = QBQ^{-1} = QPAP^{-1} Q^{-1} = (QP)A(QP)^{-1}\text{,}
+\end{equation*}
+</div>
+<div class="para">the relation is transitive.  Two matrices that are equivalent in this manner are said to be <dfn class="terminology">similar</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-equivalent-matrices-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.24: Equivalent Matrices"><a href="#example-sets-equivalent-matrices" title="Copy heading and permalink for Example 1.2.24: Equivalent Matrices">🔗</a></div></article></details><div class="para" id="section-sets-and-equivalence-relations-4-8">A <dfn class="terminology">partition</dfn> <span class="process-math">\({\mathcal P}\)</span> of a set <span class="process-math">\(X\)</span> is a collection of nonempty sets <span class="process-math">\(X_1, X_2, \ldots\)</span> such that <span class="process-math">\(X_i \cap X_j = \emptyset\)</span> for <span class="process-math">\(i  \neq j\)</span> and <span class="process-math">\(\bigcup_k X_k = X\text{.}\)</span> Let <span class="process-math">\(\sim\)</span> be an equivalence relation on a set <span class="process-math">\(X\)</span> and let <span class="process-math">\(x \in X\text{.}\)</span>  Then <span class="process-math">\([x] = \{ y \in X : y \sim x \}\)</span> is called the <dfn class="terminology">equivalence class</dfn> of <span class="process-math">\(x\text{.}\)</span>  We will see that an equivalence relation gives rise to a partition via equivalence classes.  Also, whenever a partition of a set exists, there is some natural  underlying equivalence relation, as the following theorem demonstrates.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="section-sets-and-equivalence-relations-4-9"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.25</span><span class="period">.</span>
+</h4>
+<div class="para" id="section-sets-and-equivalence-relations-4-9-1-1">Given an equivalence relation <span class="process-math">\(\sim\)</span> on a set <span class="process-math">\(X\text{,}\)</span> the equivalence classes of <span class="process-math">\(X\)</span> form a partition of <span class="process-math">\(X\text{.}\)</span>  Conversely, if <span class="process-math">\({\mathcal P} = \{ X_i\}\)</span> is a partition of a set <span class="process-math">\(X\text{,}\)</span> then there is an equivalence relation on <span class="process-math">\(X\)</span> with equivalence classes <span class="process-math">\(X_i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-9-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.25"><a href="#section-sets-and-equivalence-relations-4-9" title="Copy heading and permalink for Theorem 1.2.25">🔗</a></div></article><details id="section-sets-and-equivalence-relations-4-9-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="section-sets-and-equivalence-relations-4-9-2-1">Suppose there exists an equivalence relation <span class="process-math">\(\sim\)</span> on the set <span class="process-math">\(X\text{.}\)</span>  For any <span class="process-math">\(x \in X\text{,}\)</span> the reflexive property shows that <span class="process-math">\(x \in [x]\)</span> and so <span class="process-math">\([x]\)</span> is nonempty.  Clearly <span class="process-math">\(X = \bigcup_{x \in X} [x]\text{.}\)</span>  Now let <span class="process-math">\(x, y \in X\text{.}\)</span> We need to show that either <span class="process-math">\([x] = [y]\)</span> or <span class="process-math">\([x] \cap [y] = \emptyset\text{.}\)</span>  Suppose that the intersection of <span class="process-math">\([x]\)</span> and <span class="process-math">\([y]\)</span> is not empty and that <span class="process-math">\(z \in [x] \cap [y]\text{.}\)</span> Then <span class="process-math">\(z \sim x\)</span> and <span class="process-math">\(z \sim y\text{.}\)</span>  By symmetry and transitivity <span class="process-math">\(x \sim y\text{;}\)</span> hence, <span class="process-math">\([x] \subset [y]\text{.}\)</span>  Similarly, <span class="process-math">\([y] \subset [x]\)</span> and so <span class="process-math">\([x] = [y]\text{.}\)</span>  Therefore, any two equivalence classes are either disjoint or exactly the same.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-9-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-sets-and-equivalence-relations-4-9-2-2">Conversely, suppose that <span class="process-math">\({\mathcal P} = \{X_i\}\)</span> is a partition of a set <span class="process-math">\(X\text{.}\)</span>  Let two elements be equivalent if they are in the same partition.  Clearly, the relation is reflexive.  If <span class="process-math">\(x\)</span> is in the same partition as <span class="process-math">\(y\text{,}\)</span> then <span class="process-math">\(y\)</span> is in the same partition as <span class="process-math">\(x\text{,}\)</span> so <span class="process-math">\(x \sim y\)</span> implies <span class="process-math">\(y \sim x\text{.}\)</span>  Finally, if <span class="process-math">\(x\)</span> is in the same partition as <span class="process-math">\(y\)</span> and <span class="process-math">\(y\)</span> is in the same partition as <span class="process-math">\(z\text{,}\)</span> then <span class="process-math">\(x\)</span> must be in the same partition as <span class="process-math">\(z\text{,}\)</span> and transitivity holds.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-9-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.25.1"><a href="#section-sets-and-equivalence-relations-4-9-2" title="Copy heading and permalink for Proof 1.2.25.1">🔗</a></div></article></details><article class="corollary theorem-like" id="section-sets-and-equivalence-relations-4-10"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.26</span><span class="period">.</span>
+</h4>
+<div class="para" id="section-sets-and-equivalence-relations-4-10-1-1">Two equivalence classes of an equivalence relation are either disjoint or equal.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-10-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.2.26"><a href="#section-sets-and-equivalence-relations-4-10" title="Copy heading and permalink for Corollary 1.2.26">🔗</a></div></article><div class="para" id="section-sets-and-equivalence-relations-4-11">Let us examine some of the partitions given by the equivalence classes in the last set of examples.<div class="autopermalink" data-description="Paragraph"><a href="#section-sets-and-equivalence-relations-4-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-sets-fraction-partition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.27</span><span class="period">.</span><span class="space"> </span><span class="title">A Partition of Fractions.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-fraction-partition-2">In the equivalence relation in <a href="section-sets-and-equivalence-relations.html#example-sets-equivalent-fractions" class="xref" data-knowl="./knowl/xref/example-sets-equivalent-fractions.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.21: Equivalent Fractions">Example 1.2.21</a>, two pairs of integers, <span class="process-math">\((p,q)\)</span> and <span class="process-math">\((r,s)\text{,}\)</span> are in the same equivalence class when they reduce to the same fraction in its lowest terms.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-fraction-partition-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.27: A Partition of Fractions"><a href="#example-sets-fraction-partition" title="Copy heading and permalink for Example 1.2.27: A Partition of Fractions">🔗</a></div></article></details><details id="example-sets-matrix-partition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.28</span><span class="period">.</span><span class="space"> </span><span class="title">A Partition of Functions.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-matrix-partition-2">In the equivalence relation in <a href="section-sets-and-equivalence-relations.html#example-sets-equivalent-derivative" class="xref" data-knowl="./knowl/xref/example-sets-equivalent-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.2.22: An Equivalence Relation From Derivatives">Example 1.2.22</a>, two functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are in the same partition when they differ by a constant.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-matrix-partition-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.28: A Partition of Functions"><a href="#example-sets-matrix-partition" title="Copy heading and permalink for Example 1.2.28: A Partition of Functions">🔗</a></div></article></details><details id="example-sets-circle-partition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.29</span><span class="period">.</span><span class="space"> </span><span class="title">A Partition of Circles.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-sets-circle-partition-2">We defined an equivalence class on <span class="process-math">\({\mathbb R}^2\)</span> by <span class="process-math">\((x_1, y_1 ) \sim (x_2, y_2)\)</span> if <span class="process-math">\(x_1^2 + y_1^2 = x_2^2 + y_2^2\text{.}\)</span>  Two pairs of real numbers are in the same partition when they lie on the same circle about the origin.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-circle-partition-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.29: A Partition of Circles"><a href="#example-sets-circle-partition" title="Copy heading and permalink for Example 1.2.29: A Partition of Circles">🔗</a></div></article></details><details id="example-sets-congruent-integers" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.30</span><span class="period">.</span><span class="space"> </span><span class="title">A Partition of Integers.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-sets-congruent-integers-2">
+<div class="para">Let <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> be two integers and suppose that <span class="process-math">\(n \in {\mathbb N}\text{.}\)</span>  We say that <span class="process-math">\(r\)</span> is <dfn class="terminology">congruent</dfn> to <span class="process-math">\(s\)</span> <dfn class="terminology">modulo</dfn> <span class="process-math">\(n\text{,}\)</span> or <span class="process-math">\(r\)</span> is congruent to <span class="process-math">\(s\)</span> mod <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(r - s\)</span> is evenly divisible by <span class="process-math">\(n\text{;}\)</span> that is, <span class="process-math">\(r - s = nk\)</span>  for some <span class="process-math">\(k \in {\mathbb Z}\text{.}\)</span>  In this case we write <span class="process-math">\(r \equiv s \pmod{n}\text{.}\)</span>    For example, <span class="process-math">\(41 \equiv 17 \pmod{ 8}\)</span> since <span class="process-math">\(41 - 17=24\)</span> is divisible by 8.  We claim that congruence modulo <span class="process-math">\(n\)</span> forms an equivalence relation of <span class="process-math">\({\mathbb Z}\text{.}\)</span>  Certainly any integer <span class="process-math">\(r\)</span> is equivalent to itself since <span class="process-math">\(r - r = 0\)</span> is divisible by <span class="process-math">\(n\text{.}\)</span>  We will now show that the relation is symmetric.  If <span class="process-math">\(r \equiv s \pmod{ n}\text{,}\)</span> then <span class="process-math">\(r - s = -(s -r)\)</span> is divisible by <span class="process-math">\(n\text{.}\)</span> So <span class="process-math">\(s - r\)</span> is divisible by <span class="process-math">\(n\)</span> and <span class="process-math">\(s \equiv r \pmod{ n}\text{.}\)</span>  Now suppose that <span class="process-math">\(r \equiv s \pmod{ n}\)</span> and <span class="process-math">\(s \equiv t \pmod{ n}\text{.}\)</span>  Then there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(l\)</span> such that <span class="process-math">\(r -s = kn\)</span> and <span class="process-math">\(s - t = ln\text{.}\)</span>  To show transitivity, it is necessary to prove that <span class="process-math">\(r - t\)</span> is divisible by <span class="process-math">\(n\text{.}\)</span>  However,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r - t = r - s + s - t = kn + ln = (k + l)n\text{,}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(r - t\)</span> is divisible by <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-congruent-integers-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-sets-congruent-integers-3">
+<div class="para">If we consider the equivalence relation established by the integers modulo 3, then</div>
+<div class="displaymath process-math" id="example-sets-congruent-integers-3-1">
+\begin{align*}
+{[0]} &amp; = \{ \ldots, -3, 0, 3, 6, \ldots \}\\
+{[1]} &amp; = \{ \ldots, -2, 1, 4, 7, \ldots \}\\
+{[2]} &amp; = \{ \ldots, -1, 2, 5, 8, \ldots \}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-congruent-integers-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-sets-congruent-integers-4">Notice that <span class="process-math">\([0] \cup [1] \cup [2] = {\mathbb Z}\)</span> and also that the sets are disjoint.  The sets <span class="process-math">\([0]\text{,}\)</span> <span class="process-math">\([1]\text{,}\)</span> and <span class="process-math">\([2]\)</span> form a partition of the integers.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-congruent-integers-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-sets-congruent-integers-5">The integers modulo <span class="process-math">\(n\)</span> are a very important example in the study of abstract algebra and will become quite useful in our investigation of various algebraic structures such as groups and rings.  In our discussion of the integers modulo <span class="process-math">\(n\)</span> we have actually assumed a result known as the division algorithm, which will be stated and proved in <a href="integers.html" class="internal" title="Chapter 2: The Integers">Chapter 2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#example-sets-congruent-integers-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.30: A Partition of Integers"><a href="#example-sets-congruent-integers" title="Copy heading and permalink for Example 1.2.30: A Partition of Integers">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 1.2.3: Equivalence Relations and Partitions"><a href="#section-sets-and-equivalence-relations-4" title="Copy heading and permalink for Subsection 1.2.3: Equivalence Relations and Partitions">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Sets and Equivalence Relations"><a href="#section-sets-and-equivalence-relations" title="Copy heading and permalink for Section 1.2: Sets and Equivalence Relations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section-note-on-proofs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sets-sage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=9664088;
+var sc_invisible=1;
+var sc_security="6e60c510";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-48811660-1');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>

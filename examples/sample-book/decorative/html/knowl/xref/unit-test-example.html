@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Coding Exercise, with Unit Tests.</span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for exercise</summary><article class="view-source-view__content"><pre><code class="language-xml">        &lt;exercise xml:id="unit-test-example" label="coding-exercise-python-unit-test" include-source="yes" xml:base="rune-examples/activecode-unittest.xml"&gt;
+  &lt;title&gt;Coding Exercise, with Unit Tests&lt;/title&gt;
+
+  &lt;statement&gt;
+      &lt;p&gt;Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]&lt;/p&gt;
+  &lt;/statement&gt;
+  &lt;program interactive="activecode" language="python"&gt;
+      &lt;code&gt;
+      def add(a,b):
+          return 4
+      &lt;/code&gt;
+      &lt;tests&gt;
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+         def testOne(self):
+             self.assertEqual(add(2,2), 4, "Adding two identical integers")
+             self.assertEqual(add(7,13), 20, "Adding two different integers")
+             self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, "Adding two decimal numbers")
+
+      myTests().main()
+      &lt;/tests&gt;
+  &lt;/program&gt;
+  &lt;answer&gt;
+      &lt;p&gt;We're not really sure.  But it would begin as follows:&lt;/p&gt;
+      &lt;program language="c"&gt;
+          &lt;code&gt;
+          #include &amp;lt;stdio.h&amp;gt;
+
+          int main(void)
+          &lt;/code&gt;
+      &lt;/program&gt;
+  &lt;/answer&gt;
+&lt;/exercise&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-coding-exercise-python-unit-test">
+<div class="ac_question exercise-statement" id="rs-coding-exercise-python-unit-test_question"><div class="para" id="coding-exercise-python-unit-test-2-1">Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]<div class="autopermalink" data-description="Paragraph"><a href="#coding-exercise-python-unit-test-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<textarea data-lang="python" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-coding-exercise-python-unit-test_editor" data-question_label="" data-codelens="true" data-timelimit="25000">def add(a,b):
+    return 4
+====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+       self.assertEqual(add(2,2), 4, "Adding two identical integers")
+       self.assertEqual(add(7,13), 20, "Adding two different integers")
+       self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, "Adding two decimal numbers")
+
+myTests().main()
+</textarea>
+</div></div></div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para">We’re not really sure.  But it would begin as follows:<div class="autopermalink" data-description="Paragraph"><a href="#coding-exercise-python-unit-test-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program"><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+</code></pre></div>
+<div class="autopermalink" data-description="Answer 5.4.4.1"><a href="#coding-exercise-python-unit-test-4" title="Copy heading and permalink for Answer 5.4.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 5.4.4: Coding Exercise, with Unit Tests"><a href="#coding-exercise-python-unit-test" title="Copy heading and permalink for Checkpoint 5.4.4: Coding Exercise, with Unit Tests">🔗</a></div></article><span class="incontext"><a class="internal" href="coding-exercises.html#coding-exercise-python-unit-test">in-context</a></span>
+</body>
+</html>

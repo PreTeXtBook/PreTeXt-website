@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PTXSC Environments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://pretextbook.org/examples/pretext-showcase/html/external/ptx-logo.png">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="pretext-SC" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://pretextbook.org"><img src="external/ptx-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="pretext-showcase.html"><span class="title">PreTeXt Showcase</span></a></h1>
+<p class="byline">Many Contributors</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="pretext-showcase-9-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="mathematics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pretext-showcase.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="latex-image.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\order}[1]{\left\lvert#1\right\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter.html#frontmatter-3" class="internal"><span class="title">Abstract</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mathematics.html" class="internal"><span class="codenumber">1</span> <span class="title">Mathematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="mathematics.html#subsection-the-quadratic-formula" class="internal"><span class="codenumber">1.1</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="mathematics.html#mathematics-3" class="internal"><span class="codenumber">1.2</span> <span class="title">Some Amusing Identities</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="environments.html" class="internal"><span class="codenumber">2</span> <span class="title">Environments</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environments.html#environments-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Traditional Structure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environments.html#subsec-the-rest" class="internal"><span class="codenumber">2.2</span> <span class="title">Inquiry Based Structure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="latex-image.html" class="internal"><span class="codenumber">3</span> <span class="title">Images and Diagrams</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="latex-image.html#latex-image-2" class="internal"><span class="codenumber">3.1</span> <span class="title">Images and Diagrams from <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> Code</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="latex-image.html#latex-image-3" class="internal"><span class="codenumber">3.2</span> <span class="title">Images and Diagrams from Asymptote</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises.html" class="internal"><span class="codenumber">4</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="exercises.html#exercises-10" class="internal"><span class="codenumber">4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises.html#exercises-11" class="internal"><span class="codenumber">4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="worksheets.html" class="internal"><span class="codenumber">5</span> <span class="title">Worksheets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheets.html#worksheets-2" class="internal"><span class="codenumber">5.1</span> <span class="title">A Geometric Prelude</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="webwork.html" class="internal"><span class="codenumber">6</span> <span class="title">WeBWorK</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="pretext-showcase-9.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="pretext-showcase-9-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="pretext-showcase-9-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="environments"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Environments</span>
+</h2>
+<p class="byline">Oscar Levin</p>
+<article class="objectives goal-like" id="environments-3"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc" id="environments-3-1">
+<li id="environments-3-1-1">
+<div class="para" id="environments-3-1-1-1">Demonstrate block environments.<div class="autopermalink" data-description="Paragraph"><a href="#environments-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#environments-3-1-1" title="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="environments-3-1-2">
+<div class="para" id="environments-3-1-2-1">Illustrate styling.<div class="autopermalink" data-description="Paragraph"><a href="#environments-3-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#environments-3-1-2" title="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 2"><a href="#environments-3" title="Copy heading and permalink for Objectives 2">🔗</a></div></article><section class="introduction" id="environments-4"><div class="para" id="environments-4-1">This section will demonstrate some of the “environments” available in PreTeXt.  In addition to cataloging the options an author has to break up content, this will be a nice place to play with various styles that are under development.<div class="autopermalink" data-description="Paragraph"><a href="#environments-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="environments-4-2">Maybe a better way to describe what this section will do is by specifying our objectives.  Luckily there is an environment for that.<div class="autopermalink" data-description="Paragraph"><a href="#environments-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="environments-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Traditional Structure</span>
+</h3>
+<div class="para" id="environments-5-2">Many mathematics papers and textbook chapters are organized in the traditional definition-lemma-proof-theorem-proof format.  Depending on how friendly the paper is, or who the intended audience is, there might be quite a bit of exposition surrounding these elements.  This subsection is intended to be an illustration of this structure.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="environments-5-3">We begin with some basic definitions.  Depending on the narrative style of your text, you might want to define terms in the middle of paragraphs.  We might call this an  <dfn class="terminology">inline definition</dfn>, which can be accomplished using the <code class="code-inline tex2jax_ignore">&lt;term&gt;</code> tag.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="environments-5-4">More formal texts will likely want numbered definitions.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-numbered-definition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="def-numbered-definition-1-1">A <dfn class="terminology">numbered definition</dfn> is a definition that gets a number.  Note that we should still put the term being defined in <code class="code-inline tex2jax_ignore">&lt;term&gt;</code> tags.<div class="autopermalink" data-description="Paragraph"><a href="#def-numbered-definition-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1"><a href="#def-numbered-definition" title="Copy heading and permalink for Definition 2.1">🔗</a></div></article><div class="para" id="environments-5-6">One advantage to having numbered definitions (see <a href="environments.html#def-numbered-definition" class="xref" data-knowl="./knowl/xref/def-numbered-definition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1">Definition 2.1</a>) is that you can refer to them, just like we just did.  We can also refer to titled definitions (see <a href="environments.html#def-titled-definition" class="xref" data-knowl="./knowl/xref/def-titled-definition.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2: Titled definitions">Definition 2.2</a>).<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-titled-definition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Titled definitions.</span>
+</h4>
+<div class="para" id="def-titled-definition-2-1">When a definition is a numbered definition that also gets a title, we call it a <dfn class="terminology">titled definition</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#def-titled-definition-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.2: Titled definitions"><a href="#def-titled-definition" title="Copy heading and permalink for Definition 2.2: Titled definitions">🔗</a></div></article><div class="para" id="environments-5-8">At this point it might be useful to give a few examples of the terms defined by your definitions.  Of course here the definitions are examples of definitions, so instead will illustrate our point with an example of an example.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="environments-5-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="environments-5-9-1">This example is an example of an example that stands alone.  It does not have a question in it, so it does not need a solution.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-9-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="environments-5-9-2">
+<div class="para">Of course examples can consist of more than one paragraph, as this is also an example of.  In fact, we could put an ordered list of things that could go in an example:</div>
+<ol class="decimal" id="environments-5-9-2-1">
+<li id="environments-5-9-2-1-1">
+<div class="para" id="environments-5-9-2-1-1-1">There could just be a paragraph or two.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-9-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#environments-5-9-2-1-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="environments-5-9-2-1-2">
+<div class="para" id="environments-5-9-2-1-2-1">There could be a list of examples.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-9-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#environments-5-9-2-1-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="environments-5-9-2-1-3">
+<div class="para" id="environments-5-9-2-1-3-1">All of the above.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-9-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#environments-5-9-2-1-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-9-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.3"><a href="#environments-5-9" title="Copy heading and permalink for Example 2.3">🔗</a></div></article></details><div class="para" id="environments-5-10">While on this topic, it is worth mentioning that many authors choose to include examples of problems that can be solved.  This suggests that part of an example is the solution.  For example:<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="environments-5-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="environments-5-11-2-1">How do you include an example that has a solution, and maybe also a hint?<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-11-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="environments-5-11-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="environments-5-11-3-1">Make sure you put the “question” is the <code class="code-inline tex2jax_ignore">&lt;statement&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-11-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.1"><a href="#environments-5-11-3" title="Copy heading and permalink for Hint 2.4.1">🔗</a></div>
+</div></details><details id="environments-5-11-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="environments-5-11-4-1">As mentioned in the hint, you must structure the example as a statement, followed by a hint, answer, and/or solution.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-11-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="environments-5-11-4-2">This example is not an example of an example that has a separate answer, but of course you could have an answer as well.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-11-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.4.1"><a href="#environments-5-11-4" title="Copy heading and permalink for Solution 2.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.4"><a href="#environments-5-11" title="Copy heading and permalink for Example 2.4">🔗</a></div></article></details><details id="environments-5-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Examples with titles.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="environments-5-12-2-1">Can examples have titles?<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-12-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="environments-5-12-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="environments-5-12-3-1">Yes.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-12-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.5.1"><a href="#environments-5-12-3" title="Copy heading and permalink for Answer 2.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.5: Examples with titles"><a href="#environments-5-12" title="Copy heading and permalink for Example 2.5: Examples with titles">🔗</a></div></article></details><div class="para" id="environments-5-13">Returning to our main goal of establishing new mathematical theory, we might next state an axiom or two (especially if we are named Euclid).  In PreTeXt the environments for axioms are not “definition-like” (the only definition-like environment is a definition).  There are quite a few “axiom-like” environments.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="axiom theorem-like" id="axiom-example"><h4 class="heading">
+<span class="type">Axiom</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="axiom-example-1-1">Axiom-like environments consist of: axiom, conjecture, principle, heuristic, hypothesis, and assumption.<div class="autopermalink" data-description="Paragraph"><a href="#axiom-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Axiom 2.6"><a href="#axiom-example" title="Copy heading and permalink for Axiom 2.6">🔗</a></div></article><div class="para" id="environments-5-15">Once you have defined your terms and stated your axioms, you will likely want to prove something.  Perhaps you will start with a <dfn class="terminology">lemma</dfn> or two, use them to prove a <dfn class="terminology">theorem</dfn>, followed by a few <dfn class="terminology">corollaries</dfn>.  If you are not as confident in the importance of your results, you might call them <dfn class="terminology">propositions</dfn> or just <dfn class="terminology">facts</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lem-example"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="lem-example-1-1">There exist lemmas that are presented without proof.<div class="autopermalink" data-description="Paragraph"><a href="#lem-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 2.7"><a href="#lem-example" title="Copy heading and permalink for Lemma 2.7">🔗</a></div></article><div class="para" id="environments-5-17">The lemma above did not have a proof, since it’s proof is obvious.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-17" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lem-with-proof"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="lem-with-proof-1-1">Lemmas can have proofs.<div class="autopermalink" data-description="Paragraph"><a href="#lem-with-proof-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 2.8"><a href="#lem-with-proof" title="Copy heading and permalink for Lemma 2.8">🔗</a></div></article><details id="lem-with-proof-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-with-proof-2-1">This is clear, as it follows from the proof of <a href="environments.html#lem-with-proof" class="xref" data-knowl="./knowl/xref/lem-with-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.8">Lemma 2.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#lem-with-proof-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.8.1"><a href="#lem-with-proof-2" title="Copy heading and permalink for Proof 2.8.1">🔗</a></div></article></details><div class="para" id="environments-5-19">Using the two lemmas above, we arrive at the following:<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-19" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-example"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Nonsense.</span>
+</h4>
+<div class="para" id="thm-example-2-1">Let <span class="process-math">\(P\)</span> be any statement that follows from the two lemmas above.  Then <span class="process-math">\(P\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#thm-example-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.9: The Fundamental Theorem of Nonsense"><a href="#thm-example" title="Copy heading and permalink for Theorem 2.9: The Fundamental Theorem of Nonsense">🔗</a></div></article><div class="para" id="environments-5-21">There is no reason you need to prove a theorem right away.  You can always have some text, like this paragraph, before the proof.  You could even have an example of how a theorem could be applied before pulling the reader back in for the eagerly awaited proof.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-21" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="environments-5-22" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="environments-5-22-1">This is an example of how you might interject an example before completing a proof.  As such it is put between the statement of the theorem and its proof.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-22-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.10"><a href="#environments-5-22" title="Copy heading and permalink for Example 2.10">🔗</a></div></article></details><div class="para" id="environments-5-23">Note that if you don’t give a proof a title, it will get titled “proof” automatically.  It makes sense to put a custom title in this case since you are referring to a proof of the a theorem that was stated without proof earlier.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-23" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="environments-5-24" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Proof of Theorem 2.9.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="environments-5-24-2">Let <span class="process-math">\(P\)</span> be as described in the theorem. By the lemmas, <span class="process-math">\(P\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-24-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="environments-5-24-3">Therefore, <span class="process-math">\(P\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#environments-5-24-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.1.1: Proof of Theorem 2.9"><a href="#environments-5-24" title="Copy heading and permalink for Proof 2.1.1: Proof of Theorem 2.9">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-example"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="cor-example-1-1">The previous theorem is not useful.<div class="autopermalink" data-description="Paragraph"><a href="#cor-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.11"><a href="#cor-example" title="Copy heading and permalink for Corollary 2.11">🔗</a></div></article><div class="para" id="environments-5-26">Lemmas, theorems, and corollaries naturally go together.  There are other theorem-like environments that you might view as parallel to these.  Here is an example.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-26" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="prop-example"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
+</h4>
+<div class="para" id="prop-example-1-1">Propositions are like theorems, but perhaps not as important.<div class="autopermalink" data-description="Paragraph"><a href="#prop-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 2.12"><a href="#prop-example" title="Copy heading and permalink for Proposition 2.12">🔗</a></div></article><div class="para" id="environments-5-28">If students are reading your textbook, it might be time to collect the main points that you have made for your students and put them in a box.  You could also put your result in the box and let your student roam free.  The following is an <code class="code-inline tex2jax_ignore">&lt;assemblage&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-28" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-example"><h4 class="heading"><span class="title">Types of environments.</span></h4>
+<div class="para logical" id="assemblage-example-2">
+<div class="para">PreTeXt allows for a variety of environments:</div>
+<ul class="disc" id="assemblage-example-2-2">
+<li id="assemblage-example-2-2-1">
+<div class="para" id="assemblage-example-2-2-1-1">Definitions<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-example-2-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#assemblage-example-2-2-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-example-2-2-2">
+<div class="para" id="assemblage-example-2-2-2-1">Theorem-like environments<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-example-2-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#assemblage-example-2-2-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-example-2-2-3">
+<div class="para" id="assemblage-example-2-2-3-1">Assemblages, to assemble or summarize important connected ideas.<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-example-2-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#assemblage-example-2-2-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-example-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Types of environments"><a href="#assemblage-example" title="Copy heading and permalink for Assemblage: Types of environments">🔗</a></div></article><div class="para" id="environments-5-30">Your paper will likely have lots of remarks about its content as the connecting text between theorems, as this section exemplifies.  However, it might also be useful to highlight important remarks, or to set off remarks that do not otherwise fit into the main flow of the text.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-30" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="environments-5-31"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="environments-5-31-1">Resist the temptation to use assemblages just because they give you the desired styling.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-31-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.13"><a href="#environments-5-31" title="Copy heading and permalink for Remark 2.13">🔗</a></div></article><div class="para" id="environments-5-32">If your remark is far removed from your main content, you might make it as an aside.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-32" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<aside class="aside aside-like" id="environments-5-33"><div class="para" id="environments-5-33-1">The <code class="code-inline tex2jax_ignore">&lt;aside&gt;</code> environment might be styled so that it is literally on the side of the page.  Also, some cats are better than some dogs, but some dogs are better than all cats.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-33-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside><article class="note remark-like" id="environments-5-34"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="environments-5-34-1">Another environment like a remark is a <dfn class="terminology">note</dfn>.  Other “remark-like” environments are <code class="code-inline tex2jax_ignore">&lt;convention&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;observation&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;warning&gt;</code>, and <code class="code-inline tex2jax_ignore">&lt;insight&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-34-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 2.14"><a href="#environments-5-34" title="Copy heading and permalink for Note 2.14">🔗</a></div></article><div class="para" id="environments-5-35">No self-respecting paper on self-reference would be complete without some open questions.  You might make some conjectures, which are axiom-like environments in PreTeXt.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-35" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="conjecture theorem-like" id="conj-example"><h4 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="conj-example-1-1">All the conjectures made in this paper are false.<div class="autopermalink" data-description="Paragraph"><a href="#conj-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Conjecture 2.15"><a href="#conj-example" title="Copy heading and permalink for Conjecture 2.15">🔗</a></div></article><div class="para" id="environments-5-37">You might also present a question for your readers.  The <code class="code-inline tex2jax_ignore">&lt;question&gt;</code> and <code class="code-inline tex2jax_ignore">&lt;problem&gt;</code> environments might be appropriate, although note that these are example-like, as they can receive hints, answers, and solutions.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-37" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="question-example" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
+</h4></summary><article class="question example-like knowl__content"><div class="para" id="question-example-1-1">What’s the difference between an example and a question or problem?<div class="autopermalink" data-description="Paragraph"><a href="#question-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="question-example-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="question-example-2-1">Basically, it’s just the name of the environment.  Practically, the different environments might have pedagogical uses, and potentially they could be styled differently.<div class="autopermalink" data-description="Paragraph"><a href="#question-example-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.16.1"><a href="#question-example-2" title="Copy heading and permalink for Solution 2.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Question 2.16"><a href="#question-example" title="Copy heading and permalink for Question 2.16">🔗</a></div></article></details><details id="environments-5-39" class="problem example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
+</h4></summary><article class="problem example-like knowl__content"><div class="para" id="environments-5-39-1">Find a better solution to <a href="environments.html#question-example" class="xref" data-knowl="./knowl/xref/question-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Question 2.16">Question 2.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-39-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 2.17"><a href="#environments-5-39" title="Copy heading and permalink for Problem 2.17">🔗</a></div></article></details><div class="para" id="environments-5-40">As a final example, we present a renamed environment.  In PreTeXt, one of the theorem-like environments is fact.  But perhaps you would rather use “Self Evident Fact” as your environment name.  The following is coded as <code class="code-inline tex2jax_ignore">&lt;fact&gt;</code>, but  using <code class="code-inline tex2jax_ignore">&lt;rename&gt;</code> in <code class="code-inline tex2jax_ignore">&lt;docinfo&gt;</code> we can get the following<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-40" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="fact theorem-like" id="fact-example"><h4 class="heading">
+<span class="type">Self Evident Fact</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="fact-example-1-1">It goes without saying!<div class="autopermalink" data-description="Paragraph"><a href="#fact-example-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Self Evident Fact 2.18"><a href="#fact-example" title="Copy heading and permalink for Self Evident Fact 2.18">🔗</a></div></article><div class="para" id="environments-5-42">In addition to <code class="code-inline tex2jax_ignore">&lt;example&gt;</code>, PreTeXt provides two more “example-like” environments: question and problem.<div class="autopermalink" data-description="Paragraph"><a href="#environments-5-42" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.1: Traditional Structure"><a href="#environments-5" title="Copy heading and permalink for Subsection 2.1: Traditional Structure">🔗</a></div></section><section class="subsection" id="subsec-the-rest"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Inquiry Based Structure</span>
+</h3>
+<div class="para" id="subsec-the-rest-2">Another way you might structure a chapter is to give students more opportunities to actively engage in the material.  You might give a long list of definitions, and then a list of theorems to prove.  That would look a lot like the previous section (perhaps with fewer paragraphs between elements).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-the-rest-3">Alternatively, you can mix inquiry based learning (<abbr class="acronym">IBL</abbr>) structure into a more traditionally formatted section using appropriate environments.  You might start a section with an <code class="code-inline tex2jax_ignore">&lt;activity&gt;</code>, for example.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="subsec-the-rest-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-the-rest-4-1-1">Make a list of all the project-like environments, such as this activity.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.1"><a href="#subsec-the-rest-4" title="Copy heading and permalink for Activity 2.1">🔗</a></div></article><div class="para" id="subsec-the-rest-5">You might want to break down the activity into smaller tasks, which can be done by specifying each <code class="code-inline tex2jax_ignore">&lt;task&gt;</code>, as in the following project.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="project project-like" id="subsec-the-rest-6"><h4 class="heading">
+<span class="type">Project</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-the-rest-6-1"><div class="para" id="subsec-the-rest-6-1-1">First you give an introduction to the project to tie the tasks together.  Then:<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-the-rest-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-the-rest-6-2-1">Specify the first task.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.a"><a href="#subsec-the-rest-6-2" title="Copy heading and permalink for Task 2.2.a">🔗</a></div></article><article class="task exercise-like" id="subsec-the-rest-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-the-rest-6-3-1-1">Should the second task have a hint?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-the-rest-6-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="subsec-the-rest-6-3-2-1">It could.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.2.b.1"><a href="#subsec-the-rest-6-3-2" title="Copy heading and permalink for Hint 2.2.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.2.b"><a href="#subsec-the-rest-6-3" title="Copy heading and permalink for Task 2.2.b">🔗</a></div></article><article class="task exercise-like" id="subsec-the-rest-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-the-rest-6-4-1-1">Can tasks, or stand alone projects, have answers or solutions?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-the-rest-6-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-the-rest-6-4-2-1">Yes.  They can have both.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.c.1"><a href="#subsec-the-rest-6-4-2" title="Copy heading and permalink for Answer 2.2.c.1">🔗</a></div>
+</div></details><details id="subsec-the-rest-6-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-the-rest-6-4-3-1">Yes, they can.  Depending on how the publisher chooses to produce your book, these could be hidden completely, moved to the back of the book, or displayed as knowls.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-4-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.c.1"><a href="#subsec-the-rest-6-4-3" title="Copy heading and permalink for Solution 2.2.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 2.2.c"><a href="#subsec-the-rest-6-4" title="Copy heading and permalink for Task 2.2.c">🔗</a></div></article><div class="conclusion" id="subsec-the-rest-6-5"><div class="para" id="subsec-the-rest-6-5-1">You might end the project with a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-6-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Project 2.2"><a href="#subsec-the-rest-6" title="Copy heading and permalink for Project 2.2">🔗</a></div></article><div class="para" id="subsec-the-rest-7">Of course you might still have definitions, theorems, and examples in a document like this.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-inquiry"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
+</h4>
+<div class="para" id="def-inquiry-1-1">A definition is <dfn class="terminology">illustrative</dfn> if it serves the purpose of illustrating something.<div class="autopermalink" data-description="Paragraph"><a href="#def-inquiry-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.19"><a href="#def-inquiry" title="Copy heading and permalink for Definition 2.19">🔗</a></div></article><div class="para" id="subsec-the-rest-9">And then you might have an example.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-the-rest-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-the-rest-10-1-1">Should an example always follow a definition?<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-10-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-the-rest-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-the-rest-10-2-1">No, but it could.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-10-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.20.1"><a href="#subsec-the-rest-10-2" title="Copy heading and permalink for Solution 2.20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.20"><a href="#subsec-the-rest-10" title="Copy heading and permalink for Example 2.20">🔗</a></div></article></details><div class="para" id="subsec-the-rest-11">Examples are a good way to ask students to think about a problem but provide a solution right away.  To encourage students to think about a problem more before giving the solution, you could use an exercise.  In PreTeXt, exercises that occur inside a section, along with other content, are called “checkpoints”, even though they are coded simply as <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code><div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-the-rest-12" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-the-rest-12-1-1">Write an exercise inside a section to show what they look like.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-12-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-the-rest-12-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="subsec-the-rest-12-2-1">Done.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-12-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.21.1"><a href="#subsec-the-rest-12-2" title="Copy heading and permalink for Answer 2.21.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 2.21"><a href="#subsec-the-rest-12" title="Copy heading and permalink for Checkpoint 2.21">🔗</a></div></article></details><div class="para" id="subsec-the-rest-13">Of course, in this style of document, collecting important ideas is especially important.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-the-rest-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-ibl"><h4 class="heading"><span class="title">Components of good IBL writing.</span></h4>
+<div class="para" id="assemblage-ibl-2">Texts that support inquiry based learning should contain lots of opportunities for students to engage with the material, but can still be friendly and help students along their journey of discovery.<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-ibl-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Components of good IBL writing"><a href="#assemblage-ibl" title="Copy heading and permalink for Assemblage: Components of good IBL writing">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.2: Inquiry Based Structure"><a href="#subsec-the-rest" title="Copy heading and permalink for Subsection 2.2: Inquiry Based Structure">🔗</a></div></section><div class="autopermalink" data-description="Section 2: Environments"><a href="#environments" title="Copy heading and permalink for Section 2: Environments">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="mathematics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="latex-image.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

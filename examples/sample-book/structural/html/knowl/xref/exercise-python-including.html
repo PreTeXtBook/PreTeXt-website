@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">A Python program, including another.</span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for exercise</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;exercise xml:id="exercise-python-including" include-source="yes"&gt;
+    &lt;title&gt;A Python program, including another&lt;/title&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Compute the total amount of money loaned and store it in the variable &lt;c&gt;loan_total&lt;/c&gt;.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;program autorun="yes" codelens="no" xml:id="python-summation" interactive="activecode" language="python" label="python-sum-total" include="python-statistics"&gt;
+        &lt;code&gt;
+        loan_total = 0
+        for loan in loan_amount:
+            loan_total += loan
+        print(loan_total)
+        &lt;/code&gt;
+        &lt;tests&gt;
+        from unittest.gui import TestCaseGui
+
+        class MyTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
+                self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
+                self.assertFalse('sum(' in self.getEditorText(), "you may not use sum()")
+
+        MyTests().main()
+        &lt;/tests&gt;
+    &lt;/program&gt;
+&lt;/exercise&gt;
+</code></pre></article></details><div class="ptx-runestone-container"><div class="runestone explainer ac_section "><div data-component="activecode" id="rs-exercise-python-including">
+<div class="ac_question exercise-statement" id="rs-exercise-python-including_question"><div class="para" id="exercise-python-including-2-1">Compute the total amount of money loaned and store it in the variable <code class="code-inline tex2jax_ignore">loan_total</code>.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-python-including-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<textarea data-lang="python" data-audio="" data-coach="true" style="visibility: hidden;" id="rs-exercise-python-including_editor" data-question_label="" data-codelens="false" data-include="rs-statistics" data-timelimit="25000" data-autorun="yes">loan_total = 0
+for loan in loan_amount:
+    loan_total += loan
+print(loan_total)
+====
+from unittest.gui import TestCaseGui
+
+class MyTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertTrue('loan_total' in self.getEditorText(), "you need a loan_total variable")
+        self.assertEqual(loan_total, sum(loan_amount), "Use the accumulator pattern to add up all the loans")
+        self.assertFalse('sum(' in self.getEditorText(), "you may not use sum()")
+
+MyTests().main()
+</textarea>
+</div></div></div>
+<div class="autopermalink" data-description="Checkpoint 3.2.14: A Python program, including another"><a href="#exercise-python-including" title="Copy heading and permalink for Checkpoint 3.2.14: A Python program, including another">🔗</a></div></article><span class="incontext"><a class="internal" href="activecode.html#exercise-python-including">in-context</a></span>
+</body>
+</html>

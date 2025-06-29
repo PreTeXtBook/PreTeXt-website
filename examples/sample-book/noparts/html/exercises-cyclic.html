@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SB Exercises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
+<meta property="book:title" content="PreTeXt Sample Book">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = true;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXSB" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="cyclic-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="cyclic.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="cyclic-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Open Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-TWJ.html" class="internal"><span class="title">Author Biography</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-RAB.html" class="internal"><span class="title">About Robert A. Beezer</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors to the 4<span class="process-math">\(^\mathrm{th}\)</span> Edition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-sage.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Immediate Help</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Annotating Your Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Lists of Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Saving and Sharing Your Work</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-sets.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-sage-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-8.html" class="internal"><span class="codenumber">1.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction and Math in a Title <span class="process-math">\(A\notsubset B\)</span></span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Greatest Common Divisor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Primes and Factoring</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-integers.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-7.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-sage-exercises.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-9.html" class="internal"><span class="codenumber">2.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-5" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-6" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-groups-define.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Definition of a Group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Examples of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-5" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-sage.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Integers mod n</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Groups of symmetries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-6" class="internal"><span class="codenumber">3.4.4</span> <span class="title">Subgroups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groups.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-9.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-sage-exercises.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-11.html" class="internal"><span class="codenumber">3.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclicity</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-4.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-5.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Subgroups of a Cyclic Group</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cyclic Groups of Complex Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-7.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Large Powers of Integers</span></a></div></li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="exercises-cyclic.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-9.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-sage-exercises.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-11.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rune.html" class="internal"><span class="codenumber">5</span> <span class="title">Runestone Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="inactive-code.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Programs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="activecode.html" class="internal"><span class="codenumber">5.2</span> <span class="title">ActiveCode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="code-lens.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Code Lens</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="coding-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Coding Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="data-files.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Data Files</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="videos-in-runestone.html" class="internal"><span class="codenumber">5.6</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rune-nested-divisions.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Deeper</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Subsection One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Subsection Two</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="true-false-exercises.html" class="internal"><span class="codenumber">5.8</span> <span class="title">True/False Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groupwork.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Multiple Choice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="parsons-exercises.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="horizontal-parsons-exercises.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Horizontal Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matching-exercises.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Matching Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="clickable-area-exercises.html" class="internal"><span class="codenumber">5.13</span> <span class="title">Clickable Area Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="select-exercises.html" class="internal"><span class="codenumber">5.14</span> <span class="title">Select Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="short-answer-exercises.html" class="internal"><span class="codenumber">5.15</span> <span class="title">Short Answer Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polling.html" class="internal"><span class="codenumber">5.16</span> <span class="title">Polling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">5.17</span> <span class="title">DoenetML</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E</span> <span class="title">A Structured Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-6-3.html" class="internal"><span class="codenumber">E.1</span> <span class="title">A Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3" class="internal"><span class="codenumber">E.1.1</span> <span class="title">A Subsection in a Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="exercises-cyclic"><h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">4.5</span><span class="space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="exercises-cyclic-2"><h3 class="heading"><span class="codenumber">1<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-2-1-1">Prove or disprove each of the following statements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="exercises-cyclic-2-1-2">
+<li id="exercises-cyclic-2-1-2-1">
+<div class="para" id="exercises-cyclic-2-1-2-1-1">All of the generators of <span class="process-math">\({\mathbb Z}_{60}\)</span> are prime.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.1.a"><a href="#exercises-cyclic-2-1-2-1" title="Copy heading and permalink for Item 4.5.1.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-2-1-2-2">
+<div class="para" id="exercises-cyclic-2-1-2-2-1">
+<span class="process-math">\(U(8)\)</span> is cyclic.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.1.b"><a href="#exercises-cyclic-2-1-2-2" title="Copy heading and permalink for Item 4.5.1.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-2-1-2-3">
+<div class="para" id="exercises-cyclic-2-1-2-3-1">
+<span class="process-math">\({\mathbb Q}\)</span> is cyclic.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.1.c"><a href="#exercises-cyclic-2-1-2-3" title="Copy heading and permalink for Item 4.5.1.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-2-1-2-4">
+<div class="para" id="exercises-cyclic-2-1-2-4-1">If every proper subgroup of a group <span class="process-math">\(G\)</span> is cyclic, then <span class="process-math">\(G\)</span> is a cyclic group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.1.d"><a href="#exercises-cyclic-2-1-2-4" title="Copy heading and permalink for Item 4.5.1.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-2-1-2-5">
+<div class="para" id="exercises-cyclic-2-1-2-5-1">A group with a finite number of subgroups is finite.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-2-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.1.e"><a href="#exercises-cyclic-2-1-2-5" title="Copy heading and permalink for Item 4.5.1.e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.1"><a href="#exercises-cyclic-2" title="Copy heading and permalink for Exercise 4.5.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-3"><h3 class="heading"><span class="codenumber">2<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-3-1-1">Find the order of each of the following elements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-3-1-2">
+<li id="exercises-cyclic-3-1-2-1">
+<div class="para" id="exercises-cyclic-3-1-2-1-1">
+<span class="process-math">\(\displaystyle 5 \in {\mathbb Z}_{12}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.a"><a href="#exercises-cyclic-3-1-2-1" title="Copy heading and permalink for Item 4.5.2.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-3-1-2-2">
+<div class="para" id="exercises-cyclic-3-1-2-2-1">
+<span class="process-math">\(\displaystyle \sqrt{3} \in {\mathbb R}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.b"><a href="#exercises-cyclic-3-1-2-2" title="Copy heading and permalink for Item 4.5.2.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-3-1-2-3">
+<div class="para" id="exercises-cyclic-3-1-2-3-1">
+<span class="process-math">\(\displaystyle \sqrt{3} \in {\mathbb R}^\ast\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.c"><a href="#exercises-cyclic-3-1-2-3" title="Copy heading and permalink for Item 4.5.2.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-3-1-2-4">
+<div class="para" id="exercises-cyclic-3-1-2-4-1">
+<span class="process-math">\(\displaystyle -i \in {\mathbb C}^\ast\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.d"><a href="#exercises-cyclic-3-1-2-4" title="Copy heading and permalink for Item 4.5.2.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-3-1-2-5">
+<div class="para" id="exercises-cyclic-3-1-2-5-1">72 in <span class="process-math">\({\mathbb Z}_{240}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.e"><a href="#exercises-cyclic-3-1-2-5" title="Copy heading and permalink for Item 4.5.2.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-3-1-2-6">
+<div class="para" id="exercises-cyclic-3-1-2-6-1">312 in <span class="process-math">\({\mathbb Z}_{471}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-3-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.2.f"><a href="#exercises-cyclic-3-1-2-6" title="Copy heading and permalink for Item 4.5.2.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.2"><a href="#exercises-cyclic-3" title="Copy heading and permalink for Exercise 4.5.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-4"><h3 class="heading"><span class="codenumber">3<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-4-1-1">List all of the elements in each of the following subgroups.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="exercises-cyclic-4-1-2">
+<li id="exercises-cyclic-4-1-2-1">
+<div class="para" id="exercises-cyclic-4-1-2-1-1">The subgroup of <span class="process-math">\({\mathbb Z}\)</span> generated by 7<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.a"><a href="#exercises-cyclic-4-1-2-1" title="Copy heading and permalink for Item 4.5.3.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-2">
+<div class="para" id="exercises-cyclic-4-1-2-2-1">The subgroup of <span class="process-math">\({\mathbb Z}_{24}\)</span> generated by 15<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.b"><a href="#exercises-cyclic-4-1-2-2" title="Copy heading and permalink for Item 4.5.3.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-3">
+<div class="para" id="exercises-cyclic-4-1-2-3-1">All subgroups of <span class="process-math">\({\mathbb Z}_{12}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.c"><a href="#exercises-cyclic-4-1-2-3" title="Copy heading and permalink for Item 4.5.3.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-4">
+<div class="para" id="exercises-cyclic-4-1-2-4-1">All subgroups of <span class="process-math">\({\mathbb Z}_{60}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.d"><a href="#exercises-cyclic-4-1-2-4" title="Copy heading and permalink for Item 4.5.3.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-5">
+<div class="para" id="exercises-cyclic-4-1-2-5-1">All subgroups of <span class="process-math">\({\mathbb Z}_{13}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.e"><a href="#exercises-cyclic-4-1-2-5" title="Copy heading and permalink for Item 4.5.3.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-6">
+<div class="para" id="exercises-cyclic-4-1-2-6-1">All subgroups of <span class="process-math">\({\mathbb Z}_{48}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.f"><a href="#exercises-cyclic-4-1-2-6" title="Copy heading and permalink for Item 4.5.3.f">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-7">
+<div class="para" id="exercises-cyclic-4-1-2-7-1">The subgroup generated by 3  in <span class="process-math">\(U(20)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.g"><a href="#exercises-cyclic-4-1-2-7" title="Copy heading and permalink for Item 4.5.3.g">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-8">
+<div class="para" id="exercises-cyclic-4-1-2-8-1">The subgroup generated by 5 in <span class="process-math">\(U(18)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-8-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.h"><a href="#exercises-cyclic-4-1-2-8" title="Copy heading and permalink for Item 4.5.3.h">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-9">
+<div class="para" id="exercises-cyclic-4-1-2-9-1">The subgroup of <span class="process-math">\({\mathbb R}^\ast\)</span> generated by 7<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-9-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.i"><a href="#exercises-cyclic-4-1-2-9" title="Copy heading and permalink for Item 4.5.3.i">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-10">
+<div class="para" id="exercises-cyclic-4-1-2-10-1">The subgroup of <span class="process-math">\({\mathbb C}^\ast\)</span> generated by <span class="process-math">\(i\)</span> where <span class="process-math">\(i^2 = -1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-10-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.j"><a href="#exercises-cyclic-4-1-2-10" title="Copy heading and permalink for Item 4.5.3.j">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-11">
+<div class="para" id="exercises-cyclic-4-1-2-11-1">The subgroup of <span class="process-math">\({\mathbb C}^\ast\)</span> generated by <span class="process-math">\(2i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-11-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.k"><a href="#exercises-cyclic-4-1-2-11" title="Copy heading and permalink for Item 4.5.3.k">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-12">
+<div class="para" id="exercises-cyclic-4-1-2-12-1">The subgroup of <span class="process-math">\({\mathbb C}^\ast\)</span> generated by <span class="process-math">\((1 + i) / \sqrt{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-12-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.l"><a href="#exercises-cyclic-4-1-2-12" title="Copy heading and permalink for Item 4.5.3.l">🔗</a></div>
+</li>
+<li id="exercises-cyclic-4-1-2-13">
+<div class="para" id="exercises-cyclic-4-1-2-13-1">The subgroup of <span class="process-math">\({\mathbb C}^\ast\)</span> generated by <span class="process-math">\((1 + \sqrt{3}\, i) / 2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-4-1-2-13-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.3.m"><a href="#exercises-cyclic-4-1-2-13" title="Copy heading and permalink for Item 4.5.3.m">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.3"><a href="#exercises-cyclic-4" title="Copy heading and permalink for Exercise 4.5.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-5"><h3 class="heading"><span class="codenumber">4<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-5-1-1">Find the subgroups of <span class="process-math">\(GL_2( {\mathbb R })\)</span> generated by each of the following matrices.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols3" id="exercises-cyclic-5-1-2">
+<li id="exercises-cyclic-5-1-2-1">
+<div class="para" id="exercises-cyclic-5-1-2-1-1">
+<span class="process-math">\(\displaystyle \displaystyle \begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.a"><a href="#exercises-cyclic-5-1-2-1" title="Copy heading and permalink for Item 4.5.4.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-5-1-2-2">
+<div class="para" id="exercises-cyclic-5-1-2-2-1">
+<span class="process-math">\(\displaystyle \displaystyle
+\begin{pmatrix}
+0 &amp; 1/3 \\
+3 &amp; 0
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.b"><a href="#exercises-cyclic-5-1-2-2" title="Copy heading and permalink for Item 4.5.4.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-5-1-2-3">
+<div class="para" id="exercises-cyclic-5-1-2-3-1">
+<span class="process-math">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.c"><a href="#exercises-cyclic-5-1-2-3" title="Copy heading and permalink for Item 4.5.4.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-5-1-2-4">
+<div class="para" id="exercises-cyclic-5-1-2-4-1">
+<span class="process-math">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.d"><a href="#exercises-cyclic-5-1-2-4" title="Copy heading and permalink for Item 4.5.4.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-5-1-2-5">
+<div class="para" id="exercises-cyclic-5-1-2-5-1">
+<span class="process-math">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+-1 &amp; 0
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.e"><a href="#exercises-cyclic-5-1-2-5" title="Copy heading and permalink for Item 4.5.4.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-5-1-2-6">
+<div class="para" id="exercises-cyclic-5-1-2-6-1">
+<span class="process-math">\(\displaystyle \displaystyle
+\begin{pmatrix}
+\sqrt{3}/ 2 &amp; 1/2 \\
+-1/2 &amp; \sqrt{3}/2
+\end{pmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-5-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.4.f"><a href="#exercises-cyclic-5-1-2-6" title="Copy heading and permalink for Item 4.5.4.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.4"><a href="#exercises-cyclic-5" title="Copy heading and permalink for Exercise 4.5.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-6"><h3 class="heading"><span class="codenumber">5<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-6-1-1">Find the order of every element in <span class="process-math">\({\mathbb Z}_{18}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.5"><a href="#exercises-cyclic-6" title="Copy heading and permalink for Exercise 4.5.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-7"><h3 class="heading"><span class="codenumber">6<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-7-1-1">Find the order of every element in the symmetry group of the square, <span class="process-math">\(D_4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.6"><a href="#exercises-cyclic-7" title="Copy heading and permalink for Exercise 4.5.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-8"><h3 class="heading"><span class="codenumber">7<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-8-1-1">What are all of the cyclic subgroups of the quaternion group, <span class="process-math">\(Q_8\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-8-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.7"><a href="#exercises-cyclic-8" title="Copy heading and permalink for Exercise 4.5.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-9"><h3 class="heading"><span class="codenumber">8<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-9-1-1">List all of the cyclic subgroups of <span class="process-math">\(U(30)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-9-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.8"><a href="#exercises-cyclic-9" title="Copy heading and permalink for Exercise 4.5.8">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-10"><h3 class="heading"><span class="codenumber">9<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-10-1-1">List every generator of each subgroup of order 8 in <span class="process-math">\({\mathbb Z}_{32}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-10-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.9"><a href="#exercises-cyclic-10" title="Copy heading and permalink for Exercise 4.5.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-11"><h3 class="heading"><span class="codenumber">10<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-11-1-1">Find all elements of finite order in each of the following groups. Here the “<span class="process-math">\(\ast\)</span>” indicates the set with zero removed.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-11-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols3" id="exercises-cyclic-11-1-2">
+<li id="exercises-cyclic-11-1-2-1">
+<div class="para" id="exercises-cyclic-11-1-2-1-1">
+<span class="process-math">\(\displaystyle {\mathbb Z}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-11-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.10.a"><a href="#exercises-cyclic-11-1-2-1" title="Copy heading and permalink for Item 4.5.10.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-11-1-2-2">
+<div class="para" id="exercises-cyclic-11-1-2-2-1">
+<span class="process-math">\(\displaystyle {\mathbb Q}^\ast\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-11-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.10.b"><a href="#exercises-cyclic-11-1-2-2" title="Copy heading and permalink for Item 4.5.10.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-11-1-2-3">
+<div class="para" id="exercises-cyclic-11-1-2-3-1">
+<span class="process-math">\(\displaystyle {\mathbb R}^\ast\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-11-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.10.c"><a href="#exercises-cyclic-11-1-2-3" title="Copy heading and permalink for Item 4.5.10.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.10"><a href="#exercises-cyclic-11" title="Copy heading and permalink for Exercise 4.5.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-12"><h3 class="heading"><span class="codenumber">11<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-12-1-1">If <span class="process-math">\(a^{24} =e\)</span> in a group <span class="process-math">\(G\text{,}\)</span> what are the possible orders of <span class="process-math">\(a\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-12-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.11"><a href="#exercises-cyclic-12" title="Copy heading and permalink for Exercise 4.5.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-13"><h3 class="heading"><span class="codenumber">12<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-13-1-1">Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about <span class="process-math">\(n\)</span> generators?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-13-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.12"><a href="#exercises-cyclic-13" title="Copy heading and permalink for Exercise 4.5.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-14"><h3 class="heading"><span class="codenumber">13<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-14-1-1">For <span class="process-math">\(n \leq 20\text{,}\)</span> which groups <span class="process-math">\(U(n)\)</span> are cyclic?  Make a conjecture as to what is true in general.  Can you prove your conjecture?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-14-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.13"><a href="#exercises-cyclic-14" title="Copy heading and permalink for Exercise 4.5.13">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-15"><h3 class="heading"><span class="codenumber">14<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-cyclic-15-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+B =
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">be elements in <span class="process-math">\(GL_2( {\mathbb R} )\text{.}\)</span> Show that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have finite orders but <span class="process-math">\(AB\)</span> does not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-15-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.14"><a href="#exercises-cyclic-15" title="Copy heading and permalink for Exercise 4.5.14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-16"><h3 class="heading"><span class="codenumber">15<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-16-1-1">Evaluate each of the following.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-16-1-2">
+<li id="exercises-cyclic-16-1-2-1">
+<div class="para" id="exercises-cyclic-16-1-2-1-1">
+<span class="process-math">\(\displaystyle (3-2i)+ (5i-6)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.a"><a href="#exercises-cyclic-16-1-2-1" title="Copy heading and permalink for Item 4.5.15.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-16-1-2-2">
+<div class="para" id="exercises-cyclic-16-1-2-2-1">
+<span class="process-math">\(\displaystyle (4-5i)-\overline{(4i -4)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.b"><a href="#exercises-cyclic-16-1-2-2" title="Copy heading and permalink for Item 4.5.15.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-16-1-2-3">
+<div class="para" id="exercises-cyclic-16-1-2-3-1">
+<span class="process-math">\(\displaystyle (5-4i)(7+2i)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.c"><a href="#exercises-cyclic-16-1-2-3" title="Copy heading and permalink for Item 4.5.15.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-16-1-2-4">
+<div class="para" id="exercises-cyclic-16-1-2-4-1">
+<span class="process-math">\(\displaystyle (9-i) \overline{(9-i)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.d"><a href="#exercises-cyclic-16-1-2-4" title="Copy heading and permalink for Item 4.5.15.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-16-1-2-5">
+<div class="para" id="exercises-cyclic-16-1-2-5-1">
+<span class="process-math">\(\displaystyle i^{45}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.e"><a href="#exercises-cyclic-16-1-2-5" title="Copy heading and permalink for Item 4.5.15.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-16-1-2-6">
+<div class="para" id="exercises-cyclic-16-1-2-6-1">
+<span class="process-math">\(\displaystyle (1+i)+\overline{(1+i)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-16-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.15.f"><a href="#exercises-cyclic-16-1-2-6" title="Copy heading and permalink for Item 4.5.15.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.15"><a href="#exercises-cyclic-16" title="Copy heading and permalink for Exercise 4.5.15">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-17"><h3 class="heading"><span class="codenumber">16<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-17-1-1">Convert the following complex numbers to the form <span class="process-math">\(a + bi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-17-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-17-1-2">
+<li id="exercises-cyclic-17-1-2-1">
+<div class="para" id="exercises-cyclic-17-1-2-1-1">
+<span class="process-math">\(\displaystyle 2 \cis(\pi / 6 )\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-17-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.16.a"><a href="#exercises-cyclic-17-1-2-1" title="Copy heading and permalink for Item 4.5.16.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-17-1-2-2">
+<div class="para" id="exercises-cyclic-17-1-2-2-1">
+<span class="process-math">\(\displaystyle 5 \cis(9\pi/4)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-17-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.16.b"><a href="#exercises-cyclic-17-1-2-2" title="Copy heading and permalink for Item 4.5.16.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-17-1-2-3">
+<div class="para" id="exercises-cyclic-17-1-2-3-1">
+<span class="process-math">\(\displaystyle 3 \cis(\pi)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-17-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.16.c"><a href="#exercises-cyclic-17-1-2-3" title="Copy heading and permalink for Item 4.5.16.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-17-1-2-4">
+<div class="para" id="exercises-cyclic-17-1-2-4-1">
+<span class="process-math">\(\displaystyle \cis(7\pi/4) /2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-17-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.16.d"><a href="#exercises-cyclic-17-1-2-4" title="Copy heading and permalink for Item 4.5.16.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.16"><a href="#exercises-cyclic-17" title="Copy heading and permalink for Exercise 4.5.16">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-18"><h3 class="heading"><span class="codenumber">17<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-18-1-1">Change the following complex numbers to polar representation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols3" id="exercises-cyclic-18-1-2">
+<li id="exercises-cyclic-18-1-2-1">
+<div class="para" id="exercises-cyclic-18-1-2-1-1">
+<span class="process-math">\(\displaystyle 1-i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.a"><a href="#exercises-cyclic-18-1-2-1" title="Copy heading and permalink for Item 4.5.17.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-18-1-2-2">
+<div class="para" id="exercises-cyclic-18-1-2-2-1">
+<span class="process-math">\(\displaystyle -5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.b"><a href="#exercises-cyclic-18-1-2-2" title="Copy heading and permalink for Item 4.5.17.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-18-1-2-3">
+<div class="para" id="exercises-cyclic-18-1-2-3-1">
+<span class="process-math">\(\displaystyle 2+2i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.c"><a href="#exercises-cyclic-18-1-2-3" title="Copy heading and permalink for Item 4.5.17.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-18-1-2-4">
+<div class="para" id="exercises-cyclic-18-1-2-4-1">
+<span class="process-math">\(\displaystyle \sqrt{3} + i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.d"><a href="#exercises-cyclic-18-1-2-4" title="Copy heading and permalink for Item 4.5.17.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-18-1-2-5">
+<div class="para" id="exercises-cyclic-18-1-2-5-1">
+<span class="process-math">\(\displaystyle -3i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.e"><a href="#exercises-cyclic-18-1-2-5" title="Copy heading and permalink for Item 4.5.17.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-18-1-2-6">
+<div class="para" id="exercises-cyclic-18-1-2-6-1">
+<span class="process-math">\(\displaystyle 2i + 2 \sqrt{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-18-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.17.f"><a href="#exercises-cyclic-18-1-2-6" title="Copy heading and permalink for Item 4.5.17.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.17"><a href="#exercises-cyclic-18" title="Copy heading and permalink for Exercise 4.5.17">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-19"><h3 class="heading"><span class="codenumber">18<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-19-1-1">Calculate each of the following expressions.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-19-1-2">
+<li id="exercises-cyclic-19-1-2-1">
+<div class="para" id="exercises-cyclic-19-1-2-1-1">
+<span class="process-math">\(\displaystyle (1+i)^{-1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.a"><a href="#exercises-cyclic-19-1-2-1" title="Copy heading and permalink for Item 4.5.18.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-2">
+<div class="para" id="exercises-cyclic-19-1-2-2-1">
+<span class="process-math">\(\displaystyle (1 - i)^{6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.b"><a href="#exercises-cyclic-19-1-2-2" title="Copy heading and permalink for Item 4.5.18.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-3">
+<div class="para" id="exercises-cyclic-19-1-2-3-1">
+<span class="process-math">\(\displaystyle (\sqrt{3} + i)^{5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.c"><a href="#exercises-cyclic-19-1-2-3" title="Copy heading and permalink for Item 4.5.18.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-4">
+<div class="para" id="exercises-cyclic-19-1-2-4-1">
+<span class="process-math">\(\displaystyle (-i)^{10}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.d"><a href="#exercises-cyclic-19-1-2-4" title="Copy heading and permalink for Item 4.5.18.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-5">
+<div class="para" id="exercises-cyclic-19-1-2-5-1">
+<span class="process-math">\(\displaystyle ((1-i)/2)^{4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.e"><a href="#exercises-cyclic-19-1-2-5" title="Copy heading and permalink for Item 4.5.18.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-6">
+<div class="para" id="exercises-cyclic-19-1-2-6-1">
+<span class="process-math">\(\displaystyle (-\sqrt{2} - \sqrt{2}\, i)^{12}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.f"><a href="#exercises-cyclic-19-1-2-6" title="Copy heading and permalink for Item 4.5.18.f">🔗</a></div>
+</li>
+<li id="exercises-cyclic-19-1-2-7">
+<div class="para" id="exercises-cyclic-19-1-2-7-1">
+<span class="process-math">\(\displaystyle (-2 + 2i)^{-5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-19-1-2-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.18.g"><a href="#exercises-cyclic-19-1-2-7" title="Copy heading and permalink for Item 4.5.18.g">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.18"><a href="#exercises-cyclic-19" title="Copy heading and permalink for Exercise 4.5.18">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-20"><h3 class="heading"><span class="codenumber">19<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-20-1-1">Prove each of the following statements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-20-1-2">
+<li id="exercises-cyclic-20-1-2-1">
+<div class="para" id="exercises-cyclic-20-1-2-1-1">
+<span class="process-math">\(\displaystyle |z| = | \overline{z}|\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.a"><a href="#exercises-cyclic-20-1-2-1" title="Copy heading and permalink for Item 4.5.19.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-20-1-2-2">
+<div class="para" id="exercises-cyclic-20-1-2-2-1">
+<span class="process-math">\(\displaystyle z \overline{z} = |z|^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.b"><a href="#exercises-cyclic-20-1-2-2" title="Copy heading and permalink for Item 4.5.19.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-20-1-2-3">
+<div class="para" id="exercises-cyclic-20-1-2-3-1">
+<span class="process-math">\(\displaystyle z^{-1} = \overline{z} / |z|^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.c"><a href="#exercises-cyclic-20-1-2-3" title="Copy heading and permalink for Item 4.5.19.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-20-1-2-4">
+<div class="para" id="exercises-cyclic-20-1-2-4-1">
+<span class="process-math">\(\displaystyle |z +w| \leq |z| + |w|\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.d"><a href="#exercises-cyclic-20-1-2-4" title="Copy heading and permalink for Item 4.5.19.d">🔗</a></div>
+</li>
+<li id="exercises-cyclic-20-1-2-5">
+<div class="para" id="exercises-cyclic-20-1-2-5-1">
+<span class="process-math">\(\displaystyle |z - w| \geq | |z| - |w||\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.e"><a href="#exercises-cyclic-20-1-2-5" title="Copy heading and permalink for Item 4.5.19.e">🔗</a></div>
+</li>
+<li id="exercises-cyclic-20-1-2-6">
+<div class="para" id="exercises-cyclic-20-1-2-6-1">
+<span class="process-math">\(\displaystyle |z w| = |z|  |w|\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-20-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.19.f"><a href="#exercises-cyclic-20-1-2-6" title="Copy heading and permalink for Item 4.5.19.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.19"><a href="#exercises-cyclic-20" title="Copy heading and permalink for Exercise 4.5.19">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-21"><h3 class="heading"><span class="codenumber">20<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-21-1-1">List and graph the 6th roots of unity. What are the generators of this group?  What are the primitive 6th roots of unity?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-21-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.20"><a href="#exercises-cyclic-21" title="Copy heading and permalink for Exercise 4.5.20">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-22"><h3 class="heading"><span class="codenumber">21<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-22-1-1">List and graph the 5th roots of unity. What are the generators of this group?  What are the primitive 5th roots of unity?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-22-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.21"><a href="#exercises-cyclic-22" title="Copy heading and permalink for Exercise 4.5.21">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-23"><h3 class="heading"><span class="codenumber">22<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-23-1-1">Calculate each of the following.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-23-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1 cols2" id="exercises-cyclic-23-1-2">
+<li id="exercises-cyclic-23-1-2-1">
+<div class="para" id="exercises-cyclic-23-1-2-1-1">
+<span class="process-math">\(\displaystyle 292^{3171} \pmod{ 582}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-23-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.22.a"><a href="#exercises-cyclic-23-1-2-1" title="Copy heading and permalink for Item 4.5.22.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-23-1-2-2">
+<div class="para" id="exercises-cyclic-23-1-2-2-1">
+<span class="process-math">\(\displaystyle 2557^{ 341} \pmod{ 5681}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-23-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.22.b"><a href="#exercises-cyclic-23-1-2-2" title="Copy heading and permalink for Item 4.5.22.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-23-1-2-3">
+<div class="para" id="exercises-cyclic-23-1-2-3-1">
+<span class="process-math">\(\displaystyle 2071^{ 9521} \pmod{ 4724}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-23-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.22.c"><a href="#exercises-cyclic-23-1-2-3" title="Copy heading and permalink for Item 4.5.22.c">🔗</a></div>
+</li>
+<li id="exercises-cyclic-23-1-2-4">
+<div class="para" id="exercises-cyclic-23-1-2-4-1">
+<span class="process-math">\(\displaystyle 971^{ 321} \pmod{ 765}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-23-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.22.d"><a href="#exercises-cyclic-23-1-2-4" title="Copy heading and permalink for Item 4.5.22.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.22"><a href="#exercises-cyclic-23" title="Copy heading and permalink for Exercise 4.5.22">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-24"><h3 class="heading"><span class="codenumber">23<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-24-1-1">Let <span class="process-math">\(a, b \in G\text{.}\)</span>  Prove the following statements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-24-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="exercises-cyclic-24-1-2">
+<li id="exercises-cyclic-24-1-2-1">
+<div class="para" id="exercises-cyclic-24-1-2-1-1">The order of <span class="process-math">\(a\)</span> is the same as the order of <span class="process-math">\(a^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-24-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.23.a"><a href="#exercises-cyclic-24-1-2-1" title="Copy heading and permalink for Item 4.5.23.a">🔗</a></div>
+</li>
+<li id="exercises-cyclic-24-1-2-2">
+<div class="para" id="exercises-cyclic-24-1-2-2-1">For all <span class="process-math">\(g \in G\text{,}\)</span> <span class="process-math">\(|a| = |g^{-1}ag|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-24-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.23.b"><a href="#exercises-cyclic-24-1-2-2" title="Copy heading and permalink for Item 4.5.23.b">🔗</a></div>
+</li>
+<li id="exercises-cyclic-24-1-2-3">
+<div class="para" id="exercises-cyclic-24-1-2-3-1">The order of <span class="process-math">\(ab\)</span> is the same as the order of <span class="process-math">\(ba\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-24-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.5.23.c"><a href="#exercises-cyclic-24-1-2-3" title="Copy heading and permalink for Item 4.5.23.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.5.23"><a href="#exercises-cyclic-24" title="Copy heading and permalink for Exercise 4.5.23">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-25"><h3 class="heading"><span class="codenumber">24<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-25-1-1">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be distinct primes.  How many generators does <span class="process-math">\({\mathbb  Z}_{pq}\)</span> have?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-25-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.24"><a href="#exercises-cyclic-25" title="Copy heading and permalink for Exercise 4.5.24">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-26"><h3 class="heading"><span class="codenumber">25<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-26-1-1">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(r\)</span> be a positive integer. How many generators does <span class="process-math">\({\mathbb Z}_{p^r}\)</span> have?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-26-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.25"><a href="#exercises-cyclic-26" title="Copy heading and permalink for Exercise 4.5.25">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-27"><h3 class="heading"><span class="codenumber">26<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-27-1-1">Prove that  <span class="process-math">\({\mathbb Z}_{p}\)</span> has no nontrivial subgroups if <span class="process-math">\(p\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-27-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.26"><a href="#exercises-cyclic-27" title="Copy heading and permalink for Exercise 4.5.26">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-28"><h3 class="heading"><span class="codenumber">27<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-28-1-1">If <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> have orders 15 and 16 respectively in a group <span class="process-math">\(G\text{,}\)</span> what is the order of <span class="process-math">\(\langle g \rangle  \cap \langle h \rangle \text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-28-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.27"><a href="#exercises-cyclic-28" title="Copy heading and permalink for Exercise 4.5.27">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-29"><h3 class="heading"><span class="codenumber">28<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-29-1-1">Let <span class="process-math">\(a\)</span> be an element in a group <span class="process-math">\(G\text{.}\)</span> What is a generator for the subgroup <span class="process-math">\(\langle a^m \rangle  \cap  \langle a^n \rangle\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-29-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.28"><a href="#exercises-cyclic-29" title="Copy heading and permalink for Exercise 4.5.28">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-30"><h3 class="heading"><span class="codenumber">29<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-30-1-1">Prove that <span class="process-math">\({\mathbb Z}_n\)</span> has an even number of generators for <span class="process-math">\(n \gt 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-30-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.29"><a href="#exercises-cyclic-30" title="Copy heading and permalink for Exercise 4.5.29">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-31"><h3 class="heading"><span class="codenumber">30<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-31-1-1">Suppose that <span class="process-math">\(G\)</span> is a group and let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b \in G\text{.}\)</span> Prove that if <span class="process-math">\(|a| = m\)</span> and <span class="process-math">\(|b| = n\)</span> with <span class="process-math">\(\gcd(m,n) = 1\text{,}\)</span> then <span class="process-math">\(\langle a \rangle \cap \langle b \rangle  = \{ e \}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-31-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.30"><a href="#exercises-cyclic-31" title="Copy heading and permalink for Exercise 4.5.30">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-32"><h3 class="heading"><span class="codenumber">31<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-32-1-1">Let <span class="process-math">\(G\)</span> be an abelian group. Show that the elements of finite order in <span class="process-math">\(G\)</span> form a subgroup. This subgroup is called the <dfn class="terminology">torsion subgroup</dfn> of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-32-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.31"><a href="#exercises-cyclic-32" title="Copy heading and permalink for Exercise 4.5.31">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-33"><h3 class="heading"><span class="codenumber">32<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-33-1-1">Let <span class="process-math">\(G\)</span> be a finite cyclic group of order <span class="process-math">\(n\)</span> generated by <span class="process-math">\(x\text{.}\)</span> Show that if <span class="process-math">\(y = x^k\)</span> where <span class="process-math">\(\gcd(k,n) = 1\text{,}\)</span> then <span class="process-math">\(y\)</span> must be a generator of <span class="process-math">\(G\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-33-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.32"><a href="#exercises-cyclic-33" title="Copy heading and permalink for Exercise 4.5.32">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-34"><h3 class="heading"><span class="codenumber">33<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-34-1-1">If <span class="process-math">\(G\)</span> is an abelian group that contains a pair of cyclic subgroups of order 2, show that <span class="process-math">\(G\)</span> must contain a subgroup of order 4. Does this subgroup have to be cyclic?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-34-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.33"><a href="#exercises-cyclic-34" title="Copy heading and permalink for Exercise 4.5.33">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-35"><h3 class="heading"><span class="codenumber">34<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-35-1-1">Let <span class="process-math">\(G\)</span> be an abelian group of order <span class="process-math">\(pq\)</span> where <span class="process-math">\(\gcd(p,q) = 1\text{.}\)</span>  If <span class="process-math">\(G\)</span> contains elements <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of order <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> respectively, then show that <span class="process-math">\(G\)</span> is cyclic.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-35-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.34"><a href="#exercises-cyclic-35" title="Copy heading and permalink for Exercise 4.5.34">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-36"><h3 class="heading"><span class="codenumber">35<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-36-1-1">Prove that the subgroups of <span class="process-math">\(\mathbb Z\)</span> are exactly <span class="process-math">\(n{\mathbb Z}\)</span> for <span class="process-math">\(n = 0, 1, 2, \ldots\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-36-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.35"><a href="#exercises-cyclic-36" title="Copy heading and permalink for Exercise 4.5.35">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-37"><h3 class="heading"><span class="codenumber">36<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-37-1-1">Prove that the generators of <span class="process-math">\({\mathbb Z}_n\)</span> are the integers <span class="process-math">\(r\)</span> such that <span class="process-math">\(1 \leq r \lt n\)</span> and <span class="process-math">\(\gcd(r,n) =  1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-37-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.36"><a href="#exercises-cyclic-37" title="Copy heading and permalink for Exercise 4.5.36">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-38"><h3 class="heading"><span class="codenumber">37<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-38-1-1">Prove that if <span class="process-math">\(G\)</span> has no proper nontrivial subgroups, then <span class="process-math">\(G\)</span> is a cyclic group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-38-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.37"><a href="#exercises-cyclic-38" title="Copy heading and permalink for Exercise 4.5.37">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-39"><h3 class="heading"><span class="codenumber">38<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-39-1-1">Prove that the order of an element in a cyclic group <span class="process-math">\(G\)</span> must divide the order of the group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-39-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.38"><a href="#exercises-cyclic-39" title="Copy heading and permalink for Exercise 4.5.38">🔗</a></div></article><article class="exercise exercise-like" id="cyclic-exercise-subgroups-exist"><h3 class="heading"><span class="codenumber">39<span class="period">.</span></span></h3>
+<div class="para" id="cyclic-exercise-subgroups-exist-1-1">Prove that if <span class="process-math">\(G\)</span> is a cyclic group of order <span class="process-math">\(m\)</span> and <span class="process-math">\(d \mid m\text{,}\)</span> then <span class="process-math">\(G\)</span> must have a subgroup of order <span class="process-math">\(d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cyclic-exercise-subgroups-exist-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.39"><a href="#cyclic-exercise-subgroups-exist" title="Copy heading and permalink for Exercise 4.5.39">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-41"><h3 class="heading"><span class="codenumber">40<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-41-1-1">For what integers <span class="process-math">\(n\)</span> is <span class="process-math">\(-1\)</span> an <span class="process-math">\(n\)</span>th root of unity?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-41-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.40"><a href="#exercises-cyclic-41" title="Copy heading and permalink for Exercise 4.5.40">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-42"><h3 class="heading"><span class="codenumber">41<span class="period">.</span></span></h3>
+<div class="para logical" id="exercises-cyclic-42-1-1">
+<div class="para">If <span class="process-math">\(z = r( \cos \theta + i \sin \theta)\)</span> and <span class="process-math">\(w = s(\cos \phi + i \sin \phi)\)</span> are two nonzero complex numbers, show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+zw = rs[ \cos( \theta + \phi)  + i \sin( \theta + \phi)].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-42-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.41"><a href="#exercises-cyclic-42" title="Copy heading and permalink for Exercise 4.5.41">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-43"><h3 class="heading"><span class="codenumber">42<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-43-1-1">Prove that the circle group is a subgroup of  <span class="process-math">\({\mathbb C}^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-43-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.42"><a href="#exercises-cyclic-43" title="Copy heading and permalink for Exercise 4.5.42">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-44"><h3 class="heading"><span class="codenumber">43<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-44-1-1">Prove that the <span class="process-math">\(n\)</span>th roots of unity form a cyclic subgroup of <span class="process-math">\({\mathbb T}\)</span>  of order <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-44-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.43"><a href="#exercises-cyclic-44" title="Copy heading and permalink for Exercise 4.5.43">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-45"><h3 class="heading"><span class="codenumber">44<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-45-1-1">Let <span class="process-math">\(\alpha \in \mathbb T\text{.}\)</span> Prove that <span class="process-math">\(\alpha^m =1\)</span> and <span class="process-math">\(\alpha^n = 1\)</span> if and only if <span class="process-math">\(\alpha^d = 1\)</span> for <span class="process-math">\(d = \gcd(m,n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-45-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.44"><a href="#exercises-cyclic-45" title="Copy heading and permalink for Exercise 4.5.44">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-46"><h3 class="heading"><span class="codenumber">45<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-46-1-1">Let <span class="process-math">\(z \in {\mathbb C}^\ast\text{.}\)</span> If <span class="process-math">\(|z| \neq 1\text{,}\)</span> prove that the order of <span class="process-math">\(z\)</span> is infinite.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-46-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.45"><a href="#exercises-cyclic-46" title="Copy heading and permalink for Exercise 4.5.45">🔗</a></div></article><article class="exercise exercise-like" id="exercises-cyclic-47"><h3 class="heading"><span class="codenumber">46<span class="period">.</span></span></h3>
+<div class="para" id="exercises-cyclic-47-1-1">Let <span class="process-math">\(z =\cos \theta + i \sin \theta\)</span> be in <span class="process-math">\({\mathbb T}\)</span> where <span class="process-math">\(\theta \in {\mathbb Q}\text{.}\)</span>  Prove that the order of <span class="process-math">\(z\)</span>  is infinite.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-cyclic-47-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.5.46"><a href="#exercises-cyclic-47" title="Copy heading and permalink for Exercise 4.5.46">🔗</a></div></article><div class="autopermalink" data-description="Exercises 4.5: Exercises"><a href="#exercises-cyclic" title="Copy heading and permalink for Exercises 4.5: Exercises">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="cyclic-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cyclic-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=9664088;
+var sc_invisible=1;
+var sc_security="6e60c510";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-48811660-1');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>

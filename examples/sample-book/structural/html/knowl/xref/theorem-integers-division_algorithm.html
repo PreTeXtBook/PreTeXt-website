@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Division Algorithm.</span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for theorem</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;theorem xml:id="theorem-integers-division_algorithm"&gt;
+    &lt;title&gt;Division Algorithm&lt;/title&gt;
+    &lt;idx&gt;&lt;h&gt;Division algorithm&lt;/h&gt;&lt;h&gt;for integers&lt;/h&gt;&lt;/idx&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Let &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; be integers, with &lt;m&gt;b \gt 0&lt;/m&gt;.  Then there exist unique integers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; such that 
+            &lt;me&gt;a = bq + r&lt;/me&gt;
+        where &lt;m&gt;0 \leq r \lt b&lt;/m&gt;.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+        &lt;p&gt;This is a perfect example of the existence-and-uniqueness type of proof.  We must first prove that the numbers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; actually  exist. Then we must show that if  &lt;m&gt;q'&lt;/m&gt; and &lt;m&gt;r'&lt;/m&gt; are two other such numbers, then &lt;m&gt;q = q'&lt;/m&gt; and &lt;m&gt;r = r'&lt;/m&gt;.&lt;/p&gt;
+
+        &lt;p&gt;&lt;em&gt;Existence of &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt;.&lt;/em&gt; Let
+            &lt;me&gt;S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}&lt;/me&gt;.
+        If &lt;m&gt;0 \in S&lt;/m&gt;, then &lt;m&gt;b&lt;/m&gt; divides &lt;m&gt;a&lt;/m&gt;, and  we can let &lt;m&gt;q = a/b&lt;/m&gt; and &lt;m&gt;r = 0&lt;/m&gt;.  If &lt;m&gt;0 \notin S&lt;/m&gt;, we can use the Well-Ordering Principle.  We must first show that &lt;m&gt;S&lt;/m&gt; is nonempty.  If &lt;m&gt;a \gt 0&lt;/m&gt;, then &lt;m&gt;a - b \cdot 0 \in S&lt;/m&gt;. If &lt;m&gt;a \lt 0&lt;/m&gt;, then &lt;m&gt;a - b(2a) = a(1 - 2b) \in S&lt;/m&gt;.  In either case &lt;m&gt;S \neq \emptyset&lt;/m&gt;.  By the Well-Ordering Principle, &lt;m&gt;S&lt;/m&gt; must have a smallest member, say &lt;m&gt;r = a - bq&lt;/m&gt;. Therefore, &lt;m&gt;a = bq + r&lt;/m&gt;, &lt;m&gt;r \geq 0&lt;/m&gt;. We now show that &lt;m&gt;r \lt b&lt;/m&gt;. Suppose that &lt;m&gt;r \gt b&lt;/m&gt;. Then   
+            &lt;me&gt;a - b(q + 1)= a - bq - b = r - b \gt 0&lt;/me&gt;.
+        In this case we would have &lt;m&gt;a - b(q + 1)&lt;/m&gt; in the set &lt;m&gt;S&lt;/m&gt;. But then &lt;m&gt;a - b(q + 1) \lt a - bq&lt;/m&gt;, which would contradict the fact that &lt;m&gt;r = a - bq&lt;/m&gt; is the smallest member  of &lt;m&gt;S&lt;/m&gt;. So &lt;m&gt;r \leq b&lt;/m&gt;.  Since &lt;m&gt;0 \notin S&lt;/m&gt;, &lt;m&gt;r \neq b&lt;/m&gt; and so &lt;m&gt;r \lt b&lt;/m&gt;.&lt;/p&gt;
+
+        &lt;p&gt;&lt;em&gt;Uniqueness of &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt;.&lt;/em&gt; Suppose there exist integers &lt;m&gt;r&lt;/m&gt;, &lt;m&gt;r'&lt;/m&gt;, &lt;m&gt;q&lt;/m&gt;, and &lt;m&gt;q'&lt;/m&gt; such that
+            &lt;me&gt;a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b&lt;/me&gt;.
+        Then &lt;m&gt; bq + r =  bq' + r'&lt;/m&gt;.  Assume that &lt;m&gt;r' \geq r&lt;/m&gt;.  From the last equation we have &lt;m&gt;b(q - q') = r' - r&lt;/m&gt;; therefore, &lt;m&gt;b&lt;/m&gt; must divide &lt;m&gt;r' - r&lt;/m&gt; and &lt;m&gt;0 \leq r'- r \leq r' \lt b&lt;/m&gt;.  This is possible only if &lt;m&gt;r' - r = 0&lt;/m&gt;.  Hence, &lt;m&gt;r = r'&lt;/m&gt; and  &lt;m&gt;q = q'&lt;/m&gt;.&lt;/p&gt;
+    &lt;/proof&gt;
+&lt;/theorem&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers, with <span class="process-math">\(b \gt 0\text{.}\)</span>  Then there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a = bq + r
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(0 \leq r \lt b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-integers-division_algorithm-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.1: Division Algorithm"><a href="#theorem-integers-division_algorithm" title="Copy heading and permalink for Theorem 2.2.1: Division Algorithm">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;p&gt;This is a perfect example of the existence-and-uniqueness type of proof.  We must first prove that the numbers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; actually  exist. Then we must show that if  &lt;m&gt;q'&lt;/m&gt; and &lt;m&gt;r'&lt;/m&gt; are two other such numbers, then &lt;m&gt;q = q'&lt;/m&gt; and &lt;m&gt;r = r'&lt;/m&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Existence of &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt;.&lt;/em&gt; Let
+        &lt;me&gt;S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}&lt;/me&gt;.
+    If &lt;m&gt;0 \in S&lt;/m&gt;, then &lt;m&gt;b&lt;/m&gt; divides &lt;m&gt;a&lt;/m&gt;, and  we can let &lt;m&gt;q = a/b&lt;/m&gt; and &lt;m&gt;r = 0&lt;/m&gt;.  If &lt;m&gt;0 \notin S&lt;/m&gt;, we can use the Well-Ordering Principle.  We must first show that &lt;m&gt;S&lt;/m&gt; is nonempty.  If &lt;m&gt;a \gt 0&lt;/m&gt;, then &lt;m&gt;a - b \cdot 0 \in S&lt;/m&gt;. If &lt;m&gt;a \lt 0&lt;/m&gt;, then &lt;m&gt;a - b(2a) = a(1 - 2b) \in S&lt;/m&gt;.  In either case &lt;m&gt;S \neq \emptyset&lt;/m&gt;.  By the Well-Ordering Principle, &lt;m&gt;S&lt;/m&gt; must have a smallest member, say &lt;m&gt;r = a - bq&lt;/m&gt;. Therefore, &lt;m&gt;a = bq + r&lt;/m&gt;, &lt;m&gt;r \geq 0&lt;/m&gt;. We now show that &lt;m&gt;r \lt b&lt;/m&gt;. Suppose that &lt;m&gt;r \gt b&lt;/m&gt;. Then   
+        &lt;me&gt;a - b(q + 1)= a - bq - b = r - b \gt 0&lt;/me&gt;.
+    In this case we would have &lt;m&gt;a - b(q + 1)&lt;/m&gt; in the set &lt;m&gt;S&lt;/m&gt;. But then &lt;m&gt;a - b(q + 1) \lt a - bq&lt;/m&gt;, which would contradict the fact that &lt;m&gt;r = a - bq&lt;/m&gt; is the smallest member  of &lt;m&gt;S&lt;/m&gt;. So &lt;m&gt;r \leq b&lt;/m&gt;.  Since &lt;m&gt;0 \notin S&lt;/m&gt;, &lt;m&gt;r \neq b&lt;/m&gt; and so &lt;m&gt;r \lt b&lt;/m&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Uniqueness of &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt;.&lt;/em&gt; Suppose there exist integers &lt;m&gt;r&lt;/m&gt;, &lt;m&gt;r'&lt;/m&gt;, &lt;m&gt;q&lt;/m&gt;, and &lt;m&gt;q'&lt;/m&gt; such that
+        &lt;me&gt;a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b&lt;/me&gt;.
+    Then &lt;m&gt; bq + r =  bq' + r'&lt;/m&gt;.  Assume that &lt;m&gt;r' \geq r&lt;/m&gt;.  From the last equation we have &lt;m&gt;b(q - q') = r' - r&lt;/m&gt;; therefore, &lt;m&gt;b&lt;/m&gt; must divide &lt;m&gt;r' - r&lt;/m&gt; and &lt;m&gt;0 \leq r'- r \leq r' \lt b&lt;/m&gt;.  This is possible only if &lt;m&gt;r' - r = 0&lt;/m&gt;.  Hence, &lt;m&gt;r = r'&lt;/m&gt; and  &lt;m&gt;q = q'&lt;/m&gt;.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para">This is a perfect example of the existence-and-uniqueness type of proof.  We must first prove that the numbers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> actually  exist. Then we must show that if  <span class="process-math">\(q'\)</span> and <span class="process-math">\(r'\)</span> are two other such numbers, then <span class="process-math">\(q = q'\)</span> and <span class="process-math">\(r = r'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-integers-division_algorithm-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<em class="emphasis">Existence of <span class="process-math">\(q\)</span> and <span class="process-math">\(r\text{.}\)</span></em> Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(0 \in S\text{,}\)</span> then <span class="process-math">\(b\)</span> divides <span class="process-math">\(a\text{,}\)</span> and  we can let <span class="process-math">\(q = a/b\)</span> and <span class="process-math">\(r = 0\text{.}\)</span>  If <span class="process-math">\(0 \notin S\text{,}\)</span> we can use the Well-Ordering Principle.  We must first show that <span class="process-math">\(S\)</span> is nonempty.  If <span class="process-math">\(a \gt 0\text{,}\)</span> then <span class="process-math">\(a - b \cdot 0 \in S\text{.}\)</span> If <span class="process-math">\(a \lt 0\text{,}\)</span> then <span class="process-math">\(a - b(2a) = a(1 - 2b) \in S\text{.}\)</span>  In either case <span class="process-math">\(S \neq \emptyset\text{.}\)</span>  By the Well-Ordering Principle, <span class="process-math">\(S\)</span> must have a smallest member, say <span class="process-math">\(r = a - bq\text{.}\)</span> Therefore, <span class="process-math">\(a = bq + r\text{,}\)</span> <span class="process-math">\(r \geq 0\text{.}\)</span> We now show that <span class="process-math">\(r \lt b\text{.}\)</span> Suppose that <span class="process-math">\(r \gt b\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a - b(q + 1)= a - bq - b = r - b \gt 0\text{.}
+\end{equation*}
+</div>
+<div class="para">In this case we would have <span class="process-math">\(a - b(q + 1)\)</span> in the set <span class="process-math">\(S\text{.}\)</span> But then <span class="process-math">\(a - b(q + 1) \lt a - bq\text{,}\)</span> which would contradict the fact that <span class="process-math">\(r = a - bq\)</span> is the smallest member  of <span class="process-math">\(S\text{.}\)</span> So <span class="process-math">\(r \leq b\text{.}\)</span>  Since <span class="process-math">\(0 \notin S\text{,}\)</span> <span class="process-math">\(r \neq b\)</span> and so <span class="process-math">\(r \lt b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-integers-division_algorithm-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<em class="emphasis">Uniqueness of <span class="process-math">\(q\)</span> and <span class="process-math">\(r\text{.}\)</span></em> Suppose there exist integers <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(r'\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(q'\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(bq + r =  bq' + r'\text{.}\)</span>  Assume that <span class="process-math">\(r' \geq r\text{.}\)</span>  From the last equation we have <span class="process-math">\(b(q - q') = r' - r\text{;}\)</span> therefore, <span class="process-math">\(b\)</span> must divide <span class="process-math">\(r' - r\)</span> and <span class="process-math">\(0 \leq r'- r \leq r' \lt b\text{.}\)</span>  This is possible only if <span class="process-math">\(r' - r = 0\text{.}\)</span>  Hence, <span class="process-math">\(r = r'\)</span> and  <span class="process-math">\(q = q'\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-integers-division_algorithm-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.1.1"><a href="#theorem-integers-division_algorithm-4" title="Copy heading and permalink for Proof 2.2.1.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="section-division-algorithm.html#theorem-integers-division_algorithm">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SB Hints and Answers to Selected Odd Exercises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="PreTeXt Sample Book">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = true;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXSB" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Open Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-TWJ.html" class="internal"><span class="title">Author Biography</span></a></div></li>
+<li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-RAB.html" class="internal"><span class="title">About Robert A. Beezer</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="dedication.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="acknowledgement.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface">
+<div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors to the 4<span class="process-math">\(^\mathrm{th}\)</span> Edition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-basics.html" class="internal"><span class="codenumber">I</span> <span class="title">Basics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-sage.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Executing Sage Commands</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Immediate Help</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Annotating Your Work</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-6" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Lists of Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-8" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Saving and Sharing Your Work</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-sets.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-sage-exercises.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-8.html" class="internal"><span class="codenumber">1.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction and Math in a Title <span class="process-math">\(A\notsubset B\)</span></span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Division Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Greatest Common Divisor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Primes and Factoring</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-integers.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-7.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-sage-exercises.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-9.html" class="internal"><span class="codenumber">2.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-algebra.html" class="internal"><span class="codenumber">II</span> <span class="title">Algebra (and Runestone)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">1</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-mod-n-sym.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-5" class="internal"><span class="codenumber">1.1.1</span> <span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-6" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-groups-define.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Definition of a Group</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Examples of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-5" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-subgroups.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-2" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-3" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-sage.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Sage</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Integers mod n</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-4" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Groups of symmetries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-5" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Quaternions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-6" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Subgroups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groups.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-9.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-sage-exercises.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-11.html" class="internal"><span class="codenumber">1.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">2</span> <span class="title">Cyclicity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-4.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Cyclic groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-5.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subgroups of a Cyclic Group</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cyclic Groups of Complex Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-7.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Large Powers of Integers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-cyclic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-9.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-sage-exercises.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Sage Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-11.html" class="internal"><span class="codenumber">2.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rune.html" class="internal"><span class="codenumber">3</span> <span class="title">Runestone Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="inactive-code.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Programs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="activecode.html" class="internal"><span class="codenumber">3.2</span> <span class="title">ActiveCode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="code-lens.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Code Lens</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="coding-exercises.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Coding Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="data-files.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Data Files</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="videos-in-runestone.html" class="internal"><span class="codenumber">3.6</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rune-nested-divisions.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Deeper</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-3" class="internal"><span class="codenumber">3.7.1</span> <span class="title">Subsection One</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-4" class="internal"><span class="codenumber">3.7.2</span> <span class="title">Subsection Two</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="true-false-exercises.html" class="internal"><span class="codenumber">3.8</span> <span class="title">True/False Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-groupwork.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Multiple Choice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="parsons-exercises.html" class="internal"><span class="codenumber">3.10</span> <span class="title">Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="horizontal-parsons-exercises.html" class="internal"><span class="codenumber">3.11</span> <span class="title">Horizontal Parsons Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matching-exercises.html" class="internal"><span class="codenumber">3.12</span> <span class="title">Matching Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="clickable-area-exercises.html" class="internal"><span class="codenumber">3.13</span> <span class="title">Clickable Area Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="select-exercises.html" class="internal"><span class="codenumber">3.14</span> <span class="title">Select Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="short-answer-exercises.html" class="internal"><span class="codenumber">3.15</span> <span class="title">Short Answer Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="polling.html" class="internal"><span class="codenumber">3.16</span> <span class="title">Polling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">3.17</span> <span class="title">DoenetML</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">3.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">3.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">3.20</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">3.21</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">3.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">3.22</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">3.23</span> <span class="title">Expedited Samples</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">3.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">3.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">3.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">3.26</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">3.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">3.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">3.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter contains-active">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions active"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E</span> <span class="title">A Structured Appendix</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-6-3.html" class="internal"><span class="codenumber">E.1</span> <span class="title">A Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3" class="internal"><span class="codenumber">E.1.1</span> <span class="title">A Subsection in a Section in an Appendix</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="solutions" id="backmatter-3"><h2 class="heading">
+<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">B</span><span class="space"> </span><span class="title">Hints and Answers to Selected Odd Exercises</span>
+</h2>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for solutions</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;solutions divisional="hint answer solution" admit="odd"&gt;
+    &lt;title&gt;Hints and Answers to Selected Odd Exercises&lt;/title&gt;
+&lt;/solutions&gt;
+</code></pre></article></details><h3 class="heading hide-type" title="Exercises 2.4: Exercises">
+<span class="codenumber">I</span><span class="space"> </span><span class="title">Basics</span><br><span class="codenumber">2</span><span class="space"> </span><span class="title">The Integers</span><br><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.1<span class="period">.</span></span></h4>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;The base case, &lt;m&gt;S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2&lt;/m&gt; is true.&lt;/p&gt;
+    &lt;p&gt;Assume that &lt;m&gt;S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6&lt;/m&gt; is true. Then&lt;md&gt;
+        &lt;mrow&gt;1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 &amp;amp; = [k(k + 1)(2k + 1)]/6 + (k + 1)^2&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = [(k + 1)((k + 1) + 1)(2(k + 1) + 1)]/6,&lt;/mrow&gt;
+    &lt;/md&gt;and so &lt;m&gt;S(k + 1)&lt;/m&gt; is true. Thus, &lt;m&gt;S(n)&lt;/m&gt; is true for all positive integers &lt;m&gt;n&lt;/m&gt;.&lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">The base case, <span class="process-math">\(S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Assume that <span class="process-math">\(S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6\)</span> is true. Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 &amp; = [k(k + 1)(2k + 1)]/6 + (k + 1)^2\\
+&amp; = [(k + 1)((k + 1) + 1)(2(k + 1) + 1)]/6,
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(S(k + 1)\)</span> is true. Thus, <span class="process-math">\(S(n)\)</span> is true for all positive integers <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.4.1.1"><a href="#exercises-integers-2-2" title="Copy heading and permalink for Answer 2.4.1.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.3<span class="period">.</span></span></h4>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;The base case, &lt;m&gt;S(4): 4! = 24 \gt 16 =2^4&lt;/m&gt; is true. Assume &lt;m&gt;S(k): k! \gt 2^k&lt;/m&gt; is true. Then &lt;m&gt;(k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}&lt;/m&gt;, so &lt;m&gt;S(k + 1)&lt;/m&gt; is true. Thus, &lt;m&gt;S(n)&lt;/m&gt; is true for all positive integers &lt;m&gt;n&lt;/m&gt;.&lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">The base case, <span class="process-math">\(S(4): 4! = 24 \gt 16 =2^4\)</span> is true. Assume <span class="process-math">\(S(k): k! \gt 2^k\)</span> is true. Then <span class="process-math">\((k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}\text{,}\)</span> so <span class="process-math">\(S(k + 1)\)</span> is true. Thus, <span class="process-math">\(S(n)\)</span> is true for all positive integers <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.4.3.1"><a href="#exercises-integers-4-2" title="Copy heading and permalink for Answer 2.4.3.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.9<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Follow the proof in &lt;xref ref="example-integers-binomial-theorem"/&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Follow the proof in <a href="section-math-induction.html#example-integers-binomial-theorem" class="xref" data-knowl="./knowl/xref/example-integers-binomial-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.1.4: The Binomial Theorem">Example 2.1.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-10-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.9.1"><a href="#exercises-integers-10-2" title="Copy heading and permalink for Hint 2.4.9.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.11<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;The base case, &lt;m&gt;S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x&lt;/m&gt; is true. Assume &lt;m&gt;S(k): (1 + x)^k -1 \geq kx&lt;/m&gt; is true. Then&lt;md&gt;
+        &lt;mrow&gt;(1 + x)^{k + 1} - 1 &amp;amp; = (1 + x)(1 + x)^k -1&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = (1 + x)^k + x(1 + x)^k - 1&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; \geq kx + x(1 + x)^k&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; \geq kx + x&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = (k + 1)x,&lt;/mrow&gt;
+    &lt;/md&gt;so &lt;m&gt;S(k + 1)&lt;/m&gt; is true. Therefore, &lt;m&gt;S(n)&lt;/m&gt; is true for all positive integers &lt;m&gt;n&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">The base case, <span class="process-math">\(S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x\)</span> is true. Assume <span class="process-math">\(S(k): (1 + x)^k -1 \geq kx\)</span> is true. Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+(1 + x)^{k + 1} - 1 &amp; = (1 + x)(1 + x)^k -1\\
+&amp; = (1 + x)^k + x(1 + x)^k - 1\\
+&amp; \geq kx + x(1 + x)^k\\
+&amp; \geq kx + x\\
+&amp; = (k + 1)x,
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(S(k + 1)\)</span> is true. Therefore, <span class="process-math">\(S(n)\)</span> is true for all positive integers <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-12-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.11.1"><a href="#exercises-integers-12-2" title="Copy heading and permalink for Hint 2.4.11.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading">
+<span class="codenumber">2.4.17<span class="period">.</span></span><span class="space"> </span><span class="title">Fibonacci Numbers.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;For &lt;xref ref="fn_ineq"/&gt; and &lt;xref ref="fn_prod"/&gt; use mathematical induction.
+       &lt;xref ref="fn_formula"/&gt; Show that &lt;m&gt;f_1 = 1&lt;/m&gt;, &lt;m&gt;f_2 = 1&lt;/m&gt;, and &lt;m&gt;f_{n + 2} = f_{n + 1} + f_n&lt;/m&gt;.
+       &lt;xref ref="fn_ratio"/&gt;  Use part &lt;xref ref="fn_formula"/&gt;.
+       &lt;xref ref="fn_coprime"/&gt; Use part &lt;xref ref="fn_prod"/&gt; and &lt;xref ref="exercise-integers-gcd-1"/&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">For <a href="exercises-integers.html#fn_ineq" class="xref" data-knowl="./knowl/xref/fn_ineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.a">Item 2.4.17.a</a> and <a href="exercises-integers.html#fn_prod" class="xref" data-knowl="./knowl/xref/fn_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.b">Item 2.4.17.b</a> use mathematical induction. <a href="exercises-integers.html#fn_formula" class="xref" data-knowl="./knowl/xref/fn_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.c">Item 2.4.17.c</a> Show that <span class="process-math">\(f_1 = 1\text{,}\)</span> <span class="process-math">\(f_2 = 1\text{,}\)</span> and <span class="process-math">\(f_{n + 2} = f_{n + 1} + f_n\text{.}\)</span> <a href="exercises-integers.html#fn_ratio" class="xref" data-knowl="./knowl/xref/fn_ratio.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.d">Item 2.4.17.d</a>  Use part <a href="exercises-integers.html#fn_formula" class="xref" data-knowl="./knowl/xref/fn_formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.c">Item 2.4.17.c</a>. <a href="exercises-integers.html#fn_coprime" class="xref" data-knowl="./knowl/xref/fn_coprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.e">Item 2.4.17.e</a> Use part <a href="exercises-integers.html#fn_prod" class="xref" data-knowl="./knowl/xref/fn_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 2.4.17.b">Item 2.4.17.b</a> and <a href="exercises-integers.html#exercise-integers-gcd-1" class="xref" data-knowl="./knowl/xref/exercise-integers-gcd-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.4.16">Exercise 2.4.16</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-18-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.17.1"><a href="#exercises-integers-18-3" title="Copy heading and permalink for Hint 2.4.17.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.19<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Use the Fundamental Theorem of Arithmetic.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Use the Fundamental Theorem of Arithmetic.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-20-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.19.1"><a href="#exercises-integers-20-2" title="Copy heading and permalink for Hint 2.4.19.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.23<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Let &lt;m&gt;S = \{s \in {\mathbb N} : a \mid s&lt;/m&gt;, &lt;m&gt;b \mid s \}&lt;/m&gt;. Then &lt;m&gt;S \neq \emptyset&lt;/m&gt;, since &lt;m&gt;|ab| \in S&lt;/m&gt;. By the Principle of Well-Ordering, &lt;m&gt;S&lt;/m&gt; contains a least element &lt;m&gt;m&lt;/m&gt;. To show uniqueness, suppose that &lt;m&gt;a \mid n&lt;/m&gt; and &lt;m&gt;b \mid n&lt;/m&gt; for some &lt;m&gt;n \in {\mathbb N}&lt;/m&gt;. By the division algorithm, there exist unique integers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; such that &lt;m&gt;n = mq + r&lt;/m&gt;, where &lt;m&gt;0 \leq r \lt m&lt;/m&gt;. Since &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; divide both &lt;m&gt;m&lt;/m&gt;, and &lt;m&gt;n&lt;/m&gt;, it must be the case that  &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; both divide &lt;m&gt;r&lt;/m&gt;.  Thus, &lt;m&gt;r = 0&lt;/m&gt; by the minimality of &lt;m&gt;m&lt;/m&gt;. Therefore, &lt;m&gt;m \mid n&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Let <span class="process-math">\(S = \{s \in {\mathbb N} : a \mid s\text{,}\)</span> <span class="process-math">\(b \mid s \}\text{.}\)</span> Then <span class="process-math">\(S \neq \emptyset\text{,}\)</span> since <span class="process-math">\(|ab| \in S\text{.}\)</span> By the Principle of Well-Ordering, <span class="process-math">\(S\)</span> contains a least element <span class="process-math">\(m\text{.}\)</span> To show uniqueness, suppose that <span class="process-math">\(a \mid n\)</span> and <span class="process-math">\(b \mid n\)</span> for some <span class="process-math">\(n \in {\mathbb N}\text{.}\)</span> By the division algorithm, there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n = mq + r\text{,}\)</span> where <span class="process-math">\(0 \leq r \lt m\text{.}\)</span> Since <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> divide both <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(n\text{,}\)</span> it must be the case that  <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> both divide <span class="process-math">\(r\text{.}\)</span>  Thus, <span class="process-math">\(r = 0\)</span> by the minimality of <span class="process-math">\(m\text{.}\)</span> Therefore, <span class="process-math">\(m \mid n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-24-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.23.1"><a href="#exercises-integers-24-2" title="Copy heading and permalink for Hint 2.4.23.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.27<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Since &lt;m&gt;\gcd(a,b) = 1&lt;/m&gt;, there exist integers &lt;m&gt;r&lt;/m&gt; and &lt;m&gt;s&lt;/m&gt; such that &lt;m&gt;ar + bs = 1&lt;/m&gt;.   Thus, &lt;m&gt;acr + bcs = c&lt;/m&gt;. Since &lt;m&gt;a&lt;/m&gt; divides both &lt;m&gt;bc&lt;/m&gt; and itself, &lt;m&gt;a&lt;/m&gt; must divide &lt;m&gt;c&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Since <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> there exist integers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> such that <span class="process-math">\(ar + bs = 1\text{.}\)</span>   Thus, <span class="process-math">\(acr + bcs = c\text{.}\)</span> Since <span class="process-math">\(a\)</span> divides both <span class="process-math">\(bc\)</span> and itself, <span class="process-math">\(a\)</span> must divide <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-28-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.27.1"><a href="#exercises-integers-28-2" title="Copy heading and permalink for Hint 2.4.27.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">2.4.29<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Every prime must be of the form 2, 3, &lt;m&gt;6n + 1&lt;/m&gt;, or &lt;m&gt;6n + 5&lt;/m&gt;.   Suppose there are only finitely many primes of the form &lt;m&gt;6k + 5&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Every prime must be of the form 2, 3, <span class="process-math">\(6n + 1\text{,}\)</span> or <span class="process-math">\(6n + 5\text{.}\)</span>   Suppose there are only finitely many primes of the form <span class="process-math">\(6k + 5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-30-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.29.1"><a href="#exercises-integers-30-2" title="Copy heading and permalink for Hint 2.4.29.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 1.5: Exercises">
+<span class="codenumber">II</span><span class="space"> </span><span class="title">Algebra (and Runestone)</span><br><span class="codenumber">1</span><span class="space"> </span><span class="title">Groups</span><br><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.1<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;(a) &lt;m&gt;3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}&lt;/m&gt;;  (c) &lt;m&gt;18 + 26 \mathbb Z&lt;/m&gt;;  (e) &lt;m&gt;5 + 6 \mathbb Z&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">(a) <span class="process-math">\(3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}\text{;}\)</span>  (c) <span class="process-math">\(18 + 26 \mathbb Z\text{;}\)</span>  (e) <span class="process-math">\(5 + 6 \mathbb Z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.1.1"><a href="#exercises-groups-2-2" title="Copy heading and permalink for Hint 1.5.1.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.15<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;There is a nonabelian group containing six elements.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">There is a nonabelian group containing six elements.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-16-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.15.1"><a href="#exercises-groups-16-2" title="Copy heading and permalink for Hint 1.5.15.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.17<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;The are five different groups of order 8.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">The are five different groups of order 8.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-18-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.17.1"><a href="#exercises-groups-18-2" title="Copy heading and permalink for Hint 1.5.17.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.25<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;&lt;md&gt;
+        &lt;mrow&gt;(aba^{-1})^n &amp;amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = ab^na^{-1}.&lt;/mrow&gt;
+    &lt;/md&gt;&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})\\
+&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}\\
+&amp; = ab^na^{-1}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-26-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.25.1"><a href="#exercises-groups-26-2" title="Copy heading and permalink for Hint 1.5.25.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.31<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Since &lt;m&gt;abab = (ab)^2 = e = a^2 b^2 = aabb&lt;/m&gt;, we know that &lt;m&gt;ba = ab&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Since <span class="process-math">\(abab = (ab)^2 = e = a^2 b^2 = aabb\text{,}\)</span> we know that <span class="process-math">\(ba = ab\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-32-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.31.1"><a href="#exercises-groups-32-2" title="Copy heading and permalink for Hint 1.5.31.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.35<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;&lt;m&gt;H_1 = \{ id \}&lt;/m&gt;, &lt;m&gt;H_2 = \{ id, \rho_1, \rho_2 \}&lt;/m&gt;, &lt;m&gt;H_3 = \{ id, \mu_1 \}&lt;/m&gt;, &lt;m&gt;H_4 = \{ id, \mu_2 \}&lt;/m&gt;, &lt;m&gt;H_5 = \{ id, \mu_3 \}&lt;/m&gt;, &lt;m&gt;S_3&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(H_1 = \{ id \}\text{,}\)</span> <span class="process-math">\(H_2 = \{ id, \rho_1, \rho_2 \}\text{,}\)</span> <span class="process-math">\(H_3 = \{ id, \mu_1 \}\text{,}\)</span> <span class="process-math">\(H_4 = \{ id, \mu_2 \}\text{,}\)</span> <span class="process-math">\(H_5 = \{ id, \mu_3 \}\text{,}\)</span> <span class="process-math">\(S_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-36-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.35.1"><a href="#exercises-groups-36-2" title="Copy heading and permalink for Hint 1.5.35.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.41<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;The identity of &lt;m&gt;G&lt;/m&gt; is &lt;m&gt;1 = 1 + 0 \sqrt{2}&lt;/m&gt;. Since &lt;m&gt;(a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}&lt;/m&gt;, &lt;m&gt;G&lt;/m&gt; is closed under multiplication.  Finally,  &lt;m&gt;(a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">The identity of <span class="process-math">\(G\)</span> is <span class="process-math">\(1 = 1 + 0 \sqrt{2}\text{.}\)</span> Since <span class="process-math">\((a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}\text{,}\)</span> <span class="process-math">\(G\)</span> is closed under multiplication.  Finally,  <span class="process-math">\((a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-42-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.41.1"><a href="#exercises-groups-42-2" title="Copy heading and permalink for Hint 1.5.41.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.49<span class="period">.</span></span></h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Since &lt;m&gt;a^4b = ba&lt;/m&gt;, it must be the case that &lt;m&gt;b = a^6 b = a^2 b a&lt;/m&gt;, and we can conclude that &lt;m&gt; ab = a^3 b a = ba&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Since <span class="process-math">\(a^4b = ba\text{,}\)</span> it must be the case that <span class="process-math">\(b = a^6 b = a^2 b a\text{,}\)</span> and we can conclude that <span class="process-math">\(ab = a^3 b a = ba\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-50-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.5.49.1"><a href="#exercises-groups-50-2" title="Copy heading and permalink for Hint 1.5.49.1">🔗</a></div>
+</div></details></div></article><div class="exercisegroup"><div class="exercisegroup-exercises cols2">
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.55<span class="period">.</span></span></h4>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;
+        &lt;m&gt;1&lt;/m&gt;
+    &lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.5.55.1"><a href="#exercises-groups-56-2-2" title="Copy heading and permalink for Answer 1.5.55.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.57<span class="period">.</span></span></h4>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;
+        &lt;m&gt;n&lt;/m&gt;
+    &lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.5.57.1"><a href="#exercises-groups-56-4-2" title="Copy heading and permalink for Answer 1.5.57.1">🔗</a></div>
+</div></details></div></article>
+</div></div>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">1.5.59<span class="period">.</span></span></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 1.5.59.a"><span class="codenumber">1.5.59.a</span></h5>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;
+        &lt;m&gt;2&lt;/m&gt;
+    &lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.5.59.a.1"><a href="#exercises-groups-57-2-2" title="Copy heading and permalink for Answer 1.5.59.a.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 1.5.59.b"><span class="codenumber">1.5.59.b</span></h5>
+<article class="exercise-like"><h6 class="heading hide-type" title="Task 1.5.59.b.i"><span class="codenumber">1.5.59.b.i</span></h6>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;
+        &lt;m&gt;6&lt;/m&gt;
+    &lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(6\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.5.59.b.i.1"><a href="#exercises-groups-57-3-2-2" title="Copy heading and permalink for Answer 1.5.59.b.i.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h6 class="heading hide-type" title="Task 1.5.59.b.ii"><span class="codenumber">1.5.59.b.ii</span></h6>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for answer</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;answer&gt;
+    &lt;p&gt;
+        &lt;m&gt;10&lt;/m&gt;
+    &lt;/p&gt;
+&lt;/answer&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(10\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-57-3-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.5.59.b.ii.1"><a href="#exercises-groups-57-3-3-2" title="Copy heading and permalink for Answer 1.5.59.b.ii.1">🔗</a></div>
+</div></details></div></article></article></article><h3 class="heading hide-type" title="Exercises 3.8: True/False Exercises">
+<span class="codenumber">3</span><span class="space"> </span><span class="title">Runestone Testing</span><br><span class="codenumber">3.8</span><span class="space"> </span><span class="title">True/False Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.8.1<span class="period">.</span></span><span class="space"> </span><span class="title">True/False.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;&lt;m&gt;P_n&lt;/m&gt;, the vector space of polynomials with degree at most &lt;m&gt;n&lt;/m&gt;, has dimension &lt;m&gt;n+1&lt;/m&gt; by &lt;xref ref="theorem-exponent-laws"/&gt;.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter &lt;m&gt;n&lt;/m&gt;?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(P_n\text{,}\)</span> the vector space of polynomials with degree at most <span class="process-math">\(n\text{,}\)</span> has dimension <span class="process-math">\(n+1\)</span> by <a href="section-groups-define.html#theorem-exponent-laws" class="xref" data-knowl="./knowl/xref/theorem-exponent-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.16">Theorem 1.2.16</a>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#vector-space-dimension-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.8.1.1"><a href="#vector-space-dimension-5" title="Copy heading and permalink for Hint 3.8.1.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.9: Multiple Choice Exercises">
+<span class="codenumber">3.9</span><span class="space"> </span><span class="title">Multiple Choice Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.9.1<span class="period">.</span></span><span class="space"> </span><span class="title">Multiple-Choice, Not Randomized, One Answer.</span>
+</h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;What did you see last time you went driving?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.1.1"><a href="#multiple-choice-not-randomized-5" title="Copy heading and permalink for Hint 3.9.1.1">🔗</a></div>
+</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Maybe go out for a drive?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.1.2"><a href="#multiple-choice-not-randomized-6" title="Copy heading and permalink for Hint 3.9.1.2">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.9.3<span class="period">.</span></span><span class="space"> </span><span class="title">Multiple-Choice, Not Randomized, Multiple Answers.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Do you know the acronym&lt;ellipsis/&gt;&lt;acro&gt;ROY G BIV&lt;/acro&gt; for the colors of a rainbow, and their order?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Do you know the acronym…<abbr class="acronym">ROY G BIV</abbr> for the colors of a rainbow, and their order?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-multiple-answers-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.3.1"><a href="#multiple-choice-multiple-answers-5" title="Copy heading and permalink for Hint 3.9.3.1">🔗</a></div>
+</div></details></div></article><article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.9.5<span class="period">.</span></span><span class="space"> </span><span class="title">Multiple-Choice, Randomized, One Answer but with Checkboxes.</span>
+</h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;What did you see last time you went driving?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-randomized-forced-checkbox-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.5.1"><a href="#multiple-choice-randomized-forced-checkbox-5" title="Copy heading and permalink for Hint 3.9.5.1">🔗</a></div>
+</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Maybe go out for a drive?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-randomized-forced-checkbox-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.5.2"><a href="#multiple-choice-randomized-forced-checkbox-6" title="Copy heading and permalink for Hint 3.9.5.2">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.9.7<span class="period">.</span></span><span class="space"> </span><span class="title">Mathematical Multiple-Choice, Not Randomized, Multiple Answers.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find &lt;em&gt;a single&lt;/em&gt; correct answer.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find <em class="emphasis">a single</em> correct answer.<div class="autopermalink" data-description="Paragraph"><a href="#mathematical-multiple-choice-multiple-answers-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.9.7.1"><a href="#mathematical-multiple-choice-multiple-answers-5" title="Copy heading and permalink for Hint 3.9.7.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.10: Parsons Exercises">
+<span class="codenumber">3.10</span><span class="space"> </span><span class="title">Parsons Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.10.1<span class="period">.</span></span><span class="space"> </span><span class="title">Parsons Problem, Mathematical Proof.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;&lt;p&gt;Dorothy will not be much help with this proof.&lt;/p&gt;&lt;/hint&gt;
+</code></pre></article></details><div class="para">Dorothy will not be much help with this proof.<div class="autopermalink" data-description="Paragraph"><a href="#number-theory-proof-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.10.1.1"><a href="#number-theory-proof-5" title="Copy heading and permalink for Hint 3.10.1.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.12: Matching Exercises">
+<span class="codenumber">3.12</span><span class="space"> </span><span class="title">Matching Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.12.3<span class="period">.</span></span><span class="space"> </span><span class="title">Cardsort Problem, Linear Algebra.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;For openers, a basis for a subspace must be a &lt;em&gt;subset&lt;/em&gt; of the subspace.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">For openers, a basis for a subspace must be a <em class="emphasis">subset</em> of the subspace.<div class="autopermalink" data-description="Paragraph"><a href="#matching-bases-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.12.3.1"><a href="#matching-bases-6" title="Copy heading and permalink for Hint 3.12.3.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.13: Clickable Area Exercises">
+<span class="codenumber">3.13</span><span class="space"> </span><span class="title">Clickable Area Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.13.3<span class="period">.</span></span><span class="space"> </span><span class="title">Clickable Areas, Text in a Table.</span>
+</h4>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Python boolean variables begin with capital latters.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Python boolean variables begin with capital latters.<div class="autopermalink" data-description="Paragraph"><a href="#clickable-table-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.13.3.1"><a href="#clickable-table-4" title="Copy heading and permalink for Hint 3.13.3.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.19: Fill-In Exercises">
+<span class="codenumber">3.19</span><span class="space"> </span><span class="title">Fill-In Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.19.7<span class="period">.</span></span><span class="space"> </span><span class="title">Fill-In, Dynamic Math with Formulas as Answers.</span>
+</h4></article><h3 class="heading hide-type" title="Section 3.21: Exercises that are Timed">
+<span class="codenumber">3.21</span><span class="space"> </span><span class="title">Exercises that are Timed</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 3.21: Timed Exercises"><span class="title">Timed Exercises</span></h4>
+<article class="exercise-like"><h5 class="heading">
+<span class="codenumber">3.21.1<span class="period">.</span></span><span class="space"> </span><span class="title">True/False.</span>
+</h5>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;&lt;m&gt;P_n&lt;/m&gt;, the vector space of polynomials with degree at most &lt;m&gt;n&lt;/m&gt;, has dimension &lt;m&gt;n+1&lt;/m&gt; by &lt;xref ref="theorem-exponent-laws"/&gt;.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter &lt;m&gt;n&lt;/m&gt;?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">
+<span class="process-math">\(P_n\text{,}\)</span> the vector space of polynomials with degree at most <span class="process-math">\(n\text{,}\)</span> has dimension <span class="process-math">\(n+1\)</span> by <a href="section-groups-define.html#theorem-exponent-laws" class="xref" data-knowl="./knowl/xref/theorem-exponent-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.2.16">Theorem 1.2.16</a>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#vector-space-dimension-timed-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.21.1.1"><a href="#vector-space-dimension-timed-5" title="Copy heading and permalink for Hint 3.21.1.1">🔗</a></div>
+</div></details></div></article><h3 class="heading hide-type" title="Exercises 3.28">
+<span class="codenumber">3.28</span><span class="space"> </span><span class="title">Group Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="codenumber">3.28.1<span class="period">.</span></span><span class="space"> </span><span class="title">Multiple-Choice, Not Randomized, One Answer.</span>
+</h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;What did you see last time you went driving?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-five-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.28.1.1"><a href="#multiple-choice-not-randomized-five-5" title="Copy heading and permalink for Hint 3.28.1.1">🔗</a></div>
+</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Maybe go out for a drive?&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-five-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.28.1.2"><a href="#multiple-choice-not-randomized-five-6" title="Copy heading and permalink for Hint 3.28.1.2">🔗</a></div>
+</div></details>
+</div></article><div class="autopermalink" data-description="Appendix B: Hints and Answers to Selected Odd Exercises"><a href="#backmatter-3" title="Copy heading and permalink for Appendix B: Hints and Answers to Selected Odd Exercises">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=9664088;
+var sc_invisible=1;
+var sc_security="6e60c510";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+<!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-48811660-1');
+</script><!--End: Google Global Site Tag code-->
+</body>
+</html>

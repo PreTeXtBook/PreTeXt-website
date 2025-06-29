@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic.</span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for theorem</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;theorem xml:id="theorem-fund-theorem-arithmetic"&gt;
+    &lt;title&gt;Fundamental Theorem of Arithmetic&lt;/title&gt;
+    &lt;idx&gt;&lt;h&gt;Fundamental Theorem&lt;/h&gt;&lt;h&gt;of Arithmetic&lt;/h&gt;&lt;/idx&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Let &lt;m&gt;n&lt;/m&gt; be an integer such that &lt;m&gt;n \gt 1&lt;/m&gt;. Then
+            &lt;me&gt;n = p_1 p_2 \cdots p_k&lt;/me&gt;,
+        where &lt;m&gt;p_1, \ldots, p_k&lt;/m&gt; are  primes (not necessarily distinct).  Furthermore, this factorization is unique; that is, if 
+            &lt;me&gt;n = q_1 q_2 \cdots q_l&lt;/me&gt;,
+        then &lt;m&gt;k = l&lt;/m&gt; and the &lt;m&gt;q_i&lt;/m&gt;'s are just the &lt;m&gt;p_i&lt;/m&gt;'s rearranged.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+        &lt;p&gt;&lt;em&gt;Uniqueness.&lt;/em&gt;  To show uniqueness we will use induction on &lt;m&gt;n&lt;/m&gt;. The theorem is certainly true for &lt;m&gt;n = 2&lt;/m&gt; since in this case &lt;m&gt;n&lt;/m&gt; is prime.  Now assume that the result holds for all integers &lt;m&gt;m&lt;/m&gt; such that &lt;m&gt;1 \leq m \lt n&lt;/m&gt;, and 
+            &lt;me&gt;n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l&lt;/me&gt;,
+        where &lt;m&gt;p_1 \leq p_2 \leq \cdots \leq p_k&lt;/m&gt; and &lt;m&gt;q_1 \leq q_2 \leq \cdots \leq q_l&lt;/m&gt;. By &lt;xref ref="theorem-integers-prime-divisor"/&gt;, &lt;m&gt;p_1  \mid  q_i&lt;/m&gt; for some &lt;m&gt;i = 1, \ldots, l&lt;/m&gt; and &lt;m&gt;q_1  \mid  p_j&lt;/m&gt; for some &lt;m&gt;j = 1, \ldots, k&lt;/m&gt;.  Since all of the &lt;m&gt;p_i&lt;/m&gt;'s and &lt;m&gt;q_i&lt;/m&gt;'s are prime, &lt;m&gt;p_1 = q_i&lt;/m&gt; and  &lt;m&gt;q_1 = p_j&lt;/m&gt;. Hence, &lt;m&gt;p_1 = q_1&lt;/m&gt; since &lt;m&gt;p_1 \leq p_j = q_1 \leq q_i = p_1&lt;/m&gt;.  By the induction hypothesis, 
+            &lt;me&gt;n' = p_2 \cdots p_k = q_2 \cdots q_l&lt;/me&gt;
+        has a unique factorization.  Hence, &lt;m&gt;k = l&lt;/m&gt; and &lt;m&gt;q_i = p_i&lt;/m&gt; for &lt;m&gt;i = 1, \ldots, k&lt;/m&gt;.&lt;/p&gt;
+
+        &lt;p&gt;&lt;em&gt;Existence.&lt;/em&gt; To show existence, suppose that there is some integer that cannot be written as the product of primes.  Let &lt;m&gt;S&lt;/m&gt; be the set of all such numbers.  By the Principle of Well-Ordering, &lt;m&gt;S&lt;/m&gt; has a smallest number, say &lt;m&gt;a&lt;/m&gt;.  If the only positive factors of &lt;m&gt;a&lt;/m&gt; are &lt;m&gt;a&lt;/m&gt; and 1, then &lt;m&gt;a&lt;/m&gt; is prime, which is a contradiction.  Hence, &lt;m&gt;a = a_1 a_2&lt;/m&gt; where &lt;m&gt;1 \lt a_1 \lt a&lt;/m&gt; and &lt;m&gt;1 \lt a_2 \lt a&lt;/m&gt;.  Neither &lt;m&gt;a_1\in S&lt;/m&gt; nor &lt;m&gt;a_2 \in S&lt;/m&gt;, since &lt;m&gt;a&lt;/m&gt; is the smallest element in &lt;m&gt;S&lt;/m&gt;.  So&lt;md&gt;
+            &lt;mrow&gt;a_1 &amp;amp; = p_1 \cdots p_r&lt;/mrow&gt;
+            &lt;mrow&gt;a_2 &amp;amp; = q_1 \cdots q_s&lt;/mrow&gt;
+        &lt;/md&gt;.&lt;/p&gt;
+
+        &lt;p&gt;Therefore, &lt;me&gt;a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s&lt;/me&gt;.  So &lt;m&gt;a \notin S&lt;/m&gt;, which is a contradiction.&lt;/p&gt;
+    &lt;/proof&gt;
+&lt;/theorem&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">Let <span class="process-math">\(n\)</span> be an integer such that <span class="process-math">\(n \gt 1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n = p_1 p_2 \cdots p_k\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p_1, \ldots, p_k\)</span> are  primes (not necessarily distinct).  Furthermore, this factorization is unique; that is, if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n = q_1 q_2 \cdots q_l\text{,}
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(k = l\)</span> and the <span class="process-math">\(q_i\)</span>’s are just the <span class="process-math">\(p_i\)</span>’s rearranged.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-fund-theorem-arithmetic-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.2.7: Fundamental Theorem of Arithmetic"><a href="#theorem-fund-theorem-arithmetic" title="Copy heading and permalink for Theorem 2.2.7: Fundamental Theorem of Arithmetic">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;p&gt;&lt;em&gt;Uniqueness.&lt;/em&gt;  To show uniqueness we will use induction on &lt;m&gt;n&lt;/m&gt;. The theorem is certainly true for &lt;m&gt;n = 2&lt;/m&gt; since in this case &lt;m&gt;n&lt;/m&gt; is prime.  Now assume that the result holds for all integers &lt;m&gt;m&lt;/m&gt; such that &lt;m&gt;1 \leq m \lt n&lt;/m&gt;, and 
+        &lt;me&gt;n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l&lt;/me&gt;,
+    where &lt;m&gt;p_1 \leq p_2 \leq \cdots \leq p_k&lt;/m&gt; and &lt;m&gt;q_1 \leq q_2 \leq \cdots \leq q_l&lt;/m&gt;. By &lt;xref ref="theorem-integers-prime-divisor"/&gt;, &lt;m&gt;p_1  \mid  q_i&lt;/m&gt; for some &lt;m&gt;i = 1, \ldots, l&lt;/m&gt; and &lt;m&gt;q_1  \mid  p_j&lt;/m&gt; for some &lt;m&gt;j = 1, \ldots, k&lt;/m&gt;.  Since all of the &lt;m&gt;p_i&lt;/m&gt;'s and &lt;m&gt;q_i&lt;/m&gt;'s are prime, &lt;m&gt;p_1 = q_i&lt;/m&gt; and  &lt;m&gt;q_1 = p_j&lt;/m&gt;. Hence, &lt;m&gt;p_1 = q_1&lt;/m&gt; since &lt;m&gt;p_1 \leq p_j = q_1 \leq q_i = p_1&lt;/m&gt;.  By the induction hypothesis, 
+        &lt;me&gt;n' = p_2 \cdots p_k = q_2 \cdots q_l&lt;/me&gt;
+    has a unique factorization.  Hence, &lt;m&gt;k = l&lt;/m&gt; and &lt;m&gt;q_i = p_i&lt;/m&gt; for &lt;m&gt;i = 1, \ldots, k&lt;/m&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;Existence.&lt;/em&gt; To show existence, suppose that there is some integer that cannot be written as the product of primes.  Let &lt;m&gt;S&lt;/m&gt; be the set of all such numbers.  By the Principle of Well-Ordering, &lt;m&gt;S&lt;/m&gt; has a smallest number, say &lt;m&gt;a&lt;/m&gt;.  If the only positive factors of &lt;m&gt;a&lt;/m&gt; are &lt;m&gt;a&lt;/m&gt; and 1, then &lt;m&gt;a&lt;/m&gt; is prime, which is a contradiction.  Hence, &lt;m&gt;a = a_1 a_2&lt;/m&gt; where &lt;m&gt;1 \lt a_1 \lt a&lt;/m&gt; and &lt;m&gt;1 \lt a_2 \lt a&lt;/m&gt;.  Neither &lt;m&gt;a_1\in S&lt;/m&gt; nor &lt;m&gt;a_2 \in S&lt;/m&gt;, since &lt;m&gt;a&lt;/m&gt; is the smallest element in &lt;m&gt;S&lt;/m&gt;.  So&lt;md&gt;
+        &lt;mrow&gt;a_1 &amp;amp; = p_1 \cdots p_r&lt;/mrow&gt;
+        &lt;mrow&gt;a_2 &amp;amp; = q_1 \cdots q_s&lt;/mrow&gt;
+    &lt;/md&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Therefore, &lt;me&gt;a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s&lt;/me&gt;.  So &lt;m&gt;a \notin S&lt;/m&gt;, which is a contradiction.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">
+<em class="emphasis">Uniqueness.</em>  To show uniqueness we will use induction on <span class="process-math">\(n\text{.}\)</span> The theorem is certainly true for <span class="process-math">\(n = 2\)</span> since in this case <span class="process-math">\(n\)</span> is prime.  Now assume that the result holds for all integers <span class="process-math">\(m\)</span> such that <span class="process-math">\(1 \leq m \lt n\text{,}\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-integers-prime-divisor.html">
+\begin{equation*}
+n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p_1 \leq p_2 \leq \cdots \leq p_k\)</span> and <span class="process-math">\(q_1 \leq q_2 \leq \cdots \leq q_l\text{.}\)</span> By <a href="section-division-algorithm.html#theorem-integers-prime-divisor" class="xref" data-knowl="./knowl/xref/theorem-integers-prime-divisor.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 2.2.5">Lemma 2.2.5</a>, <span class="process-math">\(p_1  \mid  q_i\)</span> for some <span class="process-math">\(i = 1, \ldots, l\)</span> and <span class="process-math">\(q_1  \mid  p_j\)</span> for some <span class="process-math">\(j = 1, \ldots, k\text{.}\)</span>  Since all of the <span class="process-math">\(p_i\)</span>’s and <span class="process-math">\(q_i\)</span>’s are prime, <span class="process-math">\(p_1 = q_i\)</span> and  <span class="process-math">\(q_1 = p_j\text{.}\)</span> Hence, <span class="process-math">\(p_1 = q_1\)</span> since <span class="process-math">\(p_1 \leq p_j = q_1 \leq q_i = p_1\text{.}\)</span>  By the induction hypothesis,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-integers-prime-divisor.html">
+\begin{equation*}
+n' = p_2 \cdots p_k = q_2 \cdots q_l
+\end{equation*}
+</div>
+<div class="para">has a unique factorization.  Hence, <span class="process-math">\(k = l\)</span> and <span class="process-math">\(q_i = p_i\)</span> for <span class="process-math">\(i = 1, \ldots, k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-fund-theorem-arithmetic-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<em class="emphasis">Existence.</em> To show existence, suppose that there is some integer that cannot be written as the product of primes.  Let <span class="process-math">\(S\)</span> be the set of all such numbers.  By the Principle of Well-Ordering, <span class="process-math">\(S\)</span> has a smallest number, say <span class="process-math">\(a\text{.}\)</span>  If the only positive factors of <span class="process-math">\(a\)</span> are <span class="process-math">\(a\)</span> and 1, then <span class="process-math">\(a\)</span> is prime, which is a contradiction.  Hence, <span class="process-math">\(a = a_1 a_2\)</span> where <span class="process-math">\(1 \lt a_1 \lt a\)</span> and <span class="process-math">\(1 \lt a_2 \lt a\text{.}\)</span>  Neither <span class="process-math">\(a_1\in S\)</span> nor <span class="process-math">\(a_2 \in S\text{,}\)</span> since <span class="process-math">\(a\)</span> is the smallest element in <span class="process-math">\(S\text{.}\)</span>  So</div>
+<div class="displaymath process-math">
+\begin{align*}
+a_1 &amp; = p_1 \cdots p_r\\
+a_2 &amp; = q_1 \cdots q_s\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-fund-theorem-arithmetic-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s\text{.}
+\end{equation*}
+</div>
+<div class="para">So <span class="process-math">\(a \notin S\text{,}\)</span> which is a contradiction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-fund-theorem-arithmetic-4-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.2.7.1"><a href="#theorem-fund-theorem-arithmetic-4" title="Copy heading and permalink for Proof 2.2.7.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="section-division-algorithm.html#theorem-fund-theorem-arithmetic">in-context</a></span>
+</body>
+</html>

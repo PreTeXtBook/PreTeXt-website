@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">ISBN Codes.</span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for exercise</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;exercise&gt;
+    &lt;title&gt;ISBN Codes&lt;/title&gt;
+
+    &lt;statement&gt;
+        &lt;p&gt;Every book has an International Standard Book Number&lt;idx&gt;&lt;h&gt;International standard book number&lt;/h&gt;&lt;/idx&gt; (ISBN) code.  This is a 10-digit code indicating the book's publisher and title.  The tenth digit is a check digit satisfying 
+            &lt;me&gt;(d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}&lt;/me&gt;.
+        One problem is that &lt;m&gt;d_{10}&lt;/m&gt; might have to be a 10 to make the inner product zero; in this case, 11 digits would be  needed to make this scheme work.  Therefore, the character X is used for the eleventh digit.  So ISBN 3-540-96035-X is a valid ISBN code.&lt;/p&gt;
+
+        &lt;ol&gt;
+            &lt;li&gt;&lt;p&gt;Is ISBN 0-534-91500-0 a valid ISBN code?  What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?&lt;/p&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;p&gt;Does this method detect all single-digit errors?  What about all transposition errors?&lt;/p&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;p&gt;How many different ISBN codes are there?&lt;/p&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;p&gt;Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.&lt;/p&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;p&gt;A publisher has houses in Germany and the United States.  Its German prefix is &lt;c&gt;3-540&lt;/c&gt;.  If its United States prefix will be &lt;c&gt;0-abc&lt;/c&gt;, find &lt;c&gt;abc&lt;/c&gt; such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is &lt;c&gt;3&lt;/c&gt; and English is &lt;c&gt;0&lt;/c&gt;.  The next group of numbers identifies the publisher, and the last group identifies the specific book.&lt;/p&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/statement&gt;
+&lt;/exercise&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">Every book has an International Standard Book Number (ISBN) code.  This is a 10-digit code indicating the book’s publisher and title.  The tenth digit is a check digit satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}\text{.}
+\end{equation*}
+</div>
+<div class="para">One problem is that <span class="process-math">\(d_{10}\)</span> might have to be a 10 to make the inner product zero; in this case, 11 digits would be  needed to make this scheme work.  Therefore, the character X is used for the eleventh digit.  So ISBN 3-540-96035-X is a valid ISBN code.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="groups-9-5-2-2">
+<li>
+<div class="para">Is ISBN 0-534-91500-0 a valid ISBN code?  What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.6.4.a"><a href="#groups-9-5-2-2-1" title="Copy heading and permalink for Item 1.6.4.a">🔗</a></div>
+</li>
+<li>
+<div class="para">Does this method detect all single-digit errors?  What about all transposition errors?<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.6.4.b"><a href="#groups-9-5-2-2-2" title="Copy heading and permalink for Item 1.6.4.b">🔗</a></div>
+</li>
+<li>
+<div class="para">How many different ISBN codes are there?<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.6.4.c"><a href="#groups-9-5-2-2-3" title="Copy heading and permalink for Item 1.6.4.c">🔗</a></div>
+</li>
+<li>
+<div class="para">Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.6.4.d"><a href="#groups-9-5-2-2-4" title="Copy heading and permalink for Item 1.6.4.d">🔗</a></div>
+</li>
+<li>
+<div class="para">A publisher has houses in Germany and the United States.  Its German prefix is <code class="code-inline tex2jax_ignore">3-540</code>.  If its United States prefix will be <code class="code-inline tex2jax_ignore">0-abc</code>, find <code class="code-inline tex2jax_ignore">abc</code> such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is <code class="code-inline tex2jax_ignore">3</code> and English is <code class="code-inline tex2jax_ignore">0</code>.  The next group of numbers identifies the publisher, and the last group identifies the specific book.<div class="autopermalink" data-description="Paragraph"><a href="#groups-9-5-2-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.6.4.e"><a href="#groups-9-5-2-2-5" title="Copy heading and permalink for Item 1.6.4.e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.6.4: ISBN Codes"><a href="#groups-9-5" title="Copy heading and permalink for Exercise 1.6.4: ISBN Codes">🔗</a></div></article><span class="incontext"><a class="internal" href="groups-9.html#groups-9-5">in-context</a></span>
+</body>
+</html>

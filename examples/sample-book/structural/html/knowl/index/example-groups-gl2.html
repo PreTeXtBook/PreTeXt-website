@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix Multiplication of <span class="process-math">\(2\times 2\)</span> Matrices is a Group.</span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for example</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;example xml:id="example-groups-gl2"&gt;
+    &lt;title&gt;Matrix Multiplication of &lt;m&gt;2\times 2&lt;/m&gt; Matrices is a Group&lt;/title&gt;
+    &lt;p&gt;We use  &lt;m&gt;{\mathbb M}_2 ( {\mathbb R})&lt;/m&gt; to denote the set of all &lt;m&gt;2 \times 2&lt;/m&gt; matrices.  Let &lt;m&gt;GL_2({\mathbb R})&lt;/m&gt; be the subset of &lt;m&gt;{\mathbb M}_2 ( {\mathbb R})&lt;/m&gt; consisting of invertible matrices; that is, a matrix &lt;notation&gt;&lt;usage&gt;&lt;m&gt;\mathbb M_n(\mathbb R)&lt;/m&gt;&lt;/usage&gt;&lt;description&gt;the &lt;m&gt;n \times n&lt;/m&gt; matrices with entries in &lt;m&gt;\mathbb R&lt;/m&gt;&lt;/description&gt;&lt;/notation&gt;
+        &lt;me&gt;A =
+        \begin{pmatrix}
+        a &amp;amp; b \\
+        c &amp;amp; d
+        \end{pmatrix}&lt;/me&gt; 
+    is in  &lt;m&gt;GL_2( {\mathbb R})&lt;/m&gt; if there exists a matrix &lt;m&gt;A^{-1}&lt;/m&gt; such that
+    &lt;m&gt;A A^{-1} = A^{-1} A = I&lt;/m&gt;, where &lt;m&gt;I&lt;/m&gt; is the &lt;m&gt;2 \times 2&lt;/m&gt; identity matrix. For &lt;m&gt;A&lt;/m&gt; to have an inverse is equivalent to requiring that the determinant of &lt;m&gt;A&lt;/m&gt; be nonzero; that is, &lt;m&gt;\det A = ad - bc \neq 0&lt;/m&gt;. &lt;notation&gt;&lt;usage&gt;&lt;m&gt;\det A&lt;/m&gt;&lt;/usage&gt;&lt;description&gt;the determinant of &lt;m&gt;A&lt;/m&gt;&lt;/description&gt;&lt;/notation&gt; The set of invertible matrices forms a group called the &lt;term&gt;general linear group&lt;/term&gt;&lt;idx&gt;&lt;h&gt;Group&lt;/h&gt;&lt;h&gt;general linear&lt;/h&gt;&lt;/idx&gt;.  &lt;notation&gt;&lt;usage&gt;&lt;m&gt;GL_n(\mathbb R)&lt;/m&gt;&lt;/usage&gt;&lt;description&gt;the general linear group&lt;/description&gt;&lt;/notation&gt; The identity of the group is the identity matrix
+        &lt;me&gt;I =
+        \begin{pmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 1
+        \end{pmatrix}&lt;/me&gt;.
+    The inverse of &lt;m&gt;A \in GL_2( {\mathbb R})&lt;/m&gt; is
+        &lt;me&gt;A^{-1} =
+        \frac{1}{ad-bc}
+        \begin{pmatrix}
+        d &amp;amp; -b \\
+        -c &amp;amp; a
+        \end{pmatrix}&lt;/me&gt;.
+    The product of two invertible matrices is again invertible. Matrix multiplication is associative, satisfying the other group axiom. For matrices it is not true in general that &lt;m&gt;AB = BA&lt;/m&gt;; hence, &lt;m&gt;GL_2({\mathbb R})&lt;/m&gt; is another example of a nonabelian group.&lt;/p&gt;
+&lt;/example&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">We use  <span class="process-math">\({\mathbb M}_2 ( {\mathbb R})\)</span> to denote the set of all <span class="process-math">\(2 \times 2\)</span> matrices.  Let <span class="process-math">\(GL_2({\mathbb R})\)</span> be the subset of <span class="process-math">\({\mathbb M}_2 ( {\mathbb R})\)</span> consisting of invertible matrices; that is, a matrix </div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">is in  <span class="process-math">\(GL_2( {\mathbb R})\)</span> if there exists a matrix <span class="process-math">\(A^{-1}\)</span> such that <span class="process-math">\(A A^{-1} = A^{-1} A = I\text{,}\)</span> where <span class="process-math">\(I\)</span> is the <span class="process-math">\(2 \times 2\)</span> identity matrix. For <span class="process-math">\(A\)</span> to have an inverse is equivalent to requiring that the determinant of <span class="process-math">\(A\)</span> be nonzero; that is, <span class="process-math">\(\det A = ad - bc \neq 0\text{.}\)</span>  The set of invertible matrices forms a group called the <dfn class="terminology">general linear group</dfn>.   The identity of the group is the identity matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I =
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The inverse of <span class="process-math">\(A \in GL_2( {\mathbb R})\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1} =
+\frac{1}{ad-bc}
+\begin{pmatrix}
+d &amp; -b \\
+-c &amp; a
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The product of two invertible matrices is again invertible. Matrix multiplication is associative, satisfying the other group axiom. For matrices it is not true in general that <span class="process-math">\(AB = BA\text{;}\)</span> hence, <span class="process-math">\(GL_2({\mathbb R})\)</span> is another example of a nonabelian group.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-groups-gl2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.7: Matrix Multiplication of 2\times 2 Matrices is a Group"><a href="#example-groups-gl2" title="Copy heading and permalink for Example 1.2.7: Matrix Multiplication of 2\times 2 Matrices is a Group">🔗</a></div></article><span class="incontext"><a class="internal" href="section-groups-define.html#example-groups-gl2">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PTXSC WeBWorK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://pretextbook.org/examples/pretext-showcase/html/external/ptx-logo.png">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<link rel="icon" type="image/png" sizes="32x32" href="external/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="external/favicon/favicon-16x16.png">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="pretext-SC" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://pretextbook.org"><img src="external/ptx-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="pretext-showcase.html"><span class="title">PreTeXt Showcase</span></a></h1>
+<p class="byline">Many Contributors</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="pretext-showcase-9-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="worksheets.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pretext-showcase.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="pretext-showcase-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\order}[1]{\left\lvert#1\right\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-abstract"><div class="toc-title-box"><a href="frontmatter.html#frontmatter-3" class="internal"><span class="title">Abstract</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="mathematics.html" class="internal"><span class="codenumber">1</span> <span class="title">Mathematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="mathematics.html#subsection-the-quadratic-formula" class="internal"><span class="codenumber">1.1</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="mathematics.html#mathematics-3" class="internal"><span class="codenumber">1.2</span> <span class="title">Some Amusing Identities</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="environments.html" class="internal"><span class="codenumber">2</span> <span class="title">Environments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environments.html#environments-5" class="internal"><span class="codenumber">2.1</span> <span class="title">Traditional Structure</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="environments.html#subsec-the-rest" class="internal"><span class="codenumber">2.2</span> <span class="title">Inquiry Based Structure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="latex-image.html" class="internal"><span class="codenumber">3</span> <span class="title">Images and Diagrams</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="latex-image.html#latex-image-2" class="internal"><span class="codenumber">3.1</span> <span class="title">Images and Diagrams from <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> Code</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="latex-image.html#latex-image-3" class="internal"><span class="codenumber">3.2</span> <span class="title">Images and Diagrams from Asymptote</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="exercises.html" class="internal"><span class="codenumber">4</span> <span class="title">Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="exercises.html#exercises-10" class="internal"><span class="codenumber">4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises.html#exercises-11" class="internal"><span class="codenumber">4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="worksheets.html" class="internal"><span class="codenumber">5</span> <span class="title">Worksheets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheets.html#worksheets-2" class="internal"><span class="codenumber">5.1</span> <span class="title">A Geometric Prelude</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="webwork.html" class="internal"><span class="codenumber">6</span> <span class="title">WeBWorK</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="pretext-showcase-9.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="pretext-showcase-9-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="pretext-showcase-9-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="webwork"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">6</span><span class="space"> </span><span class="title">WeBWorK</span>
+</h2>
+<div class="para" id="webwork-2">These exercises demonstrate some WeBWorK features.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="webwork-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Answer Type Variety.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="webwork-3-3"><div class="para" id="webwork-3-3-1">This problem demonstrates that WeBWorK can process many kinds of answers.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-5" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="5" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRMaW1pdGVkUmFkaWNhbC5wbCIsImNvbnRleHRSZXN0cmljdGVkRG9tYWlucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJOdW1lcmljIik7CiRmID0gRm9ybXVsYSgic3FydCh4KSIpOwokZGVyaXZhdGl2ZSA9IEZvcm11bGEoIjEvKDJzcXJ0KHgpKSIpOwokcG9wdXAgPSBQb3BVcChbJz8nLCdwb3dlcicsJ2V4cG9uZW50aWFsJywnbGluZWFyJywncXVhZHJhdGljJ10sMSk7CiRyYWRpbyA9IFJhZGlvQnV0dG9ucyhbCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpdXMiLCBhcyBpbiB0aGUgcmFkaXVzIG9mIGEgY2lyY2xlLicsCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpc2giLCBhIHZlZ2V0YWJsZS4nLAogICdJdCBzaGFyZXMgYW5jZXN0cnkgd2l0aCAicmFkbGVyIiwgYSBtaXh0dXJlIG9mIGJlZXIgYW5kIGdyYXBlZnJ1aXQgc29kYS4nLApdLDEpOwpDb250ZXh0KCJMaW1pdGVkUmFkaWNhbCIpOwokYSA9IEZvcm11bGEoIjJzcXJ0KDMpIik7CkNvbnRleHQoIkxpbWl0ZWROdW1lcmljIik7CiRiID0gUmVhbChzcXJ0KDEyKSk7CkNvbnRleHQoIkludGVydmFsIik7CiRkb21haW4gPSBJbnRlcnZhbCgiWzAsaW5mKSIpOwpDb250ZXh0KCJQb2ludCIpOwokcG9pbnQgPSBQb2ludCgiKDQsMikiKTsKQ29udGV4dCgiUmVzdHJpY3RlZERvbWFpbnMiKTsKJHJlc3RyaWN0ZWQgPSBGb3JtdWxhKCJ4LCB4ID49IDAiKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGZ1bmN0aW9uIFtgZmBdIGRlZmluZWQgYnkgW2BmKHgpPVskZl1cdGV4dHsufWBdCmEuICBUaGUgZXhhY3QgdmFsdWUgb2YgW2BmKDEyKWBdIGlzIFtfXXskYX17MTB9IGFuZCBhIGRlY2ltYWwgYXBwcm94aW1hdGlvbiBmb3IgdGhpcyBpcyBbX117JGJ9ezEwfS4KCgphLiAgVGhlIGRvbWFpbiBvZiB0aGlzIGZ1bmN0aW9uLCBpbiBpbnRlcnZhbCBub3RhdGlvbiwgaXMgW19deyRkb21haW59ezEwfS4KCgphLiAgVGhlIGdyYXBoIG9mIFtgeT1bJGZdYF0gaW50ZXJzZWN0cyB0aGUgZ3JhcGggb2YgW2B5PTYteGBdIGF0IFtfXXskcG9pbnR9ezEwfS4KCgphLiAgW2BcZnJhY3tkfXtkeH1bJGZdPXt9YF0gW19deyRkZXJpdmF0aXZlfXsxMH0uCgoKYS4gIFRoZSBmb3JtdWxhIGZvciBbYGYoeCleMlx0ZXh0eyx9YF0gaW5jbHVkaW5nIGl0cyByZXN0cmljdGVkIGRvbWFpbiwgaXMgW19deyRyZXN0cmljdGVkfXsyMH0uCgoKYS4gIFtgZmBdIGlzIGEgW19deyRwb3B1cH17NX0gZnVuY3Rpb24uCgoKYS4gIFdoaWNoIGlzIHRydWUgb2YgdGhlIHdvcmQgInJhZGljYWwiPwoKICAgIFtfXXskcmFkaW99ezV9CgoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-5')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-5-1-1-1">
+<div class="para">Consider the function <span class="process-math">\(f\)</span> defined by <span class="process-math">\(f(x)={\sqrt{x}}\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-5-1-1-1-3">
+<li id="extracted-webwork-5-1-1-1-3-1">
+<div class="para" id="extracted-webwork-5-1-1-1-3-1-1">The exact value of <span class="process-math">\(f(12)\)</span> is <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> and a decimal approximation for this is <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.a"><a href="#extracted-webwork-5-1-1-1-3-1" title="Copy heading and permalink for Item 6.1.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-2">
+<div class="para" id="extracted-webwork-5-1-1-1-3-2-1">The domain of this function, in interval notation, is <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.b"><a href="#extracted-webwork-5-1-1-1-3-2" title="Copy heading and permalink for Item 6.1.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-3">
+<div class="para" id="extracted-webwork-5-1-1-1-3-3-1">The graph of <span class="process-math">\(y={\sqrt{x}}\)</span> intersects the graph of <span class="process-math">\(y=6-x\)</span> at <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.c"><a href="#extracted-webwork-5-1-1-1-3-3" title="Copy heading and permalink for Item 6.1.c">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-4">
+<div class="para" id="extracted-webwork-5-1-1-1-3-4-1">
+<span class="process-math">\(\frac{d}{dx}{\sqrt{x}}={}\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.d"><a href="#extracted-webwork-5-1-1-1-3-4" title="Copy heading and permalink for Item 6.1.d">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-5">
+<div class="para" id="extracted-webwork-5-1-1-1-3-5-1">The formula for <span class="process-math">\(f(x)^2\text{,}\)</span> including its restricted domain, is <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span>.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.e"><a href="#extracted-webwork-5-1-1-1-3-5" title="Copy heading and permalink for Item 6.1.e">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-6">
+<div class="para logical" id="extracted-webwork-5-1-1-1-3-6-1">
+<div class="para">
+<span class="process-math">\(f\)</span> is a</div>
+<ul class="square" id="extracted-webwork-5-1-1-1-3-6-1-2">
+<li id="extracted-webwork-5-1-1-1-3-6-1-2-1">
+<div class="para" id="extracted-webwork-5-1-1-1-3-6-1-2-1-1">power<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-6-1-2-2">
+<div class="para" id="extracted-webwork-5-1-1-1-3-6-1-2-2-1">exponential<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-6-1-2-3">
+<div class="para" id="extracted-webwork-5-1-1-1-3-6-1-2-3-1">linear<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-6-1-2-4">
+<div class="para" id="extracted-webwork-5-1-1-1-3-6-1-2-4-1">quadratic<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-6-1-2-4" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">function.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.f"><a href="#extracted-webwork-5-1-1-1-3-6" title="Copy heading and permalink for Item 6.1.f">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-7">
+<div class="para" id="extracted-webwork-5-1-1-1-3-7-1">Which is true of the word “radical”?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-5-1-1-1-3-7-2">
+<ul class="circle" id="extracted-webwork-5-1-1-1-3-7-2-1">
+<li id="extracted-webwork-5-1-1-1-3-7-2-1-1">
+<div class="para" id="extracted-webwork-5-1-1-1-3-7-2-1-1-1">It shares ancestry with "radius", as in the radius of a circle.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-7-2-1-2">
+<div class="para" id="extracted-webwork-5-1-1-1-3-7-2-1-2-1">It shares ancestry with "radish", a vegetable.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-5-1-1-1-3-7-2-1-3">
+<div class="para" id="extracted-webwork-5-1-1-1-3-7-2-1-3-1">It shares ancestry with "radler", a mixture of beer and grapefruit soda.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-5-1-1-1-3-7-2-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1-3-7-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.g"><a href="#extracted-webwork-5-1-1-1-3-7" title="Copy heading and permalink for Item 6.1.g">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-5-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-2-1">
+<span class="process-math">\(2\sqrt{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.1"><a href="#extracted-webwork-5-1-2" title="Copy heading and permalink for Answer 6.1.1">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-3-1">
+<span class="process-math">\(3.4641\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.2"><a href="#extracted-webwork-5-1-3" title="Copy heading and permalink for Answer 6.1.2">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-4-1">
+<span class="process-math">\(\left[0,\infty \right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.3"><a href="#extracted-webwork-5-1-4" title="Copy heading and permalink for Answer 6.1.3">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-5-1">
+<span class="process-math">\(\left(4,2\right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.4"><a href="#extracted-webwork-5-1-5" title="Copy heading and permalink for Answer 6.1.4">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-6-1">
+<span class="process-math">\(\frac{1}{2\sqrt{x}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.5"><a href="#extracted-webwork-5-1-6" title="Copy heading and permalink for Answer 6.1.5">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-7-1">
+<span class="process-math">\(x, x\ge 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.6"><a href="#extracted-webwork-5-1-7" title="Copy heading and permalink for Answer 6.1.6">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-8-1">
+<span class="process-math">\(\text{power}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-8-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.7"><a href="#extracted-webwork-5-1-8" title="Copy heading and permalink for Answer 6.1.7">🔗</a></div>
+</div></details><details id="extracted-webwork-5-1-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-5-1-9-1">
+<span class="process-math">\(\text{Choice 2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-5-1-9-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.1.8"><a href="#extracted-webwork-5-1-9" title="Copy heading and permalink for Answer 6.1.8">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1: Answer Type Variety"><a href="#webwork-3" title="Copy heading and permalink for Checkpoint 6.1: Answer Type Variety">🔗</a></div></article></details><details id="webwork-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Special Feedback.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="webwork-4-5"><div class="para" id="webwork-4-5-1">Try multiplying the exponents to see what feedback you get. Also, try something no one should get credit for, like <code class="code-inline tex2jax_ignore">x^2*x^5</code>.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-4-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-9" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="9" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJiaXphcnJvQXJpdGhtZXRpYy5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKTwvZGl2PicpKTsKQ29udGV4dCgpLT5vcGVyYXRvcnMtPnNldCgKJyonID0+IHtjbGFzcyA9PiAnYml6YXJybzo6Qk9QOjptdWx0aXBseScsIGlzQ29tbWFuZCA9PiAxfSwKJyAqJyA9PiB7Y2xhc3MgPT4gJ2JpemFycm86OkJPUDo6bXVsdGlwbHknLCBpc0NvbW1hbmQgPT4gMX0sCicqICcgPT4ge2NsYXNzID0+ICdiaXphcnJvOjpCT1A6Om11bHRpcGx5JywgaXNDb21tYW5kID0+IDF9LAopOwokZ2l2ZW4gPSBGb3JtdWxhKCJ4XjIgeF41Iik7CiRhbnN3ZXIgPSBGb3JtdWxhKCJ4XjciKTsKJHNwZWNpYWwgPSBGb3JtdWxhKCJ4XjEwIik7CiRldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKICBjaGVja2VyPT5zdWJ7CiAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJGFuc0hhc2ggKSA9IEBfOwogICAgVmFsdWU6OkVycm9yKCJXaGVuIG11bHRpcGx5aW5nIHBvd2VycyB3aXRoIHRoZSBzYW1lIGJhc2UsIHlvdSBkbyBub3QgbXVsdGlwbHkgdGhlIGV4cG9uZW50cy4iKSBpZiAoJHNwZWNpYWwgPT0gJHN0dWRlbnQpOwogICAgcmV0dXJuIDAgaWYgJGFuc0hhc2gtPntpc1ByZXZpZXd9IHx8ICRjb3JyZWN0ICE9ICRzdHVkZW50OwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjEpOwogICAgZGVsZXRlICRjb3JyZWN0LT57dGVzdF92YWx1ZXN9OyBkZWxldGUgJHN0dWRlbnQtPnt0ZXN0X3ZhbHVlc307CiAgICBteSAkT0sgPSAoJGNvcnJlY3QgPT0gJHN0dWRlbnQpOwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjApOwogICAgVmFsdWU6OkVycm9yKAogICAgICAiWW91ciBhbnN3ZXIgaXMgZXF1aXZhbGVudCB0byB0aGUgY29ycmVjdCBhbnN3ZXIsIGJ1dCBub3QgaW4gdGhlIGV4cGVjdGVkIGZvcm0uCiAgICAgIE1heWJlIGl0IG5lZWRzIHRvIGJlIHNpbXBsaWZpZWQsIGZhY3RvcmVkLCBleHBhbmRlZCwgaGF2ZSBpdHMgZGVub21pbmF0b3IgcmF0aW9uYWxpemVkLCBldGMuIgogICAgKSB1bmxlc3MgJE9LOwogICAgcmV0dXJuICRPSzsKICB9Cik7CgpCRUdJTl9QR01MClNpbXBsaWZ5IHRoZSBleHByZXNzaW9uIFtgWyRnaXZlbl1cdGV4dHsufWBdCgpbX117JGV2YWx1YXRvcn17MTB9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApBZGQgdGhlIGV4cG9uZW50cy4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIHNpbXBsaWZ5IHRoZSBwcm9kdWN0IG9mIHR3byBwb3dlcnMgb2YgdGhlIHNhbWUgYmFzZSwgYWRkIHRoZSBleHBvbmVudHMuCgpbYGBgXGJlZ2lue2FsaWduZWR9ClskZ2l2ZW5dXGFtcD14XnsyKzV9XFwKXGFtcD1bJGFuc3dlcl0KXGVuZHthbGlnbmVkfQpgYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-9')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-9-1-1-1">Simplify the expression <span class="process-math">\({x^{2}x^{5}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-9-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-9-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="extracted-webwork-9-1-2-1">Add the exponents.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-9-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.2.1"><a href="#extracted-webwork-9-1-2" title="Copy heading and permalink for Hint 6.2.1">🔗</a></div>
+</div></details><details id="extracted-webwork-9-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-9-1-3-1">
+<span class="process-math">\(x^{7}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-9-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.2.1"><a href="#extracted-webwork-9-1-3" title="Copy heading and permalink for Answer 6.2.1">🔗</a></div>
+</div></details><details id="extracted-webwork-9-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-9-1-4-1">To simplify the product of two powers of the same base, add the exponents.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-9-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-9-1-4-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+{x^{2}x^{5}}\amp=x^{2+5}\\
+\amp={x^{7}}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-9-1-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.2.1"><a href="#extracted-webwork-9-1-4" title="Copy heading and permalink for Solution 6.2.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2: Special Feedback"><a href="#webwork-4" title="Copy heading and permalink for Checkpoint 6.2: Special Feedback">🔗</a></div></article></details><details id="webwork-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span><span class="space"> </span><span class="title">String Answers.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="webwork-5-4"><div class="para" id="webwork-5-4-1">Spelling counts, but not capitalization or spaces.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-5-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-12" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="12" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiY29udGV4dEFyYml0cmFyeVN0cmluZy5wbCIsIlBUWFNDLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJBcmJpdHJhcnlTdHJpbmciKTsKJHBsYXR5cHVzID0gQ29tcHV0ZSgicGxhdHlwdXMiKS0+Y21wKGNoZWNrZXIgPT4gc3ViIHsKICBteSAoJGNvcnJlY3QsJHN0dWRlbnQsJGFucykgPSBAXzsKICAkY29ycmVjdCA9ICRjb3JyZWN0LT52YWx1ZTsKICAkc3R1ZGVudCA9ICRzdHVkZW50LT52YWx1ZTsKICAkc3R1ZGVudCA9IGxjKCRzdHVkZW50KTsKICAkc3R1ZGVudCA9fiBzLyArLyAvOwogICRzdHVkZW50ID1+IHMvXiAvLzsKICAkc3R1ZGVudCA9fiBzLyAkLy87CiAgcmV0dXJuICgkc3R1ZGVudCBlcSAkY29ycmVjdCk7Cn0pOwoKJGltYWdlXzEgPSBjcmVhdGVMYVRlWEltYWdlKCk7CiRpbWFnZV8xLT5hZGRUb1ByZWFtYmxlKGxhdGV4SW1hZ2VQcmVhbWJsZSgpKTsKJGltYWdlXzEtPkJFR0lOX0xBVEVYX0lNQUdFClxiZWdpbnt0aWt6cGljdHVyZX0KICBcZHJhd1tmaWxsPXJlZCwgb3BhY2l0eT0wLjVdICgwLDApIGNpcmNsZSAoMmNtKSBub2RlW2JlbG93IGxlZnQ9MS41Y20sIG9wYWNpdHk9MV0ge0hhcyBhIEJpbGx9IG5vZGVbYmVsb3cgbGVmdCwgb3BhY2l0eT0xXSB7RHVja307CiAgXGRyYXdbZmlsbD1ncmVlbiwgb3BhY2l0eT0wLjVdICg2MDoyY20pIGNpcmNsZSAoMmNtKSBub2RlIFthYm92ZT0yLjFjbSwgb3BhY2l0eT0xXSB7SXMgVmVuZW1vdXN9IG5vZGVbYWJvdmU9MC41Y20sIG9wYWNpdHk9MV0ge0plbGx5ZmlzaH07CiAgXGRyYXdbZmlsbD1ibHVlLCBvcGFjaXR5PTAuNV0gKDA6MmNtKSBjaXJjbGUgKDJjbSkgbm9kZSBbYmVsb3cgcmlnaHQ9MS41Y20sIG9wYWNpdHk9MV0ge0hhcyBGdXJ9IG5vZGVbYmVsb3cgcmlnaHQsIG9wYWNpdHk9MV0ge0JlYXZlcn07ClxlbmR7dGlrenBpY3R1cmV9CgpFTkRfTEFURVhfSU1BR0UKCkJFR0lOX1BHTUwKVGhpcyBWZW5uIERpYWdyYW0gZ3JvdXBzIGFuaW1hbHMgYnkgY2VydGFpbiBjaGFyYWN0ZXJpc3RpY3MuCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRpbWFnZV8xKSwgd2lkdGg9PjMwMClAXSogIDw8CgpOYW1lIGFuIGFuaW1hbCB0aGF0IGJlbG9uZ3MgaW4gdGhlIGNlbnRlciByZWdpb24uIFNwZWxsaW5nIGNvdW50cyEKCltfXXskcGxhdHlwdXN9ezMwfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-12')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-12-1-1-1">This Venn Diagram groups animals by certain characteristics.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<img src="generated/webwork/images/webwork-12-image-1.svg" role="img" class="contained"><div class="image-archive">
+<a href="generated/webwork/images/webwork-12-image-1.eps">eps</a><a href="generated/webwork/images/webwork-12-image-1.pdf">pdf</a><a href="generated/webwork/images/webwork-12-image-1.png">png</a><a href="generated/webwork/images/webwork-12-image-1.svg">svg</a><a href="generated/webwork/images/webwork-12-image-1.tex">tex</a>
+</div>
+</div> <div class="para" id="extracted-webwork-12-1-1-3">Name an animal that belongs in the center region. Spelling counts!<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="extracted-webwork-12-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-12-1-2-1">
+<span class="process-math">\({\text{platypus}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.3.1"><a href="#extracted-webwork-12-1-2" title="Copy heading and permalink for Answer 6.3.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.3: String Answers"><a href="#webwork-5" title="Copy heading and permalink for Checkpoint 6.3: String Answers">🔗</a></div></article></details><details id="webwork-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Open Problem Library.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="webwork-6-3"><div class="para" id="webwork-6-3-1">WeBWorK has an Open Problem Library with over 40,000 exercises. One of them is this exercise, with file path <a class="external" href="https://github.com/openwebwork/webwork-open-problem-library/blob/master/OpenProblemLibrary/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg" target="_blank"><code class="code-inline tex2jax_ignore">Library/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg</code></a><details class="ptx-footnote" aria-live="polite" id="webwork-6-3-1-3"><summary class="ptx-footnote__number" title="Footnote 6.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="webwork-6-3-1-3"><code class="code-inline tex2jax_ignore">github.com/openwebwork/webwork-open-problem-library/blob/master/OpenProblemLibrary/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg</code></div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-6-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-15" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="15" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-15')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-15-1-1-1">Find the prime factorization of <span class="process-math">\(35\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-15-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-15-1-1-2">
+<span class="process-math">\(35={}\)</span><span class="fillin underline" role="img" aria-label="11-character blank" style="width: 5em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-15-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-15-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-15-1-2-1">
+<span class="process-math">\(5\cdot 7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-15-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.4.1"><a href="#extracted-webwork-15-1-2" title="Copy heading and permalink for Answer 6.4.1">🔗</a></div>
+</div></details><details id="extracted-webwork-15-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-15-1-3-1">After checking to see if small prime numbers divide <span class="process-math">\(35\text{,}\)</span> we find that <span class="process-math">\(5\)</span> is one divisor. So <span class="process-math">\(35=5\cdot7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-15-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-15-1-3-2">Since both <span class="process-math">\(5\)</span> and <span class="process-math">\(7\)</span> are prime, the prime factorization of <span class="process-math">\(35\)</span> is <span class="process-math">\(5\cdot7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-15-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.4.1"><a href="#extracted-webwork-15-1-3" title="Copy heading and permalink for Solution 6.4.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.4: Open Problem Library"><a href="#webwork-6" title="Copy heading and permalink for Checkpoint 6.4: Open Problem Library">🔗</a></div></article></details><details id="webwork-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Structured with Tasks.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-18" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="18" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJzY2FmZm9sZC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRGcmFjdGlvbi5wbCIsImNvbnRleHRGaW5pdGVTb2x1dGlvblNldHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJHF1YWRyYXRpYyA9IEZvcm11bGEoIjIgeF4yIC0gNyB4IC0gMTUiKS0+cmVkdWNlOwokeDEgPSBGcmFjdGlvbig1LDEpOwokeDIgPSBGcmFjdGlvbigtMywyKTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHJlZHVjZUNvbnN0YW50cz0+MCxyZWR1Y2VDb25zdGFudEZ1bmN0aW9ucz0+MCk7CkNvbnRleHQoIkZpbml0ZVNvbHV0aW9uU2V0cyIpOwokc29sdXRpb25zID0gRm9ybXVsYSgiLTMvMiw1Iik7CgpCRUdJTl9QR01MClRoaXMgcHJvYmxlbSBoYXMgbXVsdGlwbGUgcGFydHMgdGhhdCBtdXN0IGJlIGNvbXBsZXRlZCBpbiBvcmRlci4gVHJ5IGFuc3dlcmluZyB0aGUgc2Vjb25kIHBhcnQgd2l0aCB2YXJpb3VzIHRoaW5ncyB5b3UgbWlnaHQgZXhwZWN0IGEgdXNlciB0byBlbnRlci4KCgpFTkRfUEdNTApTY2FmZm9sZDo6QmVnaW4obnVtYmVyZWQgPT4gMSxpc19vcGVuID0+ICJjb3JyZWN0X29yX2ZpcnN0X2luY29ycmVjdCIsY2FuX29wZW4gPT4gYWx3YXlzLCk7U2VjdGlvbjo6QmVnaW4oIklkZW50aWZ5IENvZWZmaWNpZW50cyIpOwpCRUdJTl9QR01MCkNvbnNpZGVyIHRoZSBlcXVhdGlvbgoKW2BgYFskcXVhZHJhdGljXSA9IDBgYGBdCgpJZGVudGlmeSB0aGUgY29lZmZpY2llbnRzIGZvciB0aGUgcXVhZHJhdGljIGVxdWF0aW9uIHVzaW5nIHRoZSBzdGFuZGFyZCBmb3JtIGZyb20gU3Vic2VjdGlvblskTkJTUF0qMS4xLgoKW2BhPWBdIFtfXXsyfXs0fSwgW2BiPWBdIFtfXXstN317NH0sIFtgYz1gXSBbX117LTE1fXs0fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRha2UgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gZm9yIHRoZSB2YWx1ZSBvZiBbYGFcdGV4dHssfWBdIHRoZSBjb2VmZmljaWVudCBvZiBbYHhgXSBmb3IgW2BiXHRleHR7LH1gXSBhbmQgdGhlIGNvbnN0YW50IGZvciBbYGNcdGV4dHsufWBdIF9JbiB0aGlzIGNhc2VfLCB0aGV5IGFyZSBbYGEgPSAyXHRleHR7LH1gXSBbYGIgPSAtN1x0ZXh0eyx9YF0gW2BjID0gLTE1XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OClNlY3Rpb246OkVuZCgpO1NlY3Rpb246OkJlZ2luKCJVc2UgdGhlIFF1YWRyYXRpYyBGb3JtdWxhIik7CkJFR0lOX1BHTUwKVXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB0byBmaW5kIHRoZSBzb2x1dGlvbiBzZXQgdG8KCltgYGBbJHF1YWRyYXRpY109MGBgYF0KCgoKW19deyRzb2x1dGlvbnN9ezMwfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClJlY2FsbCB0aGF0IHRoZSBxdWFkcmF0aWMgZm9ybXVsYSBpcyBnaXZlbiBpbiBTdWJzZWN0aW9uWyROQlNQXSoxLjEuCgpZb3UgYWxyZWFkeSBpZGVudGlmaWVkIFtgYSA9IDJcdGV4dHssfWBdIFtgYiA9IC03XHRleHR7LH1gXSBhbmQgW2BjID0gLTE1XHRleHR7LH1gXSBhbmQgdGhlIHJlc3VsdHMgZnJvbSB1c2luZyB0aGVzZSBpbiB0aGUgcXVhZHJhdGljIGZvcm11bGEgYXJlIFtgLVxmcmFjezN9ezJ9YF0gYW5kIFtgNVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgpTZWN0aW9uOjpFbmQoKTtTY2FmZm9sZDo6RW5kKCk7CkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-18')">Activate</button></div>
+<div class="problem-contents">
+<div class="introduction" id="extracted-webwork-18-1-1"><div class="para" id="extracted-webwork-18-1-1-1">This problem has multiple parts that must be completed in order. Try answering the second part with various things you might expect a user to enter.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="extracted-webwork-18-1-2"><h4 class="heading">
+<span class="codenumber">(a)</span><span class="space"> </span><span class="title">Identify Coefficients.</span>
+</h4>
+<div class="para" id="extracted-webwork-18-1-2-2-1">Consider the equation<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-18-1-2-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+{2x^{2}-7x-15} = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-18-1-2-2-3">Identify the coefficients for the quadratic equation using the standard form from Subsection 1.1.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-18-1-2-2-4">
+<span class="process-math">\(a=\)</span> <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>, <span class="process-math">\(b=\)</span> <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span>, <span class="process-math">\(c=\)</span> <span class="fillin underline" role="img" aria-label="4-character blank" style="width: 1.818181818181818em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-18-1-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-2-3-1">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.5.1"><a href="#extracted-webwork-18-1-2-3" title="Copy heading and permalink for Answer 6.5.1">🔗</a></div>
+</div></details><details id="extracted-webwork-18-1-2-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-2-4-1">
+<span class="process-math">\(-7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.5.2"><a href="#extracted-webwork-18-1-2-4" title="Copy heading and permalink for Answer 6.5.2">🔗</a></div>
+</div></details><details id="extracted-webwork-18-1-2-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-2-5-1">
+<span class="process-math">\(-15\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.5.3"><a href="#extracted-webwork-18-1-2-5" title="Copy heading and permalink for Answer 6.5.3">🔗</a></div>
+</div></details><details id="extracted-webwork-18-1-2-6" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-2-6-1">Take the coefficient of <span class="process-math">\(x^2\)</span> for the value of <span class="process-math">\(a\text{,}\)</span> the coefficient of <span class="process-math">\(x\)</span> for <span class="process-math">\(b\text{,}\)</span> and the constant for <span class="process-math">\(c\text{.}\)</span> <em class="emphasis">In this case</em>, they are <span class="process-math">\(a = 2\text{,}\)</span> <span class="process-math">\(b = -7\text{,}\)</span> <span class="process-math">\(c = -15\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.1"><a href="#extracted-webwork-18-1-2-6" title="Copy heading and permalink for Solution 6.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 6.5.a: Identify Coefficients"><a href="#extracted-webwork-18-1-2" title="Copy heading and permalink for Task 6.5.a: Identify Coefficients">🔗</a></div></article><article class="task exercise-like" id="extracted-webwork-18-1-3"><h4 class="heading">
+<span class="codenumber">(b)</span><span class="space"> </span><span class="title">Use the Quadratic Formula.</span>
+</h4>
+<div class="para" id="extracted-webwork-18-1-3-2-1">Use the quadratic formula to find the solution set to<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-18-1-3-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+{2x^{2}-7x-15}=0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-3-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-18-1-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-3-3-1">
+<span class="process-math">\(\frac{-3}{2}, 5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.5.1"><a href="#extracted-webwork-18-1-3-3" title="Copy heading and permalink for Answer 6.5.1">🔗</a></div>
+</div></details><details id="extracted-webwork-18-1-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-3-4-1">Recall that the quadratic formula is given in Subsection 1.1.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-3-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-18-1-3-4-2">You already identified <span class="process-math">\(a = 2\text{,}\)</span> <span class="process-math">\(b = -7\text{,}\)</span> and <span class="process-math">\(c = -15\text{,}\)</span> and the results from using these in the quadratic formula are <span class="process-math">\(-\frac{3}{2}\)</span> and <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-3-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.1"><a href="#extracted-webwork-18-1-3-4" title="Copy heading and permalink for Solution 6.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 6.5.b: Use the Quadratic Formula"><a href="#extracted-webwork-18-1-3" title="Copy heading and permalink for Task 6.5.b: Use the Quadratic Formula">🔗</a></div></article>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.5: Structured with Tasks"><a href="#webwork-7" title="Copy heading and permalink for Checkpoint 6.5: Structured with Tasks">🔗</a></div></article></details><details id="webwork-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Units in Answers.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="webwork-8-3"><div class="para" id="webwork-8-3-1">The answers in this exercise require that units be used.<div class="autopermalink" data-description="Paragraph"><a href="#webwork-8-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-20" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="20" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyTnVtYmVyV2l0aFVuaXRzLnBsIiwiY29udGV4dEN1cnJlbmN5LnBsIiwiY29udGV4dFBlcmNlbnQucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKJG5ld1VuaXRzID0gWwogIHtuYW1lPT4nZ2FsbG9ucycsY29udmVyc2lvbj0+e2ZhY3Rvcj0+MC4wMDM3ODU0MSxtPT4zfX0sCiAge25hbWU9PidnYWxsb24nLGNvbnZlcnNpb249PntmYWN0b3I9PjAuMDAzNzg1NDEsbT0+M319LAogIHtuYW1lPT4nZ2FsJyxjb252ZXJzaW9uPT57ZmFjdG9yPT4wLjAwMzc4NTQxLG09PjN9fSwKXTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHRvbFR5cGU9PidhYnNvbHV0ZScsdG9sZXJhbmNlPT4wLjEpOwokdm9sdW1lID0gTnVtYmVyV2l0aFVuaXRzKCIyMC8yLjc4IGdhbCIsIHtuZXdVbml0PT4kbmV3VW5pdHN9KTsKQ29udGV4dCgiUGVyY2VudCIpOwpDb250ZXh0KCktPmZsYWdzLT5zZXQodG9sZXJhbmNlPT4wLjAxKTsKJGluY3JlYXNlID0gUGVyY2VudCgzNTIvMjc4LTEpOwpDb250ZXh0KCJDdXJyZW5jeSIpOwokY29zdCA9IEN1cnJlbmN5KDMuNTIqMS4wMjgpOwoKQkVHSU5fUEdNTAphLiAgVGhlIGF2ZXJhZ2UgY29zdCBvZiBnYXNvbGluZSBpbiB0aGUgVW5pdGVkIFN0YXRlcyBpbiAyMDEwIHdhcyBcJDIuNzggcGVyIGdhbGxvbi4gSG93IG11Y2ggZ2Fzb2xpbmUgd291bGQgXCQyMCBnZXQgeW91IGluIDIwMTAsIG9uIGF2ZXJhZ2U/CgogICAgW19deyR2b2x1bWV9ezEwfQoKCmEuICBJbiAyMDExLCB0aGUgYXZlcmFnZSBjb3N0IHdhcyBcJDMuNTIgcGVyIGdhbGxvbi4gV2hhdCBwZXJjZW50IGluY3JlYXNlIHdhcyB0aGF0IGZyb20gMjAxMD8KCiAgICBbX117JGluY3JlYXNlfXsxMH0KCgphLiAgSW4gMjAxMiwgdGhlIGNvc3QgaGFkIHJpc2VuIDIuOCUgZnJvbSB0aGUgMjAxMSBjb3N0LiBXaGF0IHdhcyB0aGUgY29zdCBvZiBhIGdhbGxvbiBvZiBnYXNvbGluZSBpbiAyMDEyPwoKICAgIFtfXXskY29zdH17MTB9ICAgCgoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-20')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-20-1-1-1">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-20-1-1-1-1">
+<li id="extracted-webwork-20-1-1-1-1-1">
+<div class="para" id="extracted-webwork-20-1-1-1-1-1-1">The average cost of gasoline in the United States in 2010 was $2.78 per gallon. How much gasoline would $20 get you in 2010, on average?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.6.a"><a href="#extracted-webwork-20-1-1-1-1-1" title="Copy heading and permalink for Item 6.6.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-20-1-1-1-1-2">
+<div class="para" id="extracted-webwork-20-1-1-1-1-2-1">In 2011, the average cost was $3.52 per gallon. What percent increase was that from 2010?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.6.b"><a href="#extracted-webwork-20-1-1-1-1-2" title="Copy heading and permalink for Item 6.6.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-20-1-1-1-1-3">
+<div class="para" id="extracted-webwork-20-1-1-1-1-3-1">In 2012, the cost had risen 2.8% from the 2011 cost. What was the cost of a gallon of gasoline in 2012?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.6.c"><a href="#extracted-webwork-20-1-1-1-1-3" title="Copy heading and permalink for Item 6.6.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-20-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-20-1-2-1">
+<span class="process-math">\(7.19424\ {\rm gal}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.6.1"><a href="#extracted-webwork-20-1-2" title="Copy heading and permalink for Answer 6.6.1">🔗</a></div>
+</div></details><details id="extracted-webwork-20-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-20-1-3-1">
+<span class="process-math">\(26.6\%\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.6.2"><a href="#extracted-webwork-20-1-3" title="Copy heading and permalink for Answer 6.6.2">🔗</a></div>
+</div></details><details id="extracted-webwork-20-1-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-20-1-4-1">
+<span class="process-math">\(\$3.62\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 6.6.3"><a href="#extracted-webwork-20-1-4" title="Copy heading and permalink for Answer 6.6.3">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.6: Units in Answers"><a href="#webwork-8" title="Copy heading and permalink for Checkpoint 6.6: Units in Answers">🔗</a></div></article></details><div class="autopermalink" data-description="Section 6: WeBWorK"><a href="#webwork" title="Copy heading and permalink for Section 6: WeBWorK">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="worksheets.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="pretext-showcase-9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

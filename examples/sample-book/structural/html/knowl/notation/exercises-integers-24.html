@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">23<span class="period">.</span></span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for exercise</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;exercise number="23"&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Define the &lt;term&gt;least common multiple&lt;/term&gt; of two nonzero integers &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt;, denoted by &lt;m&gt;\lcm(a,b)&lt;/m&gt;, to be the nonnegative integer &lt;m&gt;m&lt;/m&gt; such that both &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; divide &lt;m&gt;m&lt;/m&gt;, and if &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt;  divide any other integer &lt;m&gt;n&lt;/m&gt;, then &lt;m&gt;m&lt;/m&gt; also divides &lt;m&gt;n&lt;/m&gt;. &lt;notation&gt;&lt;usage&gt;&lt;m&gt;\lcm(m,n)&lt;/m&gt;&lt;/usage&gt;&lt;description&gt;the least common multiple of &lt;m&gt;m&lt;/m&gt; and &lt;m&gt;n&lt;/m&gt;&lt;/description&gt;&lt;/notation&gt; Prove that any two integers &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; have a unique least common multiple.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;hint&gt;
+        &lt;p&gt;Let &lt;m&gt;S = \{s \in {\mathbb N} : a \mid s&lt;/m&gt;, &lt;m&gt;b \mid s \}&lt;/m&gt;. Then &lt;m&gt;S \neq \emptyset&lt;/m&gt;, since &lt;m&gt;|ab| \in S&lt;/m&gt;. By the Principle of Well-Ordering, &lt;m&gt;S&lt;/m&gt; contains a least element &lt;m&gt;m&lt;/m&gt;. To show uniqueness, suppose that &lt;m&gt;a \mid n&lt;/m&gt; and &lt;m&gt;b \mid n&lt;/m&gt; for some &lt;m&gt;n \in {\mathbb N}&lt;/m&gt;. By the division algorithm, there exist unique integers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; such that &lt;m&gt;n = mq + r&lt;/m&gt;, where &lt;m&gt;0 \leq r \lt m&lt;/m&gt;. Since &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; divide both &lt;m&gt;m&lt;/m&gt;, and &lt;m&gt;n&lt;/m&gt;, it must be the case that  &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; both divide &lt;m&gt;r&lt;/m&gt;.  Thus, &lt;m&gt;r = 0&lt;/m&gt; by the minimality of &lt;m&gt;m&lt;/m&gt;. Therefore, &lt;m&gt;m \mid n&lt;/m&gt;.&lt;/p&gt;
+    &lt;/hint&gt;
+&lt;/exercise&gt;
+</code></pre></article></details><div class="para">Define the <dfn class="terminology">least common multiple</dfn> of two nonzero integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> denoted by <span class="process-math">\(\lcm(a,b)\text{,}\)</span> to be the nonnegative integer <span class="process-math">\(m\)</span> such that both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> divide <span class="process-math">\(m\text{,}\)</span> and if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span>  divide any other integer <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(m\)</span> also divides <span class="process-math">\(n\text{.}\)</span>  Prove that any two integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> have a unique least common multiple.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-24-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for hint</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;hint&gt;
+    &lt;p&gt;Let &lt;m&gt;S = \{s \in {\mathbb N} : a \mid s&lt;/m&gt;, &lt;m&gt;b \mid s \}&lt;/m&gt;. Then &lt;m&gt;S \neq \emptyset&lt;/m&gt;, since &lt;m&gt;|ab| \in S&lt;/m&gt;. By the Principle of Well-Ordering, &lt;m&gt;S&lt;/m&gt; contains a least element &lt;m&gt;m&lt;/m&gt;. To show uniqueness, suppose that &lt;m&gt;a \mid n&lt;/m&gt; and &lt;m&gt;b \mid n&lt;/m&gt; for some &lt;m&gt;n \in {\mathbb N}&lt;/m&gt;. By the division algorithm, there exist unique integers &lt;m&gt;q&lt;/m&gt; and &lt;m&gt;r&lt;/m&gt; such that &lt;m&gt;n = mq + r&lt;/m&gt;, where &lt;m&gt;0 \leq r \lt m&lt;/m&gt;. Since &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; divide both &lt;m&gt;m&lt;/m&gt;, and &lt;m&gt;n&lt;/m&gt;, it must be the case that  &lt;m&gt;a&lt;/m&gt; and &lt;m&gt;b&lt;/m&gt; both divide &lt;m&gt;r&lt;/m&gt;.  Thus, &lt;m&gt;r = 0&lt;/m&gt; by the minimality of &lt;m&gt;m&lt;/m&gt;. Therefore, &lt;m&gt;m \mid n&lt;/m&gt;.&lt;/p&gt;
+&lt;/hint&gt;
+</code></pre></article></details><div class="para">Let <span class="process-math">\(S = \{s \in {\mathbb N} : a \mid s\text{,}\)</span> <span class="process-math">\(b \mid s \}\text{.}\)</span> Then <span class="process-math">\(S \neq \emptyset\text{,}\)</span> since <span class="process-math">\(|ab| \in S\text{.}\)</span> By the Principle of Well-Ordering, <span class="process-math">\(S\)</span> contains a least element <span class="process-math">\(m\text{.}\)</span> To show uniqueness, suppose that <span class="process-math">\(a \mid n\)</span> and <span class="process-math">\(b \mid n\)</span> for some <span class="process-math">\(n \in {\mathbb N}\text{.}\)</span> By the division algorithm, there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n = mq + r\text{,}\)</span> where <span class="process-math">\(0 \leq r \lt m\text{.}\)</span> Since <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> divide both <span class="process-math">\(m\text{,}\)</span> and <span class="process-math">\(n\text{,}\)</span> it must be the case that  <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> both divide <span class="process-math">\(r\text{.}\)</span>  Thus, <span class="process-math">\(r = 0\)</span> by the minimality of <span class="process-math">\(m\text{.}\)</span> Therefore, <span class="process-math">\(m \mid n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-integers-24-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.4.23.1"><a href="#exercises-integers-24-2" title="Copy heading and permalink for Hint 2.4.23.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2.4.23"><a href="#exercises-integers-24" title="Copy heading and permalink for Exercise 2.4.23">🔗</a></div></article><span class="incontext"><a class="internal" href="exercises-integers.html#exercises-integers-24">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">DeMoivre.</span>
+</h3>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for theorem</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;theorem xml:id="theorem-demoivre"&gt;
+    &lt;title&gt;DeMoivre&lt;/title&gt;
+    &lt;idx&gt;&lt;h&gt;DeMoivre's Theorem&lt;/h&gt;&lt;/idx&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Let &lt;m&gt;z = r \cis  \theta&lt;/m&gt; be a nonzero complex number. Then &lt;me&gt;[r \cis \theta  ]^n = r^n \cis( n \theta)&lt;/me&gt; for &lt;m&gt;n = 1, 2, \ldots&lt;/m&gt;.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+        &lt;p&gt;We will use induction on &lt;m&gt;n&lt;/m&gt; (see &lt;xref ref="section-math-induction"/&gt;). For &lt;m&gt;n = 1&lt;/m&gt; the theorem is trivial. Assume that the theorem is true for all &lt;m&gt;k&lt;/m&gt; such that &lt;m&gt;1  \leq k \leq n&lt;/m&gt;. Then&lt;md&gt;
+            &lt;mrow&gt;z^{n+1} &amp;amp; = z^n z&lt;/mrow&gt;
+            &lt;mrow&gt;&amp;amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )&lt;/mrow&gt;
+            &lt;mrow&gt;&amp;amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]&lt;/mrow&gt;
+            &lt;mrow&gt;&amp;amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]&lt;/mrow&gt;
+            &lt;mrow&gt;&amp;amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ]&lt;/mrow&gt;
+        &lt;/md&gt;.&lt;/p&gt;
+    &lt;/proof&gt;
+&lt;/theorem&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">Let <span class="process-math">\(z = r \cis  \theta\)</span> be a nonzero complex number. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[r \cis \theta  ]^n = r^n \cis( n \theta)
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(n = 1, 2, \ldots\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-demoivre-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.3.7: DeMoivre"><a href="#theorem-demoivre" title="Copy heading and permalink for Theorem 2.3.7: DeMoivre">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;p&gt;We will use induction on &lt;m&gt;n&lt;/m&gt; (see &lt;xref ref="section-math-induction"/&gt;). For &lt;m&gt;n = 1&lt;/m&gt; the theorem is trivial. Assume that the theorem is true for all &lt;m&gt;k&lt;/m&gt; such that &lt;m&gt;1  \leq k \leq n&lt;/m&gt;. Then&lt;md&gt;
+        &lt;mrow&gt;z^{n+1} &amp;amp; = z^n z&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ]&lt;/mrow&gt;
+    &lt;/md&gt;.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">We will use induction on <span class="process-math">\(n\)</span> (see <a href="section-math-induction.html" class="internal" title="Section 2.1: Mathematical Induction and Math in a Title A\notsubset B">Section I.2.1</a>). For <span class="process-math">\(n = 1\)</span> the theorem is trivial. Assume that the theorem is true for all <span class="process-math">\(k\)</span> such that <span class="process-math">\(1  \leq k \leq n\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/section-math-induction.html">
+\begin{align*}
+z^{n+1} &amp; = z^n z\\
+&amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )\\
+&amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]\\
+&amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]\\
+&amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ]\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-demoivre-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2.3.7.1"><a href="#theorem-demoivre-4" title="Copy heading and permalink for Proof 2.3.7.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="cyclic-6.html#theorem-demoivre">in-context</a></span>
+</body>
+</html>
