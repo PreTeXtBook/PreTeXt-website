@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.2.8<span class="period">.</span></span><span class="space"> </span>Attributes available for the <code class="code-inline tex2jax_ignore">&lt;target&gt;</code> elements.<div class="autopermalink" data-description="Table 5.2.8: Attributes available for the &lt;target&gt; elements."><a href="#table-cli-target-attributes" title="Copy heading and permalink for Table 5.2.8: Attributes available for the &lt;target&gt; elements.">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l t b0 r0 l0 t0 lines">Attribute</th>
+<th scope="col" class="l t b0 r0 l0 t0 lines">Description</th>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@name</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Required.  The name you use when executing a CLI command.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@format</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Required.  Valid values: <code class="code-inline tex2jax_ignore">html</code>, <code class="code-inline tex2jax_ignore">pdf</code>, <code class="code-inline tex2jax_ignore">latex</code>, <code class="code-inline tex2jax_ignore">epub</code>, <code class="code-inline tex2jax_ignore">kindle</code>, <code class="code-inline tex2jax_ignore">braille</code>, <code class="code-inline tex2jax_ignore">webwork</code>, and <code class="code-inline tex2jax_ignore">custom</code>.  The format the target will be built into.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@source</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">main.ptx</code>.  Path to the root source file of the project (relative to the value of the <code class="code-inline tex2jax_ignore">@source</code> of <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-6-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@publication</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">publication.ptx</code>.  Path to publication file (relative to the value of <code class="code-inline tex2jax_ignore">@publication</code> attribute of <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-7-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@output-dir</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: the value of <code class="code-inline tex2jax_ignore">@name</code>.  Path to folder in which output files/folders will be created (relative to the value of <code class="code-inline tex2jax_ignore">@output-dir</code> attribute of <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-8-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@output-filename</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: generated by pretext. Only valid for formats that produce a single output file.  Path to output file to be built (relative to the value of <code class="code-inline tex2jax_ignore">@output-dir</code> of the same <code class="code-inline tex2jax_ignore">&lt;target&gt;</code> element).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-9-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@deploy-dir</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, no default.  Path to subdirectory of deployed site where this target will live.  If deploying multiple targets, then this attribute must have a value for it to be deployed.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-10-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@xsl</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, no default. Required when <code class="code-inline tex2jax_ignore">@format</code> is <code class="code-inline tex2jax_ignore">custom</code>. Path to custom <abbr class="initialism">XSL</abbr> file (relative to the value of <code class="code-inline tex2jax_ignore">@xsl</code> attribute of <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-11-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@latex-engine</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">xelatex</code>.  Valid values: <code class="code-inline tex2jax_ignore">xelatex</code>, <code class="code-inline tex2jax_ignore">pdflatex</code>, or <code class="code-inline tex2jax_ignore">latex</code>. Only used on targets that build with latex, to specify what latex command to call in that step.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-12-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@braille-mode</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">emboss</code>.  Valid values: <code class="code-inline tex2jax_ignore">emboss</code> or <code class="code-inline tex2jax_ignore">electronic</code>. Only used when <code class="code-inline tex2jax_ignore">@format</code> is <code class="code-inline tex2jax_ignore">braille</code>, to specify the mode for braille.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-13-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@platform</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, no default. Only valid when <code class="code-inline tex2jax_ignore">@format</code> is <code class="code-inline tex2jax_ignore">html</code>.  Valid values: <code class="code-inline tex2jax_ignore">runestone</code>.  Used to specify that the target will be hosted on Runestone.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-14-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@compression</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, no default.  Only valid when <code class="code-inline tex2jax_ignore">@format</code> is <code class="code-inline tex2jax_ignore">webwork</code> or <code class="code-inline tex2jax_ignore">html</code> and <code class="code-inline tex2jax_ignore">@platform</code> is not <code class="code-inline tex2jax_ignore">runestone</code>. Valid values: <code class="code-inline tex2jax_ignore">scorm</code> or <code class="code-inline tex2jax_ignore">zip</code>.  Results in output being compressed (as <code class="code-inline tex2jax_ignore">.zip</code> file), and if the value is <code class="code-inline tex2jax_ignore">scorm</code>, the required scorm manifest is also include in the archive.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-15-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@asy-method</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">server</code>.  Valid values: <code class="code-inline tex2jax_ignore">server</code> or <code class="code-inline tex2jax_ignore">local</code>. Overrides the <code class="code-inline tex2jax_ignore">@asy-method</code> attribute on <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-16-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">@standalone</code></td>
+<td class="l t b0 r0 l0 t0" style="max-width:420px;"><div class="para">Optional, default: <code class="code-inline tex2jax_ignore">no</code>.  Valid values: <code class="code-inline tex2jax_ignore">yes</code> or <code class="code-inline tex2jax_ignore">no</code>.  If <code class="code-inline tex2jax_ignore">yes</code>, the target will be built as a standalone document.  This will place the output adjacent to the source file, unless <code class="code-inline tex2jax_ignore">@output-dir</code> is specified.  Useful for creating a target for which you will specify a different source file (using the <code class="code-inline tex2jax_ignore">-i</code> flag when building).<div class="autopermalink" data-description="Paragraph"><a href="#table-cli-target-attributes-2-17-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></td>
+</tr>
+</table></div></figure><span class="incontext"><a class="internal" href="processing-CLI.html#table-cli-target-attributes">in-context</a></span>
+</body>
+</html>

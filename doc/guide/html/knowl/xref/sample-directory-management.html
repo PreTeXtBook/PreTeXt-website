@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sample Directory Management.</span>
+</h4>
+<div class="para logical">
+<div class="para">Suppose you are M. Jones, the author of the <abbr class="initialism">AOTA</abbr> project, and so you might have the following directory and file structure.  There is some sort of overall path from the root of your entire filesystem to your project, so on Linux this path could be</div>
+<pre class="code-display tex2jax_ignore">/home/mjones/books/
+</pre>
+<div class="para">and on other operating systems it will be slightly different, but those differences are not relevant here.  Inside of <code class="code-inline tex2jax_ignore">books</code> there would be an <code class="code-inline tex2jax_ignore">aota</code> directory for the <abbr class="initialism">AOTA</abbr> project, structured as follows.  We are most interested in the <code class="code-inline tex2jax_ignore">ext</code> and <code class="code-inline tex2jax_ignore">gen</code> directories.</div>
+<pre class="code-display tex2jax_ignore">aota
+    source
+        aota.ptx
+        alligators.ptx
+        dogs.ptx
+    publication
+        print.ptx
+        online.ptx
+        epub.ptx
+    ext
+        photos
+            slow-alligator.jpeg
+            fast-whippet.png
+        movies
+            alligator-chases-whippet.mp4
+        data
+            deer-weights.csv
+    gen
+        latex-image
+            marsupial-life-cycle.svg
+        youtube
+            sloth.jpg
+</pre>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">In your publication files you would then have the entry, as a sub-element of the <code class="code-inline tex2jax_ignore">source</code> element,</div>
+<pre class="code-display tex2jax_ignore">&lt;directories external="../ext" generated="../gen"/&gt;
+</pre>
+<div class="para">Notice that we have deliberately named our directories <code class="code-inline tex2jax_ignore">ext</code> and <code class="code-inline tex2jax_ignore">gen</code> as part of this illustration, so that they are not identical to the <em class="emphasis">attribute</em> names on the <code class="code-inline tex2jax_ignore">&lt;directories&gt;</code> element.  The two attribute values are <em class="emphasis">relative</em> to the location of the main PreTeXt file, in this case <code class="code-inline tex2jax_ignore">aota.ptx</code>.  The two periods, <code class="code-inline tex2jax_ignore">..</code>, mean to go up a level, here to the <code class="code-inline tex2jax_ignore">aota</code> directory, then the slash indicates a step down to either <code class="code-inline tex2jax_ignore">gen</code> or <code class="code-inline tex2jax_ignore">ext</code>.  Note that <code class="code-inline tex2jax_ignore">latex-image</code> and <code class="code-inline tex2jax_ignore">youtube</code> within <code class="code-inline tex2jax_ignore">gen</code> <em class="emphasis">must</em> be specified exactly that way.  Now every PreTeXt production tool can deduce where your files are.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">How do you specify in your PreTeXt source which file to use where?  Suppose you want your two (external) photographs to be used in a <code class="code-inline tex2jax_ignore">&lt;sidebyside&gt;</code> element.  You would author</div>
+<pre class="code-display tex2jax_ignore">&lt;sidebyside widths="50% 30%"&gt;
+     &lt;image source="photos/slow-alligator.jpeg"/&gt;
+     &lt;image source="photos/fast-whippet.jpeg"/&gt;
+&lt;sidebyside/&gt;
+</pre>
+<div class="para">Notice that the values of your <code class="code-inline tex2jax_ignore">@source</code> attributes <em class="emphasis">do not</em> include <code class="code-inline tex2jax_ignore">ext</code> or <code class="code-inline tex2jax_ignore">../ext</code>.  This gives you the freedom to move your <code class="code-inline tex2jax_ignore">ext</code> directory or rename it, and then you only change the publication file and not your source.  The decision to have the subdirectories <code class="code-inline tex2jax_ignore">photos</code> and <code class="code-inline tex2jax_ignore">movies</code> are not easily changed, since they will be in your source, but they may have value for the organization of your project.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The chase video is of your own creation, you have included it as part of your project’s files, and will be hosting it on your web server, where the rest of your HTML version is made available for viewing.  You might author</div>
+<pre class="code-display tex2jax_ignore">&lt;figure xml:id="fig-chase"&gt;
+     &lt;caption&gt;Alligator chases whippet&lt;/caption&gt;
+     &lt;video source="movies/alligator-chases-whippet.mp4"/&gt;
+&lt;figure/&gt;
+</pre>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The situation with the generated files is presently a bit more complicated, but will eventually be transparent to an author.  The marsupial life cycle diagram has been authored in your source using the language from the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> TikZ package, which is delimited as a <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> element.  When building a PDF from <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> output this is a no-brainer—PreTeXt just puts your TikZ code into the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> file.  But how about HTML output?  The <code class="code-inline tex2jax_ignore">pretext/pretext</code> script will manufacture a standalone version of this image and then convert it to an SVG, and this version will work very well in the online version of your project.  What do you author?</div>
+<pre class="code-display tex2jax_ignore">&lt;figure xml:id="fig-life-cycle"&gt;
+     &lt;caption&gt;Marsupial Life Cycle&lt;/caption&gt;
+     &lt;latex-image xml:id="marsupial-life-cycle"&gt;
+         -- some TiKZ code here --
+     &lt;/latex-image&gt;
+&lt;figure/&gt;
+</pre>
+<div class="para">With the right options to the <code class="code-inline tex2jax_ignore">pretext/pretext</code> script, the file <code class="code-inline tex2jax_ignore">marsupial-life-cycle.svg</code> will be generated.  Presently, you must explicitly tell the script to place the output in the directory</div>
+<pre class="code-display tex2jax_ignore">/home/mjones/books/gen/latex-image
+</pre>
+<div class="para">but we plan to make this the default behavior.  Or you could generate the file anywhere, and move it to the <code class="code-inline tex2jax_ignore">latex-image</code> subdirectory of <code class="code-inline tex2jax_ignore">gen</code>.  Notice how much of the process of creating a companion SVG image (which excels in a web browser) is automated, and how the <code class="code-inline tex2jax_ignore">@xml:id</code> attribute and the directories in the publication file are used to keep everything coordinated.  The <code class="code-inline tex2jax_ignore">latex-image</code> directory is not negotiable, it is the home for <em class="emphasis">every</em> image authored using a PreTeXt <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> element (see <a href="processing-directory-management.html#subdirectories-of-generated" class="xref" data-knowl="./knowl/xref/subdirectories-of-generated.html" data-reveal-label="Reveal" data-close-label="Close" title="List 5.6.2: Subdirectories of the Generated Directory">List 5.6.2</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The slow sloth video was created by somebody else and posted to YouTube as a super slo-mo 240fps video.  You authored it within a <code class="code-inline tex2jax_ignore">&lt;figure&gt;</code> simply by using the ID of the video on YouTube.</div>
+<pre class="code-display tex2jax_ignore">&lt;figure xml:id="fig-sloth"&gt;
+     &lt;caption&gt;Slow Sloth&lt;/caption&gt;
+     &lt;video xml:id="sloth" youtube="DJWEqYcxUl8"/&gt;
+&lt;figure/&gt;
+</pre>
+<div class="para">With the right options to the <code class="code-inline tex2jax_ignore">pretext/pretext</code> script, the file <code class="code-inline tex2jax_ignore">sloth.jpg</code> will be generated by requesting a thumbnail preview from YouTube’s servers.  Note how this content is generated from your source (precisely, the YouTube ID) through an automated process.  Presently, you must explicitly tell the script to place the output in the directory</div>
+<pre class="code-display tex2jax_ignore">/home/mjones/books/gen/youtube
+</pre>
+<div class="para">but we plan to make this the default behavior.  The <code class="code-inline tex2jax_ignore">youtube</code> directory is not negotiable, it is the home for <em class="emphasis">every</em> server-generated preview image for an embedded YouTube video (see <a href="processing-directory-management.html#subdirectories-of-generated" class="xref" data-knowl="./knowl/xref/subdirectories-of-generated.html" data-reveal-label="Reveal" data-close-label="Close" title="List 5.6.2: Subdirectories of the Generated Directory">List 5.6.2</a>).  (Note that any <code class="code-inline tex2jax_ignore">&lt;video&gt;</code> may have an author-provided image as its preview, and then this would be considered an external file.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sample-directory-management-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.6.1: Sample Directory Management"><a href="#sample-directory-management" title="Copy heading and permalink for Example 5.6.1: Sample Directory Management">🔗</a></div></article><span class="incontext"><a class="internal" href="processing-directory-management.html#sample-directory-management">in-context</a></span>
+</body>
+</html>

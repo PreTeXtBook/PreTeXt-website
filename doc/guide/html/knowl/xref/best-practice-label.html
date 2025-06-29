@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="note remark-like"><h3 class="heading">
+<span class="type">Best Practice</span><span class="space"> </span><span class="codenumber">4.12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Use <code class="code-inline tex2jax_ignore">label</code> attribute for Runestone Components.</span>
+</h3>
+<div class="para">Many of our interactive exercises and programming environments are powered by software from Runestone Academy (<a href="runestone.html" class="internal" title="Chapter 32: Conversion to Runestone">Chapter 32</a>).  Not suprisingly, when you build online <abbr class="initialism">HTML</abbr> for hosting on Runestone servers these components have more features than otherwise.  This is managed by locating each component in a (massive) database.  And so each exercise needs an identifier.<div class="autopermalink" data-description="Paragraph"><a href="#best-practice-label-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">You accomplish this by placing a unique value in a <code class="code-inline tex2jax_ignore">@label</code> attribute on an outermost element, such as an <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;task&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;video&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;program&gt;</code>, etc.  You should choose these strings carefully, as they should not be changed, lest the database entries become confused.  Under the hood, we get the content of <code class="code-inline tex2jax_ignore">docinfo/document-id</code> element, and the <code class="code-inline tex2jax_ignore">@edition</code> attribute of <code class="code-inline tex2jax_ignore">&lt;document-id&gt;</code>, to form a database identifier such as <code class="code-inline tex2jax_ignore">AATA_2_easy-exercise</code>.  The <code class="code-inline tex2jax_ignore">&lt;document-id&gt;</code> distinguishes your book from other books, and the edition allows you some flexibility.  In other words, if you declare a new edition, you can change some of your <code class="code-inline tex2jax_ignore">@label</code> as part of that process and you will get new database entries while preserving the old.<div class="autopermalink" data-description="Paragraph"><a href="#best-practice-label-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Short answer: <em class="emphasis">before</em> hosting your project on Runestone, decide on permanent values for <code class="code-inline tex2jax_ignore">&lt;document-id&gt;</code>, <code class="code-inline tex2jax_ignore">@edition</code>, and all necessary <code class="code-inline tex2jax_ignore">@label</code>.  (We expect to add a warning for Runestone builds when these values are not set.)<div class="autopermalink" data-description="Paragraph"><a href="#best-practice-label-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Best Practice 4.12.1: Use label attribute for Runestone Components"><a href="#best-practice-label" title="Copy heading and permalink for Best Practice 4.12.1: Use label attribute for Runestone Components">🔗</a></div></article><span class="incontext"><a class="internal" href="topic-interactive-exercises.html#best-practice-label">in-context</a></span>
+</body>
+</html>

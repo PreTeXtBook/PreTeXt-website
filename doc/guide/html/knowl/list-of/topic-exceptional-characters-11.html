@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="note remark-like"><h5 class="heading">
+<span class="type">Best Practice</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A <abbr class="initialism">CDATA</abbr> Section is Never Necessary.</span>
+</h5>
+<div class="para">We hate to mention it, but sooner or later, we need to have an uncomfortable discussion about the misunderstood <abbr class="initialism">CDATA</abbr> section, and risk confusing the rest of this subsubsection.  And this is the place.  But you can come back later, if you wish.<div class="autopermalink" data-description="Paragraph"><a href="#topic-exceptional-characters-11-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">You will read other places about very special markup known as a <abbr class="initialism">CDATA</abbr> section.  The name stands for <dfn class="terminology">character data</dfn>, which means “all characters, no markup”.  Think of it as switching off the <abbr class="initialism">XML</abbr> processing for a while, so in particular, <code class="code-inline tex2jax_ignore">&amp;</code>, <code class="code-inline tex2jax_ignore">&lt;</code>, <code class="code-inline tex2jax_ignore">&gt;</code> no longer have any special meaning at all.  That <em class="emphasis">could</em> be nice, but realize that now there is no opportunity to have any markup present using <abbr class="initialism">XML</abbr> syntax, since it is ineffective.<div class="autopermalink" data-description="Paragraph"><a href="#topic-exceptional-characters-11-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<em class="emphasis">A <abbr class="initialism">CDATA</abbr> section is always a convenience and is never necessary.</em><div class="autopermalink" data-description="Paragraph"><a href="#topic-exceptional-characters-11-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">When would it be convenient?  Maybe you have some <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> inside an <code class="code-inline tex2jax_ignore">&lt;md&gt;</code> with a large matrix that uses lots of ampersands to separate the entries.  Inside a <abbr class="initialism">CDATA</abbr> you can author it with bare &amp; rather than a plethora of <code class="code-inline tex2jax_ignore">&amp;amp;</code> or <code class="code-inline tex2jax_ignore">\amp</code>.  But you lose the ability to include an <code class="code-inline tex2jax_ignore">&lt;xref&gt;</code> in that <abbr class="initialism">CDATA</abbr>, so you need to be surgical about its scope.  Perhaps a Tikz diagram in a <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> has a multitude of <code class="code-inline tex2jax_ignore">&lt;-&gt;</code> or a chunk of Sage code in an <code class="code-inline tex2jax_ignore">&lt;input&gt;</code> has a lot of finitely-generated algebraic structures authored as <code class="code-inline tex2jax_ignore">R.&lt;x&gt; = ...</code> (which is not even legal Python syntax either!).  These places where there is little, or no, markup could be <em class="emphasis">convenient</em> places to use a <abbr class="initialism">CDATA</abbr>.  Be sure to read the warning at <a href="xsltproc-updating-source.html#deprecation-fixer-cdata" class="xref" data-knowl="./knowl/xref/deprecation-fixer-cdata.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 7">Item 7</a> in <a href="processing-updating-source.html" class="internal" title="Section 5.10: Keeping Your Source Up-to-Date">Section 5.10</a> before you go all-in.<div class="autopermalink" data-description="Paragraph"><a href="#topic-exceptional-characters-11-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Best Practice 4.1.2: A CDATA Section is Never Necessary"><a href="#topic-exceptional-characters-11" title="Copy heading and permalink for Best Practice 4.1.2: A CDATA Section is Never Necessary">🔗</a></div></article><span class="incontext"><a class="internal" href="topic-paragraphs.html#topic-exceptional-characters-11">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">D.3.1<span class="period">.</span></span><span class="space"> </span>Aspell Configuration File<div class="autopermalink" data-description="Listing D.3.1: Aspell Configuration File"><a href="#aspell-configuration" title="Copy heading and permalink for Listing D.3.1: Aspell Configuration File">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-none">add-filter sgml
+
+# elements with lots of code
+# but not "pre", since it is like a "p"
+add-sgml-skip c
+add-sgml-skip cd
+add-sgml-skip program
+add-sgml-skip console
+add-sgml-skip sage
+
+# image formats
+add-sgml-skip latex-image
+add-sgml-skip asymptote
+add-sgml-skip sageplot
+
+# elements that display XML elements
+add-sgml-skip tag
+add-sgml-skip tage
+add-sgml-skip attr
+
+# initialisms and friends
+add-sgml-skip init
+add-sgml-skip acro
+add-sgml-skip abbr
+
+# math (latex)
+add-sgml-skip m
+add-sgml-skip me
+add-sgml-skip men
+add-sgml-skip md
+add-sgml-skip mdn
+add-sgml-skip usage # in "notation"
+
+# not really content, by and large
+add-sgml-skip docinfo
+</code></pre></div></div></figure><span class="incontext"><a class="internal" href="aspell.html#aspell-configuration">in-context</a></span>
+</body>
+</html>

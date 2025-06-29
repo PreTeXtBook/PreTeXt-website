@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="note remark-like"><h3 class="heading">
+<span class="type">Best Practice</span><span class="space"> </span><span class="codenumber">30.17.1</span><span class="period">.</span><span class="space"> </span><span class="title">Only Edit <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> Files Rarely.</span>
+</h3>
+<div class="para">We want to stress that the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> file created by various conversions is meant to be an <em class="emphasis">intermediate</em> format.  In other words, it is <em class="emphasis">ephemeral</em>.   We try to make it clean and organized, but it is not the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> a human would write.  You might be able to recycle a paragraph or two in other documents you create without PreTeXt.  But it is not meant to be stable or archival, and no long-term use is supported in any way.  In other words, it is not a supported output format, beyond compiling to a <abbr class="initialism">PDF</abbr> without errors.<div class="autopermalink" data-description="Paragraph"><a href="#edit-latex-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Because of that, you may find it necessary to manually adjust a file to control widows or orphans, or maybe the placement of a graphics file, or similar adjustments.  Some of the most the common adjustments used by PreTeXt authors are inserting <code class="code-inline tex2jax_ignore">\newpage</code>, <code class="code-inline tex2jax_ignore">\noindent</code>, or <code class="code-inline tex2jax_ignore">\par</code> to avoid awkward transitions, or to remove an occasional <code class="code-inline tex2jax_ignore">\leavevmode</code>; consult a good <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> reference before making such changes, as effects later in the output may be unpredictable.<div class="autopermalink" data-description="Paragraph"><a href="#edit-latex-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We view this as the final step before making a new edition, which might be a <abbr class="initialism">PDF</abbr> that you submit to a print-on-demand service (<a href="print-on-demand.html" class="internal" title="Chapter 43: Print-On-Demand">Chapter 43</a>).  So hand-editing might be an annual exercise, at the most frequent.  One way to keep track of larger number of edits over long periods of time is to write a script (in an appropriate language), which looks for unique strings before or after trouble spots and replaces the nearby content.  Another minimally invasive option is to keep a separate git branch of the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> file which makes the desired changes, which can then be applied on those rare occasions it is necessary (ideally, with little rebasing needed).<div class="autopermalink" data-description="Paragraph"><a href="#edit-latex-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Best Practice 30.17.1: Only Edit LaTeX Files Rarely"><a href="#edit-latex" title="Copy heading and permalink for Best Practice 30.17.1: Only Edit LaTeX Files Rarely">🔗</a></div></article><span class="incontext"><a class="internal" href="latex-file.html#edit-latex">in-context</a></span>
+</body>
+</html>

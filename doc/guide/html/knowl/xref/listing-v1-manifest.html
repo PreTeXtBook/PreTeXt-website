@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="listing figure-like"><figcaption><span class="type">Listing</span><span class="space"> </span><span class="codenumber">P.0.1<span class="period">.</span></span><span class="space"> </span>Example of version 1 project manifest<div class="autopermalink" data-description="Listing P.0.1: Example of version 1 project manifest"><a href="#listing-v1-manifest" title="Copy heading and permalink for Listing P.0.1: Example of version 1 project manifest">🔗</a></div></figcaption><div class="listing__contents"><div class="code-box"><pre class="program"><code class="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;project&gt;
+  &lt;targets&gt;
+    &lt;target name="web"&gt;
+      &lt;format&gt;html&lt;/format&gt;
+      &lt;source&gt;source/main.ptx&lt;/source&gt;
+      &lt;publication&gt;publication/publication.ptx&lt;/publication&gt;
+      &lt;output-dir&gt;output/web&lt;/output-dir&gt;
+    &lt;/target&gt;
+    &lt;target name="print" pdf-method="xelatex"&gt;
+      &lt;format&gt;pdf&lt;/format&gt;
+      &lt;source&gt;source/main.ptx&lt;/source&gt;
+      &lt;publication&gt;publication/publication.ptx&lt;/publication&gt;
+      &lt;output-dir&gt;output/print&lt;/output-dir&gt;
+      &lt;output-filename&gt;mybook.pdf&lt;/output-filename&gt;
+    &lt;/target&gt;
+    &lt;target name="runestone"&gt;
+      &lt;format&gt;html&lt;/format&gt;
+      &lt;source&gt;source/main.ptx&lt;/source&gt;
+      &lt;publication&gt;publication/rs-publication.ptx&lt;/publication&gt;
+      &lt;output-dir&gt;published/mydoc-id&lt;/output-dir&gt;
+      &lt;stringparam key="author.tools" value="yes"/&gt;
+      &lt;stringparam key="html.css.extra" value="external/custom-styles.css" /&gt;
+      &lt;xsl&gt;xsl/runestone.xsl&lt;/xsl&gt;
+    &lt;/target&gt;
+  &lt;/targets&gt;
+  &lt;executables&gt;
+    &lt;latex&gt;latex&lt;/latex&gt;
+    &lt;pdflatex&gt;pdflatex&lt;/pdflatex&gt;
+    &lt;xelatex&gt;xelatex&lt;/xelatex&gt;
+    &lt;asy&gt;asy&lt;/asy&gt;
+    &lt;sage&gt;sage&lt;/sage&gt;
+    &lt;pdfpng&gt;convert&lt;/pdfpng&gt;
+    &lt;pdfeps&gt;pdftops&lt;/pdfeps&gt;
+    &lt;node&gt;node&lt;/node&gt;
+    &lt;liblouis&gt;file2brl&lt;/liblouis&gt;
+  &lt;/executables&gt;
+&lt;/project&gt;
+</code></pre></div></div></figure><span class="incontext"><a class="internal" href="cli-v1vsv2.html#listing-v1-manifest">in-context</a></span>
+</body>
+</html>

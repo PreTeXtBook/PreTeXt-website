@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<section class="paragraphs"><h3 class="heading"><span class="title">Build Scripts.</span></h3>
+<div class="para">When you have a mature book project, the various files, processing options, and a desire for multiple outputs can all get a bit confusing.  Writing simple scripts is a good idea and the investment of time doing this early in a project will pay off through the course of further writing and editing.  The particular setup you employ is less important.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">I have fallen into the habit of using the <code class="code-inline tex2jax_ignore">make</code> program.  It allows me to define common variables upfront (such as paths to the PreTeXt distribution and the main directory for the project it applies to).  Then I can easily make “targets” for different outputs.  So, for example I typically go <code class="code-inline tex2jax_ignore">make pdf</code> or <code class="code-inline tex2jax_ignore">make html</code> to produce output, and have simple companion targets so that I can go <code class="code-inline tex2jax_ignore">make viewpdf</code> or <code class="code-inline tex2jax_ignore">make viewhtml</code>.  Other targets do things like checking my source against the DTD (<a href="processing-dtd.html" class="internal" title="Section 5.4: Verifying your Source">Section 5.4</a>).  I have split out the variable definitions in a way that a collaborator can join the project and simply edit the file of definitions just once to reflect their setup, and still participate in future upgrades to the script by pulling from GitHub and not overwrite their local information.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">My use of <code class="code-inline tex2jax_ignore">make</code> is a bit of an abuse, since it is really designed for large software projects, with the aim of reducing duplicative compilations and that is not at all the purpose.  You could likely have exactly the same effect with a shell script and a case (or switch) statement.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">My general strategy is to assemble all the necessary files into a temporary directory (under <code class="code-inline tex2jax_ignore">/tmp</code> in Linux) by copying them out of their permanent home, copy customizing XSL into the right place (typically <code class="code-inline tex2jax_ignore">pretext/user</code>), run the <code class="code-inline tex2jax_ignore">pretext</code> script as necessary and direct the results to the right place, and finally copy results out of the temporary directory if they are meant to be permanent.  Interesting, an exception to staging all these files is the source of the book itself which is only read for each conversion and then not needed for the output.  So you can just point directly to a top-level file and the <code class="code-inline tex2jax_ignore">xinclude</code> mechanism locates any other necessary source files.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">A good example of this general strategy is the use and placement of image files for HTML output.  It is your responsibility to place images into the location your resulting HTML files expect to locate them.  By default, this is a subdirectory of the directory holding the HTML files, named <code class="code-inline tex2jax_ignore">images</code>.  You will want to copy images, such as photographs, out of your main source directory (<code class="code-inline tex2jax_ignore">src/images</code>?). But you may be actively modifying source code for diagrams, and you want to re-run the <code class="code-inline tex2jax_ignore">pretext</code> script for each run, and make sure the output of the script is directed to the correct subdirectory for the HTML output.  Running the <code class="code-inline tex2jax_ignore">pretext</code> script frequently can get tiresome, so maybe you have a makefile target <code class="code-inline tex2jax_ignore">make diagrams</code> that updates a permanent directory, outside of your tracked files in the repository, and you copy those files into the correct subdirectory for the output.  That way, you can update images only when you are actively editing them, or when you are producing a draft that you want to be as up-to-date as possible.  As a project matures, you can add images into the directory tracked by <code class="code-inline tex2jax_ignore">git</code> so they are available to others without getting involved with the <code class="code-inline tex2jax_ignore">pretext</code> script.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">We did not say it would be easy, but we feel much of this sort of project management is outside the scope of the PreTeXt project itself, while in its initial stages, and existing tools to manage the complexity are available and documented.  (We <em class="emphasis">have</em> been encouraged to create sample scripts, which we may do.)  Just remember the strategy: stage necessary components in a temporary directory, build output in that directory, copy out desired semi-permanent results, and limit additions to the source directory to that which is original, or mature and time-consuming to reproduce.<div class="autopermalink" data-description="Paragraph"><a href="#processing-file-management-5-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Build Scripts"><a href="#processing-file-management-5" title="Copy heading and permalink for Paragraphs: Build Scripts">🔗</a></div></section><span class="incontext"><a class="internal" href="processing-file-management.html#processing-file-management-5">in-context</a></span>
+</body>
+</html>

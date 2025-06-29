@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="list table-like"><figcaption><span class="type">List</span><span class="space"> </span><span class="codenumber">37.2.1<span class="period">.</span></span><span class="space"> </span>Private Solutions File<div class="autopermalink" data-description="List 37.2.1: Private Solutions File"><a href="#private-solutions-file-5" title="Copy heading and permalink for List 37.2.1: Private Solutions File">🔗</a></div></figcaption><div class="named-list-content"><ol class="decimal" id="private-solutions-file-5-4">
+<li>
+<div class="para">Start with an <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> that you wish to provide private solutions for.  Give it an <code class="code-inline tex2jax_ignore">@xml:id</code>, which you will need for <a href="private-solutions-file.html#build-the-solution" class="xref" data-knowl="./knowl/xref/build-the-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 37.2.1:4">Item 4</a>.  Be sure the <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> is structured with a <code class="code-inline tex2jax_ignore">&lt;statement&gt;</code> so a private solution may be appended.<div class="autopermalink" data-description="Paragraph"><a href="#prep-the-exercise-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:1"><a href="#prep-the-exercise" title="Copy heading and permalink for Item 37.2.1:1">🔗</a></div>
+</li>
+<li>
+<div class="para">We recommend leaving a comment inside the <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> to remind you that there is a private solution that may need editing if the problem <code class="code-inline tex2jax_ignore">&lt;statement&gt;</code> changes.<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:2"><a href="#private-solutions-file-5-4-2" title="Copy heading and permalink for Item 37.2.1:2">🔗</a></div>
+</li>
+<li>
+<div class="para">Create a new PreTeXt file to hold the private solutions, presumably located <em class="emphasis">away</em> from your other source files (see <a href="private-solutions-file.html#private-stays-private" class="xref" data-knowl="./knowl/xref/private-stays-private.html" data-reveal-label="Reveal" data-close-label="Close" title="Warning 37.2.2: Keep Your Private Solutions Private!">Warning 37.2.2</a>).  Call it something like <code class="code-inline tex2jax_ignore">privatesolutions.ptx</code>, which is what we will use below.<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The first two lines of the file <em class="emphasis">must</em> be:</div>
+<pre class="code-display tex2jax_ignore">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;pi:privatesolutions
+  xmlns:pi="http://pretextbook.org/2020/pretext/internal"&gt;
+</pre>
+<div class="para">(<code class="code-inline tex2jax_ignore">pi</code> is the PreTeXt internal namespace.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:3"><a href="#private-solutions-file-5-4-3" title="Copy heading and permalink for Item 37.2.1:3">🔗</a></div>
+</li>
+<li>
+<div class="para">Now add as many <code class="code-inline tex2jax_ignore">&lt;hint&gt;</code>, <code class="code-inline tex2jax_ignore">&lt;answer&gt;</code>, or <code class="code-inline tex2jax_ignore">&lt;solution&gt;</code> as you like, in any order you like, authored in the usual way.  The missing piece is that you must link each solution back to the <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> it belongs to, with a <code class="code-inline tex2jax_ignore">@ref</code> attribute whose value is the <code class="code-inline tex2jax_ignore">@xml:id</code> you used to label the <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> in <a href="private-solutions-file.html#prep-the-exercise" class="xref" data-knowl="./knowl/xref/prep-the-exercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 37.2.1:1">Item 1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#build-the-solution-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For example, if there is an <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code> with <code class="code-inline tex2jax_ignore">@xml:id</code> having value <code class="code-inline tex2jax_ignore">very-hard-problem</code>, you might author:</div>
+<pre class="code-display tex2jax_ignore">&lt;answer ref="very-hard-problem"&gt;
+  &lt;p&gt;42.&lt;/p&gt;
+&lt;/answer&gt;
+</pre>
+<div class="autopermalink" data-description="Paragraph"><a href="#build-the-solution-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:4"><a href="#build-the-solution" title="Copy heading and permalink for Item 37.2.1:4">🔗</a></div>
+</li>
+<li>
+<div class="para">Finish the file by closing the overall <code class="code-inline tex2jax_ignore">&lt;pi:privatesolutions&gt;</code> element.<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:5"><a href="#private-solutions-file-5-4-5" title="Copy heading and permalink for Item 37.2.1:5">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Now you can have all of these private solutions incorporated into your source by specifying the filename in your publication file (<a href="publication-file.html" class="internal" title="Section 26.1: Publication File">Section 26.1</a>).  The <code class="code-inline tex2jax_ignore">@private-solutions</code> attribute of the <code class="code-inline tex2jax_ignore">/publication/source</code> element should be set to this filename (<a href="publication-file-source.html#publication-file-source-extras" class="internal" title="Subsection 44.7.3: Extras">Subsection 44.7.3</a>).  So you would have</div>
+<pre class="code-display tex2jax_ignore">&lt;publication&gt;
+  &lt;source private-solutions="path/to/privatesolutions.ptx"/&gt;
+  ...
+</pre>
+<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:6"><a href="#private-solutions-file-5-4-6" title="Copy heading and permalink for Item 37.2.1:6">🔗</a></div>
+</li>
+<li>
+<div class="para">The private solutions file should be available to any conversion, but most likely you will be using it with the solution manual conversion (see <a href="solution-manual.html" class="internal" title="Section 37.1: Solution Manual">Section 37.1</a>).<div class="autopermalink" data-description="Paragraph"><a href="#private-solutions-file-5-4-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 37.2.1:7"><a href="#private-solutions-file-5-4-7" title="Copy heading and permalink for Item 37.2.1:7">🔗</a></div>
+</li>
+</ol></div></figure><span class="incontext"><a class="internal" href="private-solutions-file.html#private-solutions-file-5">in-context</a></span>
+</body>
+</html>
