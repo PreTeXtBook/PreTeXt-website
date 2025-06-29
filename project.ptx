@@ -5,8 +5,59 @@
 <!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
 <project ptx-version="2" publication="source">
   <targets>
-    <target name="guide-web" format="html" source="doc/guide/guide.xml" publication="doc/guide/publication.xml" deploy-dir="doc/guide/html" />
-    <target name="guide-print" format="pdf" source="doc/guide/guide.xml" output-filename="pretext-guide.pdf" publication="doc/guide/publication.xml" deploy-dir="doc/guide" />
+    <target name="guide-web" format="html" source="doc/guide/guide.xml" 
+            publication="doc/guide/publication.xml" deploy-dir="doc/guide/html" />
+    <target name="guide-print" format="pdf" source="doc/guide/guide.xml"
+            output-filename="pretext-guide.pdf" publication="doc/guide/publication.xml" deploy-dir="doc/guide" />
+
+    <target name="showcase-web" format="html" 
+            source="examples/showcase/source/pretext-showcase.ptx"
+            publication="examples/showcase/publisher/publication.xml" deploy-dir="examples/showcase/html" />
+    <target name="showcase-print" format="pdf" 
+            source="examples/showcase/source/pretext-showcase.ptx"
+            publication="examples/showcase/publisher/publication.xml"
+            output-filename="pretext-showcase.pdf" 
+            deploy-dir="examples/showcase" />
+
+    <target name="sample-book-chapters-web" format="html"
+            source="examples/sample-book/sample-book.xml"
+            publication="examples/sample-book/publication-noparts.xml"
+            deploy-dir="examples/sample-book/noparts/html" />
+    <target name="sample-book-chapters-print" format="pdf"
+            source="examples/sample-book/sample-book.xml"
+            publication="examples/sample-book/publication-noparts.xml"
+            output-filename="sample-book.pdf"
+            deploy-dir="examples/sample-book/noparts" />
+    <target name="sample-book-solutions-print" format="pdf"
+            source="examples/sample-book/sample-book-solutions-manual.xml"
+            publication="examples/sample-book/publication-solution-manual.xml"
+            output-filename="sample-book-solutions-manual.pdf"
+            deploy-dir="examples/sample-book/noparts" />
+    <target name="sample-book-structural-web" format="html"
+            source="examples/sample-book/sample-book-parts.xml"
+            publication="examples/sample-book/publication-structural.xml"
+            deploy-dir="examples/sample-book/structural/html" />
+    <target name="sample-book-structural-annotated" format="html"
+            source="examples/sample-book/sample-book-parts.xml"
+            publication="examples/sample-book/publication-structural.xml"
+            deploy-dir="examples/sample-book/structural/html">
+            <stringparams debug.html.annotate="yes"/>
+    </target>
+    <target name="sample-book-structural-print" format="pdf"
+            source="examples/sample-book/sample-book-parts.xml"
+            publication="examples/sample-book/publication-structural.xml"
+            output-filename="sample-book.pdf"
+            deploy-dir="examples/sample-book/structural" />
+    <target name="sample-book-decorative-web" format="html"
+            source="examples/sample-book/sample-book-parts.xml"
+            publication="examples/sample-book/publication-decorative.xml"
+            deploy-dir="examples/sample-book/decorative/html" />
+    <target name="sample-book-decorative-print" format="pdf"
+            source="examples/sample-book/sample-book-parts.xml"
+            publication="examples/sample-book/publication-decorative.xml"
+            output-filename="sample-book.pdf"
+            deploy-dir="examples/sample-book/decorative" />
+
   </targets>
 </project>
 
