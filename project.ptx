@@ -3,10 +3,10 @@
 <!-- If you modify this file, PreTeXt will no longer automatically update it.-->
 
 <!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
-<project ptx-version="2">
+<project ptx-version="2" publication="source">
   <targets>
-    <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <target name="guide-web" format="html" source="doc/guide/guide.xml" publication="doc/guide/publication.xml" deploy-dir="doc/guide/html" />
+    <target name="guide-print" format="pdf" source="doc/guide/guide.xml" output-filename="pretext-guide.pdf" publication="doc/guide/publication.xml" deploy-dir="doc/guide" />
   </targets>
 </project>
 

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--   This file is part of the documentation of PreTeXt      -->
+<!--                                                          -->
+<!--      PreTeXt Publisher's Guide                           -->
+<!--                                                          -->
+<!-- Copyright (C) 2013-2017  Robert A. Beezer, David Farmer  -->
+<!-- See the file COPYING for copying conditions.             -->
+
+<chapter xml:id="online-html">
+    <title>Conversion to Online HTML</title>
+
+    <introduction>
+        <p>This chapter describes way a publisher can adjust the presentation of <pretext/> content in an inline format, without actually changing that content.  Similar to the case for <latex/> conversion (<xref ref="pdf-print"/>) there is a variety of options which may be configured.  As of 2022-10-24 we are transitioning away from string parameters (<xref ref="publisher-string-parameters"/>) to using a publication file (<xref ref="publication-file"/>), which is simultaneously being documented carefully.  During the transition you can explore <c>xsl/pretext-html.xsl</c> by searching on the use of <tag>xsl:param</tag> at the outermost level (i.e. starting in column 1).</p>
+    </introduction>
+
+    <section xml:id="html-publisher-options">
+        <title>HTML Publisher Options</title>
+
+        <subsection xml:id="index-page">
+            <title><c>index.html</c> Page</title>
+            <idx><h>index page</h><h>HTML</h></idx>
+            <idx><h>HTML</h><h>index page</h></idx>
+
+            <p>The conversion to <init>HTML</init> <em>always</em> creates a file named <c>index.html</c>.  We do this because if a reader requests the <init>URL</init><cd>
+                <cline>platypus.mammal-institute.org/aota/html</cline>
+            </cd>then most modern web servers will automatically return the page<cd>
+                <cline>platypus.mammal-institute.org/aota/html/index.html</cline>
+            </cd>So you can advertise the shorter version to potential readers.  What is in <c>index.html</c>?  Simple code to <term>redirect</term> to another one of your pages.  Which one?  Any one you like!</p>
+
+            <p>Within the <tag>publication</tag> element of your publication file (<xref ref="publication-file"/>) include an <tag>html</tag> element, with a child element <tag>index-page</tag> having an attribute <attr>ref</attr>.  The value must be the <attr>xml:id</attr> of a division which is rendered as an entire web page at the requested level of chunking.  See <xref ref="online-index-page"/>  for details on specifying this option.</p>
+
+            <p>For example, if a <tag>book</tag> is being chunked into <tag>chapter</tag>, and your source has<cd>
+                <cline>&lt;chapter xml:id="birds"&gt;</cline>
+            </cd>then you can set <c>ref="birds"</c> and the page for that chapter will be the default page for the shorter <init>URL</init>.  In practice, you probably really want a page that looks like the front matter or a Table of Contents.</p>
+
+            <p>The default is to first have <c>index.html</c> redirect to a page for the <tag>frontmatter</tag>, and if this is not possible, then it will redirect to a page for the top-level of your content.  If your document is short or simple, you may just have a single web page.  You could choose to not distribute the <c>index.html</c> file and then just use a concise and descriptive <attr>xml:id</attr> for your top-level element (e.g. <tag>article</tag>) to fashion an attractive URL that points to your shorter work.</p>
+        </subsection>
+
+        <subsection xml:id="online-embedded-calculator">
+            <title>Embedded Calculator</title>
+            <idx><h>calculator</h><h>embedded in <init>HTML</init></h></idx>
+
+            <p>You may elect to have an embedded online calculator in each page of your online version.  It will appear in the right margin, and will stay there as a reader scrolls the page up and down.  A button near the masthead can be used to contol visibility.  By default no calculator is available, so you need to explicitly request this feature.  As of 2020-05-30 there are four calculators available from the
+              <url href="https://www.geogebra.org/" visual="www.geogebra.org">GeoGebra Project</url>.  See <xref ref="online-calculator"/> for details on specifying this option.</p>
+        </subsection>
+
+        <subsection xml:id="online-favicon-configuration">
+            <title>HTML Favicon Configuration</title>
+            <idx>favicon</idx>
+
+            <p>A <term>favicon</term> is a graphical element (<q>icon</q>) that identifies a website.  Perhaps its most recognizable use is its appearance in every browser tab open at that site.  As publisher, you can associate an icon for your project to the <init>HTML</init> output of your project.</p>
+
+            <p>See <xref ref="online-favicon"/> for details on this specification.  When the attribute value is <c>none</c> (the default), then your pages will not have a favicon.</p>
+
+            <!-- commit 96c5886dc27dc47d55fa6b7aec18cfd28ec5ee13 -->
+            <!-- Date:   Wed Jul 18 13:01:02 2018 -0700          -->
+            <!-- Support for HTML favicon                        -->
+
+            <p>If you set the attribute to <c>simple</c> then you <em>must</em> provide two versions of your icon, in <init>PNG</init> format, in pixel sizes 16<times/>16 and 32<times/>32, with exactly the two filenames below (respectively), in the directory of provided external files (<xref ref="processing-directory-management"/>).<cd>
+                <cline>favicon/favicon-16x16.png</cline>
+                <cline>favicon/favicon-32x32.png</cline>
+            </cd>There are other ways to specify a favicon and some browsers expect different files.  Try this scheme first, as it appears to have been sufficient since 2018.  But if a new scheme needs implementation, we can consider a feature request.</p>
+        </subsection>
+
+        <subsection xml:id="online-scratch-activecode">
+            <title>ActiveCode Programming Windows</title>
+            <idx><h>ActiveCode</h><h>window in <init>HTML</init></h></idx>
+
+            <p>A window that allows for entering, and executing, computer programs can be made available for every page.  The reader can click on a pencil icon to activate this window.  Some languages can run in a web browser as part of any <init>HTML</init> output, while some other languages require infrastructure on a Runestone server to execute, and so are only available when you specify that hosting option.  Note that the publisher will select a single language for use with the entire document. See <xref ref="online-activecode"/> for details on specifying this option.</p>
+        </subsection>
+
+        <subsection xml:id="online-base-url">
+            <title>Base URL</title>
+            <idx>base URL</idx>
+            <idx><h>URL</h><h>base</h></idx>
+
+            <p>The base <init>URL</init> of a hosted version of <init>HTML</init> output may be specified as an entry in a publication file.  Then certain aspects of other output (typically <init>PDF</init>/<latex/>) will link to corresponding aspects of the <init>HTML</init> output.  See <xref ref="online-baseurl"/> for the specifics of this entry.  Examples of use include links from Asymptote graphics (<xref ref="latex-asymptote-links"/>), and <init>URL</init>s pointing to locally-hosted data files (<xref ref="topic-datafile"/>).</p>
+        </subsection>
+
+        <subsection xml:id="video-embedding">
+            <title>Privacy Options for Video Embedding</title>
+            <idx><h>video</h><h>HTML</h></idx>
+            <idx><h>privacy</h><h>video</h></idx>
+
+            <p>When videos are embedded in <init>HTML</init> from sites like <url href="https://www.youtube.com" visual="youtube.com">YouTube</url> or <url href="https://vimeo.com/" visual="vimeo.com">Vimeo</url>,
+            they come with whatever tracking cookies these sites want to include. Some of these can be helpful; for example, to let the viewer keep track of what they have watched.
+            Others are designed to target advertising, and load when the page loads, rather than when the video plays, which can increase the time it takes for your book to load.</p>
+
+            <p>Currently YouTube offers an <q>enhanced privacy mode</q> that disables tracking cookies on page load.
+            The assumption is that publishers will want to protect their readers' privacy and optimage page load time, so this mode is turned on by default for YouTube videos.
+            It is not known to be available for other platforms, but can be added if this changes. Note that the behavior and appearance of your videos may change slightly depending on which option you choose.</p>
+
+            <p>Within the <tag>publication</tag> element of your publication file include an <tag>html</tag> element, with a child element <tag>video</tag> having an attribute <attr>privacy</attr>.
+            The value must be either <c>yes</c> (use enhanced privacy, if available), or <c>no</c> (allow all tracking cookies).
+            If your publication file does not have this element (or you do not have a publication file) you will get a warning message, and the default will be used.  See <xref ref="embedded-video-privacy-options"/> for details on specifying this option.</p>
+        </subsection>
+
+        <subsection xml:id="html-asymptote-links">
+            <title>Links to full-size versions of Asymptote diagrams</title>
+            <idx><h>Asymptote links</h><h>HTML</h></idx>
+            <idx><h>HTML</h><h>Asymptote links</h></idx>
+
+            <p>Asymptote diagrams are embedded in <init>HTML</init> as a <c>canvas</c> element within an <c>iframe</c>.
+            Unlike <c>image</c> elements, web browsers will not provide the option to <q>view image</q>, and clicking on the image will not enlarge it.
+            Since 3D Asymptote diagrams are interactive, a reader may wish that they could interact with a larger version of the graphic.</p>
+
+            <p>You may elect to place a <q>Link to full-sized image</q> link below each Asymptote diagram.
+            Clicking on the link will open the Asymptote <init>HTML</init> file directly, and the digram will be displayed at a much larger size.</p>
+
+            <p>See <xref ref="html-asymptote-link-options"/> for the specifics of this entry.  This feature is off by default.</p>
+        </subsection>
+
+        <subsection xml:id="html-feedback">
+            <title>HTML Feedback Button</title>
+            <idx><h>HTML</h><h>feedback button</h></idx>
+            <idx><h>feedback button</h><h>HTML</h></idx>
+
+            <p>You can elect to have a <q>Feedback</q> button in the footer of your <init>HTML</init> pages.  You must provide a <init>URL</init> via an attribute.  But where that <init>URL</init> points, and what happens there, <em>is your responsibility</em>.  In other words, <pretext/> is no more help here, you just get a functional button pointing <em>somewhere</em> of your choosing or design.  An example use case may be that you want to make it very easy for your readers to submit reports of small errors, like <q>typos.</q>  So you setup an online form with a free service, which will help you manage this communication.  Or maybe you want to run a reader survey via a form, so you point to that.</p>
+
+            <p>The default text on the button is <c>Feedback</c>, which will be in the language in effect for the page.  You can override this choice (e.g., <c>Bug Report</c>), but it needs to be raw text (no markup) and then it will not react to language changes for your document.  See <xref ref="html-feedback-options"/> for precise details.</p>
+        </subsection>
+
+        <subsection xml:id="html-navigation">
+            <title>HTML Navigation</title>
+            <idx><h>Asymptote links</h><h>HTML</h></idx>
+            <idx><h>HTML</h><h>Asymptote links</h></idx>
+
+            <p>There are publisher file entries to control how navigation between pages behaves.  The <q>Up</q> button may be turned on and off.  An entry for the logic of these buttons can be set to the values of <c>linear</c> (the default) or <c>tree</c>.  The former causes the Previous and Next buttons to behave as if the divisions are arranged as in a printed book, i.e. linearly.  The latter option means that when a reader comes to the last subdivision of a division, the Next button will be not be active, and they will need to return (up the hierarchy/tree) to the division and move to the next division.  Turning off the Up button while electing the tree model is likely to lead to a frustrating navigation experience.</p>
+
+            <p>The HTML target offers two views of the Table of Contents (ToC). The default is to fully expand the ToC to the depth indicated by the the <xref ref="common-toc-options">common Table of Contents level</xref> publisher setting. There is also a <c>focused</c> view that uses an expandable ToC and only initially fully expands the path to the current page.</p>
+
+            <p>See <xref ref="html-navigation-options"/> and <xref ref="html-toc-options"/> for the exact syntax of these options.</p>
+        </subsection>
+    </section>
+
+    <section xml:id="knowled-content">
+        <title>Knowled Content</title>
+
+        <p>A <term>knowl</term> is a feature of the online conversion. It is text that you can click on, and nearby some content is revealed. You can click it again to hide that content.  You can find a variety of examples in the Sample Article, or other <pretext/> projects.</p>
+
+        <p>Knowls come in two different types:<ul>
+            <li>
+                <p>A <term>born-hidden knowl</term> or <term>born-as knowl</term> is content that is contained in a knowl at the location where it first appears.  Typical examples are footnotes, hints to exercises, or proofs of theorems.  In other words, these small units of content are <q>hidden</q> behind knowls in the location where they naturally belong.  Some content (e.g. footnotes and exercise solutions) are <em>always</em> <term>knowled</term>, while other content (e.g. an inline exercise) can be knowled, or not, as a choice made by the publisher via the Publisher's File (<xref ref="publication-file"/>).  For exact details on influencing knowlization see the reference material in <xref ref="online-knowlization-options"/>.</p>
+
+                <p>An author does not need to be conscious of knowls. The structure and content of the document should not <q>be aware</q> that there will be knowls in the online output.  But instead the publisher has control over whether or not certain medium-sized pieces of content (examples, exercises, figures, etc.) are born as knowls or not.</p>
+
+                <p>Note that some of these switches are for broad categories of items, for example, choosing to knowl theorems will also knowl <tag>lemma</tag>s, <tag>corollary</tag>s, <tag>fact</tag>s, and more.  See <xref ref="online-knowlization-options"/> for precise details.  This choice applies document-wide, there is no plan to support electing this on a case-by-case basis.</p>
+            </li>
+
+            <li>
+                <p>By contrast, a <term>cross-reference knowl</term> or an <term>xref knowl</term> is content that is a duplicate of some other content, in another location, as a result of an author making an <tag>xref</tag> cross-reference in their source.  So a cross-reference in Chapter<nbsp/>8 to Example<nbsp/>4.6 will open the content of the example in the knowl, rather than transporting the reader backwards four chapters.  If the reader <em>does</em> want to see the example in its original context in Chapter 4, then the knowl finishes with an <term>in-context</term> link that functions as a traditional hyperlink.  Almost every cross-reference is a knowl, except when the target is a division<mdash/>then a traditional hyperlink is used, since rendering an entire division as a knowl is unwieldy. Should knowls not be desired, there is a publisher level switch to render all <tag>xref</tag>s as traditional links. See <xref ref="html-xref-options"/> for details.</p>
+            </li>
+        </ul>
+        The presence of the in-context link is one way to tell the difference between the two - <term>born-hidden knowl</term>s will not have an in-context link, while <term>cross-reference knowl</term>s will. Locators in the index (<xref ref="online-index-style"/>) are mostly cross-reference knowls.  Knowls are used a few other places, such as in a list of notation.</p>
+    </section>
+
+    <section>
+        <title>Permalinks</title>
+
+        <p>If you place a mouse pointer in the left margin, to the left of a heading for an item, then an icon with two links of a chain will appear.  This is a link to the item.  Instead of a doing a right-click for a context menu that has an option like <q>Copy Link Location</q>, rather do a normal (left-) click.  This will copy the heading (<q>Example 4.5 Chameleon Colors</q>), and also the link itself, to your clipboard, along with some formatting.  You can then paste this into course materials, or email it to a reader who had a question.</p>
+
+        <p>You might want to make this feature known to your readers, perhaps via a preface explaining some of the more novel features of the <init>HTML</init> version of a <pretext/> document.</p>
+    </section>
+
+    <section>
+        <title>Lists</title>
+
+        <p>On a description list (<tag>dl</tag>), only <attr>width</attr> values of <c>narrow</c> and <c>medium</c> are implemented. (2018-03-28)</p>
+
+        <p>Lists with several columns are rendered in row-major order, as of 2018-02-28.  In other words, the first list items (<tag>li</tag>) in your source will populate the first row.</p>
+
+    </section>
+
+    <section xml:id="online-index-style">
+        <title>Index Style</title>
+
+        <p>Start at <xref ref="overview-index-notation"/> to learn how to create an index.  The realization of the index for online output is implemented within <pretext/>.  We have made certain stylistic choices, in addition to taking advantage of certain features of the online format.<ul>
+            <li>A one-column format.</li>
+            <li>Indented subheadings (not run-in).</li>
+            <li>Maximum two levels of subheadings.</li>
+            <li>Word-by-word sort order on headings.</li>
+            <li>Locators for divisions are hyperlinks.</li>
+            <li>Locators for smaller units are knowls.</li>
+            <li><q>Page ranges</q> use the initial location.</li>
+            <li>No running heads (yet).</li>
+            <li>A <term>headnote</term> can be accomplished with an <tag>introduction</tag>.</li>
+        </ul>Some of these choices would be easy to adjust or extend as the result of a feature request.</p>
+
+        <p>Also, there can be significant differences between how <pretext/> implements the index for <init>HTML</init> and how the <c>imakeidx</c> package creates an index for <latex/>.  See <xref ref="latex-index-style"/> and <xref ref="indexing-guide"/>.</p>
+    </section>
+
+    <section xml:id="online-style">
+        <title>Styling</title>
+        <idx><h>style</h><h>HTML</h></idx>
+
+        <p>The <pretext/> conversion to <init>HTML</init> creates standard <init>HTML</init> elements, with styles controlled by <init>CSS</init> via class names (and not so much via the element names).  As evidence of this, building <init>HTML</init> without the accompanying Javascript and <init>CSS</init> renders in a readable fashion, albeit quite plain (as one would expect).</p>
+
+        <p>This <init>HTML</init> is styled with <init>CSS</init> to create the output that a reader sees. There are multiple <q>themes</q> that a publisher can choose from to render the pages in different styles. Below are samples of available themes. See <xref ref="online-style-options"/> for the syntax for specifying a theme and options like the color palette to use.</p>
+
+        <paragraphs>
+            <title>Themes</title>
+
+            <p>There are multiple themes that define different appearances for HTML output. Currently available themes include:</p>
+
+            <sbsgroup>
+                <sidebyside widths="40% 40%" margins="auto" valign="middle">
+                    <figure>
+                      <image source="theme-default-modern.jpg" width="100%">
+                          <description>Screenshot of the default-modern theme</description>
+                      </image>
+                      <caption><term>default-modern</term> An updated version of the traditional PreTeXt theme.</caption>
+                    </figure>
+                    <figure>
+                      <image source="theme-tacoma.png" width="100%">
+                          <description>Screenshot of the tacoma theme</description>
+                      </image>
+                      <caption><term>tacoma</term> A theme with minimal decorations and colors. A minimalistic presentation of the contents.</caption>
+                    </figure>
+                </sidebyside>
+                <sidebyside widths="40% 40%" margins="auto" valign="middle">
+                    <figure>
+                      <image source="theme-denver.png" width="100%">
+                          <description>Screenshot of the denver theme</description>
+                      </image>
+                      <caption><term>denver</term> A theme that uses bolder structural elements and colors.</caption>
+                    </figure>
+                    <figure>
+                      <image source="theme-greeley.png" width="100%">
+                          <description>Screenshot of the greeley theme</description>
+                      </image>
+                      <caption><term>greeley</term> A theme designed for short documents like academic papers.</caption>
+                    </figure>
+                </sidebyside>
+                <sidebyside widths="40% 40%" margins="auto" valign="middle">
+                    <figure>
+                      <image source="theme-salem.png" width="100%">
+                          <description>Screenshot of the salem theme</description>
+                      </image>
+                      <caption><term>salem</term> A theme that is optimized for displaying wide interactive elements (such as Active Code and Parsons).</caption>
+                    </figure>
+                    <figure>
+                      <image source="theme-boulder.png" width="100%">
+                          <description>Screenshot of the boulder theme</description>
+                      </image>
+                      <caption><term>boulder</term> A minimal theme designed to mimic a LaTeX pdf for academic paper (no masthead).</caption>
+                    </figure>
+                </sidebyside>
+            </sbsgroup>
+        </paragraphs>
+
+        <paragraphs>
+            <title>Development</title>
+
+            <p>Please join us on the <c>pretext-dev</c> discussion group if you want to create alternate themes.</p>
+        </paragraphs>
+    </section>
+
+    <section xml:id="online-analytics">
+        <title>Analytics</title>
+        <idx>analytics</idx>
+
+        <p><pretext/> makes it as easy as possible to have services provide data about visitors to the <init>HTML</init> version of your book.  We support <url href="https://analytics.google.com/analytics/web/" visual="analytics.google.com/analytics/web/">Google Analytics</url> and <url href="https://statcounter.com/" visual="statcounter.com/">StatCounter</url>.</p>
+
+        <p>In each case, use is similar.  Begin at the service's site and follow their instructions for enabling data collection for your book's site.  We will not document those instructions here.  <em>Do not copy the identification numbers from another project<mdash/>be sure to obtain your own for your project.</em>  When completed, you can request (or will be shown) sample Javascript code to add to pages on your site.  Except, <pretext/> is going to do that part for you.  You only need to provide the unique identifiers used by the service that identify your project.  Because these sign-ups are dependent on your site, this is a publisher activity, and hence configured with the publication file (<xref ref="publication-file"/>), see <xref ref="online-analytics-options"/> for details.</p>
+
+        <p>StatCounter uses two identifiers, a <c>project</c> ID and a <c>security</c> code.  <em>Do not copy the identification numbers from another project<mdash/>be sure to obtain your own for your project.</em>  You can find them in your <q>Project Config</q> under <q>Settings</q>.  Or the code provided will contain lines such as<cd>
+            <cline>var sc_project=11538430;</cline>
+            <cline>var sc_invisible=1;</cline>
+            <cline>var sc_security="72e1390a";</cline>
+        </cd>In which case your publication file would have an element under <c>html</c> like<cd>
+            <cline>&lt;analytics statcounter-project="11538430"</cline>
+            <cline>           statcounter-security"72e1390a"/&gt;</cline>
+        </cd></p>
+
+        <p>Google Analytics comes in several flavors.  We once supported Classic and Universal, but no longer, so we do not provide documentation here.  For the replacement, Google <term>Global Site Tag</term> is a single ID.    <em>Do not copy the identification numbers from another project<mdash/>be sure to obtain your own for your project.</em>  Google once called this a tracking ID, which may also be called a property ID; these looked like <c>UA-6836004-1</c>.  Google has now switched to Google Analytics 4 and is exclusively using the form of a <term>Google Tag ID</term>/<term>Measurement ID</term> which will look similar to <c>G-CQG9X37H61</c>; you will need to upgrade your analytics if you used the older style tag.  In any case your publication file would have an element under <c>html</c> like<cd>
+            <cline>&lt;analytics google-gst="G-CQG9X37H61"/&gt;</cline>
+        </cd>If you use both services, you can elect to use just one <tag>analytics</tag> element with several attributes.</p>
+
+        <p>We would be happy to provide support for additional major services.  Just make a feature request.</p>
+    </section>
+
+    <section xml:id="native-search">
+        <title>Native Search</title>
+        <idx><h>search</h><h>native</h></idx>
+
+        <p>Client-side search is supported natively by a Javascript library.  Search results are tuned to leverage the <em>structure</em> of your <pretext/> project.  As such, development and support will favor this approach over our legacy support for an online service (<xref ref="google-search"/>).</p>
+
+        <p>There are two <term>tunings</term> of search.<dl>
+            <li>
+                <title>Textbook</title>
+                <p>This is the default.  Results are presented in order of appearance, on the assumption that a reader is following the text in a linear order and knows their current location.  Visual clues will reflect the relevance of each result.</p>
+            </li>
+            <li>
+                <title>Reference</title>
+                <p>This assumes a document is more like a reference work and is accessed <q>randomly.</q>  Results are not in order of appearnce, but rather early results will likely be more relevant.</p>
+            </li>
+        </dl></p>
+
+        <p>Employing a switch in the publication file will provide search boxes (top banner, lower-right corner) and all the supporting infrastructure.  See <xref ref="online-search-options"/> for details.</p>
+    </section>
+
+    <section xml:id="google-search">
+        <title>Google Search</title>
+        <idx><h>search</h><h>Google</h></idx>
+
+        <p>Note: as of 2022-10-27 we have search supported by an online service from Google and a client-side (<q>native</q>)version supported by Javascript (<xref ref="native-search"/>).  Development and support will favor the latter.</p>
+
+        <p>Search facilities can be enabled through <url href="https://cse.google.com/cse" visual="cse.google.com/cse">Google Custom Search Engine</url><idx>Google Custom Search Engine</idx>.  Please, please report any discrepancies in the following instructions as the setup interface at Google changes out from underneath us.  These instructions have been updated as of 2020-10-01.</p>
+
+        <p>Besides being useful for search facilities, setting up a search engine might be a good way to alert Google of something newly available, and initiate your book's rise up the search results rankings.</p>
+
+        <list>
+            <title>Configuring Google Custom Search</title>
+
+            <ol>
+                <li><p>Create an account with Google (GMail, YouTube, <etc />) and make sure you are signed in.</p></li>
+
+                <li><p>Visit <url href="https://cse.google.com/cse" visual="cse.google.com/cse">GCSE</url> and add a new search engine via  <c>New Search Engine</c>.</p></li>
+
+                <li><p>Provide a <init>URL</init> for the top-level domain name/directory for your book/document.  Everything below this will be indexed.  We have taken some care to mark knowl content in a way compatible with the search facility, but there is more work to do here.</p></li>
+
+                <li><p>Give the engine a GCSE-specific name, so you can tell later which one it is when you have several.</p></li>
+
+                <li><p>Under <c>Edit Search Engine</c> in the <c>Basics</c> tab locate <c>Search engine ID</c> which has a string that uniquely identifies your new search engine.  Save this, you'll need to make it part of your <pretext/> document.</p></li>
+
+                <li><p>Under the <c>Users</c> tab add co-authors or trusted backup personnel.</p></li>
+
+                <li><p>Fiddle with <c>Edit Search Engine > Look and Feel</c> at your own risk!  Only the defaults are tested and supported.</p></li>
+
+                <li><p>Provisions for removing advertisements for non-profit sites seem to have changed.  If your university already contracts with Google, you should investigate having a <q>SuperAdmin</q> at your institution so this setup for you, and make you a trusted collaborator.  Then it should be an easy matter to turn off advertisements.</p></li>
+            </ol>
+        </list>
+
+        <list>
+            <title>Configuring <pretext/> for Google Search</title>
+
+            <ol>
+                <li><p>Because these sign-ups are dependent on your site, this is a publisher activity, and hence configured with the publication file (<xref ref="publication-file"/>), see <xref ref="online-search-options"/> for details.</p></li>
+                <li><p>The <c>Search engine ID</c> you saved from above is referenced in Google's code as a <c>cx</c> number.  An example looks like <c>482cf73dc05bed674</c> (older examples looked like <c>002673997130187229905:qjo2y0jplyu</c>).  In which case your publication file would have an element under <c>html</c> like<cd>
+                    <cline>&lt;search google-cx="482cf73dc05bed674"/&gt;</cline>
+                </cd></p></li>
+
+                <li><p>The <c>search/@google-cx</c> attribute will alert the <pretext/> conversion and fully enable and implement search.  You are done, and everything should just work.  You should see a Google-branded search box to the top right of each of your pages.  (We have no control over the branding.)</p></li>
+
+                <li><p>Time to rebuild your <init>HTML</init> output and make the improved version available.</p></li>
+            </ol>
+        </list>
+    </section>
+
+    <section xml:id="one-page-html">
+        <title>Single Page HTML</title>
+
+        <p>
+            Sometimes you would like a shorter work to be a <em>single</em> file in <init>HTML</init> format.  Perhaps it is something self-contained, like a course syllabus, or you desire to attach it easily to an email or other post.  This section contains advice and procedures you can use to achieve this.
+        </p>
+
+        <p>
+            The primary mechanism for limiting the number of files in an HTML build is to set the <attr>portable</attr> attribute of <c>publication/html/platform</c> to <c>"yes"</c> (see <xref ref="online-portable-options"/>).  This will automatically take care of the following.
+
+            <ul>
+                <li>
+                    <p>
+                        Use hosted (CDN) versions of the <init>CSS</init> and javascript files rather than including them in your output directory.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Embed generated <init>SVG</init> images in the HTML (anything from <tag>prefigure</tag> or <tag>latex-image</tag>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Embed the search code in the HTML (if you are using the )
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Set all xref knowls to behave like links (same as setting <c>/publication/html/cross-references/@knowled</c> to <c>never</c>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Produce a single file will all your chapters/sections/subsections in it (the same as setting <c>/publication/common/chunking/@level</c> to <c>0</c>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prevent the generation of most extra <q>standalone</q> pages (such as for most interactive elements and worksheets).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Not produce the standard <c>index.html</c> file that is otherwise used to redirect to the main page.
+                    </p>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            Keep in mind that if your document has external assets, or uses generated assets that are not converted to <init>SVG</init>, these assets will still be needed in your output (regardless, you will get <c>external</c> and <c>generated</c> directories for your assets, but these might be empty or not needed).  Additionally, some interactive elements work by creating an <c>iframe</c> that loads an <init>HTML</init> file, and these cannot be avoided currently.
+        </p>
+
+        <p>
+            Finally, depending on the purpose of your document, you might consider using a simpler theme.  The <c>boulder</c> theme is designed to look like a <latex />-produced PDF; it doesn't have any masthead, which makes sense for a single page document.  Other style options are described in <xref ref="online-style"/>.
+        </p>
+
+        <p>
+            For very small documents, you might also consider turning off the table of contents by setting <c>/publication/common/tableofcontents/@level</c> to <c>0</c> (see <xref ref="common-toc-options"/>).
+        </p>
+    </section>
+
+    <section xml:id="lms-hosting">
+        <title>HTML in an LMS</title>
+
+        <p>
+            If you are using <pretext /> to author course materials, you may want to include the resulting <init>HTML</init> in your LMS (Learning Management System) course shell.
+            While uploading PDFs can also be useful for students to print from, many universities require the documents to also be made available in accessible formats, so <init>HTML</init> is likely your best option.
+        </p>
+
+        <p>
+            Depending on which LMS you use, and possibly what settings have been applied to your course shell, you may be able to upload a portable <init>HTML</init> file, as described in <xref ref="one-page-html"/>.  This seems to work with Moodle, but not with Canvas, which blocks javascript inside uploaded files (the Javascript is required to render the MathJax math content).  In this case, you have two options:
+            <ol>
+                <li>
+                    <p>
+                        Host your <init>HTML</init> output on a web server (such as using <c>pretext deploy</c> to publish your files to GitHub pages) and then link to the content or embed it in your LMS using an iframe.  To make embedding easier, you can turn on an <q>embed this page</q> button by setting <c>/publication/html/@embed-button</c> to <c>yes</c> in the publication file (see <xref ref="online-embed-button-options"/>).
+                    </p>
+                    <p>
+                        Once your page is published, click on the button and copy the code to your clipboard.  In the LMS, create a page in your course shell.  There is likely an <q>embed code</q> button in the editor interface of your LMS where you can paste what you copied from the <pretext /> page.  When you save the page in your LMS, you should see just the <em>inner</em> content of the pretext page (no table of contents or navigation).  However, the page should be fully functional, including interactive elements and MathJax rendered math (so it will be screen reader friendly).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If you need to keep your document private to your course (for example, maybe it is a set of exam solutions you don't want to publish on the open web), you can produce a <init>SCORM</init><fn>Sharable Content Object Reference Model</fn> archive of your document.  To do this, in your <c>project.ptx</c> manifest, set <attr>compression</attr> to <c>scorm</c> for the <init>HTML</init> target you want to build.
+                    </p>
+                    <p>
+                        <pretext /> will produce the HTML inside a <c>.zip</c> archive which will also include a SCORM manifest that tells your LMS how to display the content.  You can then upload this SCORM file to your LMS and add it as a page.  In Canvas, you can do this by adding SCORM to your course navigation in settings and then clicking the upload button on that page.  Brightspace (D2L) lets you upload SCORM files from a page-creation menu.  See the documentation for your LMS for additional help.
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </section>
+
+</chapter>
