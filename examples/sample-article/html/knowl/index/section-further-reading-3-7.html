@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8<span class="period">.</span></span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for exercise</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;exercise&gt;
+    &lt;statement&gt;
+        &lt;p&gt;One of the few things you can place inside of mathematics is a &lt;q&gt;fill-in&lt;/q&gt; blank.&lt;idx&gt;&lt;h&gt;fill-in blank&lt;/h&gt;&lt;/idx&gt;  We demonstrate a few scenarios here.  See details on syntax in &lt;xref ref="subsection-paragraph-markup" text="type-global"/&gt;&lt;ndash/&gt;the use is identical within mathematics.&lt;ul&gt;
+            &lt;li&gt;&lt;p&gt;Inside inline math (short, space for &lt;m&gt;x&lt;/m&gt;): &lt;m&gt;\sin(&lt;fillin fill="x"/&gt;)&lt;/m&gt;&lt;/p&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;p&gt;Inside inline math (default, space for &lt;m&gt;XXX&lt;/m&gt;): &lt;m&gt;\sin(&lt;fillin/&gt;)&lt;/m&gt;&lt;/p&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;p&gt;Inside exponents and subscripts (each is space for the string &lt;q&gt;12&lt;/q&gt;).  In this case, be sure to wrap your exponents and subscripts in braces, as would be good &lt;latex/&gt; practice anyway: &lt;m&gt;x^{5+&lt;fillin fill="12"/&gt;}\,y_{&lt;fillin fill="12"/&gt;}&lt;/m&gt;&lt;/p&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;p&gt;Inside inline math (too long for this line probably, 40 characters long): &lt;m&gt;\tan(&lt;fillin fill="Mxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"/&gt;)&lt;/m&gt;&lt;/p&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;p&gt;So use inside a displayed equation&lt;me&gt;16\log\space&lt;fillin fill="1-x^2"/&gt;&lt;/me&gt;like this one.&lt;/p&gt;&lt;/li&gt;
+
+            &lt;li&gt;&lt;p&gt;Inside the second line of a multi-line display:&lt;md&gt;
+                &lt;mrow&gt;y &amp;amp;= x^7\,x^8&lt;/mrow&gt;
+                &lt;mrow&gt;  &amp;amp;= x^{&lt;fillin fill="15"/&gt;}&lt;/mrow&gt;
+            &lt;/md&gt;&lt;/p&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;p&gt;
+                This fillin has the historical &lt;attr&gt;characters&lt;/attr&gt; attribute for a fillin inside math: &lt;m&gt;1+&lt;fillin characters="5"/&gt;+4=10&lt;/m&gt;, which may be more convenient, but may not side properly in places like subscripts, superscripts, fractions, limits of integrals, and so on.
+            &lt;/p&gt;&lt;/li&gt;
+        &lt;/ul&gt;&lt;/p&gt;
+    &lt;/statement&gt;
+&lt;/exercise&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">One of the few things you can place inside of mathematics is a “fill-in” blank.  We demonstrate a few scenarios here.  See details on syntax in <a href="section-interesting-corollary.html#subsection-paragraph-markup" class="internal" title="Subsection 4.7: Some Paragraph-Level Markup">Subsection 4.7</a>–the use is identical within mathematics.</div>
+<ul class="disc" id="section-further-reading-3-7-1-1-5">
+<li>
+<div class="para">Inside inline math (short, space for <span class="process-math">\(x\)</span>): <span class="process-math">\(\sin(\fillinmath{x})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Inside inline math (default, space for <span class="process-math">\(XXX\)</span>): <span class="process-math">\(\sin(\fillinmath{XXX})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Inside exponents and subscripts (each is space for the string “12”).  In this case, be sure to wrap your exponents and subscripts in braces, as would be good <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> practice anyway: <span class="process-math">\(x^{5+\fillinmath{12}}\,y_{\fillinmath{12}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Inside inline math (too long for this line probably, 40 characters long): <span class="process-math">\(\tan(\fillinmath{Mxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-4" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">So use inside a displayed equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+16\log\space\fillinmath{1-x^2}
+\end{equation*}
+</div>
+<div class="para">like this one.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-5" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Inside the second line of a multi-line display:</div>
+<div class="displaymath process-math">
+\begin{align*}
+y &amp;= x^7\,x^8\\
+&amp;= x^{\fillinmath{15}}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-6" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">This fillin has the historical <code class="code-inline tex2jax_ignore">@characters</code> attribute for a fillin inside math: <span class="process-math">\(1+\fillinmath{XXXXX}+4=10\text{,}\)</span> which may be more convenient, but may not side properly in places like subscripts, superscripts, fractions, limits of integrals, and so on.<div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1-5-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#section-further-reading-3-7-1-1-5-7" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-further-reading-3-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 11.2.8"><a href="#section-further-reading-3-7" title="Copy heading and permalink for Exercise 11.2.8">🔗</a></div></article><span class="incontext"><a class="internal" href="section-further-reading.html#section-further-reading-3-7">in-context</a></span>
+</body>
+</html>

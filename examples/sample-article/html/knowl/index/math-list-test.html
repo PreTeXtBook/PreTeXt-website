@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="assemblage assemblage-like"><h4 class="heading"><span class="title">Testing list items containing only math.</span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for assemblage</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;assemblage xml:id="math-list-test"&gt;
+    &lt;title&gt;Testing list items containing only math&lt;/title&gt;
+
+    &lt;p&gt;
+      There are many places where it makes sense to have a list of mathematical terms,
+      or possibly equations.
+      For example, one might wish to provide a list of derivative formulas.
+      With such lists, the author may wish to have display mathematics,
+      but almost certainly they don't want it centered.
+      One can work around this by using the &lt;latex/&gt; &lt;c&gt;\displaystyle&lt;/c&gt; command.
+      However, it would be nice if a list item containing only math used display mode by default.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    A list item containing some text in a paragraph,
+                    as well as some inline math: &lt;m&gt;\int_a^b x^2\,dx = \frac{x^3}{3}&lt;/m&gt;.
+                &lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;A list item with text and math &lt;m&gt;\int_a^b x^2\,dx&lt;/m&gt;, not in a paragraph.&lt;/li&gt;
+            &lt;li&gt;
+                &lt;m&gt;\frac{d}{dx}\tan(x) = \sec^2(x) = \frac{1}{\cos^2(x)}&lt;/m&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;&lt;m&gt;\sum_{i=0}^n r^i = \frac{1-r^{n+1}}{1-r}&lt;/m&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;idx&gt;&lt;h&gt;&lt;m&gt;\int f(x)\,dx&lt;/m&gt;&lt;/h&gt;&lt;/idx&gt;
+        &lt;idx&gt;&lt;h&gt;math in lists &lt;m&gt;\frac{d}{dx}(\sin(x))=\cos(x)&lt;/m&gt;&lt;/h&gt;&lt;/idx&gt;
+    &lt;/p&gt;
+
+
+    &lt;p&gt;
+        Now, a &lt;c&gt;p&lt;/c&gt; that isn't in a list,
+        followed by a list that's in a &lt;c&gt;p&lt;/c&gt;.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;p&gt;
+                    &lt;m&gt;\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}&lt;/m&gt;
+                    A list item starting with some math,
+                    followed by text, all in a &lt;c&gt;p&lt;/c&gt;
+                &lt;/p&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;&lt;m&gt;\frac{a}{b}\div \frac{c}{d} = \frac{ad}{bc}&lt;/m&gt;&lt;/li&gt;
+
+            &lt;li&gt;
+                &lt;m&gt;
+                    \tan\theta = \frac{\sin\theta}{\cos\theta}
+                &lt;/m&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+
+&lt;/assemblage&gt;
+</code></pre></article></details><div class="para">There are many places where it makes sense to have a list of mathematical terms, or possibly equations. For example, one might wish to provide a list of derivative formulas. With such lists, the author may wish to have display mathematics, but almost certainly they don’t want it centered. One can work around this by using the <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span> <code class="code-inline tex2jax_ignore">\displaystyle</code> command. However, it would be nice if a list item containing only math used display mode by default.<div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<ol class="decimal" id="math-list-test-3-1">
+<li>
+<div class="para">A list item containing some text in a paragraph, as well as some inline math: <span class="process-math">\(\int_a^b x^2\,dx = \frac{x^3}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#math-list-test-3-1-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">A list item with text and math <span class="process-math">\(\int_a^b x^2\,dx\text{,}\)</span> not in a paragraph.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#math-list-test-3-1-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para"><span class="process-math">\(\displaystyle \frac{d}{dx}\tan(x) = \sec^2(x) = \frac{1}{\cos^2(x)}\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#math-list-test-3-1-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para"><span class="process-math">\(\displaystyle \sum_{i=0}^n r^i = \frac{1-r^{n+1}}{1-r}\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#math-list-test-3-1-4" title="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now, a <code class="code-inline tex2jax_ignore">p</code> that isn’t in a list, followed by a list that’s in a <code class="code-inline tex2jax_ignore">p</code>.<div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<ul class="disc" id="math-list-test-5-1">
+<li>
+<div class="para">
+<span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}\)</span> A list item starting with some math, followed by text, all in a <code class="code-inline tex2jax_ignore">p</code><div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-5-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#math-list-test-5-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para"><span class="process-math">\(\displaystyle \frac{a}{b}\div \frac{c}{d} = \frac{ad}{bc}\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#math-list-test-5-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para"><span class="process-math">\(\displaystyle \tan\theta = \frac{\sin\theta}{\cos\theta}\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#math-list-test-5-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#math-list-test-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Testing list items containing only math"><a href="#math-list-test" title="Copy heading and permalink for Assemblage: Testing list items containing only math">🔗</a></div></article><span class="incontext"><a class="internal" href="section-lists.html#math-list-test">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">52</span><span class="period">.</span><span class="space"> </span><span class="title">Tabular display</span>
+</h3>
+<pre>BorderThickness = "none" | "minor" | "medium" | "major"
+BorderTop =
+    attribute top {BorderThickness}
+BorderBottom =
+    attribute bottom {BorderThickness}
+BorderLeft =
+    attribute left {BorderThickness}
+BorderRight =
+    attribute right {BorderThickness}
+AlignmentHorizontal =
+    attribute halign {"left" | "center" | "right" | "justify"}
+AlignmentVertical =
+    attribute valign {"top" | "middle" | "bottom"}
+
+TableCell =
+    element cell {
+        AlignmentHorizontal?,
+        BorderBottom?,
+        BorderRight?,
+        attribute colspan {text}?,
+        (
+            TextLong |
+            LongLine+ |
+            Paragraph+
+        )
+    }
+TableRow =
+    element row {
+        attribute header {"yes" | "no" | "vertical"}?,
+        AlignmentHorizontal?,
+        AlignmentVertical?,
+        BorderBottom?,
+        BorderLeft?,
+        TableCell+
+    }
+TableColumn =
+    element col {
+        AlignmentHorizontal?,
+        BorderTop?,
+        BorderRight?,
+        attribute width {text}?
+    }
+Tabular =
+    element tabular {
+        Component?,
+        attribute width {text}?,
+        attribute margins {text}?,
+        attribute row-headers {"yes" | "no"}?,
+        AlignmentHorizontal?,
+        AlignmentVertical?,
+        BorderTop?,
+        BorderBottom?,
+        BorderLeft?,
+        BorderRight?,
+        TableColumn*,
+        TableRow+
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 52: Tabular display"><a href="#tabular" title="Copy heading and permalink for Fragment 52: Tabular display">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#tabular">in-context</a></span>
+</body>
+</html>

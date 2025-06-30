@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC Stress Tests</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Integrating WeBWorK into Textbooks">
+<meta property="book:author" content="Robert Beezer">
+<meta property="book:author" content="Alex Jordan">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXWW" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://webwork.maa.org/"><img src="external/images/webwork-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-ww-chapter.html"><span class="title">Integrating WeBWorK into Textbooks</span> <span class="subtitle">Sample Exercises</span></a></h1>
+<p class="byline">Robert Beezer, Alex Jordan</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sample-ww-chapter-5-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sample-ww-chapter-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sample-ww-chapter-5-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Instructive Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-the-quadratic-formula.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-4.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Open Problem Library</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Antidifferentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">A Few More Features</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-6.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Math Content</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-7.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Multiple Choice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-8.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-9.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Graphics in Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-9.html#sample-ww-chapter-4-9-10" class="internal"><span class="codenumber">1.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Technical Examples</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">PGML Formatting and Verbatim Calisthenics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subject Area Templates</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sample-ww-chapter-5-4.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Stress Tests</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-5-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Layout Configuration Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Inline Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Divisional Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-testing.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-testing.html#section-runestone-testing-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-deprecations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deprecations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="sample-ww-chapter-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-solutions"><div class="toc-title-box"><a href="sample-ww-chapter-6-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sample-ww-chapter-5-4"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">Stress Tests</span>
+</h2>
+<details id="sample-ww-chapter-5-4-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">PTX problem source with server-generated images.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-79" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="79" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJzY2FmZm9sZC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2dyYXBobWFjcm9zLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7Zm9yIG15ICRpKDAuLjcpeyRnclskaV0gPSBpbml0X2dyYXBoKC0xLC0xLDQsNCxheGVzPT5bMCwwXSxncmlkPT5bNSw1XSxzaXplPT5bMTUwLDE1MF0pO307CmFkZF9mdW5jdGlvbnMoJGdyWzBdLCAiMSBmb3IgeCBpbiA8LTEsND4gdXNpbmcgY29sb3I6Ymx1ZSBhbmQgd2VpZ2h0OjIiKTsKYWRkX2Z1bmN0aW9ucygkZ3JbMV0sICJ4IGZvciB4IGluIDwtMSw0PiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwphZGRfZnVuY3Rpb25zKCRnclsyXSwgInheMiBmb3IgeCBpbiA8LTEsND4gdXNpbmcgY29sb3I6Ymx1ZSBhbmQgd2VpZ2h0OjIiKTsKYWRkX2Z1bmN0aW9ucygkZ3JbM10sICJ4XjMgZm9yIHggaW4gPC0xLDQ+IHVzaW5nIGNvbG9yOmJsdWUgYW5kIHdlaWdodDoyIik7CmFkZF9mdW5jdGlvbnMoJGdyWzRdLCAiZV54IGZvciB4IGluIDwtMSw0PiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwphZGRfZnVuY3Rpb25zKCRncls1XSwgInNpbih4KSBmb3IgeCBpbiA8LTEsND4gdXNpbmcgY29sb3I6Ymx1ZSBhbmQgd2VpZ2h0OjIiKTsKYWRkX2Z1bmN0aW9ucygkZ3JbNl0sICJjb3MoeCkgZm9yIHggaW4gPC0xLDQ+IHVzaW5nIGNvbG9yOmJsdWUgYW5kIHdlaWdodDoyIik7CmFkZF9mdW5jdGlvbnMoJGdyWzddLCAiZXhwKC14XjIpIGZvciB4IGluIDwtMSw0PiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwpTY2FmZm9sZDo6QmVnaW4obnVtYmVyZWQgPT4gMSxpc19vcGVuID0+ICJjb3JyZWN0X29yX2ZpcnN0X2luY29ycmVjdCIsY2FuX29wZW4gPT4gd2hlbl9wcmV2aW91c19jb3JyZWN0LCk7U2VjdGlvbjo6QmVnaW4oIiIpOwpCRUdJTl9QR01MCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzBdKSwgd2lkdGg9PjE1MClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnclsxXSksIHdpZHRoPT4xNTApQF0qICA8PAoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzJdKSwgd2lkdGg9PjE1MClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KU2VjdGlvbjo6RW5kKCk7U2VjdGlvbjo6QmVnaW4oIiIpOwpCRUdJTl9QR01MCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzNdKSwgd2lkdGg9PjE1MClAXSogIDw8Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRncls0XSksIHdpZHRoPT4xNTApQF0qICA8PAoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkZ3JbNV0pLCB3aWR0aD0+MTUwKUBdKiAgPDwKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGdyWzZdKSwgd2lkdGg9PjE1MClAXSogIDw8CgoKRU5EX1BHTUxfSElOVAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRncls3XSksIHdpZHRoPT4xNTApQF0qICA8PAoKCkVORF9QR01MX1NPTFVUSU9OClNlY3Rpb246OkVuZCgpO1NjYWZmb2xkOjpFbmQoKTsKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-79')">Activate</button></div>
+<div class="problem-contents">
+<article class="task exercise-like" id="extracted-webwork-79-1-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-1.png" class="contained"></div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-2.png" class="contained"></div>
+<div class="solutions"><details id="extracted-webwork-79-1-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-3.png" class="contained"></div>
+<div class="autopermalink" data-description="Solution 2.3.1.1"><a href="#extracted-webwork-79-1-1-2" title="Copy heading and permalink for Solution 2.3.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.1.a"><a href="#extracted-webwork-79-1-1" title="Copy heading and permalink for Task 2.3.1.a">🔗</a></div></article><article class="task exercise-like" id="extracted-webwork-79-1-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-4.png" class="contained"></div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-5.png" class="contained"></div> <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-6.png" class="contained"></div>
+<div class="solutions">
+<details id="extracted-webwork-79-1-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-7.png" class="contained"></div>
+<div class="autopermalink" data-description="Hint 2.3.1.1"><a href="#extracted-webwork-79-1-2-2" title="Copy heading and permalink for Hint 2.3.1.1">🔗</a></div>
+</div></details><details id="extracted-webwork-79-1-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/webwork-79-image-8.png" class="contained"></div>
+<div class="autopermalink" data-description="Solution 2.3.1.1"><a href="#extracted-webwork-79-1-2-3" title="Copy heading and permalink for Solution 2.3.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 2.3.1.b"><a href="#extracted-webwork-79-1-2" title="Copy heading and permalink for Task 2.3.1.b">🔗</a></div></article>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.1: PTX problem source with server-generated images"><a href="#sample-ww-chapter-5-4-2" title="Copy heading and permalink for Checkpoint 2.3.1: PTX problem source with server-generated images">🔗</a></div></article></details><details id="sample-ww-chapter-5-4-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Checking Proper Indentation In Lists.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sample-ww-chapter-5-4-3-2"><div class="para" id="sample-ww-chapter-5-4-3-2-1">One long exercise, where ordered sublists test the specification of their labels.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-4-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-80" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="80" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7ClRFWFQoTU9ERVMoUFRYPT4nJyxIVE1MPT4nPGRpdiBzdHlsZT0iZGlzcGxheTpub25lOyI+XChcbmV3Y29tbWFuZHtcYW1wfXsmfVwpPC9kaXY+JykpOwpDb250ZXh0KCdOdW1lcmljJyk7CkJFR0lOX1BHTUwKYS4gIFNpbXBsZSBpdGVtCmEuICBTaW1wbGUgaXRlbQphLiAgU2ltcGxlIGl0ZW0gICAKCgoKYS4gIFNpbXBsZSBpdGVtCmEuICBTaW1wbGUgaXRlbQphLiAgU2ltcGxlIGl0ZW0gICAKCgoKVGV4dCBiZWZvcmUuCmEuICBTaW1wbGUgaXRlbQphLiAgU2ltcGxlIGl0ZW0KYS4gIFNpbXBsZSBpdGVtICAgCgoKQW5kIGFmdGVyLgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCgphLiAgU3RydWN0dXJlZCBpdGVtCgoKClRleHQgYmVmb3JlLgphLiAgU3RydWN0dXJlZCBpdGVtCgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCgpBbmQgYWZ0ZXIuCgphLiAgU3RydWN0dXJlZCBpdGVtCgoKYS4gIFskTkJTUF0qCiAgICBBLiAgU3VibGlzdCBJdGVtCgoKICAgIEEuICBTdWJsaXN0IEl0ZW0KCgogICAgQS4gIFN1Ymxpc3QgSXRlbQoKCgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKCgpUZXh0IGJlZm9yZS4KYS4gIFN0cnVjdHVyZWQgaXRlbQoKCmEuICBUZXh0IGJlZm9yZS4KICAgIGkuICBTdWJsaXN0IEl0ZW0KCgogICAgaS4gIFN1Ymxpc3QgSXRlbQoKCiAgICBpLiAgU3VibGlzdCBJdGVtCgoKICAgIEFuZCBhZnRlci4KCgphLiAgU3RydWN0dXJlZCBpdGVtCgoKQW5kIGFmdGVyLgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKICAgIFNlY29uZCBwYXJhZ3JhcGgKCgphLiAgWyROQlNQXSoKICAgIEkuICBTdWJsaXN0IEl0ZW0KCiAgICAgICAgU2Vjb25kIHBhcmFncmFwaAoKCiAgICBJLiAgU3VibGlzdCBJdGVtCgogICAgICAgIFNlY29uZCBwYXJhZ3JhcGgKCgogICAgSS4gIFN1Ymxpc3QgSXRlbQoKICAgICAgICBTZWNvbmQgcGFyYWdyYXBoCgoKCgphLiAgU3RydWN0dXJlZCBpdGVtCgogICAgU2Vjb25kIHBhcmFncmFwaAoKCgpUZXh0IGJlZm9yZS4KYS4gIFN0cnVjdHVyZWQgaXRlbQoKICAgIFNlY29uZCBwYXJhZ3JhcGgKCgphLiAgVGV4dCBiZWZvcmUuCiAgICAxLiAgU3VibGlzdCBJdGVtCgogICAgICAgIFNlY29uZCBwYXJhZ3JhcGgKCgogICAgMS4gIFN1Ymxpc3QgSXRlbQoKICAgICAgICBTZWNvbmQgcGFyYWdyYXBoCgoKICAgIDEuICBTdWJsaXN0IEl0ZW0KCiAgICAgICAgU2Vjb25kIHBhcmFncmFwaAoKCiAgICBBbmQgYWZ0ZXIuCgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKICAgIFNlY29uZCBwYXJhZ3JhcGgKCgpBbmQgYWZ0ZXIuCgphLiAgWyROQlNQXSoKCgogICAgW2BgYDErMT0yYGBgXQoKICAgIFN0cnVjdHVyZWQgaXRlbQoKICAgIFNlY29uZAoKICAgIFtgYGAxKzE9MmBgYF0KCiAgICBwYXJhZ3JhcGgKCgphLiAgWyROQlNQXSoKICAgIGEuICBTdWJsaXN0CgogICAgICAgIFtgYGAxKzE9MmBgYF0KCiAgICAgICAgSXRlbQoKICAgICAgICBTZWNvbmQgcGFyYWdyYXBoCgogICAgICAgIFtgYGAxKzE9MmBgYF0KCgoKCiAgICBhLiAgWyROQlNQXSoKCgogICAgICAgIFtgYGAxKzE9MmBgYF0KCiAgICAgICAgU3VibGlzdCBJdGVtCgogICAgICAgIFNlY29uZAoKICAgICAgICBbYGBgMSsxPTJgYGBdCgogICAgICAgIHBhcmFncmFwaAoKCiAgICBhLiAgU3VibGlzdCBJdGVtCgogICAgICAgIFtgYGAxKzE9MmBgYF0KCgoKICAgICAgICAKCiAgICAgICAgW2BgYDErMT0yYGBgXQoKICAgICAgICBTZWNvbmQgcGFyYWdyYXBoCgoKCgphLiAgU3RydWN0dXJlZAoKICAgIFtgYGAxKzE9MmBgYF0KCiAgICBpdGVtCgogICAgU2Vjb25kIHBhcmFncmFwaAoKICAgIFtgYGAxKzE9MmBgYF0KCgoKCgpUZXh0IGJlZm9yZS4KYS4gIFN0cnVjdHVyZWQKCiAgICBbYGBgMSsxPTJgYGBdCgogICAgaXRlbQoKICAgIFNlY29uZCBwYXJhZ3JhcGgKCiAgICBbYGBgMSsxPTJgYGBdCgoKCgphLiAgWyROQlNQXSoKCgogICAgW2BgYDErMT0yYGBgXQoKICAgIFRleHQgYmVmb3JlLgogICAgQS4gIFN1Ymxpc3QKCiAgICAgICAgW2BgYDErMT0yYGBgXQoKICAgICAgICBJdGVtCgogICAgICAgIFNlY29uZCBwYXJhZ3JhcGgKCiAgICAgICAgW2BgYDErMT0yYGBgXQoKCgoKICAgIEEuICBbJE5CU1BdKgoKCiAgICAgICAgW2BgYDErMT0yYGBgXQoKICAgICAgICBTdWJsaXN0IEl0ZW0KCiAgICAgICAgU2Vjb25kCgogICAgICAgIFtgYGAxKzE9MmBgYF0KCiAgICAgICAgcGFyYWdyYXBoCgoKICAgIEEuICBTdWJsaXN0IEl0ZW0KCiAgICAgICAgW2BgYDErMT0yYGBgXQoKCgogICAgICAgIAoKICAgICAgICBbYGBgMSsxPTJgYGBdCgogICAgICAgIFNlY29uZCBwYXJhZ3JhcGgKCgogICAgQW5kCgogICAgW2BgYDErMT0yYGBgXQoKICAgIGFmdGVyLgoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCiAgICBbYGBgMSsxPTJgYGBdCgoKCiAgICAKCiAgICBbYGBgMSsxPTJgYGBdCgogICAgU2Vjb25kIHBhcmFncmFwaAoKCkFuZCBhZnRlci4KClRleHQgYmVmb3JlLgphLiAgU3RydWN0dXJlZAoKICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgIDErMVxhbXA9MlxcCiAgICAyXGFtcD0yCiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgogICAgaXRlbQoKICAgIFNlY29uZCBwYXJhZ3JhcGgKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICAxKzFcYW1wPTJcXAogICAgMlxhbXA9MgogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKCgoKYS4gIFskTkJTUF0qCgoKICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgIDErMVxhbXA9MlxcCiAgICAyXGFtcD0yCiAgICBcZW5ke2FsaWduZWR9CiAgICBgYGBdCgogICAgVGV4dCBiZWZvcmUuCiAgICBpLiAgU3VibGlzdAoKICAgICAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICAgICAgMSsxXGFtcD0yXFwKICAgICAgICAyXGFtcD0yCiAgICAgICAgXGVuZHthbGlnbmVkfQogICAgICAgIGBgYF0KCiAgICAgICAgSXRlbQoKICAgICAgICBTZWNvbmQgcGFyYWdyYXBoCgogICAgICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgICAgICAxKzFcYW1wPTJcXAogICAgICAgIDJcYW1wPTIKICAgICAgICBcZW5ke2FsaWduZWR9CiAgICAgICAgYGBgXQoKCgoKICAgIGkuICBbJE5CU1BdKgoKCiAgICAgICAgW2BgYFxiZWdpbnthbGlnbmVkfQogICAgICAgIDErMVxhbXA9MlxcCiAgICAgICAgMlxhbXA9MgogICAgICAgIFxlbmR7YWxpZ25lZH0KICAgICAgICBgYGBdCgogICAgICAgIFN1Ymxpc3QgSXRlbQoKICAgICAgICBTZWNvbmQKCiAgICAgICAgW2BgYFxiZWdpbnthbGlnbmVkfQogICAgICAgIDErMVxhbXA9MlxcCiAgICAgICAgMlxhbXA9MgogICAgICAgIFxlbmR7YWxpZ25lZH0KICAgICAgICBgYGBdCgogICAgICAgIHBhcmFncmFwaAoKCiAgICBpLiAgU3VibGlzdCBJdGVtCgogICAgICAgIFtgYGBcYmVnaW57YWxpZ25lZH0KICAgICAgICAxKzFcYW1wPTJcXAogICAgICAgIDJcYW1wPTIKICAgICAgICBcZW5ke2FsaWduZWR9CiAgICAgICAgYGBgXQoKCgogICAgICAgIAoKICAgICAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICAgICAgMSsxXGFtcD0yXFwKICAgICAgICAyXGFtcD0yCiAgICAgICAgXGVuZHthbGlnbmVkfQogICAgICAgIGBgYF0KCiAgICAgICAgU2Vjb25kIHBhcmFncmFwaAoKCiAgICBBbmQKCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICAxKzFcYW1wPTJcXAogICAgMlxhbXA9MgogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKICAgIGFmdGVyLgoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCiAgICBbYGBgXGJlZ2lue2FsaWduZWR9CiAgICAxKzFcYW1wPTJcXAogICAgMlxhbXA9MgogICAgXGVuZHthbGlnbmVkfQogICAgYGBgXQoKCgogICAgCgogICAgW2BgYFxiZWdpbnthbGlnbmVkfQogICAgMSsxXGFtcD0yXFwKICAgIDJcYW1wPTIKICAgIFxlbmR7YWxpZ25lZH0KICAgIGBgYF0KCiAgICBTZWNvbmQgcGFyYWdyYXBoCgoKQW5kIGFmdGVyLgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-80')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-80-1-1-1">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-1-1">
+<li id="extracted-webwork-80-1-1-1-1-1">
+<div class="para" id="extracted-webwork-80-1-1-1-1-1-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-1-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-1-1-2">
+<div class="para" id="extracted-webwork-80-1-1-1-1-2-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-1-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-1-1-3">
+<div class="para" id="extracted-webwork-80-1-1-1-1-3-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-1-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-2">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-2-1">
+<li id="extracted-webwork-80-1-1-2-1-1">
+<div class="para" id="extracted-webwork-80-1-1-2-1-1-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-2-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-2-1-2">
+<div class="para" id="extracted-webwork-80-1-1-2-1-2-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-2-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-2-1-3">
+<div class="para" id="extracted-webwork-80-1-1-2-1-3-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-2-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-3">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-3-1">
+<li id="extracted-webwork-80-1-1-3-1-1">
+<div class="para" id="extracted-webwork-80-1-1-3-1-1-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-3-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-3-1-2">
+<div class="para" id="extracted-webwork-80-1-1-3-1-2-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-3-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-3-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-3-1-3">
+<div class="para" id="extracted-webwork-80-1-1-3-1-3-1">Simple item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-3-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-3-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-4">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-5">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-5-1">
+<li id="extracted-webwork-80-1-1-5-1-1">
+<div class="para" id="extracted-webwork-80-1-1-5-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-5-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-5-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-5-1-2">
+<div class="para" id="extracted-webwork-80-1-1-5-1-2-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-5-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-5-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-5-1-3">
+<div class="para" id="extracted-webwork-80-1-1-5-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-5-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-5-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-6">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-6-1">
+<li id="extracted-webwork-80-1-1-6-1-1">
+<div class="para" id="extracted-webwork-80-1-1-6-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-6-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-6-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-6-1-2">
+<div class="para" id="extracted-webwork-80-1-1-6-1-2-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-6-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-6-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-6-1-3">
+<div class="para" id="extracted-webwork-80-1-1-6-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-6-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-6-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-7">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-8">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-8-1">
+<li id="extracted-webwork-80-1-1-8-1-1">
+<div class="para" id="extracted-webwork-80-1-1-8-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-8-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-8-1-2">
+<div class="para logical" id="extracted-webwork-80-1-1-8-1-2-1">
+<div class="para"> </div>
+<ol class="upper-alpha ol-marker-3" id="extracted-webwork-80-1-1-8-1-2-1-2">
+<li id="extracted-webwork-80-1-1-8-1-2-1-2-1">
+<div class="para" id="extracted-webwork-80-1-1-8-1-2-1-2-1-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.A"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-1" title="Copy heading and permalink for Item 2.3.2.b.A">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-8-1-2-1-2-2">
+<div class="para" id="extracted-webwork-80-1-1-8-1-2-1-2-2-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.B"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-2" title="Copy heading and permalink for Item 2.3.2.b.B">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-8-1-2-1-2-3">
+<div class="para" id="extracted-webwork-80-1-1-8-1-2-1-2-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.C"><a href="#extracted-webwork-80-1-1-8-1-2-1-2-3" title="Copy heading and permalink for Item 2.3.2.b.C">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-8-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-8-1-3">
+<div class="para" id="extracted-webwork-80-1-1-8-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-8-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-9">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-9-1">
+<li id="extracted-webwork-80-1-1-9-1-1">
+<div class="para" id="extracted-webwork-80-1-1-9-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-9-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-9-1-2">
+<div class="para logical" id="extracted-webwork-80-1-1-9-1-2-1">
+<div class="para">Text before.</div>
+<ol class="lower-roman ol-marker-4" id="extracted-webwork-80-1-1-9-1-2-1-1">
+<li id="extracted-webwork-80-1-1-9-1-2-1-1-1">
+<div class="para" id="extracted-webwork-80-1-1-9-1-2-1-1-1-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.i"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-1" title="Copy heading and permalink for Item 2.3.2.b.i">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-9-1-2-1-1-2">
+<div class="para" id="extracted-webwork-80-1-1-9-1-2-1-1-2-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.ii"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-2" title="Copy heading and permalink for Item 2.3.2.b.ii">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-9-1-2-1-1-3">
+<div class="para" id="extracted-webwork-80-1-1-9-1-2-1-1-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.iii"><a href="#extracted-webwork-80-1-1-9-1-2-1-1-3" title="Copy heading and permalink for Item 2.3.2.b.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-9-1-2-2">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-9-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-9-1-3">
+<div class="para" id="extracted-webwork-80-1-1-9-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-9-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-10">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-11">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-11-1">
+<li id="extracted-webwork-80-1-1-11-1-1">
+<div class="para" id="extracted-webwork-80-1-1-11-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-11-1-1-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-11-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-11-1-2">
+<div class="para logical" id="extracted-webwork-80-1-1-11-1-2-1">
+<div class="para"> </div>
+<ol class="upper-roman ol-marker-5" id="extracted-webwork-80-1-1-11-1-2-1-2">
+<li id="extracted-webwork-80-1-1-11-1-2-1-2-1">
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-1-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-1-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.I"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-1" title="Copy heading and permalink for Item 2.3.2.b.I">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-11-1-2-1-2-2">
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-2-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-2-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.II"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-2" title="Copy heading and permalink for Item 2.3.2.b.II">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-11-1-2-1-2-3">
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-11-1-2-1-2-3-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.III"><a href="#extracted-webwork-80-1-1-11-1-2-1-2-3" title="Copy heading and permalink for Item 2.3.2.b.III">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-11-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-11-1-3">
+<div class="para" id="extracted-webwork-80-1-1-11-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-11-1-3-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-11-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-12">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-12-1">
+<li id="extracted-webwork-80-1-1-12-1-1">
+<div class="para" id="extracted-webwork-80-1-1-12-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-1-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-12-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-12-1-2">
+<div class="para logical" id="extracted-webwork-80-1-1-12-1-2-1">
+<div class="para">Text before.</div>
+<ol class="decimal ol-marker-6" id="extracted-webwork-80-1-1-12-1-2-1-1">
+<li id="extracted-webwork-80-1-1-12-1-2-1-1-1">
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-1-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-1-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.1"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-1" title="Copy heading and permalink for Item 2.3.2.b.1">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-12-1-2-1-1-2">
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-2-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-2-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.2"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-2" title="Copy heading and permalink for Item 2.3.2.b.2">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-12-1-2-1-1-3">
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-1-1-3-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.3"><a href="#extracted-webwork-80-1-1-12-1-2-1-1-3" title="Copy heading and permalink for Item 2.3.2.b.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-2-2">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-12-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-12-1-3">
+<div class="para" id="extracted-webwork-80-1-1-12-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-12-1-3-2">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-12-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-13">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-14">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-14-1">
+<li id="extracted-webwork-80-1-1-14-1-1">
+<div class="para" id="extracted-webwork-80-1-1-14-1-1-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-1-3">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-1-4">Second<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-1-6">paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-1-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-14-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-14-1-2">
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1">
+<div class="para"> </div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-14-1-2-1-2">
+<li id="extracted-webwork-80-1-1-14-1-2-1-2-1">
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-1-1">Sublist<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-1-3">Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-1-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.a"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-1" title="Copy heading and permalink for Item 2.3.2.b.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-14-1-2-1-2-2">
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-2-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-2-3">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-2-4">Second<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-2-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-2-6">paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.b"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-2" title="Copy heading and permalink for Item 2.3.2.b.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-14-1-2-1-2-3">
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-2-1-2-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-2-1-2-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.c"><a href="#extracted-webwork-80-1-1-14-1-2-1-2-3" title="Copy heading and permalink for Item 2.3.2.b.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-14-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-14-1-3">
+<div class="para" id="extracted-webwork-80-1-1-14-1-3-1">Structured<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-3-3">item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-14-1-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-14-1-3-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14-1-3-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-14-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-14" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-15">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-15-1">
+<li id="extracted-webwork-80-1-1-15-1-1">
+<div class="para" id="extracted-webwork-80-1-1-15-1-1-1">Structured<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-1-3">item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-1-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-15-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-15-1-2">
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3">
+<div class="para">Text before.</div>
+<ol class="upper-alpha ol-marker-3" id="extracted-webwork-80-1-1-15-1-2-3-1">
+<li id="extracted-webwork-80-1-1-15-1-2-3-1-1">
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-1-1">Sublist<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-1-3">Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-1-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.A"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-1" title="Copy heading and permalink for Item 2.3.2.b.A">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-15-1-2-3-1-2">
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-2-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-2-3">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-2-4">Second<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-2-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-2-6">paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.B"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-2" title="Copy heading and permalink for Item 2.3.2.b.B">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-15-1-2-3-1-3">
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-3-1-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-3-1-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.C"><a href="#extracted-webwork-80-1-1-15-1-2-3-1-3" title="Copy heading and permalink for Item 2.3.2.b.C">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-4">And<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-2-5">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-2-6">after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-15-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-15-1-3">
+<div class="para" id="extracted-webwork-80-1-1-15-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-15-1-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+1+1=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-15-1-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15-1-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-15-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-16">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-16" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-80-1-1-17">
+<div class="para">Text before.</div>
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-80-1-1-17-1">
+<li id="extracted-webwork-80-1-1-17-1-1">
+<div class="para" id="extracted-webwork-80-1-1-17-1-1-1">Structured<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-1-3">item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-1-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#extracted-webwork-80-1-1-17-1-1" title="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-17-1-2">
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3">
+<div class="para">Text before.</div>
+<ol class="lower-roman ol-marker-4" id="extracted-webwork-80-1-1-17-1-2-3-1">
+<li id="extracted-webwork-80-1-1-17-1-2-3-1-1">
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-1-1">Sublist<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-1-3">Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-1-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-1-5">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.i"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-1" title="Copy heading and permalink for Item 2.3.2.b.i">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-17-1-2-3-1-2">
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-2-1"> <div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-2-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-2-3">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-2-4">Second<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-2-5">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-2-6">paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.ii"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-2" title="Copy heading and permalink for Item 2.3.2.b.ii">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-17-1-2-3-1-3">
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-3-1">Sublist Item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-3-1-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-3-1-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b.iii"><a href="#extracted-webwork-80-1-1-17-1-2-3-1-3" title="Copy heading and permalink for Item 2.3.2.b.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-4">And<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-2-5">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-2-6">after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#extracted-webwork-80-1-1-17-1-2" title="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-80-1-1-17-1-3">
+<div class="para" id="extracted-webwork-80-1-1-17-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-80-1-1-17-1-3-3">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+1+1\amp=2\\
+2\amp=2
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="extracted-webwork-80-1-1-17-1-3-4">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17-1-3-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.c"><a href="#extracted-webwork-80-1-1-17-1-3" title="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-17" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-80-1-1-18">And after.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-80-1-1-18" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.2: Checking Proper Indentation In Lists"><a href="#sample-ww-chapter-5-4-3" title="Copy heading and permalink for Checkpoint 2.3.2: Checking Proper Indentation In Lists">🔗</a></div></article></details><details id="sample-ww-chapter-5-4-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Checking Proper Indentation In Lists with Images and Tables.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-81" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="81" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBHZ3JhcGhtYWNyb3MucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskZz1pbml0X2dyYXBoKC0xLC0xLDEsMSxheGVzPT5bMCwwXSk7CgpCRUdJTl9QR01MCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnKSwgd2lkdGg9PjEwMilAXSogCgoKYS4gIFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGcpLCB3aWR0aD0+MTAyKUBdKiAKClN0cnVjdHVyZWQgaXRlbQoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCiAgICBbQGltYWdlKGluc2VydEdyYXBoKCRnKSwgd2lkdGg9PjEwMilAXSogCgoKYS4gIFN0cnVjdHVyZWQgaXRlbQoKCgphLiAgU3RydWN0dXJlZCBpdGVtCgogICAgW0BEYXRhVGFibGUoW1tQR01MKCdhJyksUEdNTCgnYicpLF0sW1BHTUwoJ2MnKSxQR01MKCdkJyksXSxdLGFsaWduPT4nKnsyfXtsfScsdmFsaWduPT4nbWlkZGxlJywpO0BdKgoKCmEuICBbQERhdGFUYWJsZShbW1tQR01MKCcxJyksaGFsaWduPT4ncicsXSxQR01MKCd0d28nKSxQR01MKCdbYFxsZmxvb3JccGlccmZsb29yYF0nKSxdLFtbUEdNTCgnW2BcdGV4dHtJfStcdGV4dHtJfWBdICAKW2B7fStcdGV4dHtJfStcdGV4dHtJfWBdICAKJykscm93Ym90dG9tPT4nMycsbWlkcnVsZT0+JzEnLGJvdHRvbT0+JzEnLHZhbGlnbj0+J2JvdHRvbScsXSxQR01MKCdbYDVgXScpLFBHTUwoJ3NpeCcpLF0sW1tQR01MKCdbYDJeMy0xYF0nKSxyb3dib3R0b209PiczJyxtaWRydWxlPT4nMScsXSxbUEdNTCgnVklJSScpLGNvbHNwYW49PicyJyxdLF0sXSxhbGlnbj0+JyF7XHZydWxlIHdpZHRoIDAuMTFlbX1yfGMhe1x2cnVsZSB3aWR0aCAwLjA3ZW19bHwnLHZhbGlnbj0+J21pZGRsZScsdG9wPT4nMycsKTtAXSoKClN0cnVjdHVyZWQgaXRlbQoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCiAgICBbQERhdGFUYWJsZShbW1BHTUwoJ2EnKSxQR01MKCdiJyksXSxbUEdNTCgnYycpLFBHTUwoJ2QnKSxdLF0sYWxpZ249PicqezJ9e2x9Jyx2YWxpZ249PidtaWRkbGUnLCk7QF0qCgogICAgU2Vjb25kIHBhcmFncmFwaAoKCmEuICBTdHJ1Y3R1cmVkIGl0ZW0KCgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-81')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-webwork-81-1-1-1">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-81-1-1-1-1">
+<li id="extracted-webwork-81-1-1-1-1-1">
+<div class="para" id="extracted-webwork-81-1-1-1-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 17%; margin-left: 41.5%; margin-right: 41.5%;"><img src="generated/webwork/images/webwork-81-image-1.png" class="contained"></div>
+<div class="autopermalink" data-description="Item 2.3.3.a"><a href="#extracted-webwork-81-1-1-1-1-1" title="Copy heading and permalink for Item 2.3.3.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-81-1-1-1-1-2">
+<div class="image-box" style="width: 17%; margin-left: 41.5%; margin-right: 41.5%;"><img src="generated/webwork/images/webwork-81-image-1.png" class="contained"></div>
+<div class="autopermalink" data-description="Item 2.3.3.b"><a href="#extracted-webwork-81-1-1-1-1-2" title="Copy heading and permalink for Item 2.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-81-1-1-2">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-81-1-1-3">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-81-1-1-3-1">
+<li id="extracted-webwork-81-1-1-3-1-1">
+<div class="para" id="extracted-webwork-81-1-1-3-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-3-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 17%; margin-left: 41.5%; margin-right: 41.5%;"><img src="generated/webwork/images/webwork-81-image-1.png" class="contained"></div>
+<div class="autopermalink" data-description="Item 2.3.3.a"><a href="#extracted-webwork-81-1-1-3-1-1" title="Copy heading and permalink for Item 2.3.3.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-81-1-1-3-1-2">
+<div class="para" id="extracted-webwork-81-1-1-3-1-2-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-3-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.3.b"><a href="#extracted-webwork-81-1-1-3-1-2" title="Copy heading and permalink for Item 2.3.3.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-81-1-1-3-1-3">
+<div class="para" id="extracted-webwork-81-1-1-3-1-3-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-3-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">a</td>
+<td class="l m b0 r0 l0 t0 lines">b</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">c</td>
+<td class="l m b0 r0 l0 t0 lines">d</td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Item 2.3.3.c"><a href="#extracted-webwork-81-1-1-3-1-3" title="Copy heading and permalink for Item 2.3.3.c">🔗</a></div>
+</li>
+<li id="extracted-webwork-81-1-1-3-1-4">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r1 l0 t0 lines">1</td>
+<td class="c m b0 r3 l0 t0 lines">two</td>
+<td class="l m b0 r1 l0 t0 lines"><span class="process-math">\(\lfloor\pi\rfloor\)</span></td>
+</tr>
+<tr>
+<td class="r b b1 r1 l3 t0 lines">
+<span class="process-math">\(\text{I}+\text{I}\)</span> <span class="process-math">\({}+\text{I}+\text{I}\)</span>
+</td>
+<td class="c b b3 r3 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l b b3 r1 l0 t0 lines">six</td>
+</tr>
+<tr>
+<td class="r m b3 r1 l3 t0 lines"><span class="process-math">\(2^3-1\)</span></td>
+<td class="c m b3 r1 l0 t0 lines" colspan="2">VIII</td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Item 2.3.3.d"><a href="#extracted-webwork-81-1-1-3-1-4" title="Copy heading and permalink for Item 2.3.3.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-81-1-1-4">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-81-1-1-5">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-81-1-1-5-1">
+<li id="extracted-webwork-81-1-1-5-1-1">
+<div class="para" id="extracted-webwork-81-1-1-5-1-1-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-5-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">a</td>
+<td class="l m b0 r0 l0 t0 lines">b</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">c</td>
+<td class="l m b0 r0 l0 t0 lines">d</td>
+</tr>
+</table></div>
+<div class="para" id="extracted-webwork-81-1-1-5-1-1-3">Second paragraph<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-5-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.3.a"><a href="#extracted-webwork-81-1-1-5-1-1" title="Copy heading and permalink for Item 2.3.3.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-81-1-1-5-1-2">
+<div class="para" id="extracted-webwork-81-1-1-5-1-2-1">Structured item<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-5-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.3.b"><a href="#extracted-webwork-81-1-1-5-1-2" title="Copy heading and permalink for Item 2.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-81-1-1-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.3: Checking Proper Indentation In Lists with Images and Tables"><a href="#sample-ww-chapter-5-4-4" title="Copy heading and permalink for Checkpoint 2.3.3: Checking Proper Indentation In Lists with Images and Tables">🔗</a></div></article></details><details id="sample-ww-chapter-5-4-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Deep-nested lists.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-82" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="82" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsKQkVHSU5fUEdNTApPcmRlcmVkIGxpc3QuCgphLiAgTGV2ZWwgMSwgZmlyc3QuCgoKYS4gIExldmVsIDEsIHNlY29uZC4KICAgIGkuICBMZXZlbCAyLCBmaXJzdC4KCgogICAgaS4gIExldmVsIDIsIHNlY29uZC4KICAgICAgICBBLiAgTGV2ZWwgMywgZmlyc3QuCgoKICAgICAgICBBLiAgTGV2ZWwgMywgc2Vjb25kLgogICAgICAgICAgICAxLiAgTGV2ZWwgNCwgZmlyc3QuCgoKICAgICAgICAgICAgMS4gIExldmVsIDQsIHNlY29uZC4KCgogICAgICAgICAgICAxLiAgTGV2ZWwgNCwgdGhpcmQuCgoKCgogICAgICAgIEEuICBMZXZlbCAzLCB0aGlyZC4KCgoKCiAgICBpLiAgTGV2ZWwgMiwgdGhpcmQuCgoKCgphLiAgTGV2ZWwgMSwgdGhpcmQuCgoKClVub3JkZXJlZCBsaXN0LgoKKiBMZXZlbCAxLCBmaXJzdC4KCgoqIExldmVsIDEsIHNlY29uZC4KICAgIG8gTGV2ZWwgMiwgZmlyc3QuCgoKICAgIG8gTGV2ZWwgMiwgc2Vjb25kLgogICAgICAgICsgTGV2ZWwgMywgZmlyc3QuCgoKICAgICAgICArIExldmVsIDMsIHNlY29uZC4KICAgICAgICAgICAgKiBMZXZlbCA0LCBmaXJzdC4KCgogICAgICAgICAgICAqIExldmVsIDQsIHNlY29uZC4KCgogICAgICAgICAgICAqIExldmVsIDQsIHRoaXJkLgoKCgoKICAgICAgICArIExldmVsIDMsIHRoaXJkLgoKCgoKICAgIG8gTGV2ZWwgMiwgdGhpcmQuCgoKCgoqIExldmVsIDEsIHRoaXJkLiAgIAoKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-82')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-82-1-1-1">Ordered list.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-82-1-1-2">
+<ol class="lower-alpha ol-marker-1" id="extracted-webwork-82-1-1-2-1">
+<li id="extracted-webwork-82-1-1-2-1-1">
+<div class="para" id="extracted-webwork-82-1-1-2-1-1-1">Level 1, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.a"><a href="#extracted-webwork-82-1-1-2-1-1" title="Copy heading and permalink for Item 2.3.4.a">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-2-1-2-1">
+<div class="para">Level 1, second.</div>
+<ol class="lower-roman ol-marker-4" id="extracted-webwork-82-1-1-2-1-2-1-1">
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-1-1">Level 2, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.i"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-1" title="Copy heading and permalink for Item 2.3.4.b.i">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1">
+<div class="para">Level 2, second.</div>
+<ol class="upper-alpha ol-marker-3" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1">
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-1-1">Level 3, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.A"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-1" title="Copy heading and permalink for Item 2.3.4.b.ii.A">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1">
+<div class="para">Level 3, second.</div>
+<ol class="decimal ol-marker-6" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1">
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-1-1">Level 4, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.B.1"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-1" title="Copy heading and permalink for Item 2.3.4.b.ii.B.1">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-2">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-2-1">Level 4, second.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.B.2"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-2" title="Copy heading and permalink for Item 2.3.4.b.ii.B.2">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-3-1">Level 4, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.B.3"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1-1-3" title="Copy heading and permalink for Item 2.3.4.b.ii.B.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.B"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-2" title="Copy heading and permalink for Item 2.3.4.b.ii.B">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-3-1">Level 3, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii.C"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1-1-3" title="Copy heading and permalink for Item 2.3.4.b.ii.C">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.ii"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-2" title="Copy heading and permalink for Item 2.3.4.b.ii">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-2-1-2-1-1-3-1">Level 2, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b.iii"><a href="#extracted-webwork-82-1-1-2-1-2-1-1-3" title="Copy heading and permalink for Item 2.3.4.b.iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.b"><a href="#extracted-webwork-82-1-1-2-1-2" title="Copy heading and permalink for Item 2.3.4.b">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-2-1-3">
+<div class="para" id="extracted-webwork-82-1-1-2-1-3-1">Level 1, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.4.c"><a href="#extracted-webwork-82-1-1-2-1-3" title="Copy heading and permalink for Item 2.3.4.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-82-1-1-3">Unordered list.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="extracted-webwork-82-1-1-4">
+<ul class="disc" id="extracted-webwork-82-1-1-4-1">
+<li id="extracted-webwork-82-1-1-4-1-1">
+<div class="para" id="extracted-webwork-82-1-1-4-1-1-1">Level 1, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-4-1-2-1">
+<div class="para">Level 1, second.</div>
+<ul class="circle" id="extracted-webwork-82-1-1-4-1-2-1-1">
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-1-1">Level 2, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1">
+<div class="para">Level 2, second.</div>
+<ul class="square" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1">
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-1-1">Level 3, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2">
+<div class="para logical" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1">
+<div class="para">Level 3, second.</div>
+<ul class="disc" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1">
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-1">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-1-1">Level 4, first.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-2">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-2-1">Level 4, second.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-3-1">Level 4, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-3-1">Level 3, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-2-1-1-3">
+<div class="para" id="extracted-webwork-82-1-1-4-1-2-1-1-3-1">Level 2, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2-1-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="extracted-webwork-82-1-1-4-1-3">
+<div class="para" id="extracted-webwork-82-1-1-4-1-3-1">Level 1, third.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#extracted-webwork-82-1-1-4-1-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-82-1-1-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.4: Deep-nested lists"><a href="#sample-ww-chapter-5-4-5" title="Copy heading and permalink for Checkpoint 2.3.4: Deep-nested lists">🔗</a></div></article></details><details id="sample-ww-chapter-5-4-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sample-ww-chapter-5-4-6-1"><div class="para" id="sample-ww-chapter-5-4-6-1-1">This exercise has no content in its statement. It should throw a PTX warning during the representations build.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-4-6-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-83" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="83" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsKQkVHSU5fUEdNTAoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-83')">Activate</button></div>
+<div class="problem-contents"></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.5"><a href="#sample-ww-chapter-5-4-6" title="Copy heading and permalink for Checkpoint 2.3.5">🔗</a></div></article></details><details id="sample-ww-chapter-5-4-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sample-ww-chapter-5-4-7-1"><div class="para" id="sample-ww-chapter-5-4-7-1-1">This exercise has a single quote in it. A single quote is the first option for a delimiter for perl’s q function which is used by extract-pg.xsl in table cells. So if working, it should move on to the next delimiter option.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-4-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-84" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="84" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJuaWNlVGFibGVzLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7CkJFR0lOX1BHTUwKPj4gW0BEYXRhVGFibGUoW1tQR01MKHEiV2hhdCdzIHVwLCBEb2M/IiksXSxdLGFsaWduPT4nKnsxfXtsfScsdmFsaWduPT4nbWlkZGxlJywpO0BdKiA8PAoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-84')">Activate</button></div>
+<div class="problem-contents"><div class="tabular-box natural-width"><table class="tabular"><tr><td class="l m b0 r0 l0 t0 lines">What’s up, Doc?</td></tr></table></div></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.3.6"><a href="#sample-ww-chapter-5-4-7" title="Copy heading and permalink for Checkpoint 2.3.6">🔗</a></div></article></details><div class="autopermalink" data-description="Section 2.3: Stress Tests"><a href="#sample-ww-chapter-5-4" title="Copy heading and permalink for Section 2.3: Stress Tests">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sample-ww-chapter-5-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sample-ww-chapter-5-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

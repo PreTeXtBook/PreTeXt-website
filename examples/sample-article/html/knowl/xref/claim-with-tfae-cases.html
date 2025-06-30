@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="claim theorem-like"><h4 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">A List of Equivalent Statements.</span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for claim</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;claim xml:id="claim-with-tfae-cases"&gt;
+    &lt;title&gt;A List of Equivalent Statements&lt;/title&gt;
+    &lt;statement&gt;
+        &lt;p&gt;
+            The following are equivalent.
+            &lt;ol marker="(i)"&gt;
+                &lt;li&gt;This statement is equivalent to all those below.&lt;/li&gt;
+                &lt;li&gt;This statement is equivalent to the statement above and to all those below.&lt;/li&gt;
+                &lt;li&gt;This statement is equivalent to the two statements above and to the statement below.&lt;/li&gt;
+                &lt;li&gt;This statement is equivalent to all those above.&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+        &lt;p&gt;Our purpose here is to show how you can structure a proof with cases to address the circular logic required to prove the equivalence of a list of statements, by using the &lt;attr&gt;direction&lt;/attr&gt; attribute on a &lt;tag&gt;case&lt;/tag&gt; element. You should order the list of statements in the order that you would like to prove ``this statement implies the next.''&lt;/p&gt;
+
+        &lt;case direction="cycle"&gt;
+            &lt;p&gt;Here we would prove that the first statement implies the second.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case direction="cycle"&gt;
+            &lt;p&gt;Here we would prove that the second statement implies the third.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case direction="cycle" xml:id="cycle"&gt;
+            &lt;title&gt;The trickiest case&lt;/title&gt;
+
+            &lt;p&gt;This time we include a title to describe the nature of this case. But we would still need to prove that the third statement implies the last.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case direction="cycle"&gt;
+            &lt;title&gt;Wrap-around&lt;/title&gt;
+
+            &lt;p&gt;Finally, we would complete the cycle of logic by proving that the last statement implies the first.&lt;/p&gt;
+        &lt;/case&gt;
+
+    &lt;/proof&gt;
+&lt;/claim&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">The following are equivalent.</div>
+<ol class="lower-roman ol-marker-1" id="claim-with-tfae-cases-2-1-1">
+<li>
+<div class="para">This statement is equivalent to all those below.</div>
+<div class="autopermalink" data-description="Item i"><a href="#claim-with-tfae-cases-2-1-1-1" title="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li>
+<div class="para">This statement is equivalent to the statement above and to all those below.</div>
+<div class="autopermalink" data-description="Item ii"><a href="#claim-with-tfae-cases-2-1-1-2" title="Copy heading and permalink for Item ii">🔗</a></div>
+</li>
+<li>
+<div class="para">This statement is equivalent to the two statements above and to the statement below.</div>
+<div class="autopermalink" data-description="Item iii"><a href="#claim-with-tfae-cases-2-1-1-3" title="Copy heading and permalink for Item iii">🔗</a></div>
+</li>
+<li>
+<div class="para">This statement is equivalent to all those above.</div>
+<div class="autopermalink" data-description="Item iv"><a href="#claim-with-tfae-cases-2-1-1-4" title="Copy heading and permalink for Item iv">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-tfae-cases-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Claim 4.4: A List of Equivalent Statements"><a href="#claim-with-tfae-cases" title="Copy heading and permalink for Claim 4.4: A List of Equivalent Statements">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;p&gt;Our purpose here is to show how you can structure a proof with cases to address the circular logic required to prove the equivalence of a list of statements, by using the &lt;attr&gt;direction&lt;/attr&gt; attribute on a &lt;tag&gt;case&lt;/tag&gt; element. You should order the list of statements in the order that you would like to prove ``this statement implies the next.''&lt;/p&gt;
+
+    &lt;case direction="cycle"&gt;
+        &lt;p&gt;Here we would prove that the first statement implies the second.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case direction="cycle"&gt;
+        &lt;p&gt;Here we would prove that the second statement implies the third.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case direction="cycle" xml:id="cycle"&gt;
+        &lt;title&gt;The trickiest case&lt;/title&gt;
+
+        &lt;p&gt;This time we include a title to describe the nature of this case. But we would still need to prove that the third statement implies the last.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case direction="cycle"&gt;
+        &lt;title&gt;Wrap-around&lt;/title&gt;
+
+        &lt;p&gt;Finally, we would complete the cycle of logic by proving that the last statement implies the first.&lt;/p&gt;
+    &lt;/case&gt;
+
+&lt;/proof&gt;
+</code></pre></article></details><div class="para">Our purpose here is to show how you can structure a proof with cases to address the circular logic required to prove the equivalence of a list of statements, by using the <code class="code-inline tex2jax_ignore">@direction</code> attribute on a <code class="code-inline tex2jax_ignore">&lt;case&gt;</code> element. You should order the list of statements in the order that you would like to prove ``this statement implies the next.’’<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-tfae-cases-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="case"><h5 class="heading">( ⁠(i) <!--Style arrows in CSS?-->⇒ (ii) ⁠) </h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="cycle"&gt;
+    &lt;p&gt;Here we would prove that the first statement implies the second.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">Here we would prove that the first statement implies the second.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-tfae-cases-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case"><a href="#claim-with-tfae-cases-3-2" title="Copy heading and permalink for Case">🔗</a></div></article><article class="case"><h5 class="heading">( ⁠(ii) <!--Style arrows in CSS?-->⇒ (iii) ⁠) </h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="cycle"&gt;
+    &lt;p&gt;Here we would prove that the second statement implies the third.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">Here we would prove that the second statement implies the third.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-tfae-cases-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case"><a href="#claim-with-tfae-cases-3-3" title="Copy heading and permalink for Case">🔗</a></div></article><article class="case"><h5 class="heading">( ⁠(iii) <!--Style arrows in CSS?-->⇒ (iv) ⁠) The trickiest case.</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="cycle" xml:id="cycle"&gt;
+    &lt;title&gt;The trickiest case&lt;/title&gt;
+
+    &lt;p&gt;This time we include a title to describe the nature of this case. But we would still need to prove that the third statement implies the last.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">This time we include a title to describe the nature of this case. But we would still need to prove that the third statement implies the last.<div class="autopermalink" data-description="Paragraph"><a href="#cycle-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: The trickiest case"><a href="#cycle" title="Copy heading and permalink for Case: The trickiest case">🔗</a></div></article><article class="case"><h5 class="heading">( ⁠(iv) <!--Style arrows in CSS?-->⇒ (i) ⁠) Wrap-around.</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="cycle"&gt;
+    &lt;title&gt;Wrap-around&lt;/title&gt;
+
+    &lt;p&gt;Finally, we would complete the cycle of logic by proving that the last statement implies the first.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">Finally, we would complete the cycle of logic by proving that the last statement implies the first.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-tfae-cases-3-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Wrap-around"><a href="#claim-with-tfae-cases-3-5" title="Copy heading and permalink for Case: Wrap-around">🔗</a></div></article><div class="autopermalink" data-description="Proof 4.4.1"><a href="#claim-with-tfae-cases-3" title="Copy heading and permalink for Proof 4.4.1">🔗</a></div></article><span class="incontext"><a class="internal" href="section-interesting-corollary.html#claim-with-tfae-cases">in-context</a></span>
+</body>
+</html>

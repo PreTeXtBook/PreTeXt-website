@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="claim theorem-like"><h4 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">An Equivalent Claim.</span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for claim</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;claim xml:id="claim-with-cases"&gt;
+    &lt;title&gt;An Equivalent Claim&lt;/title&gt;
+    &lt;statement&gt;
+        &lt;p&gt;This claim is an equivalence: it is true if and only if it is correct.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof&gt;
+        &lt;p&gt;Our purpose here is to show how you can structure a proof with cases, such as an equivalence structured with the arrows typically used to demonstrate the two &lt;q&gt;directions&lt;/q&gt; involved in the proof, by using the &lt;attr&gt;direction&lt;/attr&gt; attribute on a &lt;tag&gt;case&lt;/tag&gt; element.&lt;/p&gt;
+
+        &lt;case direction="forward"&gt;
+            &lt;p&gt;Nulla non lectus suscipit, bibendum leo quis, dignissim justo. In urna turpis, tincidunt id elementum id, faucibus ac tellus.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case direction="backward"&gt;
+            &lt;p&gt;Quisque auctor ligula turpis, ut aliquam urna consectetur hendrerit. Aenean porta dolor et justo facilisis feugiat in sed sapien. Nullam porta ex et commodo semper.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case xml:id="inductive-step"&gt;
+            &lt;title&gt;Case 3b: The inductive step&lt;/title&gt;
+
+            &lt;p&gt;A case may also have a &lt;c&gt;title&lt;/c&gt;, whose formatting and structure is entirely up to the author.  This then becomes the text of a cross-reference, as well.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case xml:id="questioning-case"&gt;
+            &lt;title&gt;Why Not Try This?&lt;/title&gt;
+
+            &lt;p&gt;A &lt;tag&gt;case&lt;/tag&gt; (or any other element with a default title) did not always handle title-ending punctuation correctly.  So we try an example title with a question mark.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case direction="forward" xml:id="forward"&gt;
+            &lt;title&gt;Necessity&lt;/title&gt;
+
+            &lt;p&gt;If you like, you can have both indications.&lt;/p&gt;
+        &lt;/case&gt;
+
+        &lt;case xml:id="empty-case"&gt;
+            &lt;p&gt;No direction, no title, then just a generic title.&lt;/p&gt;
+        &lt;/case&gt;
+    &lt;/proof&gt;
+    &lt;proof&gt;
+        &lt;title&gt;Exciting Proof!&lt;/title&gt;
+        &lt;p&gt;We test here that punctuation at the end of the title of a proof is handled correctly.&lt;/p&gt;
+    &lt;/proof&gt;
+    &lt;proof&gt;
+        &lt;title&gt;Exact Proof&lt;/title&gt;
+        &lt;p&gt;This proof should fill exactly three lines (as of defaults in place 2018-12-31) and so the tombstone/Halmos should be on a fourth line, and then &lt;em&gt;flush right&lt;/em&gt;. xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.&lt;/p&gt;
+    &lt;/proof&gt;
+&lt;/claim&gt;
+</code></pre></article></details><div class="para">This claim is an equivalence: it is true if and only if it is correct.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Claim 4.3: An Equivalent Claim"><a href="#claim-with-cases" title="Copy heading and permalink for Claim 4.3: An Equivalent Claim">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;p&gt;Our purpose here is to show how you can structure a proof with cases, such as an equivalence structured with the arrows typically used to demonstrate the two &lt;q&gt;directions&lt;/q&gt; involved in the proof, by using the &lt;attr&gt;direction&lt;/attr&gt; attribute on a &lt;tag&gt;case&lt;/tag&gt; element.&lt;/p&gt;
+
+    &lt;case direction="forward"&gt;
+        &lt;p&gt;Nulla non lectus suscipit, bibendum leo quis, dignissim justo. In urna turpis, tincidunt id elementum id, faucibus ac tellus.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case direction="backward"&gt;
+        &lt;p&gt;Quisque auctor ligula turpis, ut aliquam urna consectetur hendrerit. Aenean porta dolor et justo facilisis feugiat in sed sapien. Nullam porta ex et commodo semper.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case xml:id="inductive-step"&gt;
+        &lt;title&gt;Case 3b: The inductive step&lt;/title&gt;
+
+        &lt;p&gt;A case may also have a &lt;c&gt;title&lt;/c&gt;, whose formatting and structure is entirely up to the author.  This then becomes the text of a cross-reference, as well.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case xml:id="questioning-case"&gt;
+        &lt;title&gt;Why Not Try This?&lt;/title&gt;
+
+        &lt;p&gt;A &lt;tag&gt;case&lt;/tag&gt; (or any other element with a default title) did not always handle title-ending punctuation correctly.  So we try an example title with a question mark.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case direction="forward" xml:id="forward"&gt;
+        &lt;title&gt;Necessity&lt;/title&gt;
+
+        &lt;p&gt;If you like, you can have both indications.&lt;/p&gt;
+    &lt;/case&gt;
+
+    &lt;case xml:id="empty-case"&gt;
+        &lt;p&gt;No direction, no title, then just a generic title.&lt;/p&gt;
+    &lt;/case&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para">Our purpose here is to show how you can structure a proof with cases, such as an equivalence structured with the arrows typically used to demonstrate the two “directions” involved in the proof, by using the <code class="code-inline tex2jax_ignore">@direction</code> attribute on a <code class="code-inline tex2jax_ignore">&lt;case&gt;</code> element.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="case"><h5 class="heading">(<!--Style arrows in CSS?-->⇒) </h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="forward"&gt;
+    &lt;p&gt;Nulla non lectus suscipit, bibendum leo quis, dignissim justo. In urna turpis, tincidunt id elementum id, faucibus ac tellus.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">Nulla non lectus suscipit, bibendum leo quis, dignissim justo. In urna turpis, tincidunt id elementum id, faucibus ac tellus.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case"><a href="#claim-with-cases-3-2" title="Copy heading and permalink for Case">🔗</a></div></article><article class="case"><h5 class="heading">(<!--Style arrows in CSS?-->⇐) </h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="backward"&gt;
+    &lt;p&gt;Quisque auctor ligula turpis, ut aliquam urna consectetur hendrerit. Aenean porta dolor et justo facilisis feugiat in sed sapien. Nullam porta ex et commodo semper.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">Quisque auctor ligula turpis, ut aliquam urna consectetur hendrerit. Aenean porta dolor et justo facilisis feugiat in sed sapien. Nullam porta ex et commodo semper.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case"><a href="#claim-with-cases-3-3" title="Copy heading and permalink for Case">🔗</a></div></article><article class="case"><h5 class="heading">Case 3b: The inductive step.</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case xml:id="inductive-step"&gt;
+    &lt;title&gt;Case 3b: The inductive step&lt;/title&gt;
+
+    &lt;p&gt;A case may also have a &lt;c&gt;title&lt;/c&gt;, whose formatting and structure is entirely up to the author.  This then becomes the text of a cross-reference, as well.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">A case may also have a <code class="code-inline tex2jax_ignore">title</code>, whose formatting and structure is entirely up to the author.  This then becomes the text of a cross-reference, as well.<div class="autopermalink" data-description="Paragraph"><a href="#inductive-step-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Case 3b: The inductive step"><a href="#inductive-step" title="Copy heading and permalink for Case: Case 3b: The inductive step">🔗</a></div></article><article class="case"><h5 class="heading">Why Not Try This?</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case xml:id="questioning-case"&gt;
+    &lt;title&gt;Why Not Try This?&lt;/title&gt;
+
+    &lt;p&gt;A &lt;tag&gt;case&lt;/tag&gt; (or any other element with a default title) did not always handle title-ending punctuation correctly.  So we try an example title with a question mark.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">A <code class="code-inline tex2jax_ignore">&lt;case&gt;</code> (or any other element with a default title) did not always handle title-ending punctuation correctly.  So we try an example title with a question mark.<div class="autopermalink" data-description="Paragraph"><a href="#questioning-case-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Why Not Try This?"><a href="#questioning-case" title="Copy heading and permalink for Case: Why Not Try This?">🔗</a></div></article><article class="case"><h5 class="heading">(<!--Style arrows in CSS?-->⇒) Necessity.</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case direction="forward" xml:id="forward"&gt;
+    &lt;title&gt;Necessity&lt;/title&gt;
+
+    &lt;p&gt;If you like, you can have both indications.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">If you like, you can have both indications.<div class="autopermalink" data-description="Paragraph"><a href="#forward-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Necessity"><a href="#forward" title="Copy heading and permalink for Case: Necessity">🔗</a></div></article><article class="case"><h5 class="heading">Case.</h5>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for case</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;case xml:id="empty-case"&gt;
+    &lt;p&gt;No direction, no title, then just a generic title.&lt;/p&gt;
+&lt;/case&gt;
+</code></pre></article></details><div class="para">No direction, no title, then just a generic title.<div class="autopermalink" data-description="Paragraph"><a href="#empty-case-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case"><a href="#empty-case" title="Copy heading and permalink for Case">🔗</a></div></article><div class="autopermalink" data-description="Proof 4.3.1"><a href="#claim-with-cases-3" title="Copy heading and permalink for Proof 4.3.1">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="title">Exciting Proof!</span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;title&gt;Exciting Proof!&lt;/title&gt;
+    &lt;p&gt;We test here that punctuation at the end of the title of a proof is handled correctly.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para">We test here that punctuation at the end of the title of a proof is handled correctly.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.3.2: Exciting Proof!"><a href="#claim-with-cases-4" title="Copy heading and permalink for Proof 4.3.2: Exciting Proof!">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="title">Exact Proof.</span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;title&gt;Exact Proof&lt;/title&gt;
+    &lt;p&gt;This proof should fill exactly three lines (as of defaults in place 2018-12-31) and so the tombstone/Halmos should be on a fourth line, and then &lt;em&gt;flush right&lt;/em&gt;. xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para">This proof should fill exactly three lines (as of defaults in place 2018-12-31) and so the tombstone/Halmos should be on a fourth line, and then <em class="emphasis">flush right</em>. xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.<div class="autopermalink" data-description="Paragraph"><a href="#claim-with-cases-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.3.3: Exact Proof"><a href="#claim-with-cases-5" title="Copy heading and permalink for Proof 4.3.3: Exact Proof">🔗</a></div></article><span class="incontext"><a class="internal" href="section-interesting-corollary.html#claim-with-cases">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">66</span><span class="period">.</span><span class="space"> </span><span class="title">WeBWorK</span>
+</h3>
+<pre>WebWork = (WebWorkAuthored | WebWorkSource)
+WebWorkSource =
+    element webwork {
+        attribute source {text}?,
+        attribute seed {xsd:integer}?
+    }
+WWDescription =
+    element description {
+        (
+            TextSimple |
+            SimpleLine+
+        )
+    }
+WebWorkAuthored =
+    element webwork {
+        UniqueID?,
+        LabelID?,
+        Component?,
+        attribute seed {xsd:integer}?,
+        attribute copy {text}?,
+        WWDescription?,
+        WWMacros?,
+        element pg-code {text}?,
+        (
+            (StatementExerciseWW, HintWW?, SolutionWW?)
+        |
+            (IntroductionText?, TaskWW+, ConclusionText?)
+        )
+    }
+BlockStatementWW =
+            Paragraph |
+            Preformatted |
+            Tabular |
+            ImageWW
+StatementExerciseWW =
+    element statement {
+        (BlockStatementWW|WWInstruction)+
+    }
+TaskWW =
+    element task {
+        MetaDataTitleOptional,
+        (
+            (StatementExerciseWW, HintWW?, SolutionWW?) |
+            (IntroductionText?, TaskWW+, ConclusionText?)
+        )
+    }
+WWMacros =
+    element pg-macros {
+        element macro-file {text}+
+    }
+WWVariable =
+    ## The WeBWorK "var" element appears in the RELAX-NG schema as a child of many elements, but almost always as a descendant of a "p" element or a "cell" element.  As an element that is only relevant for a WeBWorK problem, occurrences of "var" must be within a "webwork" element.  A Schematron rule will check on these two situations.
+    element var {
+        (attribute name {text},
+        attribute evaluator {text}?,
+        attribute width {text}?,
+        attribute category {
+                            "angle" | "decimal" | "exponent"
+                          | "formula" | "fraction" | "inequality"
+                          | "integer" | "interval" | "logarithm"
+                          | "limit" | "number" | "point"
+                          | "syntax" | "quantity" | "vector"
+                          }?,
+        attribute form {"popup"|"buttons"|"checkboxes"|"none"}?) |
+        (attribute form {"essay"},
+        attribute width {text}?)
+    }
+WWInstruction =
+    element instruction {TextShort}
+HintWW =
+    element hint {
+        (BlockStatementWW)+
+    }
+SolutionWW =
+    element solution {
+        (BlockStatementWW)+
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 66: WeBWorK"><a href="#webwork" title="Copy heading and permalink for Fragment 66: WeBWorK">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#webwork">in-context</a></span>
+</body>
+</html>

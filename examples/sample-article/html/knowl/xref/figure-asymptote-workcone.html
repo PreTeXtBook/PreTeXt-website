@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="figure figure-like"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for figure</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;figure xml:id="figure-asymptote-workcone"&gt;
+    &lt;caption&gt;Work Cone (Asymptote Interactive 3D Image)&lt;/caption&gt;
+    &lt;image xml:id="asymptote-workcone" width="50%"&gt;
+        &lt;asymptote&gt;
+        import solids;
+        size(0,150);
+        currentprojection=orthographic(0,-30,5);
+
+        real r=4;
+        real h=10;
+        real s=8;
+        real x=r*s/h;
+
+        real sr=5;
+        real xr=r*sr/h;
+
+        real s1=sr-0.1;
+        real x1=r*s1/h;
+
+        real s2=sr+0.2;
+        real x2=r*s2/h;
+
+        render render=render(compression=0,merge=true);
+
+        draw(scale(x1,x1,-s1)*shift(-Z)*unitcone,lightblue+opacity(0.5),render);
+
+        path3 p=(x2,0,s2)--(x,0,s+0.005);
+        revolution a=revolution(p,Z);
+        draw(surface(a),lightblue+opacity(0.5),render);
+
+        path3 q=(x,0,s)--(r,0,h);
+        revolution b=revolution(q,Z);
+        draw(surface(b),white+opacity(0.5),render);
+
+        draw((-r-1,0,0)--(r+1,0,0));
+        draw((0,0,0)--(0,0,h+1),dashed);
+
+        path3 w=(x1,0,s1)--(x2,0,s2)--(0,0,s2);
+        revolution b=revolution(w,Z);
+        draw(surface(b),blue+opacity(0.5),render);
+        draw(circle((0,0,s2),x2));
+        draw(circle((0,0,s1),x1));
+
+        draw("$x$",(xr,0,0)--(xr,0,sr),red,Arrow3,PenMargin3);
+        draw("$r$",(0,0,sr)--(xr,0,sr),N,red);
+        draw((string) r,(0,0,h)--(r,0,h),N,red);
+        draw((string) h,(r,0,0)--(r,0,h),red,Arrow3,PenMargin3);
+        draw((string) s,(-x,0,0)--(-x,0,s),W,red,Arrow3,Bar3,PenMargin3);
+        &lt;/asymptote&gt;
+    &lt;/image&gt;
+&lt;/figure&gt;
+</code></pre></article></details><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="asymptote-box" style="padding-top: 108.63309352518%"><iframe src="generated/asymptote/asymptote-workcone.html" class="asymptote"></iframe></div>
+<div style="text-align: center;"><a href="https://pretextbook.org/examples/sample-article/html/generated/asymptote/asymptote-workcone.html">Link to full-sized image</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.16<span class="period">.</span></span><span class="space"> </span>Work Cone (Asymptote Interactive 3D Image)<div class="autopermalink" data-description="Figure 10.16"><a href="#figure-asymptote-workcone" title="Copy heading and permalink for Figure 10.16">🔗</a></div></figcaption></figure><span class="incontext"><a class="internal" href="section-graphics.html#figure-asymptote-workcone">in-context</a></span>
+</body>
+</html>

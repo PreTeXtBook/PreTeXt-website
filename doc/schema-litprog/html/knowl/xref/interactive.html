@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">58</span><span class="period">.</span><span class="space"> </span><span class="title">Interactives</span>
+</h3>
+<pre>Interactive =
+    element interactive {
+        UniqueID?,
+        LabelID?,
+        Component?,
+        attribute aspect { text }?,
+        attribute width { text }?,
+        attribute platform { text }?,
+        attribute preview { text }?,
+        attribute iframe { text }?,
+        attribute source { text }?,
+        attribute version { text }?,
+        (
+          (
+            Slate |
+            SideBySideNoCaption |
+            SideBySideGroupNoCaption
+          )* &amp;
+          element instructions { mixed { MetaDataTitleOptional, BlockText } }? &amp;
+          element static { Image }?
+        )
+
+    }
+
+Stack |=
+    element stack {
+        (
+            Tabular |
+            Image |
+            Video |
+            Program |
+            Console |
+            Paragraph |
+            Preformatted |
+            List |
+            Slate
+        )+
+    }
+
+Slate =
+    element slate {
+        UniqueID?,
+        LabelID?,
+        Component?,
+        (
+          JessieCodeAtt |
+          (
+            attribute surface { text },
+            (
+              attribute source { text } |
+              attribute material { text }
+            )?,
+            attribute aspect { text }?,
+            (
+              Paragraph |
+              Tabular |
+              SideBySideNoCaption |
+              SlateInput |
+              element xhtml:button {
+                attribute type { text },
+                attribute id { text },
+                text*
+              }? |
+              text*
+            )*
+          )
+        )
+    }
+
+  JessieCodeAtt =
+    attribute surface {"jessiecode"},
+    attribute axis {"true" | "false"}?,
+    attribute grid {"true" | "false"}?,
+    (
+      attribute source {text} |
+      text*
+    )
+
+  SlateInput =
+    element input {
+      attribute type {text}?,
+      attribute value {text}?,
+      attribute onkeypress {text}?,
+      attribute onclick {text}?,
+      attribute style {text}?
+    }
+
+# add Interactives where used
+BlockStatement |= Interactive
+
+Figure |= element figure { MetaDataCaption, Interactive }
+
+SideBySide |= element sidebyside {
+    SidebySideAttributes,
+    (Interactive | Slate)+
+}
+
+SideBySideNoCaption |= element sidebyside {
+    SidebySideAttributes,
+    (Interactive | Slate)+
+}
+
+Exercises |= element exercises {
+    MetaDataAltTitleOptional,
+    IntroductionDivision?,
+    (
+    (Exercise | ExerciseGroup)+ |
+    Subexercises+ | Interactive
+    ),
+    ConclusionDivision?
+}
+</pre>
+<div class="autopermalink" data-description="Fragment 58: Interactives"><a href="#interactive" title="Copy heading and permalink for Fragment 58: Interactives">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#interactive">in-context</a></span>
+</body>
+</html>

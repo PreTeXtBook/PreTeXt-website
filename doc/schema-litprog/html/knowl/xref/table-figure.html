@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">51</span><span class="period">.</span><span class="space"> </span><span class="title">Captioned and titled displays</span>
+</h3>
+<pre>Caption =
+    element caption {TextLong}
+Landscape =
+    attribute landscape {"yes" | "no"}
+Figure =
+    element figure {
+        MetaDataCaption,
+        Landscape?,
+        (
+            Image |
+            Video |
+            SideBySide |
+            SideBySideGroup |
+            MuseScore
+        )
+    } |
+    element table {
+        MetaDataAltTitle,
+        Landscape?,
+        Tabular
+    } |
+    element listing {
+        MetaDataAltTitle,
+        Landscape?,
+        (
+            Program |
+            Console
+        )
+    } |
+    element list {
+        MetaDataAltTitle,
+        Landscape?,
+        IntroductionText?,
+        List,
+        ConclusionText?
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 51: Captioned and titled displays"><a href="#table-figure" title="Copy heading and permalink for Fragment 51: Captioned and titled displays">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#table-figure">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Divisions</span>
+</h3>
+<pre>Part =
+    element part {
+        MetaDataLinedTitle, Chapter+
+    }
+Chapter =
+    element chapter {
+        MetaDataLinedTitle,
+        AuthorByline*,
+        (
+            (
+                Objectives?,
+                (BlockDivision | Paragraphs)+,
+                (ReadingQuestions? &amp; Exercises? &amp;
+                 Solutions? &amp; References? &amp; Glossary?),
+                Outcomes?
+            )
+        |
+            (
+                (Objectives? &amp; IntroductionDivision?),
+                Section,
+                (Section | ReadingQuestions | Exercises |
+                 Solutions | References | Glossary)*,
+                (Outcomes? &amp; ConclusionDivision?)
+            )
+        )
+    }
+Section =
+    element section {
+        MetaDataLinedTitle,
+        AuthorByline*,
+        (
+            (
+                Objectives?,
+                (BlockDivision | Paragraphs)+,
+                (ReadingQuestions? &amp; Exercises? &amp;
+                 Solutions? &amp; References? &amp; Glossary?),
+                Outcomes?
+            )
+        |
+            (
+                (Objectives? &amp; IntroductionDivision?),
+                Subsection,
+                (Subsection | ReadingQuestions | Exercises |
+                 Solutions | References | Glossary)*,
+                (Outcomes? &amp; ConclusionDivision?)
+            )
+        )
+    }
+Subsection =
+    element subsection {
+        MetaDataAltTitle,
+        AuthorByline*,
+        (
+            (
+                Objectives?,
+                (BlockDivision | Paragraphs)+,
+                (ReadingQuestions? &amp; Exercises? &amp;
+                 Solutions? &amp; References? &amp; Glossary?),
+                Outcomes?
+            )
+        |
+            (
+                (Objectives? &amp; IntroductionDivision?),
+                Subsubsection,
+                (Subsubsection | ReadingQuestions | Exercises |
+                 Solutions | References | Glossary)*,
+                (Outcomes? &amp; ConclusionDivision?)
+            )
+        )
+    }
+Subsubsection =
+    element subsubsection {
+        MetaDataAltTitle,
+        AuthorByline*,
+        Objectives?,
+        (BlockDivision | Paragraphs)+,
+        (ReadingQuestions? &amp; Exercises? &amp;
+         Solutions? &amp; References? &amp; Glossary?),
+        Outcomes?
+    }
+ArticleAppendix =
+    element appendix {
+        MetaDataAltTitle,
+        AuthorByline*,
+        (
+            (
+                Objectives?,
+                (BlockDivision | Paragraphs | NotationList)+,
+                (ReadingQuestions? &amp; Exercises? &amp;
+                 Solutions? &amp; References? &amp; Glossary?),
+                Outcomes?
+            )
+        |
+            (
+                (Objectives? &amp; IntroductionDivision?),
+                Subsection,
+                (Subsection | ReadingQuestions | Exercises |
+                 Solutions | References | Glossary)*,
+                (Outcomes? &amp; ConclusionDivision?)
+            )
+        )
+    }
+BookAppendix =
+    element appendix {
+        MetaDataAltTitle,
+        AuthorByline*,
+        (
+            (
+                Objectives?,
+                (BlockDivision | Paragraphs | NotationList)+,
+                (ReadingQuestions? &amp; Exercises? &amp;
+                 Solutions? &amp; References? &amp; Glossary?),
+                Outcomes?
+            )
+        |
+            (
+                (Objectives? &amp; IntroductionDivision?),
+                Section,
+                (Section | ReadingQuestions | Exercises | Solutions | References | Glossary)*,
+                (Outcomes? &amp; ConclusionDivision?)
+            )
+        )
+    }
+IndexDivision =
+    element index {
+        MetaDataAltTitleOptional,
+        IndexList
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 4: Divisions"><a href="#divisions" title="Copy heading and permalink for Fragment 4: Divisions">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#divisions">in-context</a></span>
+</body>
+</html>

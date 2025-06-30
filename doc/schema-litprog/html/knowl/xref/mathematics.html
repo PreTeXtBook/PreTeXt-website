@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">30</span><span class="period">.</span><span class="space"> </span><span class="title">Mathematics</span>
+</h3>
+<pre>FillInMath = element fillin {
+                 (attribute fill{text}?|attribute characters {xsd:integer}?),
+                 empty
+             }
+MathInline =
+    element m {
+        mixed {(FillInMath | WWVariable)*}
+    }
+MathRow =
+    element mrow {
+        MetaDataTarget,
+        (
+            attribute number {"yes" | "no"} |
+            attribute tag {"star" | "dstar" | "tstar" |
+                           "dagger" | "ddagger" | "tdagger" |
+                           "daggerdbl" | "ddaggerdbl" | "tdaggerdbl" |
+                           "hash" | "dhash" | "thash" |
+                           "maltese" | "dmaltese" | "tmaltese" }
+        )?,
+        attribute break {"yes" | "no"}?,
+        mixed {(Xref | FillInMath | WWVariable)*}
+    }
+MathIntertext = element intertext {TextLong}
+MathDisplay =
+    element me {
+        mixed {(FillInMath | WWVariable)*}
+    } |
+    element men {
+        MetaDataTarget,
+        mixed {(FillInMath | WWVariable)*}
+    } |
+    element md {
+        attribute number {"yes" | "no"}?,
+        attribute break {"yes" | "no"}?,
+        attribute alignment {text}?,
+        attribute alignat-columns {text}?,
+        MathRow,
+        (MathRow | MathIntertext)*
+    } |
+    element mdn {
+        attribute number {"yes" | "no"}?,
+        attribute break {"yes" | "no"}?,
+        attribute alignment {text}?,
+        attribute alignat-columns {text}?,
+        MathRow,
+        (MathRow | MathIntertext)*
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 30: Mathematics"><a href="#mathematics" title="Copy heading and permalink for Fragment 30: Mathematics">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#mathematics">in-context</a></span>
+</body>
+</html>

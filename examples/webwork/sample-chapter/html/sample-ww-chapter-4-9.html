@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC Graphics in Exercises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Integrating WeBWorK into Textbooks">
+<meta property="book:author" content="Robert Beezer">
+<meta property="book:author" content="Alex Jordan">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXWW" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://webwork.maa.org/"><img src="external/images/webwork-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-ww-chapter.html"><span class="title">Integrating WeBWorK into Textbooks</span> <span class="subtitle">Sample Exercises</span></a></h1>
+<p class="byline">Robert Beezer, Alex Jordan</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sample-ww-chapter-4-8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sample-ww-chapter-4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sample-ww-chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Instructive Examples</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-the-quadratic-formula.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-4.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Open Problem Library</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Antidifferentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">A Few More Features</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-6.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Math Content</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-7.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Multiple Choice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-8.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-9.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Graphics in Exercises</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-9.html#sample-ww-chapter-4-9-10" class="internal"><span class="codenumber">1.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Technical Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">PGML Formatting and Verbatim Calisthenics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subject Area Templates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-4.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Stress Tests</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-5-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Layout Configuration Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Inline Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Divisional Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-testing.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-testing.html#section-runestone-testing-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-deprecations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deprecations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="sample-ww-chapter-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-solutions"><div class="toc-title-box"><a href="sample-ww-chapter-6-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sample-ww-chapter-4-9"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.8</span><span class="space"> </span><span class="title">Graphics in Exercises</span>
+</h2>
+<div class="para" id="sample-ww-chapter-4-9-2">It is natural for exercises to have graphics. For example, an exercise might produce a graph of some kind, and ask the reader to extract some information from that graph.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-9-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sample-ww-chapter-4-9-3">If your WeBWorK server is version 2.16 or later, WeBWorK problems can process <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> code. Here is an example.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-9-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="static-latex-image" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.1</span><span class="period">.</span><span class="space"> </span><span class="title">A static <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-62" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="62" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiUENDbWFjcm9zLnBsIiwicGFyc2VyT25lT2YucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRJbnRlZ2VyRnVuY3Rpb25zLnBsIiwiV1dTQy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiSW50ZWdlckZ1bmN0aW9ucyIpOwpDb250ZXh0KCktPnZhcmlhYmxlcy0+YXJlKG49PidSZWFsJyk7CiRhbnN3ZXIgPSBPbmVPZihGb3JtdWxhKCJDKG4rMSwyKSIpLEZvcm11bGEoIihuKzEpbi8yIikpOwoKJGltYWdlXzEgPSBjcmVhdGVMYVRlWEltYWdlKCk7CiRpbWFnZV8xLT5hZGRUb1ByZWFtYmxlKGxhdGV4SW1hZ2VQcmVhbWJsZSgpKTsKJGltYWdlXzEtPkJFR0lOX0xBVEVYX0lNQUdFClxiZWdpbnt0aWt6cGljdHVyZX0KICAgIFxkcmF3W2Rhc2hlZF0gKDAuNS0wLjUqNi41LC0wLjg2NjAyNSo2LjUpIC0tICg3LTAuNSo2LjUsLTAuODY2MDI1KjYuNSk7CiAgICBcZHJhd1t2ZXJ5IHRoaWNrXSAoMi0wLjUqNywtMC44NjYwMjUqNykgLS0gKDItMC41KjQsLTAuODY2MDI1KjQpIC0tICg1LTAuNSo3LC0wLjg2NjAyNSo3KTsKICAgIFxmb3JlYWNoIFx4IGluIHsxLC4uLiw2fQogICAgICAgIFxmb3JlYWNoIFx5IGluIHsxLC4uLixceH0KICAgICAgICAgICAgXHNoYWRlW2JhbGwgY29sb3I9Ymx1ZSEzMF0gKFx5LTAuNSpceCwtMC44NjYwMjUqXHgpIGNpcmNsZSAoMC4yY20pOwogICAgXGZvcmVhY2ggXHkgaW4gezEsLi4uLDd9CiAgICAgICAgXHNoYWRlW2JhbGwgY29sb3I9b3JhbmdlITQwXSAoXHktMC41KjcsLTAuODY2MDI1KjcpIGNpcmNsZSAoMC4yY20pOwogICAgXG5vZGUgYXQgKDIuNSwtMC41KSBbYW5jaG9yPW5vcnRoIHdlc3Rde1woXGNvbG9ye2JsdWV9XHN1bVxsaW1pdHNfe2s9MX1ebmtcY29sb3J7YmxhY2t9XCl9OwogICAgXHNoYWRlW2JhbGwgY29sb3I9Ymx1ZV0gKDItMC41KjQsLTAuODY2MDI1KjQpIGNpcmNsZSAoMC4yY20pOwogICAgXHNoYWRlW2JhbGwgY29sb3I9b3JhbmdlXSAoMi0wLjUqNywtMC44NjYwMjUqNykgY2lyY2xlICgwLjJjbSk7CiAgICBcc2hhZGVbYmFsbCBjb2xvcj1vcmFuZ2VdICg1LTAuNSo3LC0wLjg2NjAyNSo3KSBjaXJjbGUgKDAuMmNtKTsKXGVuZHt0aWt6cGljdHVyZX0KCkVORF9MQVRFWF9JTUFHRQoKQkVHSU5fUEdNTApUaGlzIGltYWdlIGlzIGEgdmlzdWFsIHByb29mIHRoYXQgW2Bcc3VtX3trPTF9XntufWtgXSBlcXVhbHMgd2hhdD8KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGltYWdlXzEpLCB3aWR0aD0+MzAwLCBhbHQ9PnFxIjIxIGJsdWUgYmFsbHMgYXJlIGFycmFuZ2VkIGluIGEgdHJpYW5ndWxhciBmb3JtYXRpb24sIHdpdGggb25lIGF0IHRoZSB0b3AsIHRoZW4gYSByb3cgb2YgdHdvLCBhIHJvdyBvZiB0aHJlZSwgYW5kIHNvIG9uIHVudGlsIGEgcm93IG9mIHNpeDsgdGhlcmUgaXMgYSBzZXZlbnRoIHJvdyB3aXRoIHNldmVuIG9yYW5nZSBiYWxsczsgb25lIGJsdWUgYmFsbCBpcyBoaWdobGlnaHRlZCwgYW5kIHR3byBsaW5lcyBleHRlbmQgZG93bndhcmQgZnJvbSB0aGF0IGJhbGwsIG9uZSB0byB0aGUgbGVmdCBhbmQgb25lIHRvIHRoZSByaWdodCwgcGFyYWxsZWwgdG8gdGhlIHNpZGVzIG9mIHRoZSB0cmlhbmdsZSwgdW50aWwgdGhleSBpbnRlcnNlY3QgdHdvIG9yYW5nZSBiYWxsczsgdGhlIGVmZmVjdCBpcyB0aGF0IGVhY2ggb2YgdGhlIDFcKzJcKzNcKzRcKzVcKzYgYmx1ZSBiYWxscyBjb3JyZXNwb25kcyB0byBvbmUgcGFpciBmcm9tIHRoZSA3IG9yYW5nZSBiYWxscyIpQF0qICA8PAoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnWW91IG1heSBlbnRlciB0aGUgYW5zd2VyIHVzaW5nIFt8QyhuLGspfF0qIG5vdGF0aW9uLicpQF0qKgoKW19deyRhbnN3ZXJ9ezIwfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-62')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-62-1-1-1">This image is a visual proof that <span class="process-math">\(\sum_{k=1}^{n}k\)</span> equals what?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-62-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-62-image-1.svg" role="img" class="contained" alt="21 blue balls are arranged in a triangular formation, with one at the top, then a row of two, a row of three, and so on until a row of six; there is a seventh row with seven orange balls; one blue ball is highlighted, and two lines extend downward from that ball, one to the left and one to the right, parallel to the sides of the triangle, until they intersect two orange balls; the effect is that each of the 1+2+3+4+5+6 blue balls corresponds to one pair from the 7 orange balls"></div>
+<div class="solutions"><details id="extracted-webwork-62-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-62-1-2-1">
+<span class="process-math">\(\mathop{\rm C}\nolimits\!\left(n+1,2\right)\hbox{ or }\frac{\left(n+1\right)n}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-62-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.1.1"><a href="#extracted-webwork-62-1-2" title="Copy heading and permalink for Answer 1.8.1.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.8.1: A static &lt;latex-image&gt; graph"><a href="#static-latex-image" title="Copy heading and permalink for Checkpoint 1.8.1: A static &lt;latex-image&gt; graph">🔗</a></div></article></details><details id="randomized-latex-image" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.2</span><span class="period">.</span><span class="space"> </span><span class="title">A randomized <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="randomized-latex-image-2"><div class="para" id="randomized-latex-image-2-1">These images may depend on the random seed. In this problem, the height and width of the rectangle are randomized.<div class="autopermalink" data-description="Paragraph"><a href="#randomized-latex-image-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-63" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="63" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwicGFyc2VyTnVtYmVyV2l0aFVuaXRzLnBsIiwiV1dTQy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOyRhID0gcmFuZG9tKDQsNiwxKTsKJGIgPSAkYSArIHJhbmRvbSgyLDQsMSk7CiRhcmVhID0gTnVtYmVyV2l0aFVuaXRzKCRhKiRiLCAnY21eMicpOwoKJGltYWdlXzEgPSBjcmVhdGVMYVRlWEltYWdlKCk7CiRpbWFnZV8xLT5hZGRUb1ByZWFtYmxlKGxhdGV4SW1hZ2VQcmVhbWJsZSgpKTsKJGltYWdlXzEtPkJFR0lOX0xBVEVYX0lNQUdFClxiZWdpbnt0aWt6cGljdHVyZX0KICAgIFxkcmF3W2ZpbGw9Ymx1ZSEyMF0gKDAsMCkgLS0rKyAoNiwwKSBub2RlW3Bvcz0wLjUsYmVsb3ddIHtcKCRiXClcLGNtfSAtLSsrICgwLDQpIG5vZGVbcG9zPTAuNSxyaWdodF0ge1woJGFcKVwsY219IC0tKysgKC02LDApIC0tIGN5Y2xlOwpcZW5ke3Rpa3pwaWN0dXJlfQoKRU5EX0xBVEVYX0lNQUdFCgpCRUdJTl9QR01MCkZpbmQgdGhlIGFyZWEgb2YgdGhlIHJlY3RhbmdsZS4KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGltYWdlXzEpLCB3aWR0aD0+MzAwLCBhbHQ9PnFxImEgcmVjdGFuZ2xlIHdob3NlIHdpZHRoIGlzIGxhYmVsZWQgJGIgY20gYW5kIGhlaWdodCBpcyBsYWJlbGVkICRhIGNtIilAXSogIDw8CgpbX117JGFyZWF9ezIwfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-63')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-63-1-1-1">Find the area of the rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-63-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-63-image-1.svg" role="img" class="contained" alt="a rectangle whose width is labeled 8 cm and height is labeled 6 cm"></div>
+<div class="solutions"><details id="extracted-webwork-63-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-63-1-2-1">
+<span class="process-math">\(48\ {\rm cm^{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-63-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.2.1"><a href="#extracted-webwork-63-1-2" title="Copy heading and permalink for Answer 1.8.2.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.8.2: A randomized &lt;latex-image&gt; graph"><a href="#randomized-latex-image" title="Copy heading and permalink for Checkpoint 1.8.2: A randomized &lt;latex-image&gt; graph">🔗</a></div></article></details><details id="latex-image-with-preamble" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.3</span><span class="period">.</span><span class="space"> </span><span class="title">A <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph affected by <code class="code-inline tex2jax_ignore">&lt;latex-image-preamble&gt;</code>.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="latex-image-with-preamble-2"><div class="para" id="latex-image-with-preamble-2-1">This sample chapter’s <code class="code-inline tex2jax_ignore">&lt;docinfo&gt;</code> has a <code class="code-inline tex2jax_ignore">&lt;latex-image-preamble&gt;</code>. This exercise has graph styling that is affected by that.<div class="autopermalink" data-description="Paragraph"><a href="#latex-image-with-preamble-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-64" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="64" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjaG9pY2VtYWNyb3MucGwiLCJQR2xhdGV4aW1hZ2UucGwiLCJXV1NDLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCdOdW1lcmljJyk7QHJvb3RzID0gKC0zLi4zKVtOY2hvb3NlSyg3LDMpXTsKQHJvb3RzID0gbnVtX3NvcnQoQHJvb3RzKTsKJGFuc3dlciA9IExpc3QoQHJvb3RzKTsKJHhtaW4gPSBtaW4oLTEsQHJvb3RzKS0xOwokeG1heCA9IG1heCgxLEByb290cykrMTsKCiRpbWFnZV8xID0gY3JlYXRlTGFUZVhJbWFnZSgpOwokaW1hZ2VfMS0+YWRkVG9QcmVhbWJsZShsYXRleEltYWdlUHJlYW1ibGUoKSk7CiRpbWFnZV8xLT5CRUdJTl9MQVRFWF9JTUFHRQpcYmVnaW57dGlrenBpY3R1cmV9CiAgICBcYmVnaW57YXhpc30KICAgICAgICBcYWRkcGxvdFtkb21haW49JHhtaW46JHhtYXgsc21vb3RoXSB7KHgtJHJvb3RzWzBdKSooeC0kcm9vdHNbMV0pKih4LSRyb290c1syXSl9OwogICAgXGVuZHtheGlzfQpcZW5ke3Rpa3pwaWN0dXJlfQoKRU5EX0xBVEVYX0lNQUdFCgpCRUdJTl9QR01MCldoYXQgYXJlIHRoZSByb290cyBvZiB0aGlzIHBvbHlub21pYWw/Cgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRpbWFnZV8xKSwgd2lkdGg9PjMwMCwgYWx0PT5xcSJ0aGUgZ3JhcGggb2YgYSBwb2x5bm9taWFsIHRoYXQgY3Jvc3NlcyB0aGUgeC1heGlzIGF0ICRyb290c1swXSwgJHJvb3RzWzFdLCBhbmQgJHJvb3RzWzJdLiIpQF0qICA8PAoKW19deyRhbnN3ZXJ9ezIwfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-64')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-64-1-1-1">What are the roots of this polynomial?<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-64-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-64-image-1.svg" role="img" class="contained" alt="the graph of a polynomial that crosses the x-axis at -3, 0, and 3."></div>
+<div class="solutions"><details id="extracted-webwork-64-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-64-1-2-1">
+<span class="process-math">\(-3, 0, 3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-64-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.3.1"><a href="#extracted-webwork-64-1-2" title="Copy heading and permalink for Answer 1.8.3.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.8.3: A &lt;latex-image&gt; graph affected by &lt;latex-image-preamble&gt;"><a href="#latex-image-with-preamble" title="Copy heading and permalink for Checkpoint 1.8.3: A &lt;latex-image&gt; graph affected by &lt;latex-image-preamble&gt;">🔗</a></div></article></details><details id="special-characters" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.4</span><span class="period">.</span><span class="space"> </span><span class="title">Special characters.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="special-characters-2"><div class="para" id="special-characters-2-1">This exercise is to test that special characters behave.<div class="autopermalink" data-description="Paragraph"><a href="#special-characters-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-65" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="65" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiV1dTQy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOwokaW1hZ2VfMSA9IGNyZWF0ZUxhVGVYSW1hZ2UoKTsKJGltYWdlXzEtPmFkZFRvUHJlYW1ibGUobGF0ZXhJbWFnZVByZWFtYmxlKCkpOwokaW1hZ2VfMS0+QkVHSU5fTEFURVhfSU1BR0UKXGJlZ2lue3Rpa3pwaWN0dXJlfQogICAgXG5vZGUgYXQgKDAsMCkge0kgbmVlZCBhYm91dCBcfn4kMy41MC59OwogICAgXG5vZGUgYXQgKDAsMSkge1lvdSBnb3R0YSBnaXZlIDExMFx+fiUufTsgICVUaGlzIGlzIGEgY29tbWVudC4KICAgIFxub2RlIGF0ICgwLDIpIHtTZW5kIGVtYWlsIHVzZXJ+fkBkb21haW4uY29tLn07ClxlbmR7dGlrenBpY3R1cmV9CgpFTkRfTEFURVhfSU1BR0UKCkJFR0lOX1BHTUwKVGhlIGNvZGUgYmVsb3cgaGFzIGEgcHJpbnRlZCBkb2xsYXIgc2lnbiwgYSBwcmludGVkIHBlcmNlbnQgc2lnbiwgYSBwcmludGVkIGF0IHNpZ24sIGFuZCBhIHBlcmNlbnQgc2lnbiB1c2VkIGFzIGEgY29tbWVudCBtYXJrZXIuCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRpbWFnZV8xKSwgd2lkdGg9PjMwMCwgYWx0PT5xcSJ0aGlzIGltYWdlIGhhcyBwaWN0dXJlcyBvZiB0ZXh0IHdpdGggc3BlY2lhbCBjaGFyYWN0ZXJzIGxpa2UgXCQsICUsIGFuZCBAIilAXSogIDw8CgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-65')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-65-1-1-1">The code below has a printed dollar sign, a printed percent sign, a printed at sign, and a percent sign used as a comment marker.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-65-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-65-image-1.svg" role="img" class="contained" alt="this image has pictures of text with special characters like $, %, and @"></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.8.4: Special characters"><a href="#special-characters" title="Copy heading and permalink for Checkpoint 1.8.4: Special characters">🔗</a></div></article></details><div class="para" id="sample-ww-chapter-4-9-8">An older mechanism for creating images is supported and demonstrated here.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-9-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="solving-with-graph" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.8.5</span><span class="period">.</span><span class="space"> </span><span class="title">Solve using a graph.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div id="webwork-66" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="66" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdncmFwaG1hY3Jvcy5wbCIsImNvbnRleHRGb3JtLnBsIiwiY29udGV4dEZpbml0ZVNvbHV0aW9uU2V0cy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKJGEgPSByYW5kb20oMSwzLDEpOwokZ3IgPSBpbml0X2dyYXBoKC0xLC0xLDQsNCwKYXhlcz0+WzAsMF0sCmdyaWQ9Pls1LDVdLApzaXplPT5bMzAwLDE4MF0KKTsKYWRkX2Z1bmN0aW9ucygkZ3IsICJ4XjMvJGFeMyBmb3IgeCBpbiA8LTEsND4gdXNpbmcgY29sb3I6Ymx1ZSBhbmQgd2VpZ2h0OjIiKTsKJHNlY29uZF94ID0gUmVhbCgkYSoyKiooMS8zKSk7CiRzb2xnciA9IGluaXRfZ3JhcGgoLTEsLTEsNCw0LApheGVzPT5bMCwwXSwKZ3JpZD0+WzUsNV0sCnNpemU9PlszMDAsMTgwXQopOwphZGRfZnVuY3Rpb25zKCRzb2xnciwgInheMy8kYV4zIGZvciB4IGluIDwtMSw0PiB1c2luZyBjb2xvcjpibHVlIGFuZCB3ZWlnaHQ6MiIpOwokc29sZ3ItPm1vdmVUbygwLDEpOwokc29sZ3ItPmxpbmVUbygkYSwxLCdibGFjaycsMyk7CiRzb2xnci0+YXJyb3dUbygkYSwwLCdibGFjaycsMyk7CkNvbnRleHQoIkZpbml0ZVNvbHV0aW9uU2V0cyIpOwokYW5zd2VyID0gRm9ybXVsYSgieyRhfSIpOwoKQkVHSU5fUEdNTApUaGUgZ3JhcGggYmVsb3cgaXMgYSBncmFwaCBvZiBbYHk9Zih4KVx0ZXh0ey59YF0gVXNlIHRoZSBncmFwaCB0byBzb2x2ZSB0aGUgZXF1YXRpb24gW2BmKHgpPTFcdGV4dHsufWBdCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRnciksIHdpZHRoPT4zMDAsIGFsdD0+cXEiYSBwbG90IG9mIGEgY3VydmUgb24gYSBjYXJ0ZXNpYW4gc2V0IG9mIGF4ZXM7IHRoZSB4IGF4aXMgcmFuZ2VzIGZyb20gLTEgdG8gNCwgYW5kIHRoZSB5LWF4aXMgcmFuZ2VzIGZyb20gLTEgdG8gNDsgdGhlIGN1cnZlIGVudGVycyBmcm9tIHRoZSBsZWZ0LCBiZWxvdyB0aGUgeC1heGlzLCBhbmQgY3VydmVzIHVwd2FyZCBhbmQgdG8gdGhlIHJpZ2h0IHVudGlsIGl0IHJlYWNoZXMgdGhlIHBvaW50ICgwLDApOyBmcm9tIGhlcmUgaXQgY29udGludWVzIHByZWRvbWluYW50bHkgcmlnaHR3YXJkIGZvciBhIGJpdCwgYmVuZGluZyBzbGlnaHRseSB1cHdhcmQgbW9yZSBhbmQgbW9yZSBhcyBpdCBwcm9ncmVzc2VzOyBpdCBwYXNzZXMgdGhyb3VnaCB0aGUgcG9pbnRzICgkYSwxKSBhbmQgKCRzZWNvbmRfeCwyKSBiZWZvcmUgbGVhdmluZyB0aGUgZ3JhcGggbW92aW5nIG1vcmUgYW5kIG1vcmUgdXB3YXJkIGFuZCB0byB0aGUgcmlnaHQuIilAXSogIDw8CgpbX117JGFuc3dlcn17NX0gW0BBbnN3ZXJGb3JtYXRIZWxwKCdudW1iZXJzJylAXSoKCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgpUaGUgZ3JhcGggcmV2ZWFscyB0aGF0IHRoZSBzb2x1dGlvbiBzZXQgdG8gW2BmKHgpPTFgXSBpcyBbYFskYW5zd2VyXVx0ZXh0ey59YF0KCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJHNvbGdyKSwgd2lkdGg9PjMwMCwgYWx0PT5xcSJhIHBsb3Qgb2YgYSBjdXJ2ZSBvbiBhIGNhcnRlc2lhbiBzZXQgb2YgYXhlczsgdGhlIHggYXhpcyByYW5nZXMgZnJvbSAtMSB0byA0LCBhbmQgdGhlIHktYXhpcyByYW5nZXMgZnJvbSAtMSB0byA0OyB0aGUgY3VydmUgZW50ZXJzIGZyb20gdGhlIGxlZnQsIGJlbG93IHRoZSB4LWF4aXMsIGFuZCBjdXJ2ZXMgdXB3YXJkIGFuZCB0byB0aGUgcmlnaHQgdW50aWwgaXQgcmVhY2hlcyB0aGUgcG9pbnQgKDAsMCk7IGZyb20gaGVyZSBpdCBjb250aW51ZXMgcHJlZG9taW5hbnRseSByaWdodHdhcmQgZm9yIGEgYml0LCBiZW5kaW5nIHNsaWdodGx5IHVwd2FyZCBtb3JlIGFuZCBtb3JlIGFzIGl0IHByb2dyZXNzZXM7IGl0IHBhc3NlcyB0aHJvdWdoIHRoZSBwb2ludHMgKCRhLDEpIGFuZCAoJHNlY29uZF94LDIpIGJlZm9yZSBsZWF2aW5nIHRoZSBncmFwaCBtb3ZpbmcgbW9yZSBhbmQgbW9yZSB1cHdhcmQgYW5kIHRvIHRoZSByaWdodDsgYSBob3Jpem9udGFsIGxpbmUgc2VnbWVudCBtb3ZlcyByaWdodHdhcmQgZnJvbSB5PTEgb24gdGhlIHktYXhpcyB1bnRpbCBpdCByZWFjaGVzIGEgcG9pbnQgb24gdGhlIGN1cnZlOyBhIHZlcnRpY2FsIGxpbmUgc2VnbWVudCBtb3ZlcyBkb3duIGZyb20gdGhpcyBwb2ludCB0byB4PSRhIG9uIHRoZSB4LWF4aXMuIilAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-66')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-66-1-1-1">The graph below is a graph of <span class="process-math">\(y=f(x)\text{.}\)</span> Use the graph to solve the equation <span class="process-math">\(f(x)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-66-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>  <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-66-image-1.png" class="contained" alt="a plot of a curve on a cartesian set of axes; the x axis ranges from -1 to 4, and the y-axis ranges from -1 to 4; the curve enters from the left, below the x-axis, and curves upward and to the right until it reaches the point (0,0); from here it continues predominantly rightward for a bit, bending slightly upward more and more as it progresses; it passes through the points (1,1) and (1.25992,2) before leaving the graph moving more and more upward and to the right."></div>
+<div class="solutions">
+<details id="extracted-webwork-66-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-66-1-2-1">
+<span class="process-math">\(\left\{1\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-66-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.5.1"><a href="#extracted-webwork-66-1-2" title="Copy heading and permalink for Answer 1.8.5.1">🔗</a></div>
+</div></details><details id="extracted-webwork-66-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-66-1-3-1">The graph reveals that the solution set to <span class="process-math">\(f(x)=1\)</span> is <span class="process-math">\({\left\{1\right\}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-66-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/webwork-66-image-2.png" class="contained" alt="a plot of a curve on a cartesian set of axes; the x axis ranges from -1 to 4, and the y-axis ranges from -1 to 4; the curve enters from the left, below the x-axis, and curves upward and to the right until it reaches the point (0,0); from here it continues predominantly rightward for a bit, bending slightly upward more and more as it progresses; it passes through the points (1,1) and (1.25992,2) before leaving the graph moving more and more upward and to the right; a horizontal line segment moves rightward from y=1 on the y-axis until it reaches a point on the curve; a vertical line segment moves down from this point to x=1 on the x-axis."></div>
+<div class="autopermalink" data-description="Solution 1.8.5.1"><a href="#extracted-webwork-66-1-3" title="Copy heading and permalink for Solution 1.8.5.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.8.5: Solve using a graph"><a href="#solving-with-graph" title="Copy heading and permalink for Checkpoint 1.8.5: Solve using a graph">🔗</a></div></article></details><section class="exercises" id="sample-ww-chapter-4-9-10"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="sample-ww-chapter-4-9-10-1">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="sample-ww-chapter-4-9-10-1-1">
+<div class="para" id="sample-ww-chapter-4-9-10-1-1-1">This exercisegroup has a <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> image in its introduction. In standalone versions of the exercise, this image should be repeated.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-9-10-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sample-ww-chapter-4-9-10-1-1-2.svg" role="img" class="contained"></div>
+</div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="sample-ww-chapter-4-9-10-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div id="webwork-67" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="67" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiV1dTQy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOwokaW1hZ2VfMSA9IGNyZWF0ZUxhVGVYSW1hZ2UoKTsKJGltYWdlXzEtPmFkZFRvUHJlYW1ibGUobGF0ZXhJbWFnZVByZWFtYmxlKCkpOwokaW1hZ2VfMS0+QkVHSU5fTEFURVhfSU1BR0UKXGJlZ2lue3Rpa3pwaWN0dXJlfQogICAgXGRyYXcgKDAsMCkgLS0rKyAoNCwwKSBub2RlW2JlbG93LHBvcz0wLjVdIHtcKDRcKX0gLS0rKyAoMCwzKSBub2RlW3JpZ2h0LHBvcz0wLjVdIHtcKDNcKX0gLS0rKyAoLTQsLTMpIG5vZGVbYWJvdmUsc2xvcGVkLHBvcz0wLjVdIHtcKDVcKX0gLS0rKyAoMCwzKSAtLSsrICg0LDApOwpcZW5ke3Rpa3pwaWN0dXJlfQoKRU5EX0xBVEVYX0lNQUdFCgpCRUdJTl9QR01MCkZpbmQgW2BEYF0gd2hlbiBbYEw9NGBdIGFuZCBbYFc9M1x0ZXh0ey59YF0KCltfXXsnNSd9ezEwfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCj4+IFtAaW1hZ2UoaW5zZXJ0R3JhcGgoJGltYWdlXzEpLCB3aWR0aD0+NjAwKUBdKiAgPDwKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-67')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-67-1-1-1">Find <span class="process-math">\(D\)</span> when <span class="process-math">\(L=4\)</span> and <span class="process-math">\(W=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-67-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-67-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-67-1-2-1">
+<span class="process-math">\(5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-67-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.1.1"><a href="#extracted-webwork-67-1-2" title="Copy heading and permalink for Answer 1.8.1.1">🔗</a></div>
+</div></details><details id="extracted-webwork-67-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-67-image-1.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Solution 1.8.1.1"><a href="#extracted-webwork-67-1-3" title="Copy heading and permalink for Solution 1.8.1.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.8.1"><a href="#sample-ww-chapter-4-9-10-1-2" title="Copy heading and permalink for Exercise 1.8.1">🔗</a></div></article><article class="exercise exercise-like" id="sample-ww-chapter-4-9-10-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div id="webwork-68" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="68" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiV1dTQy5wbCIsIlBHY291cnNlLnBsIiwpOyRyZWZyZXNoQ2FjaGVkSW1hZ2VzSW5lcnQ9MTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgnTnVtZXJpYycpOwokaW1hZ2VfMSA9IGNyZWF0ZUxhVGVYSW1hZ2UoKTsKJGltYWdlXzEtPmFkZFRvUHJlYW1ibGUobGF0ZXhJbWFnZVByZWFtYmxlKCkpOwokaW1hZ2VfMS0+QkVHSU5fTEFURVhfSU1BR0UKXGJlZ2lue3Rpa3pwaWN0dXJlfQogICAgXGRyYXcgKDAsMCkgLS0rKyAoNCwwKSBub2RlW2JlbG93LHBvcz0wLjVdIHtcKDEyXCl9IC0tKysgKDAsMykgbm9kZVtyaWdodCxwb3M9MC41XSB7XCg1XCl9IC0tKysgKC00LC0zKSBub2RlW2Fib3ZlLHNsb3BlZCxwb3M9MC41XSB7XCgxM1wpfSAtLSsrICgwLDMpIC0tKysgKDQsMCk7ClxlbmR7dGlrenBpY3R1cmV9CgpFTkRfTEFURVhfSU1BR0UKCkJFR0lOX1BHTUwKRmluZCBbYERgXSB3aGVuIFtgTD0xMmBdIGFuZCBbYFc9NVx0ZXh0ey59YF0KCltfXXsnMTMnfXsxMH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9TT0xVVElPTgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRpbWFnZV8xKSwgd2lkdGg9PjYwMClAXSogIDw8CgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-68')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-68-1-1-1">Find <span class="process-math">\(D\)</span> when <span class="process-math">\(L=12\)</span> and <span class="process-math">\(W=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-68-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-68-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-68-1-2-1">
+<span class="process-math">\(13\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-68-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.2.1"><a href="#extracted-webwork-68-1-2" title="Copy heading and permalink for Answer 1.8.2.1">🔗</a></div>
+</div></details><details id="extracted-webwork-68-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/webwork-68-image-1.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Solution 1.8.2.1"><a href="#extracted-webwork-68-1-3" title="Copy heading and permalink for Solution 1.8.2.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.8.2"><a href="#sample-ww-chapter-4-9-10-1-3" title="Copy heading and permalink for Exercise 1.8.2">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.8.1–2"><a href="#sample-ww-chapter-4-9-10-1" title="Copy heading and permalink for Exercise Group 1.8.1–2">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises 1.8"><a href="#sample-ww-chapter-4-9-10" title="Copy heading and permalink for Exercises 1.8">🔗</a></div></section><div class="autopermalink" data-description="Section 1.8: Graphics in Exercises"><a href="#sample-ww-chapter-4-9" title="Copy heading and permalink for Section 1.8: Graphics in Exercises">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sample-ww-chapter-4-8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sample-ww-chapter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

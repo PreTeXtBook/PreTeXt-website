@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="corollary theorem-like"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="creator">(Leibniz, Newton)</span><span class="period">.</span>
+</h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for corollary</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;corollary xml:id="corollary-FTC-derivative"&gt;
+    &lt;creator&gt;Leibniz, Newton&lt;/creator&gt;
+    &lt;idx&gt;&lt;h&gt;Fundamental Theorem of Calculus&lt;/h&gt;&lt;h&gt;Corollary&lt;/h&gt;&lt;/idx&gt;
+    &lt;statement&gt;
+        &lt;p&gt;Suppose &lt;m&gt;f(x)&lt;/m&gt; is a continuous function.  Then &lt;men xml:id="equation-alternate-FTC"&gt;\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}=f(x)&lt;/men&gt;.&lt;/p&gt;
+    &lt;/statement&gt;
+    &lt;proof xml:id="proof-FTC-corollary"&gt;
+        &lt;p&gt;We simply take the indicated derivative, applying Theorem&lt;nbsp/&gt;&lt;xref ref="theorem-FTC"/&gt; at &lt;xref ref="equation-use-FTC"/&gt;&lt;mdn&gt;
+            &lt;mrow xml:id="equation-use-FTC"&gt;\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;amp;=\frac{d}{dx}\left(F(x)-F(a)\right)&lt;/mrow&gt;
+            &lt;mrow number="no"&gt;&amp;amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)&lt;/mrow&gt;
+            &lt;mrow xml:id="equation-conclude"&gt;&amp;amp;=f(x)-0 = f(x)&lt;/mrow&gt;
+        &lt;/mdn&gt;.&lt;/p&gt;
+    &lt;/proof&gt;
+    &lt;justification&gt;
+        &lt;p&gt;A justification, which is one of the variants of a proof.&lt;/p&gt;
+    &lt;/justification&gt;
+    &lt;!-- 2024-09-28: this device has been harmed, search here --&gt;
+    &lt;!-- by date, and in the sample article for more.  Proof  --&gt;
+    &lt;!-- below once earned a \qedhere, but no more.  Likely   --&gt;
+    &lt;!-- caused by commit just preceding this one.            --&gt;
+    &lt;!-- (perhaps 203c4b660eb27fb9ee43ffa0d6c5ab1aae110747)   --&gt;
+    &lt;proof&gt;
+        &lt;title&gt;Alternate Proof&lt;/title&gt;
+        &lt;p&gt;You can have multiple proofs, and they can have titles which replace the word &lt;q&gt;Proof&lt;/q&gt; as a heading.  Here we just exercise displayed math with no automatic numbering, and an elective number on the middle equation.&lt;md&gt;
+            &lt;mrow&gt;\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;amp;=\frac{d}{dx}\left(F(x)-F(a)\right)&lt;/mrow&gt;
+            &lt;mrow number="yes"&gt;&amp;amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)&lt;/mrow&gt;
+            &lt;mrow&gt;&amp;amp;=f(x)-0 = f(x)&lt;/mrow&gt;
+        &lt;/md&gt;&lt;/p&gt;
+    &lt;/proof&gt;
+&lt;/corollary&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">Suppose <span class="process-math">\(f(x)\)</span> is a continuous function.  Then</div>
+<div class="displaymath process-math">
+\begin{equation}
+\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}=f(x)\text{.}\tag{4.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-FTC-derivative-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 4.1"><a href="#corollary-FTC-derivative" title="Copy heading and permalink for Corollary 4.1">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof xml:id="proof-FTC-corollary"&gt;
+    &lt;p&gt;We simply take the indicated derivative, applying Theorem&lt;nbsp/&gt;&lt;xref ref="theorem-FTC"/&gt; at &lt;xref ref="equation-use-FTC"/&gt;&lt;mdn&gt;
+        &lt;mrow xml:id="equation-use-FTC"&gt;\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;amp;=\frac{d}{dx}\left(F(x)-F(a)\right)&lt;/mrow&gt;
+        &lt;mrow number="no"&gt;&amp;amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)&lt;/mrow&gt;
+        &lt;mrow xml:id="equation-conclude"&gt;&amp;amp;=f(x)-0 = f(x)&lt;/mrow&gt;
+    &lt;/mdn&gt;.&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">We simply take the indicated derivative, applying Theorem <a href="section-fundamental-theorem.html#theorem-FTC" class="xref" data-knowl="./knowl/xref/theorem-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1: The Fundamental Theorem of Calculus">2.1</a> at <a href="section-interesting-corollary.html#proof-FTC-corollary-1-4" class="xref" data-knowl="./knowl/xref/equation-use-FTC.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2">(4.2)</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/theorem-FTC.html ./knowl/xref/equation-use-FTC.html">
+\begin{align}
+\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;=\frac{d}{dx}\left(F(x)-F(a)\right)\tag{4.2}\\
+&amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)\notag\\
+&amp;=f(x)-0 = f(x)\text{.}\tag{4.3}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proof-FTC-corollary-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.1.1"><a href="#proof-FTC-corollary" title="Copy heading and permalink for Proof 4.1.1">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="type">Justification<span class="period">.</span></span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for justification</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;justification&gt;
+    &lt;p&gt;A justification, which is one of the variants of a proof.&lt;/p&gt;
+&lt;/justification&gt;
+</code></pre></article></details><div class="para">A justification, which is one of the variants of a proof.<div class="autopermalink" data-description="Paragraph"><a href="#corollary-FTC-derivative-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Justification 4.1.2"><a href="#corollary-FTC-derivative-5" title="Copy heading and permalink for Justification 4.1.2">🔗</a></div></article><article class="proof"><h4 class="heading"><span class="title">Alternate Proof.</span></h4>
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for proof</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;proof&gt;
+    &lt;title&gt;Alternate Proof&lt;/title&gt;
+    &lt;p&gt;You can have multiple proofs, and they can have titles which replace the word &lt;q&gt;Proof&lt;/q&gt; as a heading.  Here we just exercise displayed math with no automatic numbering, and an elective number on the middle equation.&lt;md&gt;
+        &lt;mrow&gt;\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;amp;=\frac{d}{dx}\left(F(x)-F(a)\right)&lt;/mrow&gt;
+        &lt;mrow number="yes"&gt;&amp;amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)&lt;/mrow&gt;
+        &lt;mrow&gt;&amp;amp;=f(x)-0 = f(x)&lt;/mrow&gt;
+    &lt;/md&gt;&lt;/p&gt;
+&lt;/proof&gt;
+</code></pre></article></details><div class="para logical">
+<div class="para">You can have multiple proofs, and they can have titles which replace the word “Proof” as a heading.  Here we just exercise displayed math with no automatic numbering, and an elective number on the middle equation.</div>
+<div class="displaymath process-math">
+\begin{align}
+\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;=\frac{d}{dx}\left(F(x)-F(a)\right)\notag\\
+&amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)\tag{4.4}\\
+&amp;=f(x)-0 = f(x)\notag
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#corollary-FTC-derivative-6-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.1.3: Alternate Proof"><a href="#corollary-FTC-derivative-6" title="Copy heading and permalink for Proof 4.1.3: Alternate Proof">🔗</a></div></article><span class="incontext"><a class="internal" href="section-interesting-corollary.html#corollary-FTC-derivative">in-context</a></span>
+</body>
+</html>

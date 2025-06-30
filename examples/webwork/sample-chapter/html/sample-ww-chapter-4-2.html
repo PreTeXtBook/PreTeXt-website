@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC Arithmetic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Integrating WeBWorK into Textbooks">
+<meta property="book:author" content="Robert Beezer">
+<meta property="book:author" content="Alex Jordan">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXWW" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://webwork.maa.org/"><img src="external/images/webwork-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-ww-chapter.html"><span class="title">Integrating WeBWorK into Textbooks</span> <span class="subtitle">Sample Exercises</span></a></h1>
+<p class="byline">Robert Beezer, Alex Jordan</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sample-ww-chapter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sample-ww-chapter-4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-the-quadratic-formula.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Instructive Examples</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sample-ww-chapter-4-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-the-quadratic-formula.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-4.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Open Problem Library</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Antidifferentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">A Few More Features</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-6.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Math Content</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-7.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Multiple Choice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-8.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-9.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Graphics in Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-9.html#sample-ww-chapter-4-9-10" class="internal"><span class="codenumber">1.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Technical Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">PGML Formatting and Verbatim Calisthenics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subject Area Templates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-4.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Stress Tests</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-5-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Layout Configuration Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Inline Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Divisional Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-testing.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-testing.html#section-runestone-testing-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-deprecations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deprecations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="sample-ww-chapter-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-solutions"><div class="toc-title-box"><a href="sample-ww-chapter-6-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sample-ww-chapter-4-2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Arithmetic</span>
+</h2>
+<div class="para" id="sample-ww-chapter-4-2-2">Some questions with quantitative answers.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="integer-addition" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Adding Single-Digit Integers.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="integer-addition-2"><div class="para" id="integer-addition-2-1">A simple, but functional example to begin with. If you are just learning how to add, you can test yourself here.<div class="autopermalink" data-description="Paragraph"><a href="#integer-addition-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-add-numbers" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="6" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IHJhbmRvbSgxLCA5LCAxKTsKJGIgPSByYW5kb20oMSwgOSwgMSk7CiRjID0gQ29tcHV0ZSgkYSArICRiKTsKCkJFR0lOX1BHTUwKQ29tcHV0ZSB0aGUgc3VtIG9mIFtgWyRhXWBdIGFuZCBbYFskYl1cdGV4dHs6fWBdCgpbYFskYV0gKyBbJGJdID1gXSBbX117JGN9ezV9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJGFdICsgWyRiXSA9IFskY11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-add-numbers')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-add-numbers-1-1-1">Compute the sum of <span class="process-math">\(6\)</span> and <span class="process-math">\(1\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-add-numbers-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-add-numbers-1-1-2">
+<span class="process-math">\(6 + 1 =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-add-numbers-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-add-numbers-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-add-numbers-1-2-1">
+<span class="process-math">\(7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-add-numbers-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.1.1"><a href="#extracted-webwork-add-numbers-1-2" title="Copy heading and permalink for Answer 1.1.1.1">🔗</a></div>
+</div></details><details id="extracted-webwork-add-numbers-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-add-numbers-1-3-1">
+<span class="process-math">\(6 + 1 = {7}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-add-numbers-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.1.1"><a href="#extracted-webwork-add-numbers-1-3" title="Copy heading and permalink for Solution 1.1.1.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="conclusion" id="integer-addition-4"><div class="para" id="integer-addition-4-1">That was a simple problem.  Let’s move on.<div class="autopermalink" data-description="Paragraph"><a href="#integer-addition-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Checkpoint 1.1.1: Adding Single-Digit Integers"><a href="#integer-addition" title="Copy heading and permalink for Checkpoint 1.1.1: Adding Single-Digit Integers">🔗</a></div></article></details><div class="para" id="sample-ww-chapter-4-2-4">If you are familiar with WeBWorK, then it may be a surprise to you to be interacting with a WeBWorK problem this way, without having logged in to WeBWorK.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-4-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="integer-addition-with-seed" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Declaring a Problem Seed.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="integer-addition-with-seed-2"><div class="para" id="integer-addition-with-seed-2-1">You can also declare a <code class="code-inline tex2jax_ignore">seed</code> to specify a version of any problem that has randomization. Here is the same problem (“copied” in the PreTeXt source), but with a <code class="code-inline tex2jax_ignore">seed</code> specified.<div class="autopermalink" data-description="Paragraph"><a href="#integer-addition-with-seed-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-10" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="510" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IHJhbmRvbSgxLCA5LCAxKTsKJGIgPSByYW5kb20oMSwgOSwgMSk7CiRjID0gQ29tcHV0ZSgkYSArICRiKTsKCkJFR0lOX1BHTUwKQ29tcHV0ZSB0aGUgc3VtIG9mIFtgWyRhXWBdIGFuZCBbYFskYl1cdGV4dHs6fWBdCgpbYFskYV0gKyBbJGJdID1gXSBbX117JGN9ezV9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJGFdICsgWyRiXSA9IFskY11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-10')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-10-1-1-1">Compute the sum of <span class="process-math">\(5\)</span> and <span class="process-math">\(8\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-10-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-10-1-1-2">
+<span class="process-math">\(5 + 8 =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-10-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-10-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-10-1-2-1">
+<span class="process-math">\(13\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-10-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.2.1"><a href="#extracted-webwork-10-1-2" title="Copy heading and permalink for Answer 1.1.2.1">🔗</a></div>
+</div></details><details id="extracted-webwork-10-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-10-1-3-1">
+<span class="process-math">\(5 + 8 = {13}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-10-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.2.1"><a href="#extracted-webwork-10-1-3" title="Copy heading and permalink for Solution 1.1.2.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.1.2: Declaring a Problem Seed"><a href="#integer-addition-with-seed" title="Copy heading and permalink for Checkpoint 1.1.2: Declaring a Problem Seed">🔗</a></div></article></details><details id="integer-addition-with-control-seed" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Controlling Randomness.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="integer-addition-with-control-seed-2"><div class="para" id="integer-addition-with-control-seed-2-1">You can code your problem with randomization, but then use a specific <code class="code-inline tex2jax_ignore">seed</code> and WeBWorK’s <code class="code-inline tex2jax_ignore">$envir{problemSeed}</code> to override that randomization for the purposes of the version that will appear in HTML and print output.<div class="autopermalink" data-description="Paragraph"><a href="#integer-addition-with-control-seed-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-12" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="1" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IHJhbmRvbSgxLCA5LCAxKTsKJGIgPSByYW5kb20oMSwgOSwgMSk7CmlmICgkZW52aXJ7cHJvYmxlbVNlZWR9PT0xKXskYT0xOyRiPTJ9OwokYyA9IENvbXB1dGUoJGEgKyAkYik7CgpCRUdJTl9QR01MCkNvbXB1dGUgdGhlIHN1bSBvZiBbYFskYV1gXSBhbmQgW2BbJGJdXHRleHR7On1gXQoKW2BbJGFdICsgWyRiXSA9YF0gW19deyRjfXs1fSBbQEFuc3dlckZvcm1hdEhlbHAoJ251bWJlcnMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCltgWyRhXSArIFskYl0gPSBbJGNdXHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-12')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-12-1-1-1">Compute the sum of <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-12-1-1-2">
+<span class="process-math">\(1 + 2 =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-12-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-12-1-2-1">
+<span class="process-math">\(3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.3.1"><a href="#extracted-webwork-12-1-2" title="Copy heading and permalink for Answer 1.1.3.1">🔗</a></div>
+</div></details><details id="extracted-webwork-12-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-12-1-3-1">
+<span class="process-math">\(1 + 2 = {3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-12-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.3.1"><a href="#extracted-webwork-12-1-3" title="Copy heading and permalink for Solution 1.1.3.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.1.3: Controlling Randomness"><a href="#integer-addition-with-control-seed" title="Copy heading and permalink for Checkpoint 1.1.3: Controlling Randomness">🔗</a></div></article></details><details id="special-answer-checking" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Special Answer Checking.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="special-answer-checking-2"><div class="para logical" id="special-answer-checking-2-1">
+<div class="para">One of the strengths of WeBWorK is its ability to give intelligent feedback for incorrect answers.</div>
+<ul class="disc" id="special-answer-checking-2-1-2">
+<li id="special-answer-checking-2-1-2-1">
+<div class="para" id="special-answer-checking-2-1-2-1-1">There is general feedback for when the student’s answer is in an entirely different ballpark from the correct answer. Try entering something like “<code class="code-inline tex2jax_ignore">y</code>”.<div class="autopermalink" data-description="Paragraph"><a href="#special-answer-checking-2-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#special-answer-checking-2-1-2-1" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="special-answer-checking-2-1-2-2">
+<div class="para" id="special-answer-checking-2-1-2-2-1">There is general feedback for when the student’s answer is not in the right form. Try entering “<code class="code-inline tex2jax_ignore">x^2*x^3</code>”, which, right or wrong, is unsimplified.<div class="autopermalink" data-description="Paragraph"><a href="#special-answer-checking-2-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#special-answer-checking-2-1-2-2" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="special-answer-checking-2-1-2-3">
+<div class="para" id="special-answer-checking-2-1-2-3-1">And problems can be written to detect and respond to common mistakes. Try entering an answer where you multiply the two exponents (instead of adding them, which would be correct.)<div class="autopermalink" data-description="Paragraph"><a href="#special-answer-checking-2-1-2-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#special-answer-checking-2-1-2-3" title="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#special-answer-checking-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-14" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="14" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiYW5zd2VySGludHMucGwiLCJQQ0NtYWNyb3MucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRMaW1pdGVkUG9seW5vbWlhbC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwokYSA9IHJhbmRvbSgxLCA5LCAxKTsKJGIgPSByYW5kb20oMSwgOSwgMSk7CiRjID0gJGEgKyAkYjsKJGV4cHJlc3Npb24gPSBGb3JtdWxhKCJ4XigkYSkqeF4oJGIpIik7CgpDb250ZXh0KCJMaW1pdGVkUG9seW5vbWlhbC1TdHJpY3QiKTsKIyBjdXN0b20gZXJyb3IgbWVzc2FnZQpDb250ZXh0KCktPntlcnJvcn17bXNnfXsiQSB2YXJpYWJsZSBjYW4gYXBwZWFyIG9ubHkgb25jZSBpbiBlYWNoIHRlcm0gb2YgYSBwb2x5bm9taWFsIn0KICAgID0gIllvdXIgYW5zd2VyIG11c3QgYmUgZnVsbHkgc2ltcGxpZmllZCI7CgokYW5zd2VyID0gRm9ybXVsYSgieF4oJGMpIik7CiRwcm9kdWN0ID0gJGEqJGI7CiRldmFsdWF0b3IgPSAkYW5zd2VyLT5jbXAoKS0+d2l0aFBvc3RGaWx0ZXIoQW5zd2VySGludHMoCiAgICBbQ29tcHV0ZSgieF4oJHByb2R1Y3QpIildID0+CiAgICAiV2hlbiBtdWx0aXBseWluZyB0ZXJtcyB3aXRoIHRoZSBzYW1lIGJhc2UsIHlvdSBkbyBub3QgbXVsdGlwbHkgdGhlIGV4cG9uZW50cy4iKSk7CgpCRUdJTl9QR01MClVzZSB0aGUgcHJvcGVydGllcyBvZiBleHBvbmVudHMgdG8gc2ltcGxpZnkgW2BbJGV4cHJlc3Npb25dXHRleHR7Ln1gXQoKW0BLZXlib2FyZEluc3RydWN0aW9ucygnVG8gZW50ZXIgYSBwb3dlciwgdXNlIGEgW3xefF0qLCBhcyBpbiBbfHheMnxdKiBmb3IgW2B4XjJcdGV4dHsufWBdJylAXSoqCgpbYFskZXhwcmVzc2lvbl09YF0gW19deyRldmFsdWF0b3J9ezh9IFtAQW5zd2VyRm9ybWF0SGVscCgnZm9ybXVsYXMnKUBdKgoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OCldlIF9hZGRfIHRoZSBleHBvbmVudHMgYXMgZm9sbG93cywgd2hpbGUgaW5jbHVkaW5nIGEgZ3JhdHVpdG91cyByZWZlcmVuY2UgdG8gdGhlIHF1YWRyYXRpYyBmb3JtdWxhOgoKW2BgYFxiZWdpbnthbGlnbmVkfQpbJGV4cHJlc3Npb25dJj14XntbJGFdK1skYl19Jlx0ZXh0e1RoZW9yZW0gMS4yLjF9XFwKJj14XntbJGNdfQpcZW5ke2FsaWduZWR9CmBgYF0KCgoKCkVORF9QR01MX1NPTFVUSU9OCgpFTkRET0NVTUVOVCgpOw==" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-14')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-14-1-1-1">Use the properties of exponents to simplify <span class="process-math">\({x^{5}x^{3}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-14-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-14-1-1-2">
+<span class="process-math">\({x^{5}x^{3}}=\)</span> <span class="fillin underline" role="img" aria-label="8-character blank" style="width: 3.636363636363636em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-14-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-14-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-14-1-2-1">
+<span class="process-math">\(x^{8}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-14-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.4.1"><a href="#extracted-webwork-14-1-2" title="Copy heading and permalink for Answer 1.1.4.1">🔗</a></div>
+</div></details><details id="extracted-webwork-14-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-14-1-3-1">We <em class="emphasis">add</em> the exponents as follows, while including a gratuitous reference to the quadratic formula:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-14-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="extracted-webwork-14-1-3-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+{x^{5}x^{3}}\amp =x^{5+3}\amp \text{Theorem 1.2.1}\\
+\amp =x^{8}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-14-1-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.4.1"><a href="#extracted-webwork-14-1-3" title="Copy heading and permalink for Solution 1.1.4.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.1.4: Special Answer Checking"><a href="#special-answer-checking" title="Copy heading and permalink for Checkpoint 1.1.4: Special Answer Checking">🔗</a></div></article></details><details id="using-hints" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Using Hints.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="using-hints-2"><div class="para" id="using-hints-2-1">Hints can be inserted into exercises. Whether a hint is visible in the HTML depends on the value of <code class="code-inline tex2jax_ignore">$showHint</code> in <code class="code-inline tex2jax_ignore">PGcourse.pl</code> in the WeBWorK course that is hosting these exercises. How the hint is displayed in the pdf output is controlled in the usual way that an PTX hint is controlled.<div class="autopermalink" data-description="Paragraph"><a href="#using-hints-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-16" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="16" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiY29udGV4dEZvcm0ucGwiLCJjb250ZXh0TGltaXRlZFJhZGljYWwucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKZG8gewogICAgJGEgPSBsaXN0X3JhbmRvbSgyLDMsNSw2KTsKICAgICRiID0gcmFuZG9tKDEsIDUsIDEpOwogICB9IHVudGlsIChnY2QoJGEsJGIpID09IDEpOwokYyA9ICRhICogJGIqKjI7CkNvbnRleHQoKS0+ZmxhZ3MtPnNldChyZWR1Y2VDb25zdGFudEZ1bmN0aW9ucz0+MCk7CiRleHByZXNzaW9uID0gRm9ybXVsYSgic3FydCgkYykiKTsKCkNvbnRleHQoIkxpbWl0ZWRSYWRpY2FsIik7CgokYW5zd2VyID0gRm9ybXVsYSgiJGIgc3FydCgkYSkiKTsKCkJFR0lOX1BHTUwKU2ltcGxpZnkgdGhlIGV4cHJlc3Npb24gW2BbJGV4cHJlc3Npb25dXHRleHR7Ln1gXQoKW2BbJGV4cHJlc3Npb25dPWBdIFtfXXskYW5zd2VyfXsxMH0KCgpFTkRfUEdNTAoKQkVHSU5fUEdNTF9ISU5UCkZhY3RvciB0aGUgbnVtYmVyIGluc2lkZSB0aGUgcmFkaWNhbC4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OCgoKW2BgYFskZXhwcmVzc2lvbl09XHNxcnR7WyRiXV4yXGNkb3QgWyRhXX09WyRiXVxzcXJ0e1skYV19YGBgXQoKCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-16')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-16-1-1-1">Simplify the expression <span class="process-math">\({\sqrt{48}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-16-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-16-1-1-2">
+<span class="process-math">\({\sqrt{48}}=\)</span> <span class="fillin underline" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-16-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-16-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="extracted-webwork-16-1-2-1">Factor the number inside the radical.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-16-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.1.5.1"><a href="#extracted-webwork-16-1-2" title="Copy heading and permalink for Hint 1.1.5.1">🔗</a></div>
+</div></details><details id="extracted-webwork-16-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-16-1-3-1">
+<span class="process-math">\(4\sqrt{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-16-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.5.1"><a href="#extracted-webwork-16-1-3" title="Copy heading and permalink for Answer 1.1.5.1">🔗</a></div>
+</div></details><details id="extracted-webwork-16-1-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="extracted-webwork-16-1-4-1">
+<div class="displaymath process-math">
+\begin{equation*}
+{\sqrt{48}}=\sqrt{4^2\cdot 3}=4\sqrt{3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-16-1-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.5.1"><a href="#extracted-webwork-16-1-4" title="Copy heading and permalink for Solution 1.1.5.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.1.5: Using Hints"><a href="#using-hints" title="Copy heading and permalink for Checkpoint 1.1.5: Using Hints">🔗</a></div></article></details><details id="no-random" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">No Randomization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="no-random-2"><div class="para" id="no-random-2-1">This problem has no randomization at all, not even if it were exported to be part of a problem set on a WeBWorK server. As such, it really doesn’t need any lines of Perl code in its setup, so you have the option of skipping that part of the authoring process.<div class="autopermalink" data-description="Paragraph"><a href="#no-random-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-18" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="18" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTsKQkVHSU5fUEdNTApbYDErMj1gXSBbX117M317NX0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-18')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-18-1-1-1">
+<span class="process-math">\(1+2=\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="extracted-webwork-18-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-18-1-2-1">
+<span class="process-math">\(3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-18-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.6.1"><a href="#extracted-webwork-18-1-2" title="Copy heading and permalink for Answer 1.1.6.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="conclusion" id="no-random-4"><div class="para" id="no-random-4-1">For more about problems that do not require any randomization, see the <a class="external" href="https://pretextbook.org/documentation.html" target="_blank">PTX Author Guide</a><details class="ptx-footnote" aria-live="polite" id="no-random-4-1-2"><summary class="ptx-footnote__number" title="Footnote 1.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="no-random-4-1-2"><code class="code-inline tex2jax_ignore">pretextbook.org/documentation.html</code></div></details>.<div class="autopermalink" data-description="Paragraph"><a href="#no-random-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Checkpoint 1.1.6: No Randomization"><a href="#no-random" title="Copy heading and permalink for Checkpoint 1.1.6: No Randomization">🔗</a></div></article></details><article class="project project-like" id="copy-webwork-add-numbers"><h3 class="heading">
+<span class="type">Project</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inside a <code class="code-inline tex2jax_ignore">&lt;project&gt;</code>.</span>
+</h3>
+<div class="introduction" id="copy-webwork-add-numbers-2"><div class="para" id="copy-webwork-add-numbers-2-1">If you like, you can have a WeBWorK inside a PROJECT-LIKE block. Just like with an <code class="code-inline tex2jax_ignore">&lt;exercise&gt;</code>, it can be preceded with an optional <code class="code-inline tex2jax_ignore">&lt;introduction&gt;</code> and followed by an optional <code class="code-inline tex2jax_ignore">&lt;conclusion&gt;</code>.<div class="autopermalink" data-description="Paragraph"><a href="#copy-webwork-add-numbers-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="webwork-20" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="511" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IHJhbmRvbSgxLCA5LCAxKTsKJGIgPSByYW5kb20oMSwgOSwgMSk7CiRjID0gQ29tcHV0ZSgkYSArICRiKTsKCkJFR0lOX1BHTUwKQ29tcHV0ZSB0aGUgc3VtIG9mIFtgWyRhXWBdIGFuZCBbYFskYl1cdGV4dHs6fWBdCgpbYFskYV0gKyBbJGJdID1gXSBbX117JGN9ezV9IFtAQW5zd2VyRm9ybWF0SGVscCgnbnVtYmVycycpQF0qCgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJGFdICsgWyRiXSA9IFskY11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-20')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-20-1-1-1">Compute the sum of <span class="process-math">\(6\)</span> and <span class="process-math">\(5\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-20-1-1-2">
+<span class="process-math">\(6 + 5 =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-webwork-20-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="extracted-webwork-20-1-2-1">
+<span class="process-math">\(11\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#extracted-webwork-20-1-2" title="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><details id="extracted-webwork-20-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="extracted-webwork-20-1-3-1">
+<span class="process-math">\(6 + 5 = {11}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-20-1-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#extracted-webwork-20-1-3" title="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Project 1.1.1: Inside a &lt;project&gt;"><a href="#copy-webwork-add-numbers" title="Copy heading and permalink for Project 1.1.1: Inside a &lt;project&gt;">🔗</a></div></article><div class="autopermalink" data-description="Section 1.1: Arithmetic"><a href="#sample-ww-chapter-4-2" title="Copy heading and permalink for Section 1.1: Arithmetic">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sample-ww-chapter-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-the-quadratic-formula.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

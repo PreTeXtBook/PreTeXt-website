@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">55</span><span class="period">.</span><span class="space"> </span><span class="title">Images</span>
+</h3>
+<pre>Image = ImageRaster | ImageCode
+ImageDescription = element description {(Paragraph | Tabular)+}
+ImageShortDescription = element shortdescription {text}
+ImageShortDescriptionCode = element shortdescription {
+    (text | WWVariable)+
+}
+ImageRaster =
+    element image {
+        UniqueID?,
+        Component?,
+        attribute width {text}?,
+        attribute margins {text}?,
+        attribute rotate {text}?,
+        attribute archive {text}?,
+        attribute source {text},
+        (
+          attribute decorative {"yes"} |
+          (
+            attribute decorative {"no"}?,
+            (
+              ImageShortDescription? &amp;
+              ImageDescription?
+            )
+          )
+        )
+    }
+CodeLatexImage =
+    element latex-image {
+        LabelID?,
+        Component?,
+        text
+    }
+ImageCode =
+    element image {
+        UniqueID?,
+        Component?,
+        attribute width {text}?,
+        attribute margins {text}?,
+        attribute archive {text}?,
+        (
+          attribute decorative {"yes"} |
+          (
+            attribute decorative {"no"}?,
+            (
+              ImageShortDescriptionCode ? &amp;
+              ImageDescription? &amp;
+              (
+                CodeLatexImage |
+                element asymptote {
+                  LabelID?,
+                  Component?,
+                  text
+                } |
+                element sageplot {
+                    LabelID?,
+                    Component?,
+                    attribute variant {'2d'|'3d'}?,
+                    attribute aspect {text}?,
+                    text
+                }
+              )
+            )
+          )
+        )
+    }
+WWLatexImage = element latex-image {
+    text
+  }
+ImageWW =
+    element image {
+        attribute pg-name {text}?,
+        attribute width {text}?,
+        (
+          attribute decorative {"yes"} |
+          (
+            attribute decorative {"no"}?,
+            (
+              ImageShortDescriptionCode? &amp;
+              ImageDescription? &amp;
+              WWLatexImage?
+            )
+          )
+        )
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 55: Images"><a href="#image" title="Copy heading and permalink for Fragment 55: Images">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#image">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="figure figure-like"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for figure</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;figure xml:id="figure-animation"&gt;
+    &lt;caption&gt;Affine Transformations&lt;/caption&gt;
+
+    &lt;!-- The "10" in the "12:10" should really be a "9".  I suspect --&gt;
+    &lt;!-- there is some inline element that induces scroll bars      --&gt;
+    &lt;interactive xml:id="interactive-animation" platform="javascript" width="100%" aspect="12:10" source="code/austin/animation.js" preview="preview/animation-preview.jpg"&gt;
+        &lt;sbsgroup&gt;
+            &lt;sidebyside&gt;
+                &lt;slate xml:id="a" surface="canvas" aspect="4:1"/&gt;
+                &lt;slate xml:id="b" surface="canvas" aspect="4:1"/&gt;
+                &lt;slate xml:id="c" surface="canvas" aspect="4:1"/&gt;
+            &lt;/sidebyside&gt;
+            &lt;sidebyside&gt;
+                &lt;slate xml:id="d" surface="canvas" aspect="4:1"/&gt;
+                &lt;slate xml:id="e" surface="canvas" aspect="4:1"/&gt;
+                &lt;slate xml:id="f" surface="canvas" aspect="4:1"/&gt;
+            &lt;/sidebyside&gt;
+            &lt;sidebyside&gt;
+                &lt;slate xml:id="left" surface="canvas" aspect="6:6"/&gt;
+                &lt;slate xml:id="right" surface="canvas" aspect="6:6"/&gt;
+            &lt;/sidebyside&gt;
+            &lt;sidebyside width="25%" margins="25% 25%"&gt;
+                &lt;slate surface="html" aspect="3:1"&gt;
+                    &lt;button type="button" id="compose" xmlns="http://www.w3.org/1999/xhtml"&gt;Compose&lt;/button&gt;
+                &lt;/slate&gt;
+                &lt;slate surface="html" aspect="3:1"&gt;
+                    &lt;button type="button" id="reset" xmlns="http://www.w3.org/1999/xhtml"&gt;Reset&lt;/button&gt;
+                &lt;/slate&gt;
+            &lt;/sidebyside&gt;
+        &lt;/sbsgroup&gt;
+        &lt;instructions&gt;
+            &lt;title&gt;Flipping Woody&lt;/title&gt;
+            &lt;p&gt;Parameters &lt;m&gt;a&lt;/m&gt;, &lt;m&gt;b&lt;/m&gt;, &lt;m&gt;d&lt;/m&gt;, and &lt;m&gt;e&lt;/m&gt;, form a &lt;m&gt;2\times 2&lt;/m&gt; matrix &lt;m&gt;A&lt;/m&gt;, while &lt;m&gt;c&lt;/m&gt; and &lt;m&gt;f&lt;/m&gt; form a vector &lt;m&gt;\vec{b}&lt;/m&gt;.  The two views of Woody shows the effect of the mapping &lt;me&gt;\vec{x}\mapsto A\vec{x} + \vec{b}&lt;/me&gt;.&lt;/p&gt;
+        &lt;/instructions&gt;
+    &lt;/interactive&gt;
+&lt;/figure&gt;
+</code></pre></article></details><iframe id="interactive-animation" width="600" height="500" src="interactive-animation-if.html"></iframe><div class="instructions"><details id="interactive-animation-2" class="solution-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Flipping Woody</span></h4></summary><div class="solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for instructions</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;instructions&gt;
+    &lt;title&gt;Flipping Woody&lt;/title&gt;
+    &lt;p&gt;Parameters &lt;m&gt;a&lt;/m&gt;, &lt;m&gt;b&lt;/m&gt;, &lt;m&gt;d&lt;/m&gt;, and &lt;m&gt;e&lt;/m&gt;, form a &lt;m&gt;2\times 2&lt;/m&gt; matrix &lt;m&gt;A&lt;/m&gt;, while &lt;m&gt;c&lt;/m&gt; and &lt;m&gt;f&lt;/m&gt; form a vector &lt;m&gt;\vec{b}&lt;/m&gt;.  The two views of Woody shows the effect of the mapping &lt;me&gt;\vec{x}\mapsto A\vec{x} + \vec{b}&lt;/me&gt;.&lt;/p&gt;
+&lt;/instructions&gt;
+</code></pre></article></details><div class="para logical" id="interactive-animation-2-2">
+<div class="para">Parameters <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(e\text{,}\)</span> form a <span class="process-math">\(2\times 2\)</span> matrix <span class="process-math">\(A\text{,}\)</span> while <span class="process-math">\(c\)</span> and <span class="process-math">\(f\)</span> form a vector <span class="process-math">\(\vec{b}\text{.}\)</span>  The two views of Woody shows the effect of the mapping</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{x}\mapsto A\vec{x} + \vec{b}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#interactive-animation-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Instructions: Flipping Woody"><a href="#interactive-animation-2" title="Copy heading and permalink for Instructions: Flipping Woody">🔗</a></div>
+</div></details></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.4<span class="period">.</span></span><span class="space"> </span>Affine Transformations<div class="autopermalink" data-description="Figure 14.4"><a href="#figure-animation" title="Copy heading and permalink for Figure 14.4">🔗</a></div></figcaption></figure><span class="incontext"><a class="internal" href="section-interactive-authored.html#figure-animation">in-context</a></span>
+</body>
+</html>

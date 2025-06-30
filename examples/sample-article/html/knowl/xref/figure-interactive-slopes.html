@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="figure figure-like"><details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for figure</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;figure xml:id="figure-interactive-slopes"&gt;
+    &lt;caption&gt;Tangent and secant slopes&lt;/caption&gt;
+    &lt;interactive xml:id="interactive-slopes" platform="javascript" width="100%" aspect="6:8" source="https://code.jquery.com/jquery-1.11.3.min.js https://d3js.org/d3.v3.min.js https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.min.js code/mcclure/slope.js" css="code/mcclure/slope.css"&gt;
+        &lt;!-- intro text, plus curve radio buttons --&gt;
+        &lt;slate xml:id="function-list" surface="html" aspect="6:2"&gt;
+            &lt;div class="p" xmlns="http://www.w3.org/1999/xhtml"&gt;
+            Calculus consists of those problems in mathematics that can be solved with the
+            following basic approach:
+            &lt;/div&gt;
+            &lt;div class="em_display" xmlns="http://www.w3.org/1999/xhtml"&gt;
+            Approximate and take a limit!
+            &lt;/div&gt;
+            &lt;div class="p" xmlns="http://www.w3.org/1999/xhtml"&gt;
+            The simplest, standard, geometric example of this process is the approximation
+            of the slope of a tangent line with a secant line.
+            Here's an illustration of this basic idea.
+            &lt;/div&gt;
+            &lt;div id="function_list" style="text-align: center" xmlns="http://www.w3.org/1999/xhtml"&gt;
+                Choose &lt;span class="process-math"&gt;\(f\)&lt;/span&gt;:
+                &lt;span class="function_radio_container" style="padding-left: 10px"&gt;
+                    &lt;input type="radio" class="radio" name="function" value="f1" id="f1"/&gt;
+                    &lt;span class="process-math"&gt;\(f(x)=x^2\)&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class="function_radio_container"&gt;
+                    &lt;input type="radio" class="radio" name="function" value="f2"/&gt;
+                    &lt;span class="process-math"&gt;\(f(x)=\frac{1}{3}e^x\)&lt;/span&gt;
+                &lt;/span&gt;
+                &lt;span class="function_radio_container"&gt;
+                    &lt;input type="radio" class="radio" name="function" value="f3"/&gt;
+                    &lt;span class="process-math"&gt;\(f(x)=\sin(2x^2)+x/4\)&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/slate&gt;
+        &lt;!-- the curve/graph/interactive itself --&gt;
+        &lt;slate xml:id="the_graph" surface="svg" aspect="6:4"/&gt;
+        &lt;!-- slopes and secant line checkbox --&gt;
+        &lt;slate xml:id="info-container" surface="html" aspect="6:2"&gt;
+            &lt;div id="h_info_container" xmlns="http://www.w3.org/1999/xhtml"&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;table&gt;
+                        &lt;tr&gt;&lt;td&gt;&lt;input id="show_secant_checkbox" type="checkbox"/&gt; Show secant line&lt;/td&gt;&lt;/tr&gt;
+                        &lt;tr&gt;&lt;td&gt;&lt;input id="h_slider" type="range" min="-0.5" max="0.5" step="0.01"/&gt;&lt;/td&gt;&lt;/tr&gt;
+                    &lt;/table&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;table&gt;
+                        &lt;tr&gt;&lt;td class="dimit" style="text-align: left;"&gt;&lt;span class="process-math"&gt;\(h\)&lt;/span&gt; = &lt;span id="h_value_display"/&gt;&lt;/td&gt;&lt;/tr&gt;
+                        &lt;tr&gt;&lt;td class="dimit" style="text-align: left;"&gt;secant slope = &lt;span id="secant_value_display"/&gt;&lt;/td&gt;&lt;/tr&gt;
+                        &lt;tr&gt;&lt;td style="text-align: left;"&gt;tangent slope = &lt;span id="tangent_value_display"/&gt;&lt;/td&gt;&lt;/tr&gt;
+                    &lt;/table&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/slate&gt;
+        &lt;instructions&gt;
+            &lt;p&gt;Select a function with the radio buttons, then use the checkbox to add the secant line.  The denominator of the difference quotient, &lt;m&gt;h&lt;/m&gt;, can be adjusted with the slider and the red point will react to the different values.  The green point is the point of tangency, and can be dragged with the mouse.&lt;/p&gt;
+        &lt;/instructions&gt;
+    &lt;/interactive&gt;
+&lt;/figure&gt;
+</code></pre></article></details><iframe id="interactive-slopes" width="600" height="800" src="interactive-slopes-if.html"></iframe><div class="instructions"><details id="interactive-slopes-4" class="solution-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Instructions<span class="period">.</span></span></h4></summary><div class="solution-like knowl__content">
+<details class="source-view"><summary class="source-view__link" data-reveal-label="Open" data-close-label="Close">View Source for instructions</summary><article class="view-source-view__content"><pre><code class="language-xml">&lt;instructions&gt;
+    &lt;p&gt;Select a function with the radio buttons, then use the checkbox to add the secant line.  The denominator of the difference quotient, &lt;m&gt;h&lt;/m&gt;, can be adjusted with the slider and the red point will react to the different values.  The green point is the point of tangency, and can be dragged with the mouse.&lt;/p&gt;
+&lt;/instructions&gt;
+</code></pre></article></details><div class="para" id="interactive-slopes-4-1">Select a function with the radio buttons, then use the checkbox to add the secant line.  The denominator of the difference quotient, <span class="process-math">\(h\text{,}\)</span> can be adjusted with the slider and the red point will react to the different values.  The green point is the point of tangency, and can be dragged with the mouse.<div class="autopermalink" data-description="Paragraph"><a href="#interactive-slopes-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Instructions"><a href="#interactive-slopes-4" title="Copy heading and permalink for Instructions">🔗</a></div>
+</div></details></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.11<span class="period">.</span></span><span class="space"> </span>Tangent and secant slopes<div class="autopermalink" data-description="Figure 14.11"><a href="#figure-interactive-slopes" title="Copy heading and permalink for Figure 14.11">🔗</a></div></figcaption></figure><span class="incontext"><a class="internal" href="section-interactive-authored.html#figure-interactive-slopes">in-context</a></span>
+</body>
+</html>

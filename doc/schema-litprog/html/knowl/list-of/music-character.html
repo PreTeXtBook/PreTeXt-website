@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">17</span><span class="period">.</span><span class="space"> </span><span class="title">Music characters</span>
+</h3>
+<pre>MusicFlat =
+    element flat {empty}
+MusicSharp =
+    element sharp {empty}
+Music =
+    element doublesharp {empty} |
+    MusicSharp |
+    element natural {empty} |
+    MusicFlat |
+    element doubleflat {empty} |
+    element scaledeg {"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"10"} |
+    element timesignature {
+        attribute top {text},
+        attribute bottom {text}
+    } |
+    element n {
+        attribute pc {
+            "A"|"B"|"C"|"D"|"E"|"F"|"G"|"a"|"b"|"c"|"d"|"e"|"f"|"g"|
+            "1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"10"
+        },
+        attribute acc {"doublesharp"|"sharp"|"flat"|"doubleflat"}?,
+        attribute octave {"1"|"2"|"3"|"4"|"5"}?
+    } |
+    element chord {
+        attribute root {text}?,
+        attribute mode {text}?,
+        attribute bps {text}?,
+        attribute bass {text}?,
+        attribute suspended {"yes"|"no"}?,
+        attribute parentheses {"yes"|"no"}?,
+        element alteration {
+            (TextSimple |
+            MusicSharp |
+            MusicFlat)*
+        }*
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 17: Music characters"><a href="#music-character" title="Copy heading and permalink for Fragment 17: Music characters">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#music-character">in-context</a></span>
+</body>
+</html>

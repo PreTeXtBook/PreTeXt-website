@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hierarchical Structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="pretext.html"><span class="title">PreTeXt RELAX-NG Schema</span></a></h1>
+<p class="byline">Robert A. Beezer</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="pretext-55.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="pretext.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="pretext-57.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="pretext-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Start Elements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Gross Structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-6.html" class="internal"><span class="codenumber">3</span> <span class="title">Document Types</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-7.html" class="internal"><span class="codenumber">4</span> <span class="title">Document Structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-8.html" class="internal"><span class="codenumber">5</span> <span class="title">Lightweight Divisions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-9.html" class="internal"><span class="codenumber">6</span> <span class="title">Specialized Divisions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-10.html" class="internal"><span class="codenumber">7</span> <span class="title">Solutions (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-11.html" class="internal"><span class="codenumber">8</span> <span class="title">Worksheets (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-12.html" class="internal"><span class="codenumber">9</span> <span class="title">Paragraphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-13.html" class="internal"><span class="codenumber">10</span> <span class="title">Mathematics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-14.html" class="internal"><span class="codenumber">11</span> <span class="title">Mathematics (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-15.html" class="internal"><span class="codenumber">12</span> <span class="title">Blocks</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-16.html" class="internal"><span class="codenumber">13</span> <span class="title">Introductions, Conclusions, and Headnotes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-17.html" class="internal"><span class="codenumber">14</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-18.html" class="internal"><span class="codenumber">15</span> <span class="title">Objectives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-19.html" class="internal"><span class="codenumber">16</span> <span class="title">Block Quotes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-20.html" class="internal"><span class="codenumber">17</span> <span class="title">Verbatim Text</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-21.html" class="internal"><span class="codenumber">18</span> <span class="title">Lists</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-22.html" class="internal"><span class="codenumber">19</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-23.html" class="internal"><span class="codenumber">20</span> <span class="title">Theorems, And Other Results</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-24.html" class="internal"><span class="codenumber">21</span> <span class="title">Proof-like (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-25.html" class="internal"><span class="codenumber">22</span> <span class="title">Axioms and Other Mathematical Statements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-26.html" class="internal"><span class="codenumber">23</span> <span class="title">Projects and Activities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-27.html" class="internal"><span class="codenumber">24</span> <span class="title">Remarks and Other Comments</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-28.html" class="internal"><span class="codenumber">25</span> <span class="title">Computations and Technology</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-29.html" class="internal"><span class="codenumber">26</span> <span class="title">Asides</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-30.html" class="internal"><span class="codenumber">27</span> <span class="title">Assemblages</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-31.html" class="internal"><span class="codenumber">28</span> <span class="title">Figures, Tables, Listings and Named Lists</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-32.html" class="internal"><span class="codenumber">29</span> <span class="title">Figure (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-33.html" class="internal"><span class="codenumber">30</span> <span class="title">Side-By-Side Layout</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-34.html" class="internal"><span class="codenumber">31</span> <span class="title">Images and Graphics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-35.html" class="internal"><span class="codenumber">32</span> <span class="title">Sage Code</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-36.html" class="internal"><span class="codenumber">33</span> <span class="title">Legacy Interactive Elements</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-37.html" class="internal"><span class="codenumber">34</span> <span class="title">Interactive Elements (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-38.html" class="internal"><span class="codenumber">35</span> <span class="title">Audio and Video</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-39.html" class="internal"><span class="codenumber">36</span> <span class="title">Poetry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-40.html" class="internal"><span class="codenumber">37</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-41.html" class="internal"><span class="codenumber">38</span> <span class="title">Exercises (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-42.html" class="internal"><span class="codenumber">39</span> <span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-43.html" class="internal"><span class="codenumber">40</span> <span class="title">Glossary</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-44.html" class="internal"><span class="codenumber">41</span> <span class="title">Examples and Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-45.html" class="internal"><span class="codenumber">42</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-46.html" class="internal"><span class="codenumber">43</span> <span class="title">Literate Programming</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-47.html" class="internal"><span class="codenumber">44</span> <span class="title">Frequently Used</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-48.html" class="internal"><span class="codenumber">45</span> <span class="title">Miscellaneous</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-49.html" class="internal"><span class="codenumber">46</span> <span class="title">Organizational Devices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-50.html" class="internal"><span class="codenumber">47</span> <span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-51.html" class="internal"><span class="codenumber">48</span> <span class="title">Front matter (experimental)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-52.html" class="internal"><span class="codenumber">49</span> <span class="title">Contributors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-53.html" class="internal"><span class="codenumber">50</span> <span class="title">Back Matter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-54.html" class="internal"><span class="codenumber">51</span> <span class="title">Document Information</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-55.html" class="internal"><span class="codenumber">52</span> <span class="title">Document Information (experimental)</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="pretext-56.html" class="internal"><span class="codenumber">53</span> <span class="title">Hierarchical Structure</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="pretext-57.html" class="internal"><span class="codenumber">54</span> <span class="title">Development Schema</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="pretext-58.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-appendix"><div class="toc-title-box"><a href="fragment-list.html" class="internal"><span class="codenumber">A</span> <span class="title">Fragments</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="pretext-56"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">53</span><span class="space"> </span><span class="title">Hierarchical Structure</span>
+</h2>
+<div class="para" id="pretext-56-2">We collect all the specifications, roughly in a top-down order, so the generated schema files have a rational ordering to them, even if the order presented here is different.<div class="autopermalink" data-description="Paragraph"><a href="#pretext-56-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="fragment" id="pretext-56-3">
+<h3 class="heading">〈92 Hierarchical Structure〉 ≡</h3>Root of file: pretext.rnc<br><pre>grammar {
+<span>〈<a href="pretext-4.html#start-elements" class="xref" data-knowl="./knowl/xref/start-elements.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 1: Start elements">Start elements</a> 1〉</span><br><span>〈<a href="pretext-5.html#gross-structure" class="xref" data-knowl="./knowl/xref/gross-structure.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 2: Gross structure">Gross structure</a> 2〉</span><br><span>〈<a href="pretext-6.html#document-types" class="xref" data-knowl="./knowl/xref/document-types.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 3: Document types">Document types</a> 3〉</span><br><span>〈<a href="pretext-7.html#divisions" class="xref" data-knowl="./knowl/xref/divisions.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 4: Divisions">Divisions</a> 4〉</span><br><span>〈<a href="pretext-50.html#frontmatter" class="xref" data-knowl="./knowl/xref/frontmatter.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 73: Front matter">Front matter</a> 73〉</span><br><span>〈<a href="pretext-53.html#backmatter" class="xref" data-knowl="./knowl/xref/backmatter.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 76: Back matter">Back matter</a> 76〉</span><br><span>〈<a href="pretext-8.html#paragraphs" class="xref" data-knowl="./knowl/xref/paragraphs.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 5: Paragraphs division">Paragraphs division</a> 5〉</span><br><span>〈<a href="pretext-9.html#universal" class="xref" data-knowl="./knowl/xref/universal.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 6: Specialized divisions">Specialized divisions</a> 6〉</span><br><span>〈<a href="pretext-15.html#block" class="xref" data-knowl="./knowl/xref/block.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 32: Blocks">Blocks</a> 32〉</span><br><span>〈<a href="pretext-15.html#block-component" class="xref" data-knowl="./knowl/xref/block-component.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 33: Common components of blocks">Common components of blocks</a> 33〉</span><br><span>〈<a href="pretext-16.html#introduction-conclusion-headnote" class="xref" data-knowl="./knowl/xref/introduction-conclusion-headnote.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 34: Introductions, conclusions, headnotes">Introductions, conclusions, headnotes</a> 34〉</span><br><span>〈<a href="pretext-18.html#objective-outcome" class="xref" data-knowl="./knowl/xref/objective-outcome.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 38: Objectives and outcomes">Objectives and outcomes</a> 38〉</span><br><span>〈<a href="pretext-19.html#blockquote" class="xref" data-knowl="./knowl/xref/blockquote.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 39: Block quotes">Block quotes</a> 39〉</span><br><span>〈<a href="pretext-20.html#verbatimdisplay" class="xref" data-knowl="./knowl/xref/verbatimdisplay.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 40: Verbatim displays">Verbatim displays</a> 40〉</span><br><span>〈<a href="pretext-21.html#list" class="xref" data-knowl="./knowl/xref/list.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 41: Lists">Lists</a> 41〉</span><br><span>〈<a href="pretext-22.html#definition-like" class="xref" data-knowl="./knowl/xref/definition-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 42: Definitions">Definitions</a> 42〉</span><br><span>〈<a href="pretext-23.html#theorem-like" class="xref" data-knowl="./knowl/xref/theorem-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 43: Theorems, and similar">Theorems, and similar</a> 43〉</span><br><span>〈<a href="pretext-25.html#axiom-like" class="xref" data-knowl="./knowl/xref/axiom-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 45: Axioms, and similar">Axioms, and similar</a> 45〉</span><br><span>〈<a href="pretext-44.html#example-like" class="xref" data-knowl="./knowl/xref/example-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 65: Examples, and similar">Examples, and similar</a> 65〉</span><br><span>〈<a href="pretext-26.html#project-like" class="xref" data-knowl="./knowl/xref/project-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 46: Projects, and similar">Projects, and similar</a> 46〉</span><br><span>〈<a href="pretext-27.html#remark-like" class="xref" data-knowl="./knowl/xref/remark-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 47: Remarks, and similar">Remarks, and similar</a> 47〉</span><br><span>〈<a href="pretext-28.html#computation-like" class="xref" data-knowl="./knowl/xref/computation-like.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 48: Computation, and similar">Computation, and similar</a> 48〉</span><br><span>〈<a href="pretext-29.html#aside" class="xref" data-knowl="./knowl/xref/aside.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 49: Asides, and similar">Asides, and similar</a> 49〉</span><br><span>〈<a href="pretext-30.html#assemblage" class="xref" data-knowl="./knowl/xref/assemblage.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 50: Assemblages">Assemblages</a> 50〉</span><br><span>〈<a href="pretext-31.html#table-figure" class="xref" data-knowl="./knowl/xref/table-figure.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 51: Captioned and titled displays">Captioned and titled displays</a> 51〉</span><br><span>〈<a href="pretext-33.html#sidebyside" class="xref" data-knowl="./knowl/xref/sidebyside.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 54: Side-by-side layouts">Side-by-side layouts</a> 54〉</span><br><span>〈<a href="pretext-34.html#image" class="xref" data-knowl="./knowl/xref/image.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 55: Images">Images</a> 55〉</span><br><span>〈<a href="pretext-31.html#tabular" class="xref" data-knowl="./knowl/xref/tabular.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 52: Tabular display">Tabular display</a> 52〉</span><br><span>〈<a href="pretext-35.html#sage" class="xref" data-knowl="./knowl/xref/sage.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 56: Sage code">Sage code</a> 56〉</span><br><span>〈<a href="pretext-36.html#interactive-musescore" class="xref" data-knowl="./knowl/xref/interactive-musescore.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 57: Interactives">Interactives</a> 57〉</span><br><span>〈<a href="pretext-38.html#audiovideo" class="xref" data-knowl="./knowl/xref/audiovideo.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 59: Video and audio">Video and audio</a> 59〉</span><br><span>〈<a href="pretext-40.html#exercise" class="xref" data-knowl="./knowl/xref/exercise.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 61: Exercises">Exercises</a> 61〉</span><br><span>〈<a href="pretext-39.html#poetry" class="xref" data-knowl="./knowl/xref/poetry.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 60: Poems">Poems</a> 60〉</span><br><span>〈<a href="pretext-42.html#bibliography" class="xref" data-knowl="./knowl/xref/bibliography.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 63: Bibliography">Bibliography</a> 63〉</span><br><span>〈<a href="pretext-43.html#glossary" class="xref" data-knowl="./knowl/xref/glossary.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 64: Glossary">Glossary</a> 64〉</span><br><span>〈<a href="pretext-52.html#contributor" class="xref" data-knowl="./knowl/xref/contributor.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 75: Contributor">Contributor</a> 75〉</span><br><span>〈<a href="pretext-45.html#webwork" class="xref" data-knowl="./knowl/xref/webwork.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 66: WeBWorK">WeBWorK</a> 66〉</span><br><span>〈<a href="pretext-46.html#literate-programming" class="xref" data-knowl="./knowl/xref/literate-programming.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 67: Literate programming">Literate programming</a> 67〉</span><br><span>〈<a href="pretext-48.html#miscellaneous" class="xref" data-knowl="./knowl/xref/miscellaneous.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 71: Miscellaneous or uncertain">Miscellaneous or uncertain</a> 71〉</span><br><span>〈<a href="pretext-47.html#frequently-used" class="xref" data-knowl="./knowl/xref/frequently-used.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 68: Frequent constructions">Frequent constructions</a> 68〉</span><br><span>〈<a href="pretext-12.html#paragraph" class="xref" data-knowl="./knowl/xref/paragraph.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 10: Paragraphs">Paragraphs</a> 10〉</span><br><span>〈<a href="pretext-12.html#shorttext" class="xref" data-knowl="./knowl/xref/shorttext.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 9: Running text">Running text</a> 9〉</span><br><span>〈<a href="pretext-17.html#footnote" class="xref" data-knowl="./knowl/xref/footnote.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 36: Footnotes">Footnotes</a> 36〉</span><br><span>〈<a href="pretext-17.html#index-entries" class="xref" data-knowl="./knowl/xref/index-entries.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 37: Index entries">Index entries</a> 37〉</span><br><span>〈<a href="pretext-17.html#reference" class="xref" data-knowl="./knowl/xref/reference.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 35: Cross-references">Cross-references</a> 35〉</span><br><span>〈<a href="pretext-13.html#mathematics" class="xref" data-knowl="./knowl/xref/mathematics.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 30: Mathematics">Mathematics</a> 30〉</span><br><span>〈<a href="pretext-12.html#verbatim" class="xref" data-knowl="./knowl/xref/verbatim.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 22: Verbatim text">Verbatim text</a> 22〉</span><br><span>〈<a href="pretext-12.html#group" class="xref" data-knowl="./knowl/xref/group.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 29: Text groups">Text groups</a> 29〉</span><br><span>〈<a href="pretext-12.html#generator" class="xref" data-knowl="./knowl/xref/generator.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 19: Text generators">Text generators</a> 19〉</span><br><span>〈<a href="pretext-12.html#fillin-character" class="xref" data-knowl="./knowl/xref/fillin-character.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 20: Fill-in blank character">Fill-in blank character</a> 20〉</span><br><span>〈<a href="pretext-12.html#siunit" class="xref" data-knowl="./knowl/xref/siunit.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 21: SI units">SI units</a> 21〉</span><br><span>〈<a href="pretext-12.html#character" class="xref" data-knowl="./knowl/xref/character.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 18: Characters">Characters</a> 18〉</span><br><span>〈<a href="pretext-49.html#listgenerator" class="xref" data-knowl="./knowl/xref/listgenerator.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 72: List generator">List generator</a> 72〉</span><br><span>〈<a href="pretext-54.html#docinfo" class="xref" data-knowl="./knowl/xref/docinfo.html" data-reveal-label="Reveal" data-close-label="Close" title="Fragment 77: Document information">Document information</a> 77〉</span><br>}
+</pre>
+<div class="autopermalink" data-description="Fragment 92: Hierarchical Structure"><a href="#pretext-56-3" title="Copy heading and permalink for Fragment 92: Hierarchical Structure">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 53: Hierarchical Structure"><a href="#pretext-56" title="Copy heading and permalink for Section 53: Hierarchical Structure">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="pretext-55.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="pretext-57.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

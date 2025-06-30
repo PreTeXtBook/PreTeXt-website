@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="fragment">
+<h3 class="heading">
+<span class="type">Fragment</span><span class="space"> </span><span class="codenumber">60</span><span class="period">.</span><span class="space"> </span><span class="title">Poems</span>
+</h3>
+<pre>AlignmentPoem = attribute halign {"left" | "center" | "right"}
+PoemAuthor =
+    element author {
+        AlignmentPoem?,
+        TextShort
+    }
+Poem =
+    element poem {
+        MetaDataTitleOptional,
+        AlignmentPoem?,
+        PoemAuthor?,
+        (PoemLine+ | Stanza+)
+    }
+Stanza =
+    element stanza {
+        MetaDataTitleOptional,
+        PoemLine+
+    }
+PoemLine =
+    element line {
+        attribute indent {xsd:integer}?,
+        TextShort
+    }
+</pre>
+<div class="autopermalink" data-description="Fragment 60: Poems"><a href="#poetry" title="Copy heading and permalink for Fragment 60: Poems">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="pretext.html#poetry">in-context</a></span>
+</body>
+</html>
