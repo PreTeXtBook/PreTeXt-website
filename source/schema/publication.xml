@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <publication>
+    <source>
+        <directories external="ext" generated="gen"/>
+    </source>
     <common>
         <tableofcontents level="1"/>
         <chunking level="0"/>

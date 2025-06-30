@@ -95,10 +95,13 @@
         </p>
       </answer>
     </static>
-    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJQb3BVcC5wbCIsInBhcnNlclJhZGlvQnV0dG9ucy5wbCIsImNvbnRleHRMaW1pdGVkUmFkaWNhbC5wbCIsImNvbnRleHRSZXN0cmljdGVkRG9tYWlucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJOdW1lcmljIik7CiRmID0gRm9ybXVsYSgic3FydCh4KSIpOwokZGVyaXZhdGl2ZSA9IEZvcm11bGEoIjEvKDJzcXJ0KHgpKSIpOwokcG9wdXAgPSBQb3BVcChbJz8nLCdwb3dlcicsJ2V4cG9uZW50aWFsJywnbGluZWFyJywncXVhZHJhdGljJ10sMSk7CiRyYWRpbyA9IFJhZGlvQnV0dG9ucyhbCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpdXMiLCBhcyBpbiB0aGUgcmFkaXVzIG9mIGEgY2lyY2xlLicsCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpc2giLCBhIHZlZ2V0YWJsZS4nLAogICdJdCBzaGFyZXMgYW5jZXN0cnkgd2l0aCAicmFkbGVyIiwgYSBtaXh0dXJlIG9mIGJlZXIgYW5kIGdyYXBlZnJ1aXQgc29kYS4nLApdLDEpOwpDb250ZXh0KCJMaW1pdGVkUmFkaWNhbCIpOwokYSA9IEZvcm11bGEoIjJzcXJ0KDMpIik7CkNvbnRleHQoIkxpbWl0ZWROdW1lcmljIik7CiRiID0gUmVhbChzcXJ0KDEyKSk7CkNvbnRleHQoIkludGVydmFsIik7CiRkb21haW4gPSBJbnRlcnZhbCgiWzAsaW5mKSIpOwpDb250ZXh0KCJQb2ludCIpOwokcG9pbnQgPSBQb2ludCgiKDQsMikiKTsKQ29udGV4dCgiUmVzdHJpY3RlZERvbWFpbnMiKTsKJHJlc3RyaWN0ZWQgPSBGb3JtdWxhKCJ4LCB4ID49IDAiKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGZ1bmN0aW9uIFtgZmBdIGRlZmluZWQgYnkgW2BmKHgpPVskZl1cdGV4dHsufWBdCmEuICBUaGUgZXhhY3QgdmFsdWUgb2YgW2BmKDEyKWBdIGlzIFtfXXskYX17MTB9IGFuZCBhIGRlY2ltYWwgYXBwcm94aW1hdGlvbiBmb3IgdGhpcyBpcyBbX117JGJ9ezEwfS4KCgphLiAgVGhlIGRvbWFpbiBvZiB0aGlzIGZ1bmN0aW9uLCBpbiBpbnRlcnZhbCBub3RhdGlvbiwgaXMgW19deyRkb21haW59ezEwfS4KCgphLiAgVGhlIGdyYXBoIG9mIFtgeT1bJGZdYF0gaW50ZXJzZWN0cyB0aGUgZ3JhcGggb2YgW2B5PTYteGBdIGF0IFtfXXskcG9pbnR9ezEwfS4KCgphLiAgW2BcZnJhY3tkfXtkeH1bJGZdPXt9YF0gW19deyRkZXJpdmF0aXZlfXsxMH0uCgoKYS4gIFRoZSBmb3JtdWxhIGZvciBbYGYoeCleMlx0ZXh0eyx9YF0gaW5jbHVkaW5nIGl0cyByZXN0cmljdGVkIGRvbWFpbiwgaXMgW19deyRyZXN0cmljdGVkfXsyMH0uCgoKYS4gIFtgZmBdIGlzIGEgW19deyRwb3B1cH17NX0gZnVuY3Rpb24uCgoKYS4gIFdoaWNoIGlzIHRydWUgb2YgdGhlIHdvcmQgInJhZGljYWwiPwoKICAgIFtfXXskcmFkaW99ezV9CgoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyUG9wVXAucGwiLCJwYXJzZXJSYWRpb0J1dHRvbnMucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRMaW1pdGVkUmFkaWNhbC5wbCIsImNvbnRleHRSZXN0cmljdGVkRG9tYWlucy5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJOdW1lcmljIik7CiRmID0gRm9ybXVsYSgic3FydCh4KSIpOwokZGVyaXZhdGl2ZSA9IEZvcm11bGEoIjEvKDJzcXJ0KHgpKSIpOwokcG9wdXAgPSBQb3BVcChbJz8nLCdwb3dlcicsJ2V4cG9uZW50aWFsJywnbGluZWFyJywncXVhZHJhdGljJ10sMSk7CiRyYWRpbyA9IFJhZGlvQnV0dG9ucyhbCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpdXMiLCBhcyBpbiB0aGUgcmFkaXVzIG9mIGEgY2lyY2xlLicsCiAgJ0l0IHNoYXJlcyBhbmNlc3RyeSB3aXRoICJyYWRpc2giLCBhIHZlZ2V0YWJsZS4nLAogICdJdCBzaGFyZXMgYW5jZXN0cnkgd2l0aCAicmFkbGVyIiwgYSBtaXh0dXJlIG9mIGJlZXIgYW5kIGdyYXBlZnJ1aXQgc29kYS4nLApdLDEpOwpDb250ZXh0KCJMaW1pdGVkUmFkaWNhbCIpOwokYSA9IEZvcm11bGEoIjJzcXJ0KDMpIik7CkNvbnRleHQoIkxpbWl0ZWROdW1lcmljIik7CiRiID0gUmVhbChzcXJ0KDEyKSk7CkNvbnRleHQoIkludGVydmFsIik7CiRkb21haW4gPSBJbnRlcnZhbCgiWzAsaW5mKSIpOwpDb250ZXh0KCJQb2ludCIpOwokcG9pbnQgPSBQb2ludCgiKDQsMikiKTsKQ29udGV4dCgiUmVzdHJpY3RlZERvbWFpbnMiKTsKJHJlc3RyaWN0ZWQgPSBGb3JtdWxhKCJ4LCB4ID49IDAiKTsKCkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGZ1bmN0aW9uIFtgZmBdIGRlZmluZWQgYnkgW2BmKHgpPVskZl1cdGV4dHsufWBdCmEuICBUaGUgZXhhY3QgdmFsdWUgb2YgW2BmKDEyKWBdIGlzIFtfXXskYX17MTB9IGFuZCBhIGRlY2ltYWwgYXBwcm94aW1hdGlvbiBmb3IgdGhpcyBpcyBbX117JGJ9ezEwfS4KCgphLiAgVGhlIGRvbWFpbiBvZiB0aGlzIGZ1bmN0aW9uLCBpbiBpbnRlcnZhbCBub3RhdGlvbiwgaXMgW19deyRkb21haW59ezEwfS4KCgphLiAgVGhlIGdyYXBoIG9mIFtgeT1bJGZdYF0gaW50ZXJzZWN0cyB0aGUgZ3JhcGggb2YgW2B5PTYteGBdIGF0IFtfXXskcG9pbnR9ezEwfS4KCgphLiAgW2BcZnJhY3tkfXtkeH1bJGZdPXt9YF0gW19deyRkZXJpdmF0aXZlfXsxMH0uCgoKYS4gIFRoZSBmb3JtdWxhIGZvciBbYGYoeCleMlx0ZXh0eyx9YF0gaW5jbHVkaW5nIGl0cyByZXN0cmljdGVkIGRvbWFpbiwgaXMgW19deyRyZXN0cmljdGVkfXsyMH0uCgoKYS4gIFtgZmBdIGlzIGEgW19deyRwb3B1cH17NX0gZnVuY3Rpb24uCgoKYS4gIFdoaWNoIGlzIHRydWUgb2YgdGhlIHdvcmQgInJhZGljYWwiPwoKICAgIFtfXXskcmFkaW99ezV9CgoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
+###       on 2025-06-28T22:01:13-06:00       
+###   A recent stable commit (2022-07-01):   
+### 6c761d3dba23af92cba35001c852aac04ae99a5f 
 ###                                          
 ###         https://pretextbook.org          
 ###                                          
@@ -124,11 +127,11 @@ DOCUMENT();
 ############################################################
 loadMacros(
   "PGstandard.pl",
-  "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
   "parserPopUp.pl",
   "parserRadioButtons.pl",
+  "contextForm.pl",
   "contextLimitedRadical.pl",
   "contextRestrictedDomains.pl",
   "PGcourse.pl",
@@ -213,10 +216,13 @@ ENDDOCUMENT();
 \end{aligned}</me></p>
 </solution>
     </static>
-    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsImJpemFycm9Bcml0aG1ldGljLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKTwvZGl2PicpKTsKQ29udGV4dCgpLT5vcGVyYXRvcnMtPnNldCgKJyonID0+IHtjbGFzcyA9PiAnYml6YXJybzo6Qk9QOjptdWx0aXBseScsIGlzQ29tbWFuZCA9PiAxfSwKJyAqJyA9PiB7Y2xhc3MgPT4gJ2JpemFycm86OkJPUDo6bXVsdGlwbHknLCBpc0NvbW1hbmQgPT4gMX0sCicqICcgPT4ge2NsYXNzID0+ICdiaXphcnJvOjpCT1A6Om11bHRpcGx5JywgaXNDb21tYW5kID0+IDF9LAopOwokZ2l2ZW4gPSBGb3JtdWxhKCJ4XjIgeF41Iik7CiRhbnN3ZXIgPSBGb3JtdWxhKCJ4XjciKTsKJHNwZWNpYWwgPSBGb3JtdWxhKCJ4XjEwIik7CiRldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKICBjaGVja2VyPT5zdWJ7CiAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJGFuc0hhc2ggKSA9IEBfOwogICAgVmFsdWU6OkVycm9yKCJXaGVuIG11bHRpcGx5aW5nIHBvd2VycyB3aXRoIHRoZSBzYW1lIGJhc2UsIHlvdSBkbyBub3QgbXVsdGlwbHkgdGhlIGV4cG9uZW50cy4iKSBpZiAoJHNwZWNpYWwgPT0gJHN0dWRlbnQpOwogICAgcmV0dXJuIDAgaWYgJGFuc0hhc2gtPntpc1ByZXZpZXd9IHx8ICRjb3JyZWN0ICE9ICRzdHVkZW50OwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjEpOwogICAgZGVsZXRlICRjb3JyZWN0LT57dGVzdF92YWx1ZXN9OyBkZWxldGUgJHN0dWRlbnQtPnt0ZXN0X3ZhbHVlc307CiAgICBteSAkT0sgPSAoJGNvcnJlY3QgPT0gJHN0dWRlbnQpOwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjApOwogICAgVmFsdWU6OkVycm9yKAogICAgICAiWW91ciBhbnN3ZXIgaXMgZXF1aXZhbGVudCB0byB0aGUgY29ycmVjdCBhbnN3ZXIsIGJ1dCBub3QgaW4gdGhlIGV4cGVjdGVkIGZvcm0uCiAgICAgIE1heWJlIGl0IG5lZWRzIHRvIGJlIHNpbXBsaWZpZWQsIGZhY3RvcmVkLCBleHBhbmRlZCwgaGF2ZSBpdHMgZGVub21pbmF0b3IgcmF0aW9uYWxpemVkLCBldGMuIgogICAgKSB1bmxlc3MgJE9LOwogICAgcmV0dXJuICRPSzsKICB9Cik7CgpCRUdJTl9QR01MClNpbXBsaWZ5IHRoZSBleHByZXNzaW9uIFtgWyRnaXZlbl1cdGV4dHsufWBdCgpbX117JGV2YWx1YXRvcn17MTB9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApBZGQgdGhlIGV4cG9uZW50cy4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIHNpbXBsaWZ5IHRoZSBwcm9kdWN0IG9mIHR3byBwb3dlcnMgb2YgdGhlIHNhbWUgYmFzZSwgYWRkIHRoZSBleHBvbmVudHMuCgpbYGBgXGJlZ2lue2FsaWduZWR9ClskZ2l2ZW5dXGFtcD14XnsyKzV9XFwKXGFtcD1bJGFuc3dlcl0KXGVuZHthbGlnbmVkfQpgYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJiaXphcnJvQXJpdGhtZXRpYy5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0Rm9ybS5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpURVhUKE1PREVTKFBUWD0+JycsSFRNTD0+JzxkaXYgc3R5bGU9ImRpc3BsYXk6bm9uZTsiPlwoXG5ld2NvbW1hbmR7XGFtcH17Jn1cKTwvZGl2PicpKTsKQ29udGV4dCgpLT5vcGVyYXRvcnMtPnNldCgKJyonID0+IHtjbGFzcyA9PiAnYml6YXJybzo6Qk9QOjptdWx0aXBseScsIGlzQ29tbWFuZCA9PiAxfSwKJyAqJyA9PiB7Y2xhc3MgPT4gJ2JpemFycm86OkJPUDo6bXVsdGlwbHknLCBpc0NvbW1hbmQgPT4gMX0sCicqICcgPT4ge2NsYXNzID0+ICdiaXphcnJvOjpCT1A6Om11bHRpcGx5JywgaXNDb21tYW5kID0+IDF9LAopOwokZ2l2ZW4gPSBGb3JtdWxhKCJ4XjIgeF41Iik7CiRhbnN3ZXIgPSBGb3JtdWxhKCJ4XjciKTsKJHNwZWNpYWwgPSBGb3JtdWxhKCJ4XjEwIik7CiRldmFsdWF0b3IgPSAkYW5zd2VyIC0+IGNtcCgKICBjaGVja2VyPT5zdWJ7CiAgICBteSAoICRjb3JyZWN0LCAkc3R1ZGVudCwgJGFuc0hhc2ggKSA9IEBfOwogICAgVmFsdWU6OkVycm9yKCJXaGVuIG11bHRpcGx5aW5nIHBvd2VycyB3aXRoIHRoZSBzYW1lIGJhc2UsIHlvdSBkbyBub3QgbXVsdGlwbHkgdGhlIGV4cG9uZW50cy4iKSBpZiAoJHNwZWNpYWwgPT0gJHN0dWRlbnQpOwogICAgcmV0dXJuIDAgaWYgJGFuc0hhc2gtPntpc1ByZXZpZXd9IHx8ICRjb3JyZWN0ICE9ICRzdHVkZW50OwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjEpOwogICAgZGVsZXRlICRjb3JyZWN0LT57dGVzdF92YWx1ZXN9OyBkZWxldGUgJHN0dWRlbnQtPnt0ZXN0X3ZhbHVlc307CiAgICBteSAkT0sgPSAoJGNvcnJlY3QgPT0gJHN0dWRlbnQpOwogICAgQ29udGV4dCgpLT5mbGFncy0+c2V0KGJpemFycm9NdWw9PjApOwogICAgVmFsdWU6OkVycm9yKAogICAgICAiWW91ciBhbnN3ZXIgaXMgZXF1aXZhbGVudCB0byB0aGUgY29ycmVjdCBhbnN3ZXIsIGJ1dCBub3QgaW4gdGhlIGV4cGVjdGVkIGZvcm0uCiAgICAgIE1heWJlIGl0IG5lZWRzIHRvIGJlIHNpbXBsaWZpZWQsIGZhY3RvcmVkLCBleHBhbmRlZCwgaGF2ZSBpdHMgZGVub21pbmF0b3IgcmF0aW9uYWxpemVkLCBldGMuIgogICAgKSB1bmxlc3MgJE9LOwogICAgcmV0dXJuICRPSzsKICB9Cik7CgpCRUdJTl9QR01MClNpbXBsaWZ5IHRoZSBleHByZXNzaW9uIFtgWyRnaXZlbl1cdGV4dHsufWBdCgpbX117JGV2YWx1YXRvcn17MTB9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApBZGQgdGhlIGV4cG9uZW50cy4KCgpFTkRfUEdNTF9ISU5UCgpCRUdJTl9QR01MX1NPTFVUSU9OClRvIHNpbXBsaWZ5IHRoZSBwcm9kdWN0IG9mIHR3byBwb3dlcnMgb2YgdGhlIHNhbWUgYmFzZSwgYWRkIHRoZSBleHBvbmVudHMuCgpbYGBgXGJlZ2lue2FsaWduZWR9ClskZ2l2ZW5dXGFtcD14XnsyKzV9XFwKXGFtcD1bJGFuc3dlcl0KXGVuZHthbGlnbmVkfQpgYGBdCgoKCgpFTkRfUEdNTF9TT0xVVElPTgoKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
+###       on 2025-06-28T22:01:13-06:00       
+###   A recent stable commit (2022-07-01):   
+### 6c761d3dba23af92cba35001c852aac04ae99a5f 
 ###                                          
 ###         https://pretextbook.org          
 ###                                          
@@ -242,10 +248,10 @@ DOCUMENT();
 ############################################################
 loadMacros(
   "PGstandard.pl",
-  "MathObjects.pl",
   "PGML.pl",
   "bizarroArithmetic.pl",
   "AnswerFormatHelp.pl",
+  "contextForm.pl",
   "PGcourse.pl",
 );
 COMMENT('Authored in PreTeXt');
@@ -341,10 +347,13 @@ ENDDOCUMENT();
         </p>
       </answer>
     </static>
-    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJQR2xhdGV4aW1hZ2UucGwiLCJjb250ZXh0QXJiaXRyYXJ5U3RyaW5nLnBsIiwiUFRYU0MucGwiLCJQR2NvdXJzZS5wbCIsKTskcmVmcmVzaENhY2hlZEltYWdlc0luZXJ0PTE7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoIkFyYml0cmFyeVN0cmluZyIpOwokcGxhdHlwdXMgPSBDb21wdXRlKCJwbGF0eXB1cyIpLT5jbXAoY2hlY2tlciA9PiBzdWIgewogIG15ICgkY29ycmVjdCwkc3R1ZGVudCwkYW5zKSA9IEBfOwogICRjb3JyZWN0ID0gJGNvcnJlY3QtPnZhbHVlOwogICRzdHVkZW50ID0gJHN0dWRlbnQtPnZhbHVlOwogICRzdHVkZW50ID0gbGMoJHN0dWRlbnQpOwogICRzdHVkZW50ID1+IHMvICsvIC87CiAgJHN0dWRlbnQgPX4gcy9eIC8vOwogICRzdHVkZW50ID1+IHMvICQvLzsKICByZXR1cm4gKCRzdHVkZW50IGVxICRjb3JyZWN0KTsKfSk7CiRpbWFnZV8xID0gY3JlYXRlTGFUZVhJbWFnZSgpOwokaW1hZ2VfMS0+YWRkVG9QcmVhbWJsZShsYXRleEltYWdlUHJlYW1ibGUoKSk7CiRpbWFnZV8xLT5CRUdJTl9MQVRFWF9JTUFHRQpcYmVnaW57dGlrenBpY3R1cmV9CiAgXGRyYXdbZmlsbD1yZWQsIG9wYWNpdHk9MC41XSAoMCwwKSBjaXJjbGUgKDJjbSkgbm9kZVtiZWxvdyBsZWZ0PTEuNWNtLCBvcGFjaXR5PTFdIHtIYXMgYSBCaWxsfSBub2RlW2JlbG93IGxlZnQsIG9wYWNpdHk9MV0ge0R1Y2t9OwogIFxkcmF3W2ZpbGw9Z3JlZW4sIG9wYWNpdHk9MC41XSAoNjA6MmNtKSBjaXJjbGUgKDJjbSkgbm9kZSBbYWJvdmU9Mi4xY20sIG9wYWNpdHk9MV0ge0lzIFZlbmVtb3VzfSBub2RlW2Fib3ZlPTAuNWNtLCBvcGFjaXR5PTFdIHtKZWxseWZpc2h9OwogIFxkcmF3W2ZpbGw9Ymx1ZSwgb3BhY2l0eT0wLjVdICgwOjJjbSkgY2lyY2xlICgyY20pIG5vZGUgW2JlbG93IHJpZ2h0PTEuNWNtLCBvcGFjaXR5PTFdIHtIYXMgRnVyfSBub2RlW2JlbG93IHJpZ2h0LCBvcGFjaXR5PTFdIHtCZWF2ZXJ9OwpcZW5ke3Rpa3pwaWN0dXJlfQoKRU5EX0xBVEVYX0lNQUdFCgpCRUdJTl9QR01MClRoaXMgVmVubiBEaWFncmFtIGdyb3VwcyBhbmltYWxzIGJ5IGNlcnRhaW4gY2hhcmFjdGVyaXN0aWNzLgoKPj4gW0BpbWFnZShpbnNlcnRHcmFwaCgkaW1hZ2VfMSksIHdpZHRoPT4zMDApQF0qICA8PAoKTmFtZSBhbiBhbmltYWwgdGhhdCBiZWxvbmdzIGluIHRoZSBjZW50ZXIgcmVnaW9uLiBTcGVsbGluZyBjb3VudHMhCgpbX117JHBsYXR5cHVzfXszMH0KCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdsYXRleGltYWdlLnBsIiwiY29udGV4dEFyYml0cmFyeVN0cmluZy5wbCIsIlBUWFNDLnBsIiwiUEdjb3Vyc2UucGwiLCk7JHJlZnJlc2hDYWNoZWRJbWFnZXNJbmVydD0xO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwpDb250ZXh0KCJBcmJpdHJhcnlTdHJpbmciKTsKJHBsYXR5cHVzID0gQ29tcHV0ZSgicGxhdHlwdXMiKS0+Y21wKGNoZWNrZXIgPT4gc3ViIHsKICBteSAoJGNvcnJlY3QsJHN0dWRlbnQsJGFucykgPSBAXzsKICAkY29ycmVjdCA9ICRjb3JyZWN0LT52YWx1ZTsKICAkc3R1ZGVudCA9ICRzdHVkZW50LT52YWx1ZTsKICAkc3R1ZGVudCA9IGxjKCRzdHVkZW50KTsKICAkc3R1ZGVudCA9fiBzLyArLyAvOwogICRzdHVkZW50ID1+IHMvXiAvLzsKICAkc3R1ZGVudCA9fiBzLyAkLy87CiAgcmV0dXJuICgkc3R1ZGVudCBlcSAkY29ycmVjdCk7Cn0pOwoKJGltYWdlXzEgPSBjcmVhdGVMYVRlWEltYWdlKCk7CiRpbWFnZV8xLT5hZGRUb1ByZWFtYmxlKGxhdGV4SW1hZ2VQcmVhbWJsZSgpKTsKJGltYWdlXzEtPkJFR0lOX0xBVEVYX0lNQUdFClxiZWdpbnt0aWt6cGljdHVyZX0KICBcZHJhd1tmaWxsPXJlZCwgb3BhY2l0eT0wLjVdICgwLDApIGNpcmNsZSAoMmNtKSBub2RlW2JlbG93IGxlZnQ9MS41Y20sIG9wYWNpdHk9MV0ge0hhcyBhIEJpbGx9IG5vZGVbYmVsb3cgbGVmdCwgb3BhY2l0eT0xXSB7RHVja307CiAgXGRyYXdbZmlsbD1ncmVlbiwgb3BhY2l0eT0wLjVdICg2MDoyY20pIGNpcmNsZSAoMmNtKSBub2RlIFthYm92ZT0yLjFjbSwgb3BhY2l0eT0xXSB7SXMgVmVuZW1vdXN9IG5vZGVbYWJvdmU9MC41Y20sIG9wYWNpdHk9MV0ge0plbGx5ZmlzaH07CiAgXGRyYXdbZmlsbD1ibHVlLCBvcGFjaXR5PTAuNV0gKDA6MmNtKSBjaXJjbGUgKDJjbSkgbm9kZSBbYmVsb3cgcmlnaHQ9MS41Y20sIG9wYWNpdHk9MV0ge0hhcyBGdXJ9IG5vZGVbYmVsb3cgcmlnaHQsIG9wYWNpdHk9MV0ge0JlYXZlcn07ClxlbmR7dGlrenBpY3R1cmV9CgpFTkRfTEFURVhfSU1BR0UKCkJFR0lOX1BHTUwKVGhpcyBWZW5uIERpYWdyYW0gZ3JvdXBzIGFuaW1hbHMgYnkgY2VydGFpbiBjaGFyYWN0ZXJpc3RpY3MuCgo+PiBbQGltYWdlKGluc2VydEdyYXBoKCRpbWFnZV8xKSwgd2lkdGg9PjMwMClAXSogIDw8CgpOYW1lIGFuIGFuaW1hbCB0aGF0IGJlbG9uZ3MgaW4gdGhlIGNlbnRlciByZWdpb24uIFNwZWxsaW5nIGNvdW50cyEKCltfXXskcGxhdHlwdXN9ezMwfQoKCkVORF9QR01MCgpFTkRET0NVTUVOVCgpOw==" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
+###       on 2025-06-28T22:01:13-06:00       
+###   A recent stable commit (2022-07-01):   
+### 6c761d3dba23af92cba35001c852aac04ae99a5f 
 ###                                          
 ###         https://pretextbook.org          
 ###                                          
@@ -370,7 +379,6 @@ DOCUMENT();
 ############################################################
 loadMacros(
   "PGstandard.pl",
-  "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
   "PGlateximage.pl",
@@ -399,6 +407,7 @@ $platypus = Compute("platypus")->cmp(checker => sub {
   $student =~ s/ $//;
   return ($student eq $correct);
 });
+
 $image_1 = createLaTeXImage();
 $image_1->addToPreamble(latexImagePreamble());
 $image_1->BEGIN_LATEX_IMAGE
@@ -446,11 +455,13 @@ ENDDOCUMENT();
 <p>Since both <m>5</m> and <m>7</m> are prime, the prime factorization of <m>35</m> is <m>5\cdot7</m>.</p>
 </solution>
     </static>
-    <server-data sourceFilePath="Library/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data sourceFilePath="Library/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg source="Library/PCC/BasicAlgebra/NumberBasics/FactorInteger10.pg"/>
   </webwork-reps>
   <webwork-reps version="2" ww_major_version="2" ww_minor_version="17" xml:id="extracted-webwork-18" ww-id="webwork-18">
     <static seed="18">
+      <introduction><p>This problem has multiple parts that must be completed in order. Try answering the second part with various things you might expect a user to enter.</p>
+</introduction>
       <task><title>Identify Coefficients</title>
 <statement><p>Consider the equation</p>
 <p><me>{2x^{2}-7x-15} = 0</me></p>
@@ -466,10 +477,13 @@ ENDDOCUMENT();
 <p>You already identified <m>a = 2\text{,}</m> <m>b = -7\text{,}</m> and <m>c = -15\text{,}</m> and the results from using these in the quadratic formula are <m>-\frac{3}{2}</m> and <m>5\text{.}</m></p>
 </solution></task>
     </static>
-    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsInNjYWZmb2xkLnBsIiwiQW5zd2VyRm9ybWF0SGVscC5wbCIsImNvbnRleHRGcmFjdGlvbi5wbCIsImNvbnRleHRGaW5pdGVTb2x1dGlvblNldHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJHF1YWRyYXRpYyA9IEZvcm11bGEoIjIgeF4yIC0gNyB4IC0gMTUiKS0+cmVkdWNlOwokeDEgPSBGcmFjdGlvbig1LDEpOwokeDIgPSBGcmFjdGlvbigtMywyKTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHJlZHVjZUNvbnN0YW50cz0+MCxyZWR1Y2VDb25zdGFudEZ1bmN0aW9ucz0+MCk7CkNvbnRleHQoIkZpbml0ZVNvbHV0aW9uU2V0cyIpOwokc29sdXRpb25zID0gRm9ybXVsYSgiLTMvMiw1Iik7ClNjYWZmb2xkOjpCZWdpbihudW1iZXJlZCA9PiAxLGlzX29wZW4gPT4gImNvcnJlY3Rfb3JfZmlyc3RfaW5jb3JyZWN0IixjYW5fb3BlbiA9PiB3aGVuX3ByZXZpb3VzX2NvcnJlY3QsKTtTZWN0aW9uOjpCZWdpbigiSWRlbnRpZnkgQ29lZmZpY2llbnRzIik7CkJFR0lOX1BHTUwKQ29uc2lkZXIgdGhlIGVxdWF0aW9uCgpbYGBgWyRxdWFkcmF0aWNdID0gMGBgYF0KCklkZW50aWZ5IHRoZSBjb2VmZmljaWVudHMgZm9yIHRoZSBxdWFkcmF0aWMgZXF1YXRpb24gdXNpbmcgdGhlIHN0YW5kYXJkIGZvcm0gZnJvbSBTdWJzZWN0aW9uWyROQlNQXSoxLjEuCgpbYGE9YF0gW19dezJ9ezR9LCBbYGI9YF0gW19dey03fXs0fSwgW2BjPWBdIFtfXXstMTV9ezR9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KVGFrZSB0aGUgY29lZmZpY2llbnQgb2YgW2B4XjJgXSBmb3IgdGhlIHZhbHVlIG9mIFtgYVx0ZXh0eyx9YF0gdGhlIGNvZWZmaWNpZW50IG9mIFtgeGBdIGZvciBbYGJcdGV4dHssfWBdIGFuZCB0aGUgY29uc3RhbnQgZm9yIFtgY1x0ZXh0ey59YF0gX0luIHRoaXMgY2FzZV8sIHRoZXkgYXJlIFtgYSA9IDJcdGV4dHssfWBdIFtgYiA9IC03XHRleHR7LH1gXSBbYGMgPSAtMTVcdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KU2VjdGlvbjo6RW5kKCk7U2VjdGlvbjo6QmVnaW4oIlVzZSB0aGUgUXVhZHJhdGljIEZvcm11bGEiKTsKQkVHSU5fUEdNTApVc2UgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIHRvIGZpbmQgdGhlIHNvbHV0aW9uIHNldCB0bwoKW2BgYFskcXVhZHJhdGljXT0wYGBgXQoKCgpbX117JHNvbHV0aW9uc317MzB9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfU09MVVRJT04KUmVjYWxsIHRoYXQgdGhlIHF1YWRyYXRpYyBmb3JtdWxhIGlzIGdpdmVuIGluIFN1YnNlY3Rpb25bJE5CU1BdKjEuMS4KCllvdSBhbHJlYWR5IGlkZW50aWZpZWQgW2BhID0gMlx0ZXh0eyx9YF0gW2BiID0gLTdcdGV4dHssfWBdIGFuZCBbYGMgPSAtMTVcdGV4dHssfWBdIGFuZCB0aGUgcmVzdWx0cyBmcm9tIHVzaW5nIHRoZXNlIGluIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSBhcmUgW2AtXGZyYWN7M317Mn1gXSBhbmQgW2A1XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OClNlY3Rpb246OkVuZCgpO1NjYWZmb2xkOjpFbmQoKTsKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJzY2FmZm9sZC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJjb250ZXh0Rm9ybS5wbCIsImNvbnRleHRGcmFjdGlvbi5wbCIsImNvbnRleHRGaW5pdGVTb2x1dGlvblNldHMucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKQ29udGV4dCgiRnJhY3Rpb24iKTsKJHF1YWRyYXRpYyA9IEZvcm11bGEoIjIgeF4yIC0gNyB4IC0gMTUiKS0+cmVkdWNlOwokeDEgPSBGcmFjdGlvbig1LDEpOwokeDIgPSBGcmFjdGlvbigtMywyKTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHJlZHVjZUNvbnN0YW50cz0+MCxyZWR1Y2VDb25zdGFudEZ1bmN0aW9ucz0+MCk7CkNvbnRleHQoIkZpbml0ZVNvbHV0aW9uU2V0cyIpOwokc29sdXRpb25zID0gRm9ybXVsYSgiLTMvMiw1Iik7CgpCRUdJTl9QR01MClRoaXMgcHJvYmxlbSBoYXMgbXVsdGlwbGUgcGFydHMgdGhhdCBtdXN0IGJlIGNvbXBsZXRlZCBpbiBvcmRlci4gVHJ5IGFuc3dlcmluZyB0aGUgc2Vjb25kIHBhcnQgd2l0aCB2YXJpb3VzIHRoaW5ncyB5b3UgbWlnaHQgZXhwZWN0IGEgdXNlciB0byBlbnRlci4KCgpFTkRfUEdNTApTY2FmZm9sZDo6QmVnaW4obnVtYmVyZWQgPT4gMSxpc19vcGVuID0+ICJjb3JyZWN0X29yX2ZpcnN0X2luY29ycmVjdCIsY2FuX29wZW4gPT4gYWx3YXlzLCk7U2VjdGlvbjo6QmVnaW4oIklkZW50aWZ5IENvZWZmaWNpZW50cyIpOwpCRUdJTl9QR01MCkNvbnNpZGVyIHRoZSBlcXVhdGlvbgoKW2BgYFskcXVhZHJhdGljXSA9IDBgYGBdCgpJZGVudGlmeSB0aGUgY29lZmZpY2llbnRzIGZvciB0aGUgcXVhZHJhdGljIGVxdWF0aW9uIHVzaW5nIHRoZSBzdGFuZGFyZCBmb3JtIGZyb20gU3Vic2VjdGlvblskTkJTUF0qMS4xLgoKW2BhPWBdIFtfXXsyfXs0fSwgW2BiPWBdIFtfXXstN317NH0sIFtgYz1gXSBbX117LTE1fXs0fQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClRha2UgdGhlIGNvZWZmaWNpZW50IG9mIFtgeF4yYF0gZm9yIHRoZSB2YWx1ZSBvZiBbYGFcdGV4dHssfWBdIHRoZSBjb2VmZmljaWVudCBvZiBbYHhgXSBmb3IgW2BiXHRleHR7LH1gXSBhbmQgdGhlIGNvbnN0YW50IGZvciBbYGNcdGV4dHsufWBdIF9JbiB0aGlzIGNhc2VfLCB0aGV5IGFyZSBbYGEgPSAyXHRleHR7LH1gXSBbYGIgPSAtN1x0ZXh0eyx9YF0gW2BjID0gLTE1XHRleHR7Ln1gXQoKCkVORF9QR01MX1NPTFVUSU9OClNlY3Rpb246OkVuZCgpO1NlY3Rpb246OkJlZ2luKCJVc2UgdGhlIFF1YWRyYXRpYyBGb3JtdWxhIik7CkJFR0lOX1BHTUwKVXNlIHRoZSBxdWFkcmF0aWMgZm9ybXVsYSB0byBmaW5kIHRoZSBzb2x1dGlvbiBzZXQgdG8KCltgYGBbJHF1YWRyYXRpY109MGBgYF0KCgoKW19deyRzb2x1dGlvbnN9ezMwfQoKCkVORF9QR01MCgpCRUdJTl9QR01MX1NPTFVUSU9OClJlY2FsbCB0aGF0IHRoZSBxdWFkcmF0aWMgZm9ybXVsYSBpcyBnaXZlbiBpbiBTdWJzZWN0aW9uWyROQlNQXSoxLjEuCgpZb3UgYWxyZWFkeSBpZGVudGlmaWVkIFtgYSA9IDJcdGV4dHssfWBdIFtgYiA9IC03XHRleHR7LH1gXSBhbmQgW2BjID0gLTE1XHRleHR7LH1gXSBhbmQgdGhlIHJlc3VsdHMgZnJvbSB1c2luZyB0aGVzZSBpbiB0aGUgcXVhZHJhdGljIGZvcm11bGEgYXJlIFtgLVxmcmFjezN9ezJ9YF0gYW5kIFtgNVx0ZXh0ey59YF0KCgpFTkRfUEdNTF9TT0xVVElPTgpTZWN0aW9uOjpFbmQoKTtTY2FmZm9sZDo6RW5kKCk7CkVORERPQ1VNRU5UKCk7" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
+###       on 2025-06-28T22:01:13-06:00       
+###   A recent stable commit (2022-07-01):   
+### 6c761d3dba23af92cba35001c852aac04ae99a5f 
 ###                                          
 ###         https://pretextbook.org          
 ###                                          
@@ -495,10 +509,10 @@ DOCUMENT();
 ############################################################
 loadMacros(
   "PGstandard.pl",
-  "MathObjects.pl",
   "PGML.pl",
   "scaffold.pl",
   "AnswerFormatHelp.pl",
+  "contextForm.pl",
   "contextFraction.pl",
   "contextFiniteSolutionSets.pl",
   "PGcourse.pl",
@@ -526,10 +540,15 @@ $solutions = Formula("-3/2,5");
 # Body
 ############################################################
 
+BEGIN_PGML
+This problem has multiple parts that must be completed in order. Try answering the second part with various things you might expect a user to enter.
+
+END_PGML
+
 ############################################################
 # Scaffold
 ############################################################
-Scaffold::Begin(numbered => 1,is_open => "correct_or_first_incorrect",can_open => when_previous_correct,);
+Scaffold::Begin(numbered => 1,is_open => "correct_or_first_incorrect",can_open => always,);
 
 ############################################################
 # Section
@@ -627,10 +646,13 @@ ENDDOCUMENT();
         </p>
       </answer>
     </static>
-    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIk1hdGhPYmplY3RzLnBsIiwiUEdNTC5wbCIsIkFuc3dlckZvcm1hdEhlbHAucGwiLCJwYXJzZXJOdW1iZXJXaXRoVW5pdHMucGwiLCJjb250ZXh0Q3VycmVuY3kucGwiLCJjb250ZXh0UGVyY2VudC5wbCIsIlBHY291cnNlLnBsIiwpO1RFWFQoYmVnaW5wcm9ibGVtKCkpOwokbmV3VW5pdHMgPSBbCiAge25hbWU9PidnYWxsb25zJyxjb252ZXJzaW9uPT57ZmFjdG9yPT4wLjAwMzc4NTQxLG09PjN9fSwKICB7bmFtZT0+J2dhbGxvbicsY29udmVyc2lvbj0+e2ZhY3Rvcj0+MC4wMDM3ODU0MSxtPT4zfX0sCiAge25hbWU9PidnYWwnLGNvbnZlcnNpb249PntmYWN0b3I9PjAuMDAzNzg1NDEsbT0+M319LApdOwpDb250ZXh0KCktPmZsYWdzLT5zZXQodG9sVHlwZT0+J2Fic29sdXRlJyx0b2xlcmFuY2U9PjAuMSk7CiR2b2x1bWUgPSBOdW1iZXJXaXRoVW5pdHMoIjIwLzIuNzggZ2FsIiwge25ld1VuaXQ9PiRuZXdVbml0c30pOwpDb250ZXh0KCJQZXJjZW50Iik7CkNvbnRleHQoKS0+ZmxhZ3MtPnNldCh0b2xlcmFuY2U9PjAuMDEpOwokaW5jcmVhc2UgPSBQZXJjZW50KDM1Mi8yNzgtMSk7CkNvbnRleHQoIkN1cnJlbmN5Iik7CiRjb3N0ID0gQ3VycmVuY3koMy41MioxLjAyOCk7CgpCRUdJTl9QR01MCmEuICBUaGUgYXZlcmFnZSBjb3N0IG9mIGdhc29saW5lIGluIHRoZSBVbml0ZWQgU3RhdGVzIGluIDIwMTAgd2FzICQyLjc4IHBlciBnYWxsb24uIEhvdyBtdWNoIGdhc29saW5lIHdvdWxkICQyMCBnZXQgeW91IGluIDIwMTAsIG9uIGF2ZXJhZ2U/CgogICAgW19deyR2b2x1bWV9ezEwfQoKCmEuICBJbiAyMDExLCB0aGUgYXZlcmFnZSBjb3N0IHdhcyAkMy41MiBwZXIgZ2FsbG9uLiBXaGF0IHBlcmNlbnQgaW5jcmVhc2Ugd2FzIHRoYXQgZnJvbSAyMDEwPwoKICAgIFtfXXskaW5jcmVhc2V9ezEwfQoKCmEuICBJbiAyMDEyLCB0aGUgY29zdCBoYWQgcmlzZW4gMi44JSBmcm9tIHRoZSAyMDExIGNvc3QuIFdoYXQgd2FzIHRoZSBjb3N0IG9mIGEgZ2FsbG9uIG9mIGdhc29saW5lIGluIDIwMTI/CgogICAgW19deyRjb3N0fXsxMH0gICAKCgoKRU5EX1BHTUwKCkVORERPQ1VNRU5UKCk7" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" course-password="anonymous" language="en-US"/>
+    <server-data problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwicGFyc2VyTnVtYmVyV2l0aFVuaXRzLnBsIiwiY29udGV4dEN1cnJlbmN5LnBsIiwiY29udGV4dFBlcmNlbnQucGwiLCJQR2NvdXJzZS5wbCIsKTtURVhUKGJlZ2lucHJvYmxlbSgpKTsKJG5ld1VuaXRzID0gWwogIHtuYW1lPT4nZ2FsbG9ucycsY29udmVyc2lvbj0+e2ZhY3Rvcj0+MC4wMDM3ODU0MSxtPT4zfX0sCiAge25hbWU9PidnYWxsb24nLGNvbnZlcnNpb249PntmYWN0b3I9PjAuMDAzNzg1NDEsbT0+M319LAogIHtuYW1lPT4nZ2FsJyxjb252ZXJzaW9uPT57ZmFjdG9yPT4wLjAwMzc4NTQxLG09PjN9fSwKXTsKQ29udGV4dCgpLT5mbGFncy0+c2V0KHRvbFR5cGU9PidhYnNvbHV0ZScsdG9sZXJhbmNlPT4wLjEpOwokdm9sdW1lID0gTnVtYmVyV2l0aFVuaXRzKCIyMC8yLjc4IGdhbCIsIHtuZXdVbml0PT4kbmV3VW5pdHN9KTsKQ29udGV4dCgiUGVyY2VudCIpOwpDb250ZXh0KCktPmZsYWdzLT5zZXQodG9sZXJhbmNlPT4wLjAxKTsKJGluY3JlYXNlID0gUGVyY2VudCgzNTIvMjc4LTEpOwpDb250ZXh0KCJDdXJyZW5jeSIpOwokY29zdCA9IEN1cnJlbmN5KDMuNTIqMS4wMjgpOwoKQkVHSU5fUEdNTAphLiAgVGhlIGF2ZXJhZ2UgY29zdCBvZiBnYXNvbGluZSBpbiB0aGUgVW5pdGVkIFN0YXRlcyBpbiAyMDEwIHdhcyBcJDIuNzggcGVyIGdhbGxvbi4gSG93IG11Y2ggZ2Fzb2xpbmUgd291bGQgXCQyMCBnZXQgeW91IGluIDIwMTAsIG9uIGF2ZXJhZ2U/CgogICAgW19deyR2b2x1bWV9ezEwfQoKCmEuICBJbiAyMDExLCB0aGUgYXZlcmFnZSBjb3N0IHdhcyBcJDMuNTIgcGVyIGdhbGxvbi4gV2hhdCBwZXJjZW50IGluY3JlYXNlIHdhcyB0aGF0IGZyb20gMjAxMD8KCiAgICBbX117JGluY3JlYXNlfXsxMH0KCgphLiAgSW4gMjAxMiwgdGhlIGNvc3QgaGFkIHJpc2VuIDIuOCUgZnJvbSB0aGUgMjAxMSBjb3N0LiBXaGF0IHdhcyB0aGUgY29zdCBvZiBhIGdhbGxvbiBvZiBnYXNvbGluZSBpbiAyMDEyPwoKICAgIFtfXXskY29zdH17MTB9ICAgCgoKCgpFTkRfUEdNTAoKRU5ERE9DVU1FTlQoKTs=" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
+###       on 2025-06-28T22:01:13-06:00       
+###   A recent stable commit (2022-07-01):   
+### 6c761d3dba23af92cba35001c852aac04ae99a5f 
 ###                                          
 ###         https://pretextbook.org          
 ###                                          
@@ -656,7 +678,6 @@ DOCUMENT();
 ############################################################
 loadMacros(
   "PGstandard.pl",
-  "MathObjects.pl",
   "PGML.pl",
   "AnswerFormatHelp.pl",
   "parserNumberWithUnits.pl",
@@ -692,11 +713,11 @@ $cost = Currency(3.52*1.028);
 ############################################################
 
 BEGIN_PGML
-a.  The average cost of gasoline in the United States in 2010 was $2.78 per gallon. How much gasoline would $20 get you in 2010, on average?
+a.  The average cost of gasoline in the United States in 2010 was \$2.78 per gallon. How much gasoline would \$20 get you in 2010, on average?
 
     [_]{$volume}{10}
 
-a.  In 2011, the average cost was $3.52 per gallon. What percent increase was that from 2010?
+a.  In 2011, the average cost was \$3.52 per gallon. What percent increase was that from 2010?
 
     [_]{$increase}{10}
 
