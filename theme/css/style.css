@@ -5,6 +5,7 @@ html {min-height: 100%;}
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {color: #048;}
@@ -159,7 +160,7 @@ header.header {
 
 /* content */
 .content {
-    max-width: 780px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px 40px;
 }
@@ -198,7 +199,13 @@ header.header {
 .footer .right a:hover {color: #F7F7F2;}
 
 @media screen and (max-width: 800px) {
+    main {
+        padding: 0;
+        background: unset;
+    }
     main article.content {
         width: 100%;
+        padding: 30px 3%;
+        margin: 0;
     }
 }
