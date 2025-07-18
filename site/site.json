@@ -1,0 +1,6 @@
+{
+    "THEME": "./site/theme",
+    "SITENAME": "PreTeXt",
+    "SITESUBTITLE": "Write Once, Read Anywhere",
+    "STATIC_PATHS": ["examples", "doc"]
+}

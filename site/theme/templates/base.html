@@ -1,78 +1,88 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
-  <head>
-    {% block head %}
-      <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-      <meta charset="utf-8" />
-      <meta name="generator" content="Pelican" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {% if SITESUBTITLE %}
-        <meta name="description" content="{{ SITESUBTITLE }}" />
-      {% endif %}
-        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
-      {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
-      {% endif %}
-      {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
-      {% endif %}
-      {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
-      {% endif %}
-      {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
-      {% endif %}
-      {% if CATEGORY_FEED_ATOM and category %}
-        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
-      {% endif %}
-      {% if CATEGORY_FEED_RSS and category %}
-        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
-      {% endif %}
-      {% if TAG_FEED_ATOM and tag %}
-        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
-      {% endif %}
-      {% if TAG_FEED_RSS and tag %}
-        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
-      {% endif %}
-    {% endblock head %}
-  </head>
 
-  <body>
-    {% block body %}
-      <header>
-        {% block header %}
-          <hgroup><h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>{% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}</hgroup>
-        {% endblock header %}
-        {% block nav %}
-          <nav><ul>
-            {% for title, link in MENUITEMS %}
-              <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-            {% if DISPLAY_PAGES_ON_MENU %}
-              {% for p in pages %}
-                <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
-              {% endfor %}
-            {% endif %}
-            {% if DISPLAY_CATEGORIES_ON_MENU %}
-              {% for cat, null in categories %}
-                <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat==category %} aria-current="page" {% endif %}>{{ cat}}</a></li>
-              {% endfor %}
-            {% endif %}
-          </ul></nav>
-        {% endblock nav %}
-      </header>
-      <main>
-        {% block content %}
-        {% endblock content %}
-      </main>
-      <footer>
-        {% block footer %}
-          <address>
-            Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
-            which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-          </address>
-        {% endblock footer %}
-      </footer>
-    {% endblock body %}
-  </body>
+<head>
+  {% block head %}
+  <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="authoring publishing mathematics STEM LaTeX" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://pretextbook.org/js/lib/jquery.min.js"></script>
+  <script src="https://pretextbook.org/js/lib/knowl.js"></script>
+  <link rel="stylesheet" type="text/css" href="theme/css/style.css" media="screen">
+  </link>
+  <link rel="stylesheet" type="text/css" href="https://pretextbook.org/css/0.31/catalog.css">
+  </link>
+  <title>PreTeXt</title>
+  {% endblock head %}
+</head>
+
+<body>
+  {% block body %}
+  <header class="header">
+    {% block header %}
+    <div class="title">
+      <a href="index.html">PreTeXt</a>
+    </div>
+    {% endblock header %}
+    {% block nav %}
+    <nav class="navbar">
+      <ul>
+        <!--<li><a href="index.html">Home</a></li>-->
+        <li><a href="guide.html">Guide</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <!--<li><a href="catalog.html">Catalog</a></li>-->
+        <!--<li><a href="newsletter.html">Newsletters</a></li>-->
+        <!--<li><a href="conversions.html">Conversions TO PreTeXt</a></li>-->
+        <!--<li><a href="tools.html">Tools</a></li>-->
+        <!--<li><a href="quickstart.html">Quickstart</a></li>-->
+        <!--<li><a href="talks-articles.html">Talks and Articles</a></li>-->
+        <li><a href="community.html">Community</a></li>
+        <!--<li><a href="other-projects.html">Other Projects</a></li>-->
+        <!--<li><a href="contact.html">Contact</a></li>-->
+      </ul>
+    </nav>
+    {% endblock nav %}
+  </header>
+  <main>
+    {% block content %}
+    {% endblock content %}
+  </main>
+  <footer>
+    {% block footer %}
+    <div class="footer">
+    <span>
+      Site generated with <a rel="nofollow" href="https://getpelican.com/">Pelican</a>.
+    </span>
+      <span><a href="index.html">pretextbook.org</a></span>
+      <span>Design by <a href="https://math.oscarlevin.com/">Oscar Levin</a><br/>based on a <a href="http://templates.arcsin.se/">template</a> by <a
+          href="http://arcsin.se/">Arcsin</a></span>
+    </div>
+    {% endblock footer %}
+  </footer>
+  <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***-->
+  <script xmlns="">
+    var sc_project = 9664088;
+    var sc_invisible = 1;
+    var sc_security = "6e60c510";
+    var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+    document.write("<sc" + "ript src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+  </script><noscript xmlns="">
+    <div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/9664088/0/6e60c510/1/" alt="web analytics"></a></div>
+  </noscript>
+  <!--End: StatCounter code-->
+  <!--Start: Google Global Site Tag code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***           GET YOUR OWN FROM GOOGLE             ***-->
+  <script xmlns="" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-48811660-1"></script>
+  <script xmlns="">  window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-48811660-1');
+  </script><!--End: Google Global Site Tag code-->
+  {% endblock body %}
+</body>
+
 </html>

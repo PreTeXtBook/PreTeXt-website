@@ -6,29 +6,29 @@
 <project ptx-version="2" publication="source">
   <targets>
     <!-- Docs -->
-    <target name="guide-web" format="html" source="doc/guide/guide.xml" 
+    <target name="guide-web" format="html" source="doc/guide/guide.xml"
             publication="doc/guide/publication.xml" deploy-dir="doc/guide/html" />
     <target name="guide-print" format="pdf" source="doc/guide/guide.xml"
             output-filename="pretext-guide.pdf" publication="doc/guide/publication.xml" deploy-dir="doc/guide" />
 
-    <target name="schema-web" format="html" 
+    <target name="schema-web" format="html"
             source="schema/pretext.xml"
             publication="schema/publication.xml"
-            deploy-dir="doc/schema-litprog/html" />
-    <target name="schema-print" format="pdf" 
+            deploy-dir="doc/schema-litprog/html"/>
+    <target name="schema-print" format="pdf"
             source="schema/pretext.xml"
             output-filename="pretext.pdf"
             publication="schema/publication.xml"
-            deploy-dir="doc/schema-litprog" />
+            deploy-dir="doc/schema-litprog"/>
 
     <!-- Examples -->
-    <target name="showcase-web" format="html" 
+    <target name="showcase-web" format="html"
             source="examples/showcase/source/pretext-showcase.ptx"
             publication="examples/showcase/publisher/publication.xml" deploy-dir="examples/showcase/html" />
-    <target name="showcase-print" format="pdf" 
+    <target name="showcase-print" format="pdf"
             source="examples/showcase/source/pretext-showcase.ptx"
             publication="examples/showcase/publisher/publication.xml"
-            output-filename="pretext-showcase.pdf" 
+            output-filename="pretext-showcase.pdf"
             deploy-dir="examples/showcase" />
 
     <target name="sample-book-chapters-web" format="html"
@@ -53,7 +53,7 @@
             source="examples/sample-book/sample-book-parts.xml"
             publication="examples/sample-book/publication-structural.xml"
             deploy-dir="examples/sample-book/structural/html">
-            <stringparams debug.html.annotate="yes"/>
+      <stringparams debug.html.annotate="yes"/>
     </target>
     <target name="sample-book-structural-print" format="pdf"
             source="examples/sample-book/sample-book-parts.xml"
@@ -80,6 +80,7 @@
             deploy-dir="examples/sample-article/html">
             <stringparams debug.html.annotate="yes"/>
     </target>
+
     <target name="sample-article-print" format="pdf" latex-engine="pdflatex"
             source="examples/sample-article/sample-article.xml"
             publication="examples/sample-article/publication.xml"
@@ -136,64 +137,3 @@
   </targets>
 </project>
 
-
-<!-- SAMPLE MANIFEST illustrating all options. Defaults are given (mostly).              -->
-
-<!-- <project
-        ptx-version="2"
-        source="source"
-        publication="publication"
-        output-dir="output"
-        site="site"
-        stage="output/stage"
-        xsl="xsl"
-        asy-method="server"
-        generated-cache=".cache"
-     >
-       <targets>
-          <target
-            name="web"
-            format="html"
-            source="main.ptx"
-            publication="publication.ptx"
-            output-dir="web"
-            deploy-dir="interactive"
-            xsl="custom-html.xsl"
-            asy-method="server"
-          />
-          <target
-            name="web-zipped"
-            format="html"
-            source="main.ptx"
-            publication="publication.ptx"
-            output-dir="web"
-            compression="zip"
-            asy-method="server"
-          />
-          <target
-            name="runestone"
-            format="html"
-            platform="runestone"
-          />
-          <target
-            name="print"
-            format="pdf"
-            source="main.ptx"
-            publication="publication.ptx"
-            output-dir="print"
-            output-filename="mybook.pdf"
-            latex-engine="pdflatex"
-            deploy-dir="pdf"
-          />
-          <target
-            name="latex"
-            format="latex"
-          />
-          <target
-            name="braille"
-            format="braille"
-            braille-mode="emboss"
-          />
-        </targets>
-</project>
--->
