@@ -8,6 +8,7 @@
 # don't track unpublished builds or stage (note: Runestone uses `published`)
 output
 published
+source
 
 # don't track assets generated from source
 generated-assets
