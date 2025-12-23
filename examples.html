@@ -48,34 +48,26 @@
     </header>
 
     <h3>Examples</h3>
-<p>In the examples directory of the PreTeXt distribution there are several examples. We include output for six of them here. To see examples of actual books (and other projects), see the Gallery at the main page of this site.</p>
-<h3>Showcase Article</h3>
-<p>The Showcase Article demonstrates the features of PreTeXt. It is not comprehensive, nor instructive. But you can browse it as part of evaluating PreTeXt, or as a source of ideas for your project. The source is also meant to be a demonstration and contains some comments that will help with implementation.</p>
-<p>As of 2019-04-02 this is under construction. Knowledgeable PreTeXt authors are encouraged to add examples of their favorite features.</p>
-<ul>
-<li><a href="https://pretextbook.org/examples/showcase/html">Showcase Article, Online</a></li>
-<li><a href="https://pretextbook.org/examples/showcase/pretext-showcase.pdf">Showcase Article, PDF</a></li>
-<li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/showcase">Showcase Article, Source at GitHub</a></li>
-</ul>
+<p>We have a variety of PreTeXt projects designed to be examples of what is possible with PreTeXt.  These are not necessarily <q>best practices</q>, especially since they are also used for testing new features and new code.  They can be an adjunct to the documentation, and are always built with the very latest version of PreText.  Be sure to look for <q>annotated</q> HTML versions of the Sample Article and the Sample Book, which contain easy access to the source code right next to the output.  These source for these examples are part of the PreTeXt repository, so you can explore them further there.</p>
+<p>To see examples of actual books (and other projects), see the Gallery at the main page of this site.</p>
 <h3>Sample Book</h3>
-<p>The sample-book is an example of how a book-length document can be authored and organized. It may have a run of chapters, or be structured into parts. The parts can be “structural”, where numbering of chapters restarts in each part, or “decorative”, where chapters are numbered consecutively throughout the book without regard for the parts.</p>
-<p>The first version below has only chapters, and no parts. We have used it as an example of how to generate a Solution Manual as a PDF that could be distributed to instructors.</p>
-<p>The final chapter contains interactive exercises and programming environments. There are powered by Javascript we get from Runestone Services. A slightly modified build will make an even more interactive version when hosted at <a href="https://runestone.academy/">Runestone Academy</a> on a dedicated (no-cost) server there. This work is in-progress as of 2022-05-31 and the code and markup may evolve. The source for this is the only documentation now.</p>
+<p>The Sample Book is an example of how a book-length document can be authored and organized. It may have a run of chapters, or be structured into parts. The parts can be <q>structural</q>, where numbering of chapters restarts in each part, or <q>decorative</q>, where chapters are numbered consecutively throughout the book without regard for the parts.</p>
+<p>The first version below has only chapters, and no parts.  There is also an annotated version of this variant.</p>
+<p>The final chapter contains interactive exercises and programming environments. There are powered by Javascript we get from Runestone Services. A slightly modified build will make an even more interactive version when hosted at <a href="https://runestone.academy/">Runestone Academy</a> on a dedicated (no-cost) server there.</p>
 <p>Chapters Only:</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-book/noparts/html">Sample Book, Online</a></li>
-<li><a href="https://pretextbook.org/examples/sample-book/noparts/sample-book.pdf">Sample Book, PDF</a></li>
-<li><a href="https://pretextbook.org/examples/sample-book/noparts/sample-book-solutions-manual.pdf">Sample Book Solution Manual, PDF</a></li>
+<li><a href="examples/sample-book/noparts/html">Sample Book, Online</a></li>
+<li><a href="examples/sample-book/noparts/sample-book.pdf">Sample Book, PDF</a></li>
 </ul>
 <p>Structural Parts:</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-book/structural/html">Sample Book, Online</a></li>
-<li><a href="https://pretextbook.org/examples/sample-book/structural/sample-book.pdf">Sample Book, PDF</a></li>
+<li><a href="examples/sample-book/structural/html">Sample Book, Online</a></li>
+<li><a href="examples/sample-book/structural/sample-book.pdf">Sample Book, PDF</a></li>
 </ul>
 <p>Decorative Parts:</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-book/decorative/html">Sample Book, Online</a></li>
-<li><a href="https://pretextbook.org/examples/sample-book/decorative/sample-book.pdf">Sample Book, PDF</a></li>
+<li><a href="examples/sample-book/decorative/html">Sample Book, Online</a></li>
+<li><a href="examples/sample-book/decorative/sample-book.pdf">Sample Book, PDF</a></li>
 </ul>
 <p>Chapters Only, Hosted at <a href="https://runestone.academy/">Runestone Academy</a>:</p>
 <ul>
@@ -83,57 +75,45 @@
 </ul>
 <p>Annotated with Source Examples, with Parts:</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-book/annotated/">Sample Book, Annotated</a></li>
+<li><a href="examples/sample-book/annotated/">Sample Book, Annotated</a></li>
 </ul>
 <p>Source:</p>
 <ul>
 <li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/sample-book">Sample Book, Source at GitHub</a></li>
 </ul>
 <h3>Sample Article</h3>
-<p>The sample-article is both a developer’s sandbox and the kitchen sink of the documentation. It is a sandbox because we frequently test new features here and sometimes also debug problems. So sometimes it contains some preliminary, or immature, examples. It is the kitchen sink because we try to add one of everything. This is both for testing, and so that you can look at output and then examine the source to see how to do something you like or need. There is even a special version of the online output that has copious "View Source" knowls that will show you the PreTeXt source for each division and many blocks</p>
+<p>The Sample Article is both a developer’s sandbox and the kitchen sink with <em>every</em> possible PreTeXt feature. It is a sandbox because we frequently test new features here and sometimes also debug problems. So sometimes it contains some preliminary, or immature, examples. It is the kitchen sink because we try to add one of everything. This is both for testing, and so that you can look at output and then examine the source to see how to do something you like or need. There is even a special version of the online output that has copious "View Source" knowls that will show you the PreTeXt source for each division and many blocks</p>
 <p>But it is cutting-edge and contains new features before they make it into the Author’s Guide. As a testing platform, we bring the least powerful version of LaTeX to bear for creating the PDF, so this is <em>always</em> built using the pdflatex engine (in contrast to the font example below).</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-article/html">Sample Article, Online</a></li>
-<li><a href="https://pretextbook.org/examples/sample-article/annotated">Sample Article, Annotated</a></li>
-<li><a href="https://pretextbook.org/examples/sample-article/sample-article.pdf">Sample Article, PDF</a></li>
+<li><a href="examples/sample-article/html">Sample Article, Online</a></li>
+<li><a href="examples/sample-article/annotated">Sample Article, Annotated</a></li>
+<li><a href="examples/sample-article/sample-article.pdf">Sample Article, PDF</a></li>
 <li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/sample-article">Sample Article, Source at GitHub</a></li>
 </ul>
 <h3>WeBWorK Sample Chapter</h3>
-<p>The WeBWorK sample-chapter contains examples of various ways to incorporate WeBWorK automated homework problems into your text. This work was initiated with a grant from <a href="http://openoregon.org/">OpenOregon</a> with a matching grant from <a href="http://www.pugetsound.edu/">University of Puget Sound</a>.</p>
+<p>The WeBWorK Sample Chapter contains examples of various ways to incorporate WeBWorK automated homework problems into your text. This work was initiated with a grant from <a href="http://openoregon.org/">OpenOregon</a> with a matching grant from <a href="http://www.pugetsound.edu/">University of Puget Sound</a>.</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/webwork/sample-chapter/html">WeBWorK Sample Chapter, Online</a></li>
-<li><a href="https://pretextbook.org/examples/webwork/sample-chapter/sample-chapter.pdf">WeBWorK Sample Chapter, PDF</a></li>
-<li><a href="https://pretextbook.org/examples/webwork/sample-chapter/archive">WeBWorK Sample Chapter, PG Problem Archive</a></li>
+<li><a href="examples/webwork/sample-chapter/html">WeBWorK Sample Chapter, Online</a></li>
+<li><a href="examples/webwork/sample-chapter/sample-chapter.pdf">WeBWorK Sample Chapter, PDF</a></li>
+<li><a href="examples/webwork/sample-chapter/Integrating_WeBWorK_into_Textbooks.tgz">WeBWorK Sample Chapter, PG Problem Archive</a></li>
 <li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/webwork/sample-chapter">WeBWorK Sample Chapter, Source at GitHub</a></li>
 </ul>
-<h3>Sample Runestone Book</h3>
-<p>This sample material has moved, and is now incorporated as the final chapter of the Sample Book, with numerous versions posted towards the top of this page.</p>
-<h3>Styling Development</h3>
-<p>Ongoing work to create, develop, and expand new styles.</p>
+<h3>Styling Online Versions</h3>
+<p>HTML output can employ a variety of styles (independent of content).  We use the Sample Article as a vehicle for demonstrating these styles.  Color schemes may also be changed, but we do not demonstrate any of that here, as each example has its default colors.</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/sample-article/oscar">Sample Article, with oscarlevin style</a></li>
-<li><a href="https://pretextbook.org/examples/sample-article/crc">Sample Article, with crc UI (and bluegreen_grey colors)</a></li>
+<li><a href="examples/sample-article/default-modern">Sample Article, default-modern style</a></li>
+<li><a href="examples/sample-article/denver">Sample Article, denver style</a></li>
+<li><a href="examples/sample-article/boulder">Sample Article, boulder style</a></li>
+<li><a href="examples/sample-article/greely">Sample Article, greely style</a></li>
+<li><a href="examples/sample-article/salem">Sample Article, salem style</a></li>
+<li><a href="examples/sample-article/tacoma">Sample Article, tacoma style</a></li>
 </ul>
 <h3>EPUB Sampler</h3>
-<p>The EPUB Sampler is designed to test and stress the conversion to EPUB. As such it is a bit of a mess. Intentionally. The actual EPUB file could be useful for testing EPUB reading systems. We build a PDF and an HTML version, just for completeness.</p>
+<p>The EPUB Sampler is designed to test and stress the conversion to EPUB. We build a PDF and an HTML version, as a demonstration, even though EPUB is something of a blend of the two output formats.</p>
 <ul>
-<li><a href="https://pretextbook.org/examples/epub-sampler/epub-sampler.epub">EPUB Sampler, EPUB Format</a></li>
-<li><a href="https://pretextbook.org/examples/epub-sampler/html">EPUB Sampler, Online</a></li>
-<li><a href="https://pretextbook.org/examples/epub-sampler/epub-sampler.pdf">EPUB Sampler, PDF</a></li>
-</ul>
-<h3>Humanities in Action</h3>
-<p>Humanities in Action showcases Jahrme Risner’s summer project in 2016, funded by the Arts, Humanities, Social Sciences Summer Research for Undergraduates program at the <a href="http://www.pugetsound.edu/">University of Puget Sound</a>.</p>
-<ul>
-<li><a href="https://pretextbook.org/examples/humanities/html">Humanities in Action, Online</a></li>
-<li><a href="https://pretextbook.org/examples/humanities/hia.pdf">Humanities in Action, PDF</a></li>
-<li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/humanities">Humanities in Action, Source at GitHub</a></li>
-</ul>
-<h3>Characters, Fonts, and Languages</h3>
-<p>Different languages and different scripts can get complicated fast. This is another sample document that is used both as a demonstration and for testing. Unicode characters generally work easily in HTML, so check the online version first to see what is possible. Since the various fonts can be quite demanding, we <em>always</em> create the PDF here from LaTeX by using the xelatex engine (in contrast to the sample article above).</p>
-<ul>
-<li><a href="https://pretextbook.org/examples/fonts/html/fonts-and-characters.html">Characters, Fonts, and Languages, Online</a></li>
-<li><a href="https://pretextbook.org/examples/fonts/fonts-and-characters.pdf">Characters, Fonts, and Languages, PDF</a></li>
-<li><a href="https://github.com/PreTeXtBook/pretext/tree/master/examples/fonts">Characters, Fonts, and Languages, Source at GitHub</a></li>
+<li><a href="examples/epub-sampler/epub-sampler.epub">EPUB Sampler, EPUB Format</a></li>
+<li><a href="examples/epub-sampler/html">EPUB Sampler, Online</a></li>
+<li><a href="examples/epub-sampler/epub-sampler.pdf">EPUB Sampler, PDF</a></li>
 </ul>
 
   </article>

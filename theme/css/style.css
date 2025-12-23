@@ -45,10 +45,6 @@ blockquote {
 
 h1,h2,h3 {padding-top: 6px; color: #553; margin-bottom: 4px;}
 
-/* misc */
-.clearer {clear: both; font-size: 0;}
-.left {float: left;}
-.right {float: right;}
 
 /*structure
 .inner-container {
@@ -184,8 +180,8 @@ header.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #949490;
-    color: #F7F7F2;
+    background: hsl(60, 20%, 13%);
+    color: #ffffff;
     font: normal .75em monospace, sans-serif;
     margin-top: 5px;
     padding: 10px 12px;
