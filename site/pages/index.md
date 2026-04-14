@@ -2,6 +2,14 @@ title: Write Once, Read Anywhere
 URL:
 save_as: index.html
 
+<div class="notification">
+
+    Free Getting Started Workshop: Thursday, April 23, 2026, 3:00-4:30 PM ET.
+    <br/>
+    <a href="https://scholarlattice.org/collections/225da49a-6006-43a2-82f1-f9268ba18e65" target="_blank">Learn more and register.</a>
+
+</div>
+
 Welcome! We're glad you are here.
 
 <div class="cta-cards-container">
@@ -20,7 +28,7 @@ Welcome! We're glad you are here.
 
   <div class="cta-card">
     <h3>🤝 Get Help</h3>
-    <p>Connect with our community, ask questions, and get help from experienced PreTeXt users.</p>
+    <p>Connect with our community through forums and online events hosted by PreTeXt users.</p>
     <a href="support.html" class="button">Get Support</a>
   </div>
 </div>

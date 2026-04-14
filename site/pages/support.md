@@ -6,7 +6,7 @@ Got questions?  We're here to help!
 
 Many of your questions may be answered in the [PreTeXt Guide](guide.html).  Try the search feature.
 
-We also have an active and welcome community of volunteers to offer support through a variety of mediums.  Check out our [support forums](https://groups.google.com/forum/#!forum/pretext-support), [Discord server](https://mathtech.org/chat), and [Zoom office hours](https://mathtech.org/events/).
+We also have an active and friendly community of volunteers to offer support through a variety of mediums.  Check out our [support forums](https://groups.google.com/forum/#!forum/pretext-support), [Discord server](https://mathtech.org/chat), and [Zoom office hours](https://mathtech.org/events/).
 
 We strive to make PreTeXt a welcoming and supportive community.  Whether you are an author, instructor, publisher, reader, or developer, we hope you will join our community and help make PreTeXt even better.  Here are some ways you can connect with us.
 
