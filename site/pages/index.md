@@ -8,19 +8,20 @@ Welcome! We're glad you are here.
   <div class="cta-card">
     <h3>✨ Why PreTeXt</h3>
     <p>Discover the powerful features and benefits that make PreTeXt the ideal choice for authors.</p>
-    <a href="why-pretext.html">Learn More</a>
+    <a href="why-pretext.html" class="button">Learn More</a>
   </div>
 
   <div class="cta-card">
     <h3>⚡ Quick Start</h3>
-    <p>Get started with PreTeXt in minutes. Create your first document and explore the basics.</p>
-    <a href="quick-start.html">Get Started</a>
+    <p>Get started now in your browser with <a href="https://pretext.plus/tryit" target="_blank">PreTeXt.Plus</a>,
+    or <a href="quick-start.html">quickly get started</a> with a local install.</p>
+    <a href="https://pretext.plus/tryit" class="button" target="_blank">Try it Online</a>
   </div>
 
   <div class="cta-card">
     <h3>🤝 Get Help</h3>
     <p>Connect with our community, ask questions, and get help from experienced PreTeXt users.</p>
-    <a href="support.html">Get Support</a>
+    <a href="support.html" class="button">Get Support</a>
   </div>
 </div>
 

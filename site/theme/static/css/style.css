@@ -53,7 +53,7 @@ a:hover {color: var(--color-link-hover);}
     margin-top: 0;
 }
 
-.cta-card a, button a {
+.cta-card a.button, button a {
     display: inline-block;
     background: var(--color-link);
     color: white;
