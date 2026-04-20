@@ -6,7 +6,7 @@ save_as: index.html
 
     Free Getting Started Workshop: Thursday, April 23, 2026, 3:00-4:00 PM ET.
     <br/>
-    <a href="https://scholarlattice.org/collections/225da49a-6006-43a2-82f1-f9268ba18e65" target="_blank">Learn more and register.</a>
+    <a href="https://scholarlattice.org/pages/2adfdac0-63c2-4e24-8960-0a563678603b" target="_blank">Learn more and register.</a>
 
 </div>
 
