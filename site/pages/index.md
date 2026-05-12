@@ -2,13 +2,6 @@ title: Write Once, Read Anywhere
 URL:
 save_as: index.html
 
-<div class="notification">
-
-    Free Getting Started Workshop: Thursday, April 23, 2026, 3:00-4:00 PM ET.
-    <br/>
-    <a href="https://scholarlattice.org/collections/225da49a-6006-43a2-82f1-f9268ba18e65" target="_blank">Learn more and register.</a>
-
-</div>
 
 Welcome! We're glad you are here.
 
