@@ -81,6 +81,16 @@ DEBUG=1
 #	      pip install pelican[markdown]
 #
 # 	  to install Pelican via pip.
+#
+# 5.  Annotated examples are built from PreTeXt source that
+#     has first been pretty-printed by  pretext-format,  the
+#     PreTeXt source formatter.  As a one-time setup step, run
+#
+#         scripts/pretext-format/update-format
+#
+#     in the  scripts/pretext-format  directory of the website
+#     repository.  This in turn requires having  npm  for
+#     installation, and  node  for use.
 
 #######################
 # Temporary Directories
@@ -94,7 +104,7 @@ DEBUG=1
 # PreTeXt source for annotated versions must be formatted first,
 # so the "View Source" annotations are easier to read.  We need
 # a "scratch" directory where the source can be manipulated by
-# tools from the "LaTeX-to-LaTeX' tool
+# the  pretext-format  tool
 SCRATCH=$(mktemp -d "${TMPDIR:-/tmp}/scratch.XXXXXXXX")
 
 # The build script make a temporary copy of all the material that
@@ -109,8 +119,12 @@ STAGED=$(mktemp -d "${TMPDIR:-/tmp}/staged.XXXXXXXX")
 # pretext/pretext executable
 declare PTXPTX=${PTX}/pretext/pretext
 
-# PreTeXt formatting repository
-declare LTL=${REPOS}/LaTeX3LaTeX
+# PreTeXt source formatter (see scripts/pretext-format/README.md)
+declare PTXFORMAT=${DIR}/pretext-format/node_modules/.bin/pretext-format
+# Options chosen for compact presentation inside the
+# bounded-width knowls used in annotated examples:
+# aggressive line-breaking and a two-space indent.
+declare PTXFORMATOPTS="--write --break-lines many --break-sentences --tab-size 2"
 
 # PreTeXt Projects repository
 declare PP=${REPOS}/pretext-projects
@@ -169,6 +183,13 @@ if ! command -v pelican >/dev/null 2>&1; then
     exit 1
 fi
 
+# Likewise, pretext-format must be installed via the one-time
+# setup step described above (scripts/pretext-format/update-format).
+if [ ! -x "${PTXFORMAT}" ]; then
+    echo "ERROR: pretext-format executable not found at ${PTXFORMAT}.  Did you run scripts/pretext-format/update-format?" >&2
+    exit 1
+fi
+
 ##############
 # Repositories
 ##############
@@ -177,7 +198,6 @@ fi
 # locally.  We catalog them here, by their GitHub names
 
 # 1.  PreTextBook/pretext
-# 2.  davidfarmer/LaTeX3LaTeX
 
 # PreTeXt, master branch of *public* repository
 # Do not touch a local version, it might be in
@@ -188,17 +208,6 @@ if [ "${1}" != "local" ] ; then
 	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	cd ${PTX}
 	git checkout master
-	git pull
-fi
-
-# LaTeX3LaTeX formatter repository
-# To help creating annotated versions
-if [ "${1}" != "local" ] ; then
-	echo
-	echo "BUILD: LaTeX3LaTeX formatter repository update :BUILD"
-	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-	cd ${LTL}
-	git checkout main
 	git pull
 fi
 
@@ -324,10 +333,14 @@ install -d ${SCRATCH}/sa/annotated
 cd ${SCRATCH}/sa/annotated
 # copy creates a "sample-article" directory
 cp -a ${SA} .
-# Pretty-print will just massage top-level XML files
-# from source, and then will drop them in this
-# scratch location *overwriting* parts of copy above
-${LTL}/ltol.py xml_pp ${SA} ./sample-article
+# Pretty-print the top-level XML source files in place
+# (overwriting parts of the copy above), so the
+# "View Source" annotations are easier to read.
+# The  *.xml  glob also sweeps up files that are never
+# shown in the annotated output (publication files,
+# etc.) -- formatting them has no real effect but
+# also no real cost.
+( cd ./sample-article && ${PTXFORMAT} ${PTXFORMATOPTS} *.xml )
 # location in final tree
 install -d ${EXAMPLESOUT}/sample-article/annotated
 # reset, then drop down one more level
@@ -365,13 +378,14 @@ install -d ${SCRATCH}/sb/annotated
 cd ${SCRATCH}/sb/annotated
 # copy creates a "sample-book" directory
 cp -a ${SB} .
-# Pretty-print will just massage top-level XML files
-# from source, and then will drop them in this
-# scratch location *overwriting* parts of copy above
-# We need to cover subdirectories with source material
-${LTL}/ltol.py xml_pp ${SB}           ./sample-book
-${LTL}/ltol.py xml_pp ${SB}/exercises ./sample-book/exercises
-${LTL}/ltol.py xml_pp ${SB}/sage      ./sample-book/sage
+# Pretty-print XML source in place (overwriting parts of
+# the copy above), so the "View Source" annotations are
+# easier to read.  XML lives in the top level and in the
+# exercises  and  sage  subdirectories.  The  *.xml  globs
+# also sweep up files that are never shown in the annotated
+# output (publication files, etc.) -- formatting them has
+# no real effect but also no real cost.
+( cd ./sample-book && ${PTXFORMAT} ${PTXFORMATOPTS} *.xml exercises/*.xml sage/*.xml )
 # text files being included, just copy
 cp ${SB}/code/symmetric-group-8.sage  ./sample-book/code
 cp ${SB}/tikz/cyclic-roots-unity.tex  ./sample-book/tikz
