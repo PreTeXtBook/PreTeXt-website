@@ -402,9 +402,8 @@ cd -
 echo
 echo "BUILD: creating WW sample chapter :BUILD"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-# Extract static representations and images from server
-# -a will abort on bad xml produced by webwork (especially)
-${PTXPTX} -v -a -c webwork -p ${WW}/publisher/publication.xml ${WW}/sample-chapter.ptx
+# WW representations for the sample chapter are tracked in the PreTeXt repository,
+# so they are kept current via re-generation, and commits with necessary updates.
 
 # PDF
 install -d ${EXAMPLESOUT}/webwork/sample-chapter
