@@ -12,7 +12,7 @@ To see examples of actual books (and other projects), see the Gallery at the mai
 
 The Sample Book is an example of how a book-length document can be authored and organized. It may have a run of chapters, or be structured into parts. The parts can be <q>structural</q>, where numbering of chapters restarts in each part, or <q>decorative</q>, where chapters are numbered consecutively throughout the book without regard for the parts.
 
-The first version below has only chapters, and no parts.  There is also an annotated version of this variant.
+The first version below has only chapters, and no parts.  There is also an annotated version of this variant.  (Note that the source annotations use two spaces for each level of indentation, to conserve screen real estate.  Some authors prefer to use four spaces.  And never use tabs!)
 
 The final chapter contains interactive exercises and programming environments. There are powered by Javascript we get from Runestone Services. A slightly modified build will make an even more interactive version when hosted at [Runestone Academy](https://runestone.academy/) on a dedicated (no-cost) server there.
 
@@ -47,7 +47,7 @@ Source:
 
 The Sample Article is both a developer’s sandbox and the kitchen sink with <em>every</em> possible PreTeXt feature. It is a sandbox because we frequently test new features here and sometimes also debug problems. So sometimes it contains some preliminary, or immature, examples. It is the kitchen sink because we try to add one of everything. This is both for testing, and so that you can look at output and then examine the source to see how to do something you like or need. There is even a special version of the online output that has copious "View Source" knowls that will show you the PreTeXt source for each division and many blocks
 
-But it is cutting-edge and contains new features before they make it into the Author’s Guide. As a testing platform, we bring the least powerful version of LaTeX to bear for creating the PDF, so this is _always_ built using the pdflatex engine (in contrast to the font example below).
+But it is cutting-edge and contains new features before they make it into the Author’s Guide. As a testing platform, we bring the least powerful version of LaTeX to bear for creating the PDF, so this is _always_ built using the pdflatex engine (in contrast to the font example below).   (Note that the source annotations of the "annotated" version use two spaces for each level of indentation, to conserve screen real estate.  Some authors prefer to use four spaces.  And never use tabs!)
 
 - [Sample Article, Online](examples/sample-article/html)
 - [Sample Article, Annotated](examples/sample-article/annotated)
