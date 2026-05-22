@@ -186,7 +186,8 @@ fi
 # Likewise, pretext-format must be installed via the one-time
 # setup step described above (scripts/pretext-format/update-format).
 if [ ! -x "${PTXFORMAT}" ]; then
-    echo "ERROR: pretext-format executable not found at ${PTXFORMAT}.  Did you run scripts/pretext-format/update-format?" >&2
+    echo "ERROR: pretext-format executable not found at ${PTXFORMAT}." >&2
+    echo "Did you run scripts/pretext-format/update-format (from within the  scripts/pretext-format  directory?)" >&2
     exit 1
 fi
 
