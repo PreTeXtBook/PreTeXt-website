@@ -91,6 +91,12 @@ DEBUG=1
 #     in the  scripts/pretext-format  directory of the website
 #     repository.  This in turn requires having  npm  for
 #     installation, and  node  for use.
+#
+# 6.  The "pdf-fo" format (an experimental, LaTeX-free route to an
+#     accessible PDF via XSL-FO) is rendered by the Apache FOP
+#     processor, which must be installed.  On Debian:
+#
+#         apt install fop
 
 #######################
 # Temporary Directories
@@ -156,6 +162,7 @@ declare SBST=structural
 declare SA=${PTX}/examples/sample-article
 declare SB=${PTX}/examples/sample-book
 declare WW=${PTX}/examples/webwork/sample-chapter
+declare PFD=${PTX}/examples/pdf-fo-development
 declare G=${PTX}/doc/guide
 declare ES=${PTX}/examples/epub
 declare SLP=${PTX}/schema
@@ -307,6 +314,10 @@ install -d ${EXAMPLESOUT}/sample-article/html
 ${PTXPTX} -v -c doc -f pdf -d ${EXAMPLESOUT}/sample-article -p ${SA}/publication.xml ${SA}/sample-article.xml
 # PDF - print, with outfile name change
 ${PTXPTX} -v -c doc -f pdf -o ${EXAMPLESOUT}/sample-article/sample-article-print.pdf -p ${SA}/publication-print.xml ${SA}/sample-article.xml
+# PDF - accessible, via XSL-FO and Apache FOP, with outfile name change
+# (very experimental, but with full PDF/UA-1 coverage).  Requires the
+# Apache FOP processor (Debian package:  fop)
+${PTXPTX} -v -c doc -f pdf-fo -o ${EXAMPLESOUT}/sample-article/sample-article-fo.pdf -p ${SA}/publication.xml ${SA}/sample-article.xml
 # HTML
 ${PTXPTX} -v -c doc -f html -d ${EXAMPLESOUT}/sample-article/html -p ${SA}/publication.xml ${SA}/sample-article.xml
 
@@ -349,6 +360,25 @@ cd -
 cd ${SCRATCH}/sa/annotated/sample-article
 ${PTXPTX} -v -c doc -f html -x debug.html.annotate yes -d ${EXAMPLESOUT}/sample-article/annotated -p publication.xml sample-article.xml
 cd -
+
+# FO test development article
+echo
+echo "BUILD: creating FO test development article :BUILD"
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+# The development document for the "pdf-fo" format: a LaTeX-free,
+# accessible PDF rendered through XSL-FO by Apache FOP.  We build
+# the same source three ways (the accessible FO PDF, a regular
+# LaTeX PDF, and HTML) for side-by-side comparison.  The "pdf-fo"
+# format requires the Apache FOP processor (Debian package:  fop)
+install -d ${EXAMPLESOUT}/pdf-fo-development/html
+# PDF - accessible, via XSL-FO and Apache FOP (the default outfile
+# name is the headline product)
+${PTXPTX} -v -c doc -f pdf-fo -d ${EXAMPLESOUT}/pdf-fo-development -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
+# PDF - regular (LaTeX), outfile renamed so it does not collide
+# with the FO PDF above
+${PTXPTX} -v -c doc -f pdf -o ${EXAMPLESOUT}/pdf-fo-development/pdf-fo-development-latex.pdf -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
+# HTML
+${PTXPTX} -v -c doc -f html -d ${EXAMPLESOUT}/pdf-fo-development/html -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
 
 # Sample book
 echo
