@@ -367,9 +367,10 @@ echo "BUILD: creating FO test development article :BUILD"
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 # The development document for the "pdf-fo" format: a LaTeX-free,
 # accessible PDF rendered through XSL-FO by Apache FOP.  We build
-# the same source three ways (the accessible FO PDF, a regular
-# LaTeX PDF, and HTML) for side-by-side comparison.  The "pdf-fo"
-# format requires the Apache FOP processor (Debian package:  fop)
+# the same source four ways (the accessible FO PDF, a regular
+# LaTeX PDF, HTML, and EPUB) for side-by-side comparison.  The
+# "pdf-fo" format requires the Apache FOP processor (Debian
+# package:  fop)
 install -d ${EXAMPLESOUT}/pdf-fo-development/html
 # PDF - accessible, via XSL-FO and Apache FOP (the default outfile
 # name is the headline product)
@@ -379,6 +380,8 @@ ${PTXPTX} -v -c doc -f pdf-fo -d ${EXAMPLESOUT}/pdf-fo-development -p ${PFD}/pub
 ${PTXPTX} -v -c doc -f pdf -o ${EXAMPLESOUT}/pdf-fo-development/pdf-fo-development-latex.pdf -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
 # HTML
 ${PTXPTX} -v -c doc -f html -d ${EXAMPLESOUT}/pdf-fo-development/html -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
+# EPUB (non-Kindle, mathematics as SVG)
+${PTXPTX} -v -c doc -f epub-svg -o ${EXAMPLESOUT}/pdf-fo-development/pdf-fo-development.epub -p ${PFD}/publication.xml ${PFD}/pdf-fo-development.xml
 
 # Sample book
 echo
