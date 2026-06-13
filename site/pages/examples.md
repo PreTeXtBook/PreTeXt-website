@@ -60,11 +60,12 @@ But it is cutting-edge and contains new features before they make it into the Au
 
 This small article is the development sandbox for an <em>experimental</em>, LaTeX-free route to PDF.  Rather than passing through LaTeX, the PreTeXt source is converted to XSL Formatting Objects (XSL-FO) and rendered by the [Apache FOP](https://xmlgraphics.apache.org/fop/) processor.  Mathematics is set with MathJax (as SVG), and the resulting PDF is <em>accessible by default</em>: it is a tagged PDF conforming to PDF/UA-1 (ISO&nbsp;14289-1, the accessibility standard), with a heading outline, alternate text for images and mathematics, document metadata, and a logical reading order built in from the start.
 
-The same source is built three ways below, so the accessible FO PDF can be compared against a traditional LaTeX PDF and the online HTML.  This route is new and still incomplete, so expect some rough edges.
+The same source is built four ways below, so the accessible FO PDF can be compared against a traditional LaTeX PDF, the online HTML, and an EPUB.  This route is new and still incomplete, so expect some rough edges.
 
 - [Development Article, Accessible PDF via XSL-FO](examples/pdf-fo-development/pdf-fo-development.pdf)
 - [Development Article, Online](examples/pdf-fo-development/html)
 - [Development Article, Regular (LaTeX) PDF](examples/pdf-fo-development/pdf-fo-development-latex.pdf)
+- [Development Article, EPUB](examples/pdf-fo-development/pdf-fo-development.epub)
 - [Development Article, Source at GitHub](https://github.com/PreTeXtBook/pretext/tree/master/examples/pdf-fo-development)
 
 ### WeBWorK Sample Chapter
