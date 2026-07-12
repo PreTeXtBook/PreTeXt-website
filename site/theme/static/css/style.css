@@ -28,7 +28,7 @@ a:hover {color: var(--color-link-hover);}
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .cta-card {
@@ -385,5 +385,9 @@ header.header {
     .navbar a {
         display: block;
         padding: 12px 15px;
+    }
+
+    .cta-cards-container {
+        flex-direction: column;
     }
 }
