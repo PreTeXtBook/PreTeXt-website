@@ -98,7 +98,7 @@ The EPUB Sampler is designed to test and stress the conversion to EPUB. We build
 
 ### Slide Shows
 
-The Sample Slideshow is one source file built two ways, as a PDF via LaTeX's Beamer class and as a reveal.js page for the browser. Authoring is mostly stock PreTeXt: a `slide` element holds one screenful, and if you group slides into `section` elements then reveal.js arranges each section's slides vertically, so a reader moves across sections and down within one. Everything else is the markup you would write anywhere else in PreTeXt.
+The Sample Slideshow is one source file built two ways, as a PDF via LaTeX's Beamer class and as a reveal.js page for the browser. Authoring is mostly stock PreTeXt: a <q>slide</q> element holds one screenful, and if you group slides into <q>section</q> elements then reveal.js arranges each section's slides vertically, so a reader moves across sections and down within one. Everything else is the markup you would write anywhere else in PreTeXt.
 
 The reveal.js version here is built with resources embedded, so reveal.js itself, the stylesheets, the fonts, and the mathematics as SVG all travel inside the single HTML file. Images are the exception and remain alongside it as ordinary files.
 
