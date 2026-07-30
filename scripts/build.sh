@@ -165,6 +165,7 @@ declare WW=${PTX}/examples/webwork/sample-chapter
 declare PFD=${PTX}/examples/pdf-fo-development
 declare G=${PTX}/doc/guide
 declare ES=${PTX}/examples/epub
+declare SS=${PTX}/examples/sample-slideshow
 declare SLP=${PTX}/schema
 declare PELICAN=${DIR}/../site
 
@@ -461,6 +462,21 @@ ${PTXPTX} -v -o ${EXAMPLESOUT}/epub-sampler/epub-sampler.pdf -c doc -f pdf -p ${
 ${PTXPTX} -v -d ${EXAMPLESOUT}/epub-sampler/html -c doc -f html -p ${ES}/publication.xml ${ES}/epub-sampler.xml
 # EPUB
 ${PTXPTX} -v -o ${EXAMPLESOUT}/epub-sampler/epub-sampler.epub -c doc -f epub-svg -p ${ES}/publication.xml ${ES}/epub-sampler.xml
+
+# Sample slideshow, as a Beamer PDF and as a reveal.js page
+echo
+echo "BUILD: creating the Sample Slideshow :BUILD"
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+install -d ${EXAMPLESOUT}/sample-slideshow/revealjs
+# Beamer, which produces the PDF directly
+${PTXPTX} -v -d ${EXAMPLESOUT}/sample-slideshow -c doc -f beamer -p ${SS}/publication.xml ${SS}/sample-slideshow.xml
+# reveal.js, from the publication file electing embedded resources, so the
+# page carries reveal.js, the stylesheets, the fonts, and the mathematics as
+# SVG, all inline.  Images are the exception and stay on disk, so the build's
+# copies of the managed  external  and  generated  directories travel with the
+# page.  (The  _static  directory the build also emits is not referenced by
+# this page at all, and is left behind in the staging area.)
+${PTXPTX} -v -d ${EXAMPLESOUT}/sample-slideshow/revealjs -c doc -f revealjs -p ${SS}/publication-single-file.xml ${SS}/sample-slideshow.xml
 
 
 ############
