@@ -206,6 +206,48 @@ fi
 # Various repositories are assumed to live under ${REPOS}
 # locally.  We catalog them here, by their GitHub names
 
+# 0.  PreTeXtBook/PreTeXt-website
+
+# This repository, holding this script and the page sources.  Unlike
+# the repositories below, a stale or modified copy here does not fail
+# loudly, it just quietly builds and publishes the wrong site.  So the
+# state is checked, and anything unexpected stops the build outright
+# rather than letting it proceed.
+if [ "${1}" != "local" ] ; then
+	echo
+	echo "BUILD: website repository update :BUILD"
+	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	cd ${DIR}/..
+	# Each condition is checked on its own.  A plain "git pull --ff-only"
+	# is not enough: when the remote has nothing new it succeeds even
+	# from a modified or ahead-of-origin copy, which is exactly the state
+	# worth catching.
+	declare WEBSITE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+	if [ "${WEBSITE_BRANCH}" != "main" ] ; then
+		echo "ERROR: the website repository is on branch ${WEBSITE_BRANCH}, not main." >&2
+		echo "Switch to main before building, or run  build.sh local  to build from the copy as it stands." >&2
+		exit 1
+	fi
+	if [ -n "$(git status --porcelain --untracked-files=no)" ] ; then
+		echo "ERROR: the website repository has uncommitted changes to tracked files." >&2
+		echo "Commit or stash them, or run  build.sh local  to build from the copy as it stands." >&2
+		exit 1
+	fi
+	if ! git fetch origin main ; then
+		echo "ERROR: could not reach origin to update the website repository." >&2
+		exit 1
+	fi
+	if [ -n "$(git rev-list origin/main..HEAD)" ] ; then
+		echo "ERROR: the website repository has commits that are not on origin/main." >&2
+		echo "Push them, or run  build.sh local  to build from the copy as it stands." >&2
+		exit 1
+	fi
+	if ! git merge --ff-only origin/main ; then
+		echo "ERROR: could not fast-forward the website repository to origin/main." >&2
+		exit 1
+	fi
+fi
+
 # 1.  PreTextBook/pretext
 
 # PreTeXt, master branch of *public* repository
