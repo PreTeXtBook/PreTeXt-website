@@ -190,6 +190,12 @@ header.header {
     text-decoration: none;
     font-weight: bold;
 }
+.header .logo {
+    padding: 3px;
+    height: 75px;
+    background-color: white;
+    border-radius: 3px;
+}
 
 .header .navbar {
     color: var(--color-header-text);
