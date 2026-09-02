@@ -357,10 +357,17 @@ install -d ${EXAMPLESOUT}/sample-article/html
 ${PTXPTX} -v -c doc -f pdf -d ${EXAMPLESOUT}/sample-article -p ${SA}/publication.xml ${SA}/sample-article.xml
 # PDF - print, with outfile name change
 ${PTXPTX} -v -c doc -f pdf -o ${EXAMPLESOUT}/sample-article/sample-article-print.pdf -p ${SA}/publication-print.xml ${SA}/sample-article.xml
-# PDF - accessible, via XSL-FO and Apache FOP, with outfile name change
-# (very experimental, but with full PDF/UA-1 coverage).  Requires the
-# Apache FOP processor (Debian package:  fop)
-${PTXPTX} -v -c doc -f pdf-fo -o ${EXAMPLESOUT}/sample-article/sample-article-fo.pdf -p ${SA}/publication.xml ${SA}/sample-article.xml
+# PDF - accessible, via XSL-FO and Apache FOP (very experimental, but
+# with full PDF/UA-1 coverage).  Requires the Apache FOP processor
+# (Debian package:  fop).  Built twice, once for each of the two text
+# fonts this route offers, so the website can present them side by
+# side.  The font is a publication file setting, so the two builds
+# differ only in the publication file they are given:  publication.xml
+# asks for "latin-modern" (also the default),  publication-alegreya.xml
+# asks for "alegreya".  Both outfile names carry their font, so that
+# neither one reads as the plain or preferred version.
+${PTXPTX} -v -c doc -f pdf-fo -o ${EXAMPLESOUT}/sample-article/sample-article-fo-latin-modern.pdf -p ${SA}/publication.xml ${SA}/sample-article.xml
+${PTXPTX} -v -c doc -f pdf-fo -o ${EXAMPLESOUT}/sample-article/sample-article-fo-alegreya.pdf -p ${SA}/publication-alegreya.xml ${SA}/sample-article.xml
 # HTML
 ${PTXPTX} -v -c doc -f html -d ${EXAMPLESOUT}/sample-article/html -p ${SA}/publication.xml ${SA}/sample-article.xml
 
