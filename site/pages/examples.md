@@ -53,7 +53,8 @@ But it is cutting-edge and contains new features before they make it into the Au
 - [Sample Article, Annotated](examples/sample-article/annotated)
 - [Sample Article, Electronic PDF (one-sided)](examples/sample-article/sample-article.pdf)
 - [Sample Article, Print PDF (two-sided)](examples/sample-article/sample-article-print.pdf)
-- [Sample Article, Accessible PDF via XSL-FO](examples/sample-article/sample-article-fo.pdf) (<em>very</em> experimental, but with full PDF/UA-1 accessibility coverage)
+- [Sample Article, Accessible PDF via XSL-FO, Latin Modern font](examples/sample-article/sample-article-fo-latin-modern.pdf) (<em>very</em> experimental, but with full PDF/UA-1 accessibility coverage)
+- [Sample Article, Accessible PDF via XSL-FO, Alegreya font](examples/sample-article/sample-article-fo-alegreya.pdf) (the same article by the same route, set in the other text font with bundled support)
 - [Sample Article, Source at GitHub](https://github.com/PreTeXtBook/pretext/tree/master/examples/sample-article)
 
 ### Accessible PDF via XSL Formatting Objects
